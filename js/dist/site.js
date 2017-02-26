@@ -244,8 +244,12 @@ var Site = function ($) {
         }, {
             key: 'load',
             value: function load() {
-                var _body = $('body');
-                _body.css('visibility', 'visible');
+                var _html = $('html');
+                _html.velocity({ opacity: 1 }, {
+                    duration: 300,
+                    queue: false,
+                    ease: "easeOutCubic"
+                });
             }
         }, {
             key: 'setSettings',
@@ -444,18 +448,18 @@ var Site = function ($) {
     $(document).ready(function () {
         // Set global settings
         Site.setSettings();
-    });
 
-    // Resize
-    $(window).on('resize', function () {
-        // Update
-        Site.resize();
-    });
+        // Resize
+        $(window).on('resize', function () {
+            // Update
+            Site.resize();
+        });
 
-    // Load
-    $(window).on('load', function () {
         // Load
-        Site.load();
+        $(window).on('load', function () {
+            // Load.
+            Site.load();
+        });
     });
 
     // READY & OBSERVE

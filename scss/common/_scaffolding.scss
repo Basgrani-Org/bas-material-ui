@@ -18,6 +18,8 @@
 // Body
 
 html {
+    opacity: 0;
+
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     font-family: $bas-ui-font-family-sans-serif;
@@ -28,9 +30,6 @@ html {
 }
 
 body {
-    visibility: hidden;
-    @include bas-ui-transition(visibility);
-
     font-family: $bas-ui-font-family-sans-serif;
     font-size: $bas-ui-font-size-base;
     font-weight: normal;
@@ -142,6 +141,7 @@ hr {
 // for traditionally non-focusable elements with role="button"
 // see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
 
-[role="button"] {
+[role="button"],
+.bas-ui-button {
     cursor: pointer;
 }

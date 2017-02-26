@@ -52,44 +52,21 @@ pre[class*="language-"] {
 .header-doc {
     background-color: #2d2d2d;
     color: #fff;
-    .container {
-        h1 {
+
+    h1 {
+        font-size: 72px;
+        color: #689f38;
+        i {
             font-size: 72px;
-            color: #689f38;
-            i {
-                font-size: 72px;
-            }
-        }
-        p {
-            margin-bottom: 25px;
         }
     }
-
-    &.header-doc-center {
-        text-align: center;
+    p {
+        margin-bottom: 25px;
     }
 
-    &.home {
-        .getting-started {
-            text-align: right;
-        }
-        .source-in-git-hub {
-            text-align: left;
-        }
-        p.last-commit-in-git-hub-p {
-            font-weight: 300;
-        }
-        .last-commit-in-git-hub, .last-commit-in-git-hub:hover {
-            text-decoration: none;
-        }
-        @media (max-width: 767px){
-            h1 {
-                font-size: 52px;
-            }
-            .getting-started,
-            .source-in-git-hub {
-                text-align: center;
-            }
+    @media (max-width: 767px){
+        h1 {
+            font-size: 52px;
         }
     }
 }
@@ -124,6 +101,39 @@ pre[class*="language-"] {
     &.doc-section-black {
         background-color: #2d2d2d;
         color: #fff;
+    }
+}
+
+// Page - Overview
+html.page-home-overview {
+    .header-doc {
+        .getting-started {
+            text-align: right;
+        }
+        .source-in-git-hub {
+            text-align: left;
+        }
+        p.last-commit-in-git-hub-p {
+            font-weight: 300;
+        }
+        .last-commit-in-git-hub, .last-commit-in-git-hub:hover {
+            text-decoration: none;
+        }
+        @media (max-width: 767px){
+            .getting-started,
+            .source-in-git-hub {
+                text-align: center;
+            }
+        }
+    }
+}
+
+// Page - Donate
+html.page-home-donate {
+    @media (max-width: 767px){
+        h1 {
+            font-size: 42px;
+        }
     }
 }
 

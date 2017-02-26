@@ -177,46 +177,22 @@ pre[class*="language-"]:before {
   color: #fff;
 }
 
-.header-doc .container h1 {
+.header-doc h1 {
   font-size: 72px;
   color: #689f38;
 }
 
-.header-doc .container h1 i {
+.header-doc h1 i {
   font-size: 72px;
 }
 
-.header-doc .container p {
+.header-doc p {
   margin-bottom: 25px;
 }
 
-.header-doc.header-doc-center {
-  text-align: center;
-}
-
-.header-doc.home .getting-started {
-  text-align: right;
-}
-
-.header-doc.home .source-in-git-hub {
-  text-align: left;
-}
-
-.header-doc.home p.last-commit-in-git-hub-p {
-  font-weight: 300;
-}
-
-.header-doc.home .last-commit-in-git-hub, .header-doc.home .last-commit-in-git-hub:hover {
-  text-decoration: none;
-}
-
 @media (max-width: 767px) {
-  .header-doc.home h1 {
+  .header-doc h1 {
     font-size: 52px;
-  }
-  .header-doc.home .getting-started,
-  .header-doc.home .source-in-git-hub {
-    text-align: center;
   }
 }
 
@@ -248,6 +224,35 @@ pre[class*="language-"]:before {
 .doc-section.doc-section-black {
   background-color: #2d2d2d;
   color: #fff;
+}
+
+html.page-home-overview .header-doc .getting-started {
+  text-align: right;
+}
+
+html.page-home-overview .header-doc .source-in-git-hub {
+  text-align: left;
+}
+
+html.page-home-overview .header-doc p.last-commit-in-git-hub-p {
+  font-weight: 300;
+}
+
+html.page-home-overview .header-doc .last-commit-in-git-hub, html.page-home-overview .header-doc .last-commit-in-git-hub:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  html.page-home-overview .header-doc .getting-started,
+  html.page-home-overview .header-doc .source-in-git-hub {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  html.page-home-donate h1 {
+    font-size: 42px;
+  }
 }
 
 /* Footer */

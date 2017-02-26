@@ -225,8 +225,12 @@ const Site = (($) => {
         }
 
         static load() {
-            let _body = $('body');
-            _body.css('visibility', 'visible');
+            let _html = $('html');
+            _html.velocity({opacity: 1}, {
+                duration: 300,
+                queue   : false,
+                ease    : "easeOutCubic"
+            });
         }
 
         static setSettings() {
@@ -411,18 +415,18 @@ const Site = (($) => {
     $(document).ready(function () {
         // Set global settings
         Site.setSettings();
-    });
 
-    // Resize
-    $(window).on('resize', function () {
-        // Update
-        Site.resize();
-    });
+        // Resize
+        $(window).on('resize', function () {
+            // Update
+            Site.resize();
+        });
 
-    // Load
-    $(window).on('load', function () {
         // Load
-        Site.load();
+        $(window).on('load', function () {
+            // Load.
+            Site.load();
+        });
     });
 
     // READY & OBSERVE

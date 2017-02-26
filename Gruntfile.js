@@ -328,6 +328,16 @@ module.exports = function ( grunt ) {
 
         // Copy
         copy: {
+            various: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'docs_src/',
+                        src: ['CNAME'],
+                        dest: 'docs/'
+                    }
+                ]
+            },
             fonts: {
                 files: [
                     {
@@ -568,6 +578,7 @@ module.exports = function ( grunt ) {
         'copy:img',
         'copy:css',
         'copy:js',
+        'copy:various',
         'assemble',
         'replace:version',
         'replace:min',

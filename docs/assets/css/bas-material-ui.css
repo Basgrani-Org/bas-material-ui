@@ -9685,6 +9685,7 @@ textarea {
 }
 
 html {
+  opacity: 0;
   -webkit-tap-highlight-color: transparent;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -9694,10 +9695,6 @@ html {
 }
 
 body {
-  visibility: hidden;
-  -webkit-transition: visibility 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: visibility 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: visibility 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -9784,7 +9781,8 @@ hr {
   clip: auto;
 }
 
-[role="button"] {
+[role="button"],
+.bas-ui-button {
   cursor: pointer;
 }
 

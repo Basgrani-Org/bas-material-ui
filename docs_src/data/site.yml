@@ -1,0 +1,16 @@
+###
+# Site variables
+###
+
+production: <%= production %>
+
+source: ./docs_src
+destination: ./docs
+
+title: "BasMaterial UI"
+homepage_git: "https://github.com/Basgrani-Org/bas-material-ui"
+readme_git: "https://github.com/Basgrani-Org/bas-material-ui/blob/master/README.md"
+changelog_git: "https://github.com/Basgrani-Org/bas-material-ui/blob/master/CHANGELOG.md"
+zip_git: "https://github.com/Basgrani-Org/bas-material-ui/archive/master.zip"
+donate_link: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VKV3GRW7R6MLW"
+basgrani_link: "http://basgrani.com"

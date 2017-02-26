@@ -18,7 +18,7 @@ module.exports = function ( grunt ) {
         // ------------------------------------------------------------------------
 
         pkg : grunt.file.readJSON('package.json'),
-        site: grunt.file.readYAML('docs/data/site.yml'),
+        site: grunt.file.readYAML('docs_src/data/site.yml'),
 
         meta: {
             name: 'BasMaterial UI',
@@ -64,7 +64,7 @@ module.exports = function ( grunt ) {
                     sourceMap: true
                 },
                 files: {
-                    'site/assets/css/<%= meta.name_root_docs_file %>.css': 'docs/scss/<%= meta.name_root_docs_file %>.scss'
+                    'docs/assets/css/<%= meta.name_root_docs_file %>.css': 'docs_src/scss/<%= meta.name_root_docs_file %>.scss'
                 }
             }
         },
@@ -93,7 +93,7 @@ module.exports = function ( grunt ) {
                 src: 'dist/css/<%= meta.name_root_file %>.css'
             },
             docs: {
-                src: 'site/assets/css/<%= meta.name_root_docs_file %>.css'
+                src: 'docs/assets/css/<%= meta.name_root_docs_file %>.css'
             }
         },
 
@@ -108,8 +108,8 @@ module.exports = function ( grunt ) {
                 dest: 'dist/css/<%= meta.name_root_file %>.min.css'
             },
             docs: {
-                src: 'site/assets/css/<%= meta.name_root_docs_file %>.css',
-                dest: 'site/assets/css/<%= meta.name_root_docs_file %>.min.css'
+                src: 'docs/assets/css/<%= meta.name_root_docs_file %>.css',
+                dest: 'docs/assets/css/<%= meta.name_root_docs_file %>.min.css'
             }
         },
 
@@ -139,9 +139,9 @@ module.exports = function ( grunt ) {
                     sourceMap: false
                 },
                 expand: true,
-                cwd: 'docs/js/es6/',
+                cwd: 'docs_src/js/es6/',
                 src: '**/*.js',
-                dest: 'docs/js/dist/'
+                dest: 'docs_src/js/dist/'
 
             }
         },
@@ -175,7 +175,7 @@ module.exports = function ( grunt ) {
                     }
                 },
                 files: {
-                    'site/assets/js/<%= meta.name_root_docs_file %>.js': ['docs/js/dist/app.js']
+                    'docs/assets/js/<%= meta.name_root_docs_file %>.js': ['docs_src/js/dist/app.js']
                 }
             },
             docs: {
@@ -185,7 +185,7 @@ module.exports = function ( grunt ) {
                     }
                 },
                 files: {
-                    'site/assets/js/<%= meta.name_root_docs_file %>.js': ['docs/js/dist/app.js']
+                    'docs/assets/js/<%= meta.name_root_docs_file %>.js': ['docs_src/js/dist/app.js']
                 }
             }
         },
@@ -203,7 +203,7 @@ module.exports = function ( grunt ) {
             },
             docs: {
                 files: {
-                    src: 'site/assets/js/<%= meta.name_root_docs_file %>.js'
+                    src: 'docs/assets/js/<%= meta.name_root_docs_file %>.js'
                 }
             }
         },
@@ -228,8 +228,8 @@ module.exports = function ( grunt ) {
                     mangle: true,
                     preserveComments: /^!|@preserve|@license|@cc_on/i
                 },
-                src: 'site/assets/js/<%= meta.name_root_docs_file %>.js',
-                dest: 'site/assets/js/<%= meta.name_root_docs_file %>.min.js'
+                src: 'docs/assets/js/<%= meta.name_root_docs_file %>.js',
+                dest: 'docs/assets/js/<%= meta.name_root_docs_file %>.min.js'
             }
         },
 
@@ -277,21 +277,21 @@ module.exports = function ( grunt ) {
             dist: {
                 src: ["dist/*"]
             },
-            site: {
-                src: ["site/*"]
+            docs: {
+                src: ["docs/*"]
             },
             js: {
                 src: ["js/dist/*"]
             },
             docs_js: {
-                src: ["docs/js/dist/*"]
+                src: ["docs_src/js/dist/*"]
             }
         },
 
         // String remplace
         replace: {
             version: {
-                src: ['site/*.html'],
+                src: ['docs/**/*.html'],
                 overwrite: true, // overwrite matched source files
                 replacements: [
                     {
@@ -301,7 +301,7 @@ module.exports = function ( grunt ) {
                 ]
             },
             min: {
-                src: ['site/*.html'],
+                src: ['docs/**/*.html'],
                 overwrite: true, // overwrite matched source files
                 replacements: [
                     {
@@ -315,7 +315,7 @@ module.exports = function ( grunt ) {
                 ]
             },
             analytics: {
-                src: ['site/*.html'],
+                src: ['docs/**/*.html'],
                 overwrite: true, // overwrite matched source files
                 replacements: [
                     {
@@ -334,13 +334,13 @@ module.exports = function ( grunt ) {
                         expand: true,
                         cwd: '',
                         src: ['fonts/**'],
-                        dest: 'site/assets'
+                        dest: 'docs/assets'
                     },
                     {
                         expand: true,
                         flatten: true,
                         src: ['bower_components/mdi/fonts/*'],
-                        dest: 'site/assets/fonts',
+                        dest: 'docs/assets/fonts',
                         filter: 'isFile'
                     }
                 ]
@@ -351,13 +351,13 @@ module.exports = function ( grunt ) {
                         expand: true,
                         cwd: '',
                         src: ['img/**'],
-                        dest: 'site/assets'
+                        dest: 'docs/assets'
                     },
                     {
                         expand: true,
-                        cwd: 'docs/',
+                        cwd: 'docs_src/',
                         src: ['img/**'],
-                        dest: 'site/assets'
+                        dest: 'docs/assets'
                     }
                 ]
             },
@@ -367,7 +367,7 @@ module.exports = function ( grunt ) {
                         expand: true,
                         cwd: 'dist/',
                         src: ['css/<%= meta.name_root_file %>.css', 'css/<%= meta.name_root_file %>.css.map'],
-                        dest: 'site/assets/'
+                        dest: 'docs/assets/'
                     }
                 ]
             },
@@ -377,7 +377,7 @@ module.exports = function ( grunt ) {
                         expand: true,
                         cwd: 'dist/',
                         src: ['css/<%= meta.name_root_file %>.css', 'css/<%= meta.name_root_file %>.css.map', 'css/<%= meta.name_root_file %>.min.css'],
-                        dest: 'site/assets/'
+                        dest: 'docs/assets/'
                     }
                 ]
             },
@@ -387,7 +387,7 @@ module.exports = function ( grunt ) {
                         expand: true,
                         cwd: 'dist/',
                         src: ['js/<%= meta.name_root_file %>.js'],
-                        dest: 'site/assets/'
+                        dest: 'docs/assets/'
                     }
                 ]
             },
@@ -397,7 +397,7 @@ module.exports = function ( grunt ) {
                         expand: true,
                         cwd: 'dist/',
                         src: ['js/<%= meta.name_root_file %>.js', 'js/<%= meta.name_root_file %>.min.js'],
-                        dest: 'site/assets/'
+                        dest: 'docs/assets/'
                     }
                 ]
             },
@@ -558,7 +558,7 @@ module.exports = function ( grunt ) {
     // Release
     grunt.registerTask('Build', [
         'clean:dist',
-        'clean:site',
+        'clean:docs',
         '_sass_compile',
         '_babel_compile',
         '_sass_docs_compile',

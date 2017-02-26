@@ -2,6 +2,9 @@
 
 **Note:** Coming soon available for production!! Meanwhile use only for test purpose.
 
+- Ready for meteor!!
+- Ready for reactive app's!!
+
 ## Introduction
 
 BasMaterial UI, is a natural user interface based in Google's Material Design.
@@ -94,7 +97,7 @@ External dependencies, should be included separately:
 
 - jQuery (v3.0.0)
 
-## Installation
+## Tools Installation
 
 Install the main tools (require sudo on certain systems):
 

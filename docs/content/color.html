@@ -1,0 +1,2709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="shortcut icon" type="image/png" href="../../assets/img/favicon.png">
+    <meta name="description" content="Color | Color in material design is inspired by bold hues juxtaposed with muted environments, deep shadows, and bright highlights.">
+    <title>Color | BasMaterial UI</title>
+
+    <!-- CSS-->
+    <link href="../../assets/css/bas-material-ui.min.css?v=0.1.0" rel="stylesheet">
+    <link href="../../assets/css/bas-material-ui-docs.css?v=0.1.0" rel="stylesheet">
+</head>
+<body class="bas-ui-layout-header-fixed bas-ui-side-nav-auto bas-ui-side-nav-hide-off bas-ui-side-nav-with-overlay-off">
+    <!--[if lt IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Header -->
+    <!-- Layout Header -->
+    <header class="bas-ui-layout-header">
+    
+        <div id="doc-ui-app-bar" class="bas-ui-app-bar">
+    
+            <!-- Toggle -->
+            <div class="bas-ui-side-nav-toggle"><i class="mdi mdi-menu bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i></div>
+    
+            <!-- Breadcrumb -->
+            <div class="bas-ui-breadcrumb">
+                <a href="/" class="bas-ui-breadcrumb-item"><span>Content</span></a>
+                <a href="../content/color.html" class="bas-ui-breadcrumb-item"><span>Color</span></a>
+            </div>
+    
+            <!-- Nav Menu -->
+            <ul class="right bas-ui-nav-menu">
+                <li class="bas-ui-nav-menu-item-icon hidden-xs-down">
+                    <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-top-search-show">
+                        <i class="mdi mdi-magnify bas-ui-icon"></i>
+                    </a>
+                </li>
+                <li class="bas-ui-nav-menu-item-icon hidden-xs-down">
+                    <a data-target="bas-ui-modal-header-doc-1"  class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-modal-trigger">
+                        <i class="mdi mdi-apps bas-ui-icon"></i>
+                    </a>
+                </li>
+                <li class="bas-ui-nav-menu-item-icon">
+                    <a data-target="bas-ui-modal-header-doc-1"  class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-modal-trigger">
+                        <i class="mdi mdi-bell bas-ui-icon"></i>
+                    </a>
+                    <span class="bas-ui-badge bas-ui-badge-overlap" data-badge="12"></span>
+                </li>
+                <li class="bas-ui-nav-menu-item-icon">
+                    <a data-target="doc-dropdown-app-bar-user" data-hover="false" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves dropdown-trigger">
+                        <i class="mdi mdi-account bas-ui-icon"></i>
+                    </a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-app-bar-user" class="bas-ui-dropdown bas-ui-dropdown-right-top">
+                        <li><a href="#!">Profile</a></li>
+                        <li><a href="#!">Logout</a></li>
+                    </ul>
+                </li>
+                <li class="bas-ui-nav-menu-item-icon hidden-sm-up">
+                    <a data-target="doc-dropdown-app-bar" data-hover="false" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves dropdown-trigger">
+                        <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                    </a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-app-bar" class="bas-ui-dropdown bas-ui-dropdown-right-top">
+                        <li><a class="bas-ui-top-search-show"><i class="mdi mdi-magnify bas-ui-icon"></i> Search</a></li>
+                        <li><a data-target="bas-ui-modal-header-doc-1" class="bas-ui-modal-trigger"><i class="mdi mdi-apps bas-ui-icon"></i> Apps</a></li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <!-- Top Search -->
+            <div class="bas-ui-top-search">
+                <i class="bas-ui-top-search-close mdi mdi-arrow-left bas-ui-icon bas-ui-icon-left"></i>
+                <!-- Search -->
+                <div id="doc-bas-ui-top-search-autocomplete" class="bas-ui-search">
+                    <input type="text" placeholder="Search">
+                    <i class="bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left"></i>
+                    <i class="bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right"></i>
+                </div>
+            </div>
+    
+        </div>
+    
+    
+    </header>
+    
+    <!-- Layout Side Nav -->
+    <div class="bas-ui-side-nav">
+    
+        <div class="bas-ui-side-nav-wrapper">
+    
+            <div class="brand">
+                <div class="bas-ui-side-nav-toggle"><i class="mdi mdi-menu bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i></div>
+                <a target="_blank" href="http://basgrani.com"><img src="../../assets/img/logo.svg" alt="BasMaterial UI logo"></a>
+            </div>
+    
+            <div class="bas-ui-side-nav-content-wrapper">
+                <nav>
+    
+                    <!-- Search -->
+                    <div id="doc-bas-ui-side-nav-search-autocomplete" class="bas-ui-search">
+                        <input type="text" placeholder="Search">
+                        <i class="bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left"></i>
+                        <i class="bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>
+                    </div>
+    
+                    <!-- Collapsible Menu -->
+                    <ul class="bas-ui-collapsible" data-collapsible="accordion">
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-index" href="/">
+                                    <i class="mdi mdi-hexagon bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Overview
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves">
+                                <a id="collapsible-nav-getting-started" target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui/blob/master/README.md">
+                                    <i class="mdi mdi-settings bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    <i class="mdi mdi-open-in-new bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>
+                                    Getting Started
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-help" href="/help/donate.html">
+                                    <i class="mdi mdi-heart-pulse bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Help This Project
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-layout">
+                                    <i class="mdi mdi-view-quilt bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Layout
+                                </a>
+                            </div>
+                            <div class="bas-ui-collapsible-body collapse ">
+                                        <a id="collapsible-nav-layout-grid" class="" href="../layout/grid.html">Grid</a>
+                                        <a id="collapsible-nav-layout-structuring" class="" href="../layout/structuring.html">Structuring</a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves active">
+                                <a id="collapsible-nav-content">
+                                    <i class="mdi mdi-layers bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Content
+                                </a>
+                            </div>
+                            <div class="bas-ui-collapsible-body collapse in">
+                                        <a id="collapsible-nav-content-icons" class="" href="icons.html">Icons</a>
+                                        <a id="collapsible-nav-content-badges" class="" href="badges.html">Badges</a>
+                                        <a id="collapsible-nav-content-color" class="active" href="color.html">Color</a>
+                                        <a id="collapsible-nav-content-helpers" class="" href="helpers.html">Helpers</a>
+                                        <a id="collapsible-nav-content-progress" class="" href="progress.html">Progress</a>
+                                        <a id="collapsible-nav-content-table" class="" href="table.html">Table</a>
+                                        <a id="collapsible-nav-content-typography" class="" href="typography.html">Typography</a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-components">
+                                    <i class="mdi mdi-puzzle bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Components
+                                </a>
+                            </div>
+                            <div class="bas-ui-collapsible-body collapse ">
+                                        <a id="collapsible-nav-components-cards" class="" href="../components/cards.html">Cards</a>
+                                        <a id="collapsible-nav-components-collapsible" class="" href="../components/collapsible.html">Collapsible</a>
+                                        <a id="collapsible-nav-components-dropdown" class="" href="../components/dropdown.html">Dropdown</a>
+                                        <a id="collapsible-nav-components-form-validation" class="" href="../components/form-validation.html">Form Validation</a>
+                                        <a id="collapsible-nav-components-forms" class="" href="../components/forms.html">Forms</a>
+                                        <a id="collapsible-nav-components-buttons" class="" href="../components/buttons.html">Buttons</a>
+                                        <a id="collapsible-nav-components-list" class="" href="../components/list.html">List</a>
+                                        <a id="collapsible-nav-components-messages" class="" href="../components/messages.html">Messages (Soon)</a>
+                                        <a id="collapsible-nav-components-modals" class="" href="../components/modals.html">Modals</a>
+                                        <a id="collapsible-nav-components-tabs" class="" href="../components/tabs.html">Tabs</a>
+                                        <a id="collapsible-nav-components-toast" class="" href="../components/toast.html">Toast (Soon)</a>
+                                        <a id="collapsible-nav-components-tooltips" class="" href="../components/tooltips.html">Tooltips (Soon)</a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-showcase" href="/showcase/showcase.html">
+                                    <i class="mdi mdi-web bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Showcase
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves">
+                                <a id="collapsible-nav-download" class="download-in-git-hub-href" href="https://github.com/Basgrani-Org/bas-material-ui/archive/master.zip">
+                                    <i class="mdi mdi-download bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Download
+                                </a>
+                            </div>
+                        </li>
+    
+                    </ul>
+    
+                </nav>
+            </div>
+    
+            <div class="footer">
+                <a target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui"><i class="mdi mdi-github-circle bas-ui-icon bas-ui-icon-left bas-ui-icon-18"></i></a><p class="copyright">&copy; BasMaterial UI - v0.1.0</p>
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    <!-- Modal Right (Notifications) -->
+    <div id="bas-ui-modal-header-doc-1" class="bas-ui-modal bas-ui-modal-fixed bas-ui-modal-right-sheet">
+    
+        <!-- Header -->
+        <div class="bas-ui-modal-header">
+            <div class="header-title">
+                <!--i class="mdi mdi-close bas-ui-icon bas-ui-icon-left bas-ui-icon-24 bas-ui-modal-close"></i-->
+                <span class="section-title">Notifications</span>
+            </div>
+            <ul class="right bas-ui-nav-menu">
+                <li class="bas-ui-nav-menu-item-icon">
+                    <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-modal-close">
+                        <i class="mdi mdi-close bas-ui-icon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- Content -->
+        <div class="bas-ui-modal-content">
+    
+            <ul class="bas-ui-list bas-ui-hoverable">
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_1.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_2.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_3.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_1.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_2.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_3.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_1.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_2.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_3.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_1.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_2.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_3.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+            </ul>
+    
+        </div>
+    
+        <!-- Footer -->
+        <div class="bas-ui-modal-footer">
+            <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves bas-ui-modal-close">View All</a>
+        </div>
+    
+    </div>
+
+    <main class="bas-ui-main bas-ui-scrollbar-y">
+        
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>Color</h1>
+        <p class="lead">Color in material design is inspired by bold hues juxtaposed with muted environments, deep shadows, and bright highlights.</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="header">Normal</h2>
+                <p>To apply a background color, add the color name <code class="language-markup">grey-900</code>. To apply a text color, add the color name <code class="language-markup">light-green-text-700</code></p>
+
+                <div class="bas-ui-card bas-ui-bottom-margin-3 grey-900 light-green-text-700">
+                    <div class="bas-ui-card-supporting-text">
+                        Sample color usage
+                    </div>
+                </div>
+
+                <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-card grey-900 light-green-text-700&quot;&gt;
+    &lt;div class=&quot;bas-ui-card-supporting-text&quot;&gt;
+        Sample color usage
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            </div>
+
+            <div class="col-md-6">
+                <h2 class="header">Hover</h2>
+                <p>To apply a hover for background color and text color, add <code class="language-markup">-hover</code> after the name color.</p>
+
+                <div class="bas-ui-card bas-ui-bottom-margin-3 grey-900-hover light-green-text-700-hover">
+                    <div class="bas-ui-card-supporting-text">
+                        Sample hover color usage
+                    </div>
+                </div>
+
+                <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-card grey-900-hover light-green-text-700-hover&quot;&gt;
+    &lt;div class=&quot;bas-ui-card-supporting-text&quot;&gt;
+        Sample hover color usage
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Sass</h2>
+                <p>You can apply the color simply by extending the classes like the example below</p>
+
+                <pre><code class="language-scss">
+.custom-container {
+    @extend .grey-900;
+}</code></pre>
+
+            </div>
+        </div>
+
+        <!-- Render color palette -->
+        <div class="doc-color-palette">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="header">Material Palette (Background)</h2>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="red-50">
+                            <span class="name-class">red-50</span>
+                            <span class="cod-color">#FFEBEE</span>
+                        </div>
+                        <div style="color: #000000;" class="red-100">
+                            <span class="name-class">red-100</span>
+                            <span class="cod-color">#FFCDD2</span>
+                        </div>
+                        <div style="color: #000000;" class="red-200">
+                            <span class="name-class">red-200</span>
+                            <span class="cod-color">#EF9A9A</span>
+                        </div>
+                        <div style="color: #000000;" class="red-300">
+                            <span class="name-class">red-300</span>
+                            <span class="cod-color">#E57373</span>
+                        </div>
+                        <div style="color: #000000;" class="red-400">
+                            <span class="name-class">red-400</span>
+                            <span class="cod-color">#EF5350</span>
+                        </div>
+                        <div style="color: #ffffff;" class="red-500">
+                            <span class="name-class">red-500</span>
+                            <span class="cod-color">#F44336</span>
+                        </div>
+                        <div style="color: #ffffff;" class="red-600">
+                            <span class="name-class">red-600</span>
+                            <span class="cod-color">#E53935</span>
+                        </div>
+                        <div style="color: #ffffff;" class="red-700">
+                            <span class="name-class">red-700</span>
+                            <span class="cod-color">#D32F2F</span>
+                        </div>
+                        <div style="color: #ffffff;" class="red-800">
+                            <span class="name-class">red-800</span>
+                            <span class="cod-color">#C62828</span>
+                        </div>
+                        <div style="color: #ffffff;" class="red-900">
+                            <span class="name-class">red-900</span>
+                            <span class="cod-color">#B71C1C</span>
+                        </div>
+                        <div style="color: #000000;" class="red-A100">
+                            <span class="name-class">red-A100</span>
+                            <span class="cod-color">#FF8A80</span>
+                        </div>
+                        <div style="color: #000000;" class="red-A200">
+                            <span class="name-class">red-A200</span>
+                            <span class="cod-color">#FF5252</span>
+                        </div>
+                        <div style="color: #000000;" class="red-A400">
+                            <span class="name-class">red-A400</span>
+                            <span class="cod-color">#FF1744</span>
+                        </div>
+                        <div style="color: #ffffff;" class="red-A700">
+                            <span class="name-class">red-A700</span>
+                            <span class="cod-color">#D50000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="pink-50">
+                            <span class="name-class">pink-50</span>
+                            <span class="cod-color">#fce4ec</span>
+                        </div>
+                        <div style="color: #000000;" class="pink-100">
+                            <span class="name-class">pink-100</span>
+                            <span class="cod-color">#f8bbd0</span>
+                        </div>
+                        <div style="color: #000000;" class="pink-200">
+                            <span class="name-class">pink-200</span>
+                            <span class="cod-color">#f48fb1</span>
+                        </div>
+                        <div style="color: #000000;" class="pink-300">
+                            <span class="name-class">pink-300</span>
+                            <span class="cod-color">#f06292</span>
+                        </div>
+                        <div style="color: #000000;" class="pink-400">
+                            <span class="name-class">pink-400</span>
+                            <span class="cod-color">#ec407a</span>
+                        </div>
+                        <div style="color: #ffffff;" class="pink-500">
+                            <span class="name-class">pink-500</span>
+                            <span class="cod-color">#e91e63</span>
+                        </div>
+                        <div style="color: #ffffff;" class="pink-600">
+                            <span class="name-class">pink-600</span>
+                            <span class="cod-color">#d81b60</span>
+                        </div>
+                        <div style="color: #ffffff;" class="pink-700">
+                            <span class="name-class">pink-700</span>
+                            <span class="cod-color">#c2185b</span>
+                        </div>
+                        <div style="color: #ffffff;" class="pink-800">
+                            <span class="name-class">pink-800</span>
+                            <span class="cod-color">#ad1457</span>
+                        </div>
+                        <div style="color: #ffffff;" class="pink-900">
+                            <span class="name-class">pink-900</span>
+                            <span class="cod-color">#880e4f</span>
+                        </div>
+                        <div style="color: #000000;" class="pink-A100">
+                            <span class="name-class">pink-A100</span>
+                            <span class="cod-color">#ff80ab</span>
+                        </div>
+                        <div style="color: #000000;" class="pink-A200">
+                            <span class="name-class">pink-A200</span>
+                            <span class="cod-color">#ff4081</span>
+                        </div>
+                        <div style="color: #000000;" class="pink-A400">
+                            <span class="name-class">pink-A400</span>
+                            <span class="cod-color">#f50057</span>
+                        </div>
+                        <div style="color: #ffffff;" class="pink-A700">
+                            <span class="name-class">pink-A700</span>
+                            <span class="cod-color">#c51162</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="purple-50">
+                            <span class="name-class">purple-50</span>
+                            <span class="cod-color">#f3e5f5</span>
+                        </div>
+                        <div style="color: #000000;" class="purple-100">
+                            <span class="name-class">purple-100</span>
+                            <span class="cod-color">#e1bee7</span>
+                        </div>
+                        <div style="color: #000000;" class="purple-200">
+                            <span class="name-class">purple-200</span>
+                            <span class="cod-color">#ce93d8</span>
+                        </div>
+                        <div style="color: #000000;" class="purple-300">
+                            <span class="name-class">purple-300</span>
+                            <span class="cod-color">#ba68c8</span>
+                        </div>
+                        <div style="color: #000000;" class="purple-400">
+                            <span class="name-class">purple-400</span>
+                            <span class="cod-color">#ab47bc</span>
+                        </div>
+                        <div style="color: #ffffff;" class="purple-500">
+                            <span class="name-class">purple-500</span>
+                            <span class="cod-color">#9c27b0</span>
+                        </div>
+                        <div style="color: #ffffff;" class="purple-600">
+                            <span class="name-class">purple-600</span>
+                            <span class="cod-color">#8e24aa</span>
+                        </div>
+                        <div style="color: #ffffff;" class="purple-700">
+                            <span class="name-class">purple-700</span>
+                            <span class="cod-color">#7b1fa2</span>
+                        </div>
+                        <div style="color: #ffffff;" class="purple-800">
+                            <span class="name-class">purple-800</span>
+                            <span class="cod-color">#6a1b9a</span>
+                        </div>
+                        <div style="color: #ffffff;" class="purple-900">
+                            <span class="name-class">purple-900</span>
+                            <span class="cod-color">#4a148c</span>
+                        </div>
+                        <div style="color: #000000;" class="purple-A100">
+                            <span class="name-class">purple-A100</span>
+                            <span class="cod-color">#ea80fc</span>
+                        </div>
+                        <div style="color: #000000;" class="purple-A200">
+                            <span class="name-class">purple-A200</span>
+                            <span class="cod-color">#e040fb</span>
+                        </div>
+                        <div style="color: #000000;" class="purple-A400">
+                            <span class="name-class">purple-A400</span>
+                            <span class="cod-color">#d500f9</span>
+                        </div>
+                        <div style="color: #ffffff;" class="purple-A700">
+                            <span class="name-class">purple-A700</span>
+                            <span class="cod-color">#aa00ff</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="deep-purple-50">
+                            <span class="name-class">deep-purple-50</span>
+                            <span class="cod-color">#ede7f6</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-purple-100">
+                            <span class="name-class">deep-purple-100</span>
+                            <span class="cod-color">#d1c4e9</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-purple-200">
+                            <span class="name-class">deep-purple-200</span>
+                            <span class="cod-color">#b39ddb</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-purple-300">
+                            <span class="name-class">deep-purple-300</span>
+                            <span class="cod-color">#9575cd</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-purple-400">
+                            <span class="name-class">deep-purple-400</span>
+                            <span class="cod-color">#7e57c2</span>
+                        </div>
+                        <div style="color: #ffffff;" class="deep-purple-500">
+                            <span class="name-class">deep-purple-500</span>
+                            <span class="cod-color">#673ab7</span>
+                        </div>
+                        <div style="color: #ffffff;" class="deep-purple-600">
+                            <span class="name-class">deep-purple-600</span>
+                            <span class="cod-color">#5e35b1</span>
+                        </div>
+                        <div style="color: #ffffff;" class="deep-purple-700">
+                            <span class="name-class">deep-purple-700</span>
+                            <span class="cod-color">#512da8</span>
+                        </div>
+                        <div style="color: #ffffff;" class="deep-purple-800">
+                            <span class="name-class">deep-purple-800</span>
+                            <span class="cod-color">#4527a0</span>
+                        </div>
+                        <div style="color: #ffffff;" class="deep-purple-900">
+                            <span class="name-class">deep-purple-900</span>
+                            <span class="cod-color">#311b92</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-purple-A100">
+                            <span class="name-class">deep-purple-A100</span>
+                            <span class="cod-color">#b388ff</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-purple-A200">
+                            <span class="name-class">deep-purple-A200</span>
+                            <span class="cod-color">#7c4dff</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-purple-A400">
+                            <span class="name-class">deep-purple-A400</span>
+                            <span class="cod-color">#651fff</span>
+                        </div>
+                        <div style="color: #ffffff;" class="deep-purple-A700">
+                            <span class="name-class">deep-purple-A700</span>
+                            <span class="cod-color">#6200ea</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="indigo-50">
+                            <span class="name-class">indigo-50</span>
+                            <span class="cod-color">#e8eaf6</span>
+                        </div>
+                        <div style="color: #000000;" class="indigo-100">
+                            <span class="name-class">indigo-100</span>
+                            <span class="cod-color">#c5cae9</span>
+                        </div>
+                        <div style="color: #000000;" class="indigo-200">
+                            <span class="name-class">indigo-200</span>
+                            <span class="cod-color">#9fa8da</span>
+                        </div>
+                        <div style="color: #000000;" class="indigo-300">
+                            <span class="name-class">indigo-300</span>
+                            <span class="cod-color">#7986cb</span>
+                        </div>
+                        <div style="color: #000000;" class="indigo-400">
+                            <span class="name-class">indigo-400</span>
+                            <span class="cod-color">#5c6bc0</span>
+                        </div>
+                        <div style="color: #ffffff;" class="indigo-500">
+                            <span class="name-class">indigo-500</span>
+                            <span class="cod-color">#3f51b5</span>
+                        </div>
+                        <div style="color: #ffffff;" class="indigo-600">
+                            <span class="name-class">indigo-600</span>
+                            <span class="cod-color">#3949ab</span>
+                        </div>
+                        <div style="color: #ffffff;" class="indigo-700">
+                            <span class="name-class">indigo-700</span>
+                            <span class="cod-color">#303f9f</span>
+                        </div>
+                        <div style="color: #ffffff;" class="indigo-800">
+                            <span class="name-class">indigo-800</span>
+                            <span class="cod-color">#283593</span>
+                        </div>
+                        <div style="color: #ffffff;" class="indigo-900">
+                            <span class="name-class">indigo-900</span>
+                            <span class="cod-color">#1a237e</span>
+                        </div>
+                        <div style="color: #000000;" class="indigo-A100">
+                            <span class="name-class">indigo-A100</span>
+                            <span class="cod-color">#8c9eff</span>
+                        </div>
+                        <div style="color: #000000;" class="indigo-A200">
+                            <span class="name-class">indigo-A200</span>
+                            <span class="cod-color">#536dfe</span>
+                        </div>
+                        <div style="color: #000000;" class="indigo-A400">
+                            <span class="name-class">indigo-A400</span>
+                            <span class="cod-color">#3d5afe</span>
+                        </div>
+                        <div style="color: #ffffff;" class="indigo-A700">
+                            <span class="name-class">indigo-A700</span>
+                            <span class="cod-color">#304ffe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="blue-50">
+                            <span class="name-class">blue-50</span>
+                            <span class="cod-color">#E3F2FD</span>
+                        </div>
+                        <div style="color: #000000;" class="blue-100">
+                            <span class="name-class">blue-100</span>
+                            <span class="cod-color">#BBDEFB</span>
+                        </div>
+                        <div style="color: #000000;" class="blue-200">
+                            <span class="name-class">blue-200</span>
+                            <span class="cod-color">#90CAF9</span>
+                        </div>
+                        <div style="color: #000000;" class="blue-300">
+                            <span class="name-class">blue-300</span>
+                            <span class="cod-color">#64B5F6</span>
+                        </div>
+                        <div style="color: #000000;" class="blue-400">
+                            <span class="name-class">blue-400</span>
+                            <span class="cod-color">#42A5F5</span>
+                        </div>
+                        <div style="color: #ffffff;" class="blue-500">
+                            <span class="name-class">blue-500</span>
+                            <span class="cod-color">#2196F3</span>
+                        </div>
+                        <div style="color: #ffffff;" class="blue-600">
+                            <span class="name-class">blue-600</span>
+                            <span class="cod-color">#1E88E5</span>
+                        </div>
+                        <div style="color: #ffffff;" class="blue-700">
+                            <span class="name-class">blue-700</span>
+                            <span class="cod-color">#1976D2</span>
+                        </div>
+                        <div style="color: #ffffff;" class="blue-800">
+                            <span class="name-class">blue-800</span>
+                            <span class="cod-color">#1565C0</span>
+                        </div>
+                        <div style="color: #ffffff;" class="blue-900">
+                            <span class="name-class">blue-900</span>
+                            <span class="cod-color">#0D47A1</span>
+                        </div>
+                        <div style="color: #000000;" class="blue-A100">
+                            <span class="name-class">blue-A100</span>
+                            <span class="cod-color">#82B1FF</span>
+                        </div>
+                        <div style="color: #000000;" class="blue-A200">
+                            <span class="name-class">blue-A200</span>
+                            <span class="cod-color">#448AFF</span>
+                        </div>
+                        <div style="color: #000000;" class="blue-A400">
+                            <span class="name-class">blue-A400</span>
+                            <span class="cod-color">#2979FF</span>
+                        </div>
+                        <div style="color: #ffffff;" class="blue-A700">
+                            <span class="name-class">blue-A700</span>
+                            <span class="cod-color">#2962FF</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="light-blue-50">
+                            <span class="name-class">light-blue-50</span>
+                            <span class="cod-color">#e1f5fe</span>
+                        </div>
+                        <div style="color: #000000;" class="light-blue-100">
+                            <span class="name-class">light-blue-100</span>
+                            <span class="cod-color">#b3e5fc</span>
+                        </div>
+                        <div style="color: #000000;" class="light-blue-200">
+                            <span class="name-class">light-blue-200</span>
+                            <span class="cod-color">#81d4fa</span>
+                        </div>
+                        <div style="color: #000000;" class="light-blue-300">
+                            <span class="name-class">light-blue-300</span>
+                            <span class="cod-color">#4fc3f7</span>
+                        </div>
+                        <div style="color: #000000;" class="light-blue-400">
+                            <span class="name-class">light-blue-400</span>
+                            <span class="cod-color">#29b6f6</span>
+                        </div>
+                        <div style="color: #ffffff;" class="light-blue-500">
+                            <span class="name-class">light-blue-500</span>
+                            <span class="cod-color">#03a9f4</span>
+                        </div>
+                        <div style="color: #ffffff;" class="light-blue-600">
+                            <span class="name-class">light-blue-600</span>
+                            <span class="cod-color">#039be5</span>
+                        </div>
+                        <div style="color: #ffffff;" class="light-blue-700">
+                            <span class="name-class">light-blue-700</span>
+                            <span class="cod-color">#0288d1</span>
+                        </div>
+                        <div style="color: #ffffff;" class="light-blue-800">
+                            <span class="name-class">light-blue-800</span>
+                            <span class="cod-color">#0277bd</span>
+                        </div>
+                        <div style="color: #ffffff;" class="light-blue-900">
+                            <span class="name-class">light-blue-900</span>
+                            <span class="cod-color">#01579b</span>
+                        </div>
+                        <div style="color: #000000;" class="light-blue-A100">
+                            <span class="name-class">light-blue-A100</span>
+                            <span class="cod-color">#80d8ff</span>
+                        </div>
+                        <div style="color: #000000;" class="light-blue-A200">
+                            <span class="name-class">light-blue-A200</span>
+                            <span class="cod-color">#40c4ff</span>
+                        </div>
+                        <div style="color: #000000;" class="light-blue-A400">
+                            <span class="name-class">light-blue-A400</span>
+                            <span class="cod-color">#00b0ff</span>
+                        </div>
+                        <div style="color: #ffffff;" class="light-blue-A700">
+                            <span class="name-class">light-blue-A700</span>
+                            <span class="cod-color">#0091ea</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="cyan-50">
+                            <span class="name-class">cyan-50</span>
+                            <span class="cod-color">#e0f7fa</span>
+                        </div>
+                        <div style="color: #000000;" class="cyan-100">
+                            <span class="name-class">cyan-100</span>
+                            <span class="cod-color">#b2ebf2</span>
+                        </div>
+                        <div style="color: #000000;" class="cyan-200">
+                            <span class="name-class">cyan-200</span>
+                            <span class="cod-color">#80deea</span>
+                        </div>
+                        <div style="color: #000000;" class="cyan-300">
+                            <span class="name-class">cyan-300</span>
+                            <span class="cod-color">#4dd0e1</span>
+                        </div>
+                        <div style="color: #000000;" class="cyan-400">
+                            <span class="name-class">cyan-400</span>
+                            <span class="cod-color">#26c6da</span>
+                        </div>
+                        <div style="color: #ffffff;" class="cyan-500">
+                            <span class="name-class">cyan-500</span>
+                            <span class="cod-color">#00bcd4</span>
+                        </div>
+                        <div style="color: #ffffff;" class="cyan-600">
+                            <span class="name-class">cyan-600</span>
+                            <span class="cod-color">#00acc1</span>
+                        </div>
+                        <div style="color: #ffffff;" class="cyan-700">
+                            <span class="name-class">cyan-700</span>
+                            <span class="cod-color">#0097a7</span>
+                        </div>
+                        <div style="color: #ffffff;" class="cyan-800">
+                            <span class="name-class">cyan-800</span>
+                            <span class="cod-color">#00838f</span>
+                        </div>
+                        <div style="color: #ffffff;" class="cyan-900">
+                            <span class="name-class">cyan-900</span>
+                            <span class="cod-color">#006064</span>
+                        </div>
+                        <div style="color: #000000;" class="cyan-A100">
+                            <span class="name-class">cyan-A100</span>
+                            <span class="cod-color">#84ffff</span>
+                        </div>
+                        <div style="color: #000000;" class="cyan-A200">
+                            <span class="name-class">cyan-A200</span>
+                            <span class="cod-color">#18ffff</span>
+                        </div>
+                        <div style="color: #000000;" class="cyan-A400">
+                            <span class="name-class">cyan-A400</span>
+                            <span class="cod-color">#00e5ff</span>
+                        </div>
+                        <div style="color: #ffffff;" class="cyan-A700">
+                            <span class="name-class">cyan-A700</span>
+                            <span class="cod-color">#00b8d4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="teal-50">
+                            <span class="name-class">teal-50</span>
+                            <span class="cod-color">#e0f2f1</span>
+                        </div>
+                        <div style="color: #000000;" class="teal-100">
+                            <span class="name-class">teal-100</span>
+                            <span class="cod-color">#b2dfdb</span>
+                        </div>
+                        <div style="color: #000000;" class="teal-200">
+                            <span class="name-class">teal-200</span>
+                            <span class="cod-color">#80cbc4</span>
+                        </div>
+                        <div style="color: #000000;" class="teal-300">
+                            <span class="name-class">teal-300</span>
+                            <span class="cod-color">#4db6ac</span>
+                        </div>
+                        <div style="color: #000000;" class="teal-400">
+                            <span class="name-class">teal-400</span>
+                            <span class="cod-color">#26a69a</span>
+                        </div>
+                        <div style="color: #ffffff;" class="teal-500">
+                            <span class="name-class">teal-500</span>
+                            <span class="cod-color">#009688</span>
+                        </div>
+                        <div style="color: #ffffff;" class="teal-600">
+                            <span class="name-class">teal-600</span>
+                            <span class="cod-color">#00897b</span>
+                        </div>
+                        <div style="color: #ffffff;" class="teal-700">
+                            <span class="name-class">teal-700</span>
+                            <span class="cod-color">#00796b</span>
+                        </div>
+                        <div style="color: #ffffff;" class="teal-800">
+                            <span class="name-class">teal-800</span>
+                            <span class="cod-color">#00695c</span>
+                        </div>
+                        <div style="color: #ffffff;" class="teal-900">
+                            <span class="name-class">teal-900</span>
+                            <span class="cod-color">#004d40</span>
+                        </div>
+                        <div style="color: #000000;" class="teal-A100">
+                            <span class="name-class">teal-A100</span>
+                            <span class="cod-color">#a7ffeb</span>
+                        </div>
+                        <div style="color: #000000;" class="teal-A200">
+                            <span class="name-class">teal-A200</span>
+                            <span class="cod-color">#64ffda</span>
+                        </div>
+                        <div style="color: #000000;" class="teal-A400">
+                            <span class="name-class">teal-A400</span>
+                            <span class="cod-color">#1de9b6</span>
+                        </div>
+                        <div style="color: #ffffff;" class="teal-A700">
+                            <span class="name-class">teal-A700</span>
+                            <span class="cod-color">#00bfa5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="green-50">
+                            <span class="name-class">green-50</span>
+                            <span class="cod-color">#E8F5E9</span>
+                        </div>
+                        <div style="color: #000000;" class="green-100">
+                            <span class="name-class">green-100</span>
+                            <span class="cod-color">#C8E6C9</span>
+                        </div>
+                        <div style="color: #000000;" class="green-200">
+                            <span class="name-class">green-200</span>
+                            <span class="cod-color">#A5D6A7</span>
+                        </div>
+                        <div style="color: #000000;" class="green-300">
+                            <span class="name-class">green-300</span>
+                            <span class="cod-color">#81C784</span>
+                        </div>
+                        <div style="color: #000000;" class="green-400">
+                            <span class="name-class">green-400</span>
+                            <span class="cod-color">#66BB6A</span>
+                        </div>
+                        <div style="color: #ffffff;" class="green-500">
+                            <span class="name-class">green-500</span>
+                            <span class="cod-color">#4CAF50</span>
+                        </div>
+                        <div style="color: #ffffff;" class="green-600">
+                            <span class="name-class">green-600</span>
+                            <span class="cod-color">#43A047</span>
+                        </div>
+                        <div style="color: #ffffff;" class="green-700">
+                            <span class="name-class">green-700</span>
+                            <span class="cod-color">#388E3C</span>
+                        </div>
+                        <div style="color: #ffffff;" class="green-800">
+                            <span class="name-class">green-800</span>
+                            <span class="cod-color">#2E7D32</span>
+                        </div>
+                        <div style="color: #ffffff;" class="green-900">
+                            <span class="name-class">green-900</span>
+                            <span class="cod-color">#1B5E20</span>
+                        </div>
+                        <div style="color: #000000;" class="green-A100">
+                            <span class="name-class">green-A100</span>
+                            <span class="cod-color">#B9F6CA</span>
+                        </div>
+                        <div style="color: #000000;" class="green-A200">
+                            <span class="name-class">green-A200</span>
+                            <span class="cod-color">#69F0AE</span>
+                        </div>
+                        <div style="color: #000000;" class="green-A400">
+                            <span class="name-class">green-A400</span>
+                            <span class="cod-color">#00E676</span>
+                        </div>
+                        <div style="color: #ffffff;" class="green-A700">
+                            <span class="name-class">green-A700</span>
+                            <span class="cod-color">#00C853</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="light-green-50">
+                            <span class="name-class">light-green-50</span>
+                            <span class="cod-color">#f1f8e9</span>
+                        </div>
+                        <div style="color: #000000;" class="light-green-100">
+                            <span class="name-class">light-green-100</span>
+                            <span class="cod-color">#dcedc8</span>
+                        </div>
+                        <div style="color: #000000;" class="light-green-200">
+                            <span class="name-class">light-green-200</span>
+                            <span class="cod-color">#c5e1a5</span>
+                        </div>
+                        <div style="color: #000000;" class="light-green-300">
+                            <span class="name-class">light-green-300</span>
+                            <span class="cod-color">#aed581</span>
+                        </div>
+                        <div style="color: #000000;" class="light-green-400">
+                            <span class="name-class">light-green-400</span>
+                            <span class="cod-color">#9ccc65</span>
+                        </div>
+                        <div style="color: #ffffff;" class="light-green-500">
+                            <span class="name-class">light-green-500</span>
+                            <span class="cod-color">#8bc34a</span>
+                        </div>
+                        <div style="color: #ffffff;" class="light-green-600">
+                            <span class="name-class">light-green-600</span>
+                            <span class="cod-color">#7cb342</span>
+                        </div>
+                        <div style="color: #ffffff;" class="light-green-700">
+                            <span class="name-class">light-green-700</span>
+                            <span class="cod-color">#689f38</span>
+                        </div>
+                        <div style="color: #ffffff;" class="light-green-800">
+                            <span class="name-class">light-green-800</span>
+                            <span class="cod-color">#558b2f</span>
+                        </div>
+                        <div style="color: #ffffff;" class="light-green-900">
+                            <span class="name-class">light-green-900</span>
+                            <span class="cod-color">#33691e</span>
+                        </div>
+                        <div style="color: #000000;" class="light-green-A100">
+                            <span class="name-class">light-green-A100</span>
+                            <span class="cod-color">#ccff90</span>
+                        </div>
+                        <div style="color: #000000;" class="light-green-A200">
+                            <span class="name-class">light-green-A200</span>
+                            <span class="cod-color">#b2ff59</span>
+                        </div>
+                        <div style="color: #000000;" class="light-green-A400">
+                            <span class="name-class">light-green-A400</span>
+                            <span class="cod-color">#76ff03</span>
+                        </div>
+                        <div style="color: #ffffff;" class="light-green-A700">
+                            <span class="name-class">light-green-A700</span>
+                            <span class="cod-color">#64dd17</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="lime-50">
+                            <span class="name-class">lime-50</span>
+                            <span class="cod-color">#f9fbe7</span>
+                        </div>
+                        <div style="color: #000000;" class="lime-100">
+                            <span class="name-class">lime-100</span>
+                            <span class="cod-color">#f0f4c3</span>
+                        </div>
+                        <div style="color: #000000;" class="lime-200">
+                            <span class="name-class">lime-200</span>
+                            <span class="cod-color">#e6ee9c</span>
+                        </div>
+                        <div style="color: #000000;" class="lime-300">
+                            <span class="name-class">lime-300</span>
+                            <span class="cod-color">#dce775</span>
+                        </div>
+                        <div style="color: #000000;" class="lime-400">
+                            <span class="name-class">lime-400</span>
+                            <span class="cod-color">#d4e157</span>
+                        </div>
+                        <div style="color: #ffffff;" class="lime-500">
+                            <span class="name-class">lime-500</span>
+                            <span class="cod-color">#cddc39</span>
+                        </div>
+                        <div style="color: #ffffff;" class="lime-600">
+                            <span class="name-class">lime-600</span>
+                            <span class="cod-color">#c0ca33</span>
+                        </div>
+                        <div style="color: #ffffff;" class="lime-700">
+                            <span class="name-class">lime-700</span>
+                            <span class="cod-color">#afb42b</span>
+                        </div>
+                        <div style="color: #ffffff;" class="lime-800">
+                            <span class="name-class">lime-800</span>
+                            <span class="cod-color">#9e9d24</span>
+                        </div>
+                        <div style="color: #ffffff;" class="lime-900">
+                            <span class="name-class">lime-900</span>
+                            <span class="cod-color">#827717</span>
+                        </div>
+                        <div style="color: #000000;" class="lime-A100">
+                            <span class="name-class">lime-A100</span>
+                            <span class="cod-color">#f4ff81</span>
+                        </div>
+                        <div style="color: #000000;" class="lime-A200">
+                            <span class="name-class">lime-A200</span>
+                            <span class="cod-color">#eeff41</span>
+                        </div>
+                        <div style="color: #000000;" class="lime-A400">
+                            <span class="name-class">lime-A400</span>
+                            <span class="cod-color">#c6ff00</span>
+                        </div>
+                        <div style="color: #ffffff;" class="lime-A700">
+                            <span class="name-class">lime-A700</span>
+                            <span class="cod-color">#aeea00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="yellow-50">
+                            <span class="name-class">yellow-50</span>
+                            <span class="cod-color">#fffde7</span>
+                        </div>
+                        <div style="color: #000000;" class="yellow-100">
+                            <span class="name-class">yellow-100</span>
+                            <span class="cod-color">#fff9c4</span>
+                        </div>
+                        <div style="color: #000000;" class="yellow-200">
+                            <span class="name-class">yellow-200</span>
+                            <span class="cod-color">#fff59d</span>
+                        </div>
+                        <div style="color: #000000;" class="yellow-300">
+                            <span class="name-class">yellow-300</span>
+                            <span class="cod-color">#fff176</span>
+                        </div>
+                        <div style="color: #000000;" class="yellow-400">
+                            <span class="name-class">yellow-400</span>
+                            <span class="cod-color">#ffee58</span>
+                        </div>
+                        <div style="color: #ffffff;" class="yellow-500">
+                            <span class="name-class">yellow-500</span>
+                            <span class="cod-color">#ffeb3b</span>
+                        </div>
+                        <div style="color: #ffffff;" class="yellow-600">
+                            <span class="name-class">yellow-600</span>
+                            <span class="cod-color">#fdd835</span>
+                        </div>
+                        <div style="color: #ffffff;" class="yellow-700">
+                            <span class="name-class">yellow-700</span>
+                            <span class="cod-color">#fbc02d</span>
+                        </div>
+                        <div style="color: #ffffff;" class="yellow-800">
+                            <span class="name-class">yellow-800</span>
+                            <span class="cod-color">#f9a825</span>
+                        </div>
+                        <div style="color: #ffffff;" class="yellow-900">
+                            <span class="name-class">yellow-900</span>
+                            <span class="cod-color">#f57f17</span>
+                        </div>
+                        <div style="color: #000000;" class="yellow-A100">
+                            <span class="name-class">yellow-A100</span>
+                            <span class="cod-color">#ffff8d</span>
+                        </div>
+                        <div style="color: #000000;" class="yellow-A200">
+                            <span class="name-class">yellow-A200</span>
+                            <span class="cod-color">#ffff00</span>
+                        </div>
+                        <div style="color: #000000;" class="yellow-A400">
+                            <span class="name-class">yellow-A400</span>
+                            <span class="cod-color">#ffea00</span>
+                        </div>
+                        <div style="color: #ffffff;" class="yellow-A700">
+                            <span class="name-class">yellow-A700</span>
+                            <span class="cod-color">#ffd600</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="amber-50">
+                            <span class="name-class">amber-50</span>
+                            <span class="cod-color">#fff8e1</span>
+                        </div>
+                        <div style="color: #000000;" class="amber-100">
+                            <span class="name-class">amber-100</span>
+                            <span class="cod-color">#ffecb3</span>
+                        </div>
+                        <div style="color: #000000;" class="amber-200">
+                            <span class="name-class">amber-200</span>
+                            <span class="cod-color">#ffe082</span>
+                        </div>
+                        <div style="color: #000000;" class="amber-300">
+                            <span class="name-class">amber-300</span>
+                            <span class="cod-color">#ffd54f</span>
+                        </div>
+                        <div style="color: #000000;" class="amber-400">
+                            <span class="name-class">amber-400</span>
+                            <span class="cod-color">#ffca28</span>
+                        </div>
+                        <div style="color: #ffffff;" class="amber-500">
+                            <span class="name-class">amber-500</span>
+                            <span class="cod-color">#ffc107</span>
+                        </div>
+                        <div style="color: #ffffff;" class="amber-600">
+                            <span class="name-class">amber-600</span>
+                            <span class="cod-color">#ffb300</span>
+                        </div>
+                        <div style="color: #ffffff;" class="amber-700">
+                            <span class="name-class">amber-700</span>
+                            <span class="cod-color">#ffa000</span>
+                        </div>
+                        <div style="color: #ffffff;" class="amber-800">
+                            <span class="name-class">amber-800</span>
+                            <span class="cod-color">#ff8f00</span>
+                        </div>
+                        <div style="color: #ffffff;" class="amber-900">
+                            <span class="name-class">amber-900</span>
+                            <span class="cod-color">#ff6f00</span>
+                        </div>
+                        <div style="color: #000000;" class="amber-A100">
+                            <span class="name-class">amber-A100</span>
+                            <span class="cod-color">#ffe57f</span>
+                        </div>
+                        <div style="color: #000000;" class="amber-A200">
+                            <span class="name-class">amber-A200</span>
+                            <span class="cod-color">#ffd740</span>
+                        </div>
+                        <div style="color: #000000;" class="amber-A400">
+                            <span class="name-class">amber-A400</span>
+                            <span class="cod-color">#ffc400</span>
+                        </div>
+                        <div style="color: #ffffff;" class="amber-A700">
+                            <span class="name-class">amber-A700</span>
+                            <span class="cod-color">#ffab00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="orange-50">
+                            <span class="name-class">orange-50</span>
+                            <span class="cod-color">#fff3e0</span>
+                        </div>
+                        <div style="color: #000000;" class="orange-100">
+                            <span class="name-class">orange-100</span>
+                            <span class="cod-color">#ffe0b2</span>
+                        </div>
+                        <div style="color: #000000;" class="orange-200">
+                            <span class="name-class">orange-200</span>
+                            <span class="cod-color">#ffcc80</span>
+                        </div>
+                        <div style="color: #000000;" class="orange-300">
+                            <span class="name-class">orange-300</span>
+                            <span class="cod-color">#ffb74d</span>
+                        </div>
+                        <div style="color: #000000;" class="orange-400">
+                            <span class="name-class">orange-400</span>
+                            <span class="cod-color">#ffa726</span>
+                        </div>
+                        <div style="color: #ffffff;" class="orange-500">
+                            <span class="name-class">orange-500</span>
+                            <span class="cod-color">#ff9800</span>
+                        </div>
+                        <div style="color: #ffffff;" class="orange-600">
+                            <span class="name-class">orange-600</span>
+                            <span class="cod-color">#fb8c00</span>
+                        </div>
+                        <div style="color: #ffffff;" class="orange-700">
+                            <span class="name-class">orange-700</span>
+                            <span class="cod-color">#f57c00</span>
+                        </div>
+                        <div style="color: #ffffff;" class="orange-800">
+                            <span class="name-class">orange-800</span>
+                            <span class="cod-color">#ef6c00</span>
+                        </div>
+                        <div style="color: #ffffff;" class="orange-900">
+                            <span class="name-class">orange-900</span>
+                            <span class="cod-color">#e65100</span>
+                        </div>
+                        <div style="color: #000000;" class="orange-A100">
+                            <span class="name-class">orange-A100</span>
+                            <span class="cod-color">#ffd180</span>
+                        </div>
+                        <div style="color: #000000;" class="orange-A200">
+                            <span class="name-class">orange-A200</span>
+                            <span class="cod-color">#ffab40</span>
+                        </div>
+                        <div style="color: #000000;" class="orange-A400">
+                            <span class="name-class">orange-A400</span>
+                            <span class="cod-color">#ff9100</span>
+                        </div>
+                        <div style="color: #ffffff;" class="orange-A700">
+                            <span class="name-class">orange-A700</span>
+                            <span class="cod-color">#ff6d00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="deep-orange-50">
+                            <span class="name-class">deep-orange-50</span>
+                            <span class="cod-color">#fbe9e7</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-orange-100">
+                            <span class="name-class">deep-orange-100</span>
+                            <span class="cod-color">#ffccbc</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-orange-200">
+                            <span class="name-class">deep-orange-200</span>
+                            <span class="cod-color">#ffab91</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-orange-300">
+                            <span class="name-class">deep-orange-300</span>
+                            <span class="cod-color">#ff8a65</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-orange-400">
+                            <span class="name-class">deep-orange-400</span>
+                            <span class="cod-color">#ff7043</span>
+                        </div>
+                        <div style="color: #ffffff;" class="deep-orange-500">
+                            <span class="name-class">deep-orange-500</span>
+                            <span class="cod-color">#ff5722</span>
+                        </div>
+                        <div style="color: #ffffff;" class="deep-orange-600">
+                            <span class="name-class">deep-orange-600</span>
+                            <span class="cod-color">#f4511e</span>
+                        </div>
+                        <div style="color: #ffffff;" class="deep-orange-700">
+                            <span class="name-class">deep-orange-700</span>
+                            <span class="cod-color">#e64a19</span>
+                        </div>
+                        <div style="color: #ffffff;" class="deep-orange-800">
+                            <span class="name-class">deep-orange-800</span>
+                            <span class="cod-color">#d84315</span>
+                        </div>
+                        <div style="color: #ffffff;" class="deep-orange-900">
+                            <span class="name-class">deep-orange-900</span>
+                            <span class="cod-color">#bf360c</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-orange-A100">
+                            <span class="name-class">deep-orange-A100</span>
+                            <span class="cod-color">#ff9e80</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-orange-A200">
+                            <span class="name-class">deep-orange-A200</span>
+                            <span class="cod-color">#ff6e40</span>
+                        </div>
+                        <div style="color: #000000;" class="deep-orange-A400">
+                            <span class="name-class">deep-orange-A400</span>
+                            <span class="cod-color">#ff3d00</span>
+                        </div>
+                        <div style="color: #ffffff;" class="deep-orange-A700">
+                            <span class="name-class">deep-orange-A700</span>
+                            <span class="cod-color">#dd2c00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="brown-50">
+                            <span class="name-class">brown-50</span>
+                            <span class="cod-color">#efebe9</span>
+                        </div>
+                        <div style="color: #000000;" class="brown-100">
+                            <span class="name-class">brown-100</span>
+                            <span class="cod-color">#d7ccc8</span>
+                        </div>
+                        <div style="color: #000000;" class="brown-200">
+                            <span class="name-class">brown-200</span>
+                            <span class="cod-color">#bcaaa4</span>
+                        </div>
+                        <div style="color: #000000;" class="brown-300">
+                            <span class="name-class">brown-300</span>
+                            <span class="cod-color">#a1887f</span>
+                        </div>
+                        <div style="color: #000000;" class="brown-400">
+                            <span class="name-class">brown-400</span>
+                            <span class="cod-color">#8d6e63</span>
+                        </div>
+                        <div style="color: #ffffff;" class="brown-500">
+                            <span class="name-class">brown-500</span>
+                            <span class="cod-color">#795548</span>
+                        </div>
+                        <div style="color: #ffffff;" class="brown-600">
+                            <span class="name-class">brown-600</span>
+                            <span class="cod-color">#6d4c41</span>
+                        </div>
+                        <div style="color: #ffffff;" class="brown-700">
+                            <span class="name-class">brown-700</span>
+                            <span class="cod-color">#5d4037</span>
+                        </div>
+                        <div style="color: #ffffff;" class="brown-800">
+                            <span class="name-class">brown-800</span>
+                            <span class="cod-color">#4e342e</span>
+                        </div>
+                        <div style="color: #ffffff;" class="brown-900">
+                            <span class="name-class">brown-900</span>
+                            <span class="cod-color">#3e2723</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="blue-grey-50">
+                            <span class="name-class">blue-grey-50</span>
+                            <span class="cod-color">#eceff1</span>
+                        </div>
+                        <div style="color: #000000;" class="blue-grey-100">
+                            <span class="name-class">blue-grey-100</span>
+                            <span class="cod-color">#cfd8dc</span>
+                        </div>
+                        <div style="color: #000000;" class="blue-grey-200">
+                            <span class="name-class">blue-grey-200</span>
+                            <span class="cod-color">#b0bec5</span>
+                        </div>
+                        <div style="color: #000000;" class="blue-grey-300">
+                            <span class="name-class">blue-grey-300</span>
+                            <span class="cod-color">#90a4ae</span>
+                        </div>
+                        <div style="color: #000000;" class="blue-grey-400">
+                            <span class="name-class">blue-grey-400</span>
+                            <span class="cod-color">#78909c</span>
+                        </div>
+                        <div style="color: #ffffff;" class="blue-grey-500">
+                            <span class="name-class">blue-grey-500</span>
+                            <span class="cod-color">#607d8b</span>
+                        </div>
+                        <div style="color: #ffffff;" class="blue-grey-600">
+                            <span class="name-class">blue-grey-600</span>
+                            <span class="cod-color">#546e7a</span>
+                        </div>
+                        <div style="color: #ffffff;" class="blue-grey-700">
+                            <span class="name-class">blue-grey-700</span>
+                            <span class="cod-color">#455a64</span>
+                        </div>
+                        <div style="color: #ffffff;" class="blue-grey-800">
+                            <span class="name-class">blue-grey-800</span>
+                            <span class="cod-color">#37474f</span>
+                        </div>
+                        <div style="color: #ffffff;" class="blue-grey-900">
+                            <span class="name-class">blue-grey-900</span>
+                            <span class="cod-color">#263238</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #000000;" class="grey-50">
+                            <span class="name-class">grey-50</span>
+                            <span class="cod-color">#fafafa</span>
+                        </div>
+                        <div style="color: #000000;" class="grey-100">
+                            <span class="name-class">grey-100</span>
+                            <span class="cod-color">#f5f5f5</span>
+                        </div>
+                        <div style="color: #000000;" class="grey-200">
+                            <span class="name-class">grey-200</span>
+                            <span class="cod-color">#eeeeee</span>
+                        </div>
+                        <div style="color: #000000;" class="grey-300">
+                            <span class="name-class">grey-300</span>
+                            <span class="cod-color">#e0e0e0</span>
+                        </div>
+                        <div style="color: #000000;" class="grey-400">
+                            <span class="name-class">grey-400</span>
+                            <span class="cod-color">#bdbdbd</span>
+                        </div>
+                        <div style="color: #ffffff;" class="grey-500">
+                            <span class="name-class">grey-500</span>
+                            <span class="cod-color">#9e9e9e</span>
+                        </div>
+                        <div style="color: #ffffff;" class="grey-600">
+                            <span class="name-class">grey-600</span>
+                            <span class="cod-color">#757575</span>
+                        </div>
+                        <div style="color: #ffffff;" class="grey-700">
+                            <span class="name-class">grey-700</span>
+                            <span class="cod-color">#616161</span>
+                        </div>
+                        <div style="color: #ffffff;" class="grey-800">
+                            <span class="name-class">grey-800</span>
+                            <span class="cod-color">#424242</span>
+                        </div>
+                        <div style="color: #ffffff;" class="grey-900">
+                            <span class="name-class">grey-900</span>
+                            <span class="cod-color">#212121</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="color: #ffffff;" class="shades-black">
+                            <span class="name-class">shades-black</span>
+                            <span class="cod-color">#000000</span>
+                        </div>
+                        <div style="color: #000000;" class="shades-white">
+                            <span class="name-class">shades-white</span>
+                            <span class="cod-color">#FFFFFF</span>
+                        </div>
+                        <div style="color: #000000;" class="shades-transparent">
+                            <span class="name-class">shades-transparent</span>
+                            <span class="cod-color">transparent</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="header">Material Palette (Text)</h2>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="red-text-50">
+                            <span class="name-class">red-text-50</span>
+                            <span class="cod-color">#FFEBEE</span>
+                        </div>
+                        <div style="background-color: #000000;" class="red-text-100">
+                            <span class="name-class">red-text-100</span>
+                            <span class="cod-color">#FFCDD2</span>
+                        </div>
+                        <div style="background-color: #000000;" class="red-text-200">
+                            <span class="name-class">red-text-200</span>
+                            <span class="cod-color">#EF9A9A</span>
+                        </div>
+                        <div style="background-color: #000000;" class="red-text-300">
+                            <span class="name-class">red-text-300</span>
+                            <span class="cod-color">#E57373</span>
+                        </div>
+                        <div style="background-color: #000000;" class="red-text-400">
+                            <span class="name-class">red-text-400</span>
+                            <span class="cod-color">#EF5350</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="red-text-500">
+                            <span class="name-class">red-text-500</span>
+                            <span class="cod-color">#F44336</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="red-text-600">
+                            <span class="name-class">red-text-600</span>
+                            <span class="cod-color">#E53935</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="red-text-700">
+                            <span class="name-class">red-text-700</span>
+                            <span class="cod-color">#D32F2F</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="red-text-800">
+                            <span class="name-class">red-text-800</span>
+                            <span class="cod-color">#C62828</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="red-text-900">
+                            <span class="name-class">red-text-900</span>
+                            <span class="cod-color">#B71C1C</span>
+                        </div>
+                        <div style="background-color: #000000;" class="red-text-A100">
+                            <span class="name-class">red-text-A100</span>
+                            <span class="cod-color">#FF8A80</span>
+                        </div>
+                        <div style="background-color: #000000;" class="red-text-A200">
+                            <span class="name-class">red-text-A200</span>
+                            <span class="cod-color">#FF5252</span>
+                        </div>
+                        <div style="background-color: #000000;" class="red-text-A400">
+                            <span class="name-class">red-text-A400</span>
+                            <span class="cod-color">#FF1744</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="red-text-A700">
+                            <span class="name-class">red-text-A700</span>
+                            <span class="cod-color">#D50000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="pink-text-50">
+                            <span class="name-class">pink-text-50</span>
+                            <span class="cod-color">#fce4ec</span>
+                        </div>
+                        <div style="background-color: #000000;" class="pink-text-100">
+                            <span class="name-class">pink-text-100</span>
+                            <span class="cod-color">#f8bbd0</span>
+                        </div>
+                        <div style="background-color: #000000;" class="pink-text-200">
+                            <span class="name-class">pink-text-200</span>
+                            <span class="cod-color">#f48fb1</span>
+                        </div>
+                        <div style="background-color: #000000;" class="pink-text-300">
+                            <span class="name-class">pink-text-300</span>
+                            <span class="cod-color">#f06292</span>
+                        </div>
+                        <div style="background-color: #000000;" class="pink-text-400">
+                            <span class="name-class">pink-text-400</span>
+                            <span class="cod-color">#ec407a</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="pink-text-500">
+                            <span class="name-class">pink-text-500</span>
+                            <span class="cod-color">#e91e63</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="pink-text-600">
+                            <span class="name-class">pink-text-600</span>
+                            <span class="cod-color">#d81b60</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="pink-text-700">
+                            <span class="name-class">pink-text-700</span>
+                            <span class="cod-color">#c2185b</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="pink-text-800">
+                            <span class="name-class">pink-text-800</span>
+                            <span class="cod-color">#ad1457</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="pink-text-900">
+                            <span class="name-class">pink-text-900</span>
+                            <span class="cod-color">#880e4f</span>
+                        </div>
+                        <div style="background-color: #000000;" class="pink-text-A100">
+                            <span class="name-class">pink-text-A100</span>
+                            <span class="cod-color">#ff80ab</span>
+                        </div>
+                        <div style="background-color: #000000;" class="pink-text-A200">
+                            <span class="name-class">pink-text-A200</span>
+                            <span class="cod-color">#ff4081</span>
+                        </div>
+                        <div style="background-color: #000000;" class="pink-text-A400">
+                            <span class="name-class">pink-text-A400</span>
+                            <span class="cod-color">#f50057</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="pink-text-A700">
+                            <span class="name-class">pink-text-A700</span>
+                            <span class="cod-color">#c51162</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="purple-text-50">
+                            <span class="name-class">purple-text-50</span>
+                            <span class="cod-color">#f3e5f5</span>
+                        </div>
+                        <div style="background-color: #000000;" class="purple-text-100">
+                            <span class="name-class">purple-text-100</span>
+                            <span class="cod-color">#e1bee7</span>
+                        </div>
+                        <div style="background-color: #000000;" class="purple-text-200">
+                            <span class="name-class">purple-text-200</span>
+                            <span class="cod-color">#ce93d8</span>
+                        </div>
+                        <div style="background-color: #000000;" class="purple-text-300">
+                            <span class="name-class">purple-text-300</span>
+                            <span class="cod-color">#ba68c8</span>
+                        </div>
+                        <div style="background-color: #000000;" class="purple-text-400">
+                            <span class="name-class">purple-text-400</span>
+                            <span class="cod-color">#ab47bc</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="purple-text-500">
+                            <span class="name-class">purple-text-500</span>
+                            <span class="cod-color">#9c27b0</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="purple-text-600">
+                            <span class="name-class">purple-text-600</span>
+                            <span class="cod-color">#8e24aa</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="purple-text-700">
+                            <span class="name-class">purple-text-700</span>
+                            <span class="cod-color">#7b1fa2</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="purple-text-800">
+                            <span class="name-class">purple-text-800</span>
+                            <span class="cod-color">#6a1b9a</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="purple-text-900">
+                            <span class="name-class">purple-text-900</span>
+                            <span class="cod-color">#4a148c</span>
+                        </div>
+                        <div style="background-color: #000000;" class="purple-text-A100">
+                            <span class="name-class">purple-text-A100</span>
+                            <span class="cod-color">#ea80fc</span>
+                        </div>
+                        <div style="background-color: #000000;" class="purple-text-A200">
+                            <span class="name-class">purple-text-A200</span>
+                            <span class="cod-color">#e040fb</span>
+                        </div>
+                        <div style="background-color: #000000;" class="purple-text-A400">
+                            <span class="name-class">purple-text-A400</span>
+                            <span class="cod-color">#d500f9</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="purple-text-A700">
+                            <span class="name-class">purple-text-A700</span>
+                            <span class="cod-color">#aa00ff</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="deep-purple-text-50">
+                            <span class="name-class">deep-purple-text-50</span>
+                            <span class="cod-color">#ede7f6</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-purple-text-100">
+                            <span class="name-class">deep-purple-text-100</span>
+                            <span class="cod-color">#d1c4e9</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-purple-text-200">
+                            <span class="name-class">deep-purple-text-200</span>
+                            <span class="cod-color">#b39ddb</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-purple-text-300">
+                            <span class="name-class">deep-purple-text-300</span>
+                            <span class="cod-color">#9575cd</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-purple-text-400">
+                            <span class="name-class">deep-purple-text-400</span>
+                            <span class="cod-color">#7e57c2</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="deep-purple-text-500">
+                            <span class="name-class">deep-purple-text-500</span>
+                            <span class="cod-color">#673ab7</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="deep-purple-text-600">
+                            <span class="name-class">deep-purple-text-600</span>
+                            <span class="cod-color">#5e35b1</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="deep-purple-text-700">
+                            <span class="name-class">deep-purple-text-700</span>
+                            <span class="cod-color">#512da8</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="deep-purple-text-800">
+                            <span class="name-class">deep-purple-text-800</span>
+                            <span class="cod-color">#4527a0</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="deep-purple-text-900">
+                            <span class="name-class">deep-purple-text-900</span>
+                            <span class="cod-color">#311b92</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-purple-text-A100">
+                            <span class="name-class">deep-purple-text-A100</span>
+                            <span class="cod-color">#b388ff</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-purple-text-A200">
+                            <span class="name-class">deep-purple-text-A200</span>
+                            <span class="cod-color">#7c4dff</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-purple-text-A400">
+                            <span class="name-class">deep-purple-text-A400</span>
+                            <span class="cod-color">#651fff</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="deep-purple-text-A700">
+                            <span class="name-class">deep-purple-text-A700</span>
+                            <span class="cod-color">#6200ea</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="indigo-text-50">
+                            <span class="name-class">indigo-text-50</span>
+                            <span class="cod-color">#e8eaf6</span>
+                        </div>
+                        <div style="background-color: #000000;" class="indigo-text-100">
+                            <span class="name-class">indigo-text-100</span>
+                            <span class="cod-color">#c5cae9</span>
+                        </div>
+                        <div style="background-color: #000000;" class="indigo-text-200">
+                            <span class="name-class">indigo-text-200</span>
+                            <span class="cod-color">#9fa8da</span>
+                        </div>
+                        <div style="background-color: #000000;" class="indigo-text-300">
+                            <span class="name-class">indigo-text-300</span>
+                            <span class="cod-color">#7986cb</span>
+                        </div>
+                        <div style="background-color: #000000;" class="indigo-text-400">
+                            <span class="name-class">indigo-text-400</span>
+                            <span class="cod-color">#5c6bc0</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="indigo-text-500">
+                            <span class="name-class">indigo-text-500</span>
+                            <span class="cod-color">#3f51b5</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="indigo-text-600">
+                            <span class="name-class">indigo-text-600</span>
+                            <span class="cod-color">#3949ab</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="indigo-text-700">
+                            <span class="name-class">indigo-text-700</span>
+                            <span class="cod-color">#303f9f</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="indigo-text-800">
+                            <span class="name-class">indigo-text-800</span>
+                            <span class="cod-color">#283593</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="indigo-text-900">
+                            <span class="name-class">indigo-text-900</span>
+                            <span class="cod-color">#1a237e</span>
+                        </div>
+                        <div style="background-color: #000000;" class="indigo-text-A100">
+                            <span class="name-class">indigo-text-A100</span>
+                            <span class="cod-color">#8c9eff</span>
+                        </div>
+                        <div style="background-color: #000000;" class="indigo-text-A200">
+                            <span class="name-class">indigo-text-A200</span>
+                            <span class="cod-color">#536dfe</span>
+                        </div>
+                        <div style="background-color: #000000;" class="indigo-text-A400">
+                            <span class="name-class">indigo-text-A400</span>
+                            <span class="cod-color">#3d5afe</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="indigo-text-A700">
+                            <span class="name-class">indigo-text-A700</span>
+                            <span class="cod-color">#304ffe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="blue-text-50">
+                            <span class="name-class">blue-text-50</span>
+                            <span class="cod-color">#E3F2FD</span>
+                        </div>
+                        <div style="background-color: #000000;" class="blue-text-100">
+                            <span class="name-class">blue-text-100</span>
+                            <span class="cod-color">#BBDEFB</span>
+                        </div>
+                        <div style="background-color: #000000;" class="blue-text-200">
+                            <span class="name-class">blue-text-200</span>
+                            <span class="cod-color">#90CAF9</span>
+                        </div>
+                        <div style="background-color: #000000;" class="blue-text-300">
+                            <span class="name-class">blue-text-300</span>
+                            <span class="cod-color">#64B5F6</span>
+                        </div>
+                        <div style="background-color: #000000;" class="blue-text-400">
+                            <span class="name-class">blue-text-400</span>
+                            <span class="cod-color">#42A5F5</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="blue-text-500">
+                            <span class="name-class">blue-text-500</span>
+                            <span class="cod-color">#2196F3</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="blue-text-600">
+                            <span class="name-class">blue-text-600</span>
+                            <span class="cod-color">#1E88E5</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="blue-text-700">
+                            <span class="name-class">blue-text-700</span>
+                            <span class="cod-color">#1976D2</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="blue-text-800">
+                            <span class="name-class">blue-text-800</span>
+                            <span class="cod-color">#1565C0</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="blue-text-900">
+                            <span class="name-class">blue-text-900</span>
+                            <span class="cod-color">#0D47A1</span>
+                        </div>
+                        <div style="background-color: #000000;" class="blue-text-A100">
+                            <span class="name-class">blue-text-A100</span>
+                            <span class="cod-color">#82B1FF</span>
+                        </div>
+                        <div style="background-color: #000000;" class="blue-text-A200">
+                            <span class="name-class">blue-text-A200</span>
+                            <span class="cod-color">#448AFF</span>
+                        </div>
+                        <div style="background-color: #000000;" class="blue-text-A400">
+                            <span class="name-class">blue-text-A400</span>
+                            <span class="cod-color">#2979FF</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="blue-text-A700">
+                            <span class="name-class">blue-text-A700</span>
+                            <span class="cod-color">#2962FF</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="light-blue-text-50">
+                            <span class="name-class">light-blue-text-50</span>
+                            <span class="cod-color">#e1f5fe</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-blue-text-100">
+                            <span class="name-class">light-blue-text-100</span>
+                            <span class="cod-color">#b3e5fc</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-blue-text-200">
+                            <span class="name-class">light-blue-text-200</span>
+                            <span class="cod-color">#81d4fa</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-blue-text-300">
+                            <span class="name-class">light-blue-text-300</span>
+                            <span class="cod-color">#4fc3f7</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-blue-text-400">
+                            <span class="name-class">light-blue-text-400</span>
+                            <span class="cod-color">#29b6f6</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="light-blue-text-500">
+                            <span class="name-class">light-blue-text-500</span>
+                            <span class="cod-color">#03a9f4</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="light-blue-text-600">
+                            <span class="name-class">light-blue-text-600</span>
+                            <span class="cod-color">#039be5</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="light-blue-text-700">
+                            <span class="name-class">light-blue-text-700</span>
+                            <span class="cod-color">#0288d1</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="light-blue-text-800">
+                            <span class="name-class">light-blue-text-800</span>
+                            <span class="cod-color">#0277bd</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="light-blue-text-900">
+                            <span class="name-class">light-blue-text-900</span>
+                            <span class="cod-color">#01579b</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-blue-text-A100">
+                            <span class="name-class">light-blue-text-A100</span>
+                            <span class="cod-color">#80d8ff</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-blue-text-A200">
+                            <span class="name-class">light-blue-text-A200</span>
+                            <span class="cod-color">#40c4ff</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-blue-text-A400">
+                            <span class="name-class">light-blue-text-A400</span>
+                            <span class="cod-color">#00b0ff</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="light-blue-text-A700">
+                            <span class="name-class">light-blue-text-A700</span>
+                            <span class="cod-color">#0091ea</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="cyan-text-50">
+                            <span class="name-class">cyan-text-50</span>
+                            <span class="cod-color">#e0f7fa</span>
+                        </div>
+                        <div style="background-color: #000000;" class="cyan-text-100">
+                            <span class="name-class">cyan-text-100</span>
+                            <span class="cod-color">#b2ebf2</span>
+                        </div>
+                        <div style="background-color: #000000;" class="cyan-text-200">
+                            <span class="name-class">cyan-text-200</span>
+                            <span class="cod-color">#80deea</span>
+                        </div>
+                        <div style="background-color: #000000;" class="cyan-text-300">
+                            <span class="name-class">cyan-text-300</span>
+                            <span class="cod-color">#4dd0e1</span>
+                        </div>
+                        <div style="background-color: #000000;" class="cyan-text-400">
+                            <span class="name-class">cyan-text-400</span>
+                            <span class="cod-color">#26c6da</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="cyan-text-500">
+                            <span class="name-class">cyan-text-500</span>
+                            <span class="cod-color">#00bcd4</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="cyan-text-600">
+                            <span class="name-class">cyan-text-600</span>
+                            <span class="cod-color">#00acc1</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="cyan-text-700">
+                            <span class="name-class">cyan-text-700</span>
+                            <span class="cod-color">#0097a7</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="cyan-text-800">
+                            <span class="name-class">cyan-text-800</span>
+                            <span class="cod-color">#00838f</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="cyan-text-900">
+                            <span class="name-class">cyan-text-900</span>
+                            <span class="cod-color">#006064</span>
+                        </div>
+                        <div style="background-color: #000000;" class="cyan-text-A100">
+                            <span class="name-class">cyan-text-A100</span>
+                            <span class="cod-color">#84ffff</span>
+                        </div>
+                        <div style="background-color: #000000;" class="cyan-text-A200">
+                            <span class="name-class">cyan-text-A200</span>
+                            <span class="cod-color">#18ffff</span>
+                        </div>
+                        <div style="background-color: #000000;" class="cyan-text-A400">
+                            <span class="name-class">cyan-text-A400</span>
+                            <span class="cod-color">#00e5ff</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="cyan-text-A700">
+                            <span class="name-class">cyan-text-A700</span>
+                            <span class="cod-color">#00b8d4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="teal-text-50">
+                            <span class="name-class">teal-text-50</span>
+                            <span class="cod-color">#e0f2f1</span>
+                        </div>
+                        <div style="background-color: #000000;" class="teal-text-100">
+                            <span class="name-class">teal-text-100</span>
+                            <span class="cod-color">#b2dfdb</span>
+                        </div>
+                        <div style="background-color: #000000;" class="teal-text-200">
+                            <span class="name-class">teal-text-200</span>
+                            <span class="cod-color">#80cbc4</span>
+                        </div>
+                        <div style="background-color: #000000;" class="teal-text-300">
+                            <span class="name-class">teal-text-300</span>
+                            <span class="cod-color">#4db6ac</span>
+                        </div>
+                        <div style="background-color: #000000;" class="teal-text-400">
+                            <span class="name-class">teal-text-400</span>
+                            <span class="cod-color">#26a69a</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="teal-text-500">
+                            <span class="name-class">teal-text-500</span>
+                            <span class="cod-color">#009688</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="teal-text-600">
+                            <span class="name-class">teal-text-600</span>
+                            <span class="cod-color">#00897b</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="teal-text-700">
+                            <span class="name-class">teal-text-700</span>
+                            <span class="cod-color">#00796b</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="teal-text-800">
+                            <span class="name-class">teal-text-800</span>
+                            <span class="cod-color">#00695c</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="teal-text-900">
+                            <span class="name-class">teal-text-900</span>
+                            <span class="cod-color">#004d40</span>
+                        </div>
+                        <div style="background-color: #000000;" class="teal-text-A100">
+                            <span class="name-class">teal-text-A100</span>
+                            <span class="cod-color">#a7ffeb</span>
+                        </div>
+                        <div style="background-color: #000000;" class="teal-text-A200">
+                            <span class="name-class">teal-text-A200</span>
+                            <span class="cod-color">#64ffda</span>
+                        </div>
+                        <div style="background-color: #000000;" class="teal-text-A400">
+                            <span class="name-class">teal-text-A400</span>
+                            <span class="cod-color">#1de9b6</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="teal-text-A700">
+                            <span class="name-class">teal-text-A700</span>
+                            <span class="cod-color">#00bfa5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="green-text-50">
+                            <span class="name-class">green-text-50</span>
+                            <span class="cod-color">#E8F5E9</span>
+                        </div>
+                        <div style="background-color: #000000;" class="green-text-100">
+                            <span class="name-class">green-text-100</span>
+                            <span class="cod-color">#C8E6C9</span>
+                        </div>
+                        <div style="background-color: #000000;" class="green-text-200">
+                            <span class="name-class">green-text-200</span>
+                            <span class="cod-color">#A5D6A7</span>
+                        </div>
+                        <div style="background-color: #000000;" class="green-text-300">
+                            <span class="name-class">green-text-300</span>
+                            <span class="cod-color">#81C784</span>
+                        </div>
+                        <div style="background-color: #000000;" class="green-text-400">
+                            <span class="name-class">green-text-400</span>
+                            <span class="cod-color">#66BB6A</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="green-text-500">
+                            <span class="name-class">green-text-500</span>
+                            <span class="cod-color">#4CAF50</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="green-text-600">
+                            <span class="name-class">green-text-600</span>
+                            <span class="cod-color">#43A047</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="green-text-700">
+                            <span class="name-class">green-text-700</span>
+                            <span class="cod-color">#388E3C</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="green-text-800">
+                            <span class="name-class">green-text-800</span>
+                            <span class="cod-color">#2E7D32</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="green-text-900">
+                            <span class="name-class">green-text-900</span>
+                            <span class="cod-color">#1B5E20</span>
+                        </div>
+                        <div style="background-color: #000000;" class="green-text-A100">
+                            <span class="name-class">green-text-A100</span>
+                            <span class="cod-color">#B9F6CA</span>
+                        </div>
+                        <div style="background-color: #000000;" class="green-text-A200">
+                            <span class="name-class">green-text-A200</span>
+                            <span class="cod-color">#69F0AE</span>
+                        </div>
+                        <div style="background-color: #000000;" class="green-text-A400">
+                            <span class="name-class">green-text-A400</span>
+                            <span class="cod-color">#00E676</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="green-text-A700">
+                            <span class="name-class">green-text-A700</span>
+                            <span class="cod-color">#00C853</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="light-green-text-50">
+                            <span class="name-class">light-green-text-50</span>
+                            <span class="cod-color">#f1f8e9</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-green-text-100">
+                            <span class="name-class">light-green-text-100</span>
+                            <span class="cod-color">#dcedc8</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-green-text-200">
+                            <span class="name-class">light-green-text-200</span>
+                            <span class="cod-color">#c5e1a5</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-green-text-300">
+                            <span class="name-class">light-green-text-300</span>
+                            <span class="cod-color">#aed581</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-green-text-400">
+                            <span class="name-class">light-green-text-400</span>
+                            <span class="cod-color">#9ccc65</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="light-green-text-500">
+                            <span class="name-class">light-green-text-500</span>
+                            <span class="cod-color">#8bc34a</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="light-green-text-600">
+                            <span class="name-class">light-green-text-600</span>
+                            <span class="cod-color">#7cb342</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="light-green-text-700">
+                            <span class="name-class">light-green-text-700</span>
+                            <span class="cod-color">#689f38</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="light-green-text-800">
+                            <span class="name-class">light-green-text-800</span>
+                            <span class="cod-color">#558b2f</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="light-green-text-900">
+                            <span class="name-class">light-green-text-900</span>
+                            <span class="cod-color">#33691e</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-green-text-A100">
+                            <span class="name-class">light-green-text-A100</span>
+                            <span class="cod-color">#ccff90</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-green-text-A200">
+                            <span class="name-class">light-green-text-A200</span>
+                            <span class="cod-color">#b2ff59</span>
+                        </div>
+                        <div style="background-color: #000000;" class="light-green-text-A400">
+                            <span class="name-class">light-green-text-A400</span>
+                            <span class="cod-color">#76ff03</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="light-green-text-A700">
+                            <span class="name-class">light-green-text-A700</span>
+                            <span class="cod-color">#64dd17</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="lime-text-50">
+                            <span class="name-class">lime-text-50</span>
+                            <span class="cod-color">#f9fbe7</span>
+                        </div>
+                        <div style="background-color: #000000;" class="lime-text-100">
+                            <span class="name-class">lime-text-100</span>
+                            <span class="cod-color">#f0f4c3</span>
+                        </div>
+                        <div style="background-color: #000000;" class="lime-text-200">
+                            <span class="name-class">lime-text-200</span>
+                            <span class="cod-color">#e6ee9c</span>
+                        </div>
+                        <div style="background-color: #000000;" class="lime-text-300">
+                            <span class="name-class">lime-text-300</span>
+                            <span class="cod-color">#dce775</span>
+                        </div>
+                        <div style="background-color: #000000;" class="lime-text-400">
+                            <span class="name-class">lime-text-400</span>
+                            <span class="cod-color">#d4e157</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="lime-text-500">
+                            <span class="name-class">lime-text-500</span>
+                            <span class="cod-color">#cddc39</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="lime-text-600">
+                            <span class="name-class">lime-text-600</span>
+                            <span class="cod-color">#c0ca33</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="lime-text-700">
+                            <span class="name-class">lime-text-700</span>
+                            <span class="cod-color">#afb42b</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="lime-text-800">
+                            <span class="name-class">lime-text-800</span>
+                            <span class="cod-color">#9e9d24</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="lime-text-900">
+                            <span class="name-class">lime-text-900</span>
+                            <span class="cod-color">#827717</span>
+                        </div>
+                        <div style="background-color: #000000;" class="lime-text-A100">
+                            <span class="name-class">lime-text-A100</span>
+                            <span class="cod-color">#f4ff81</span>
+                        </div>
+                        <div style="background-color: #000000;" class="lime-text-A200">
+                            <span class="name-class">lime-text-A200</span>
+                            <span class="cod-color">#eeff41</span>
+                        </div>
+                        <div style="background-color: #000000;" class="lime-text-A400">
+                            <span class="name-class">lime-text-A400</span>
+                            <span class="cod-color">#c6ff00</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="lime-text-A700">
+                            <span class="name-class">lime-text-A700</span>
+                            <span class="cod-color">#aeea00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="yellow-text-50">
+                            <span class="name-class">yellow-text-50</span>
+                            <span class="cod-color">#fffde7</span>
+                        </div>
+                        <div style="background-color: #000000;" class="yellow-text-100">
+                            <span class="name-class">yellow-text-100</span>
+                            <span class="cod-color">#fff9c4</span>
+                        </div>
+                        <div style="background-color: #000000;" class="yellow-text-200">
+                            <span class="name-class">yellow-text-200</span>
+                            <span class="cod-color">#fff59d</span>
+                        </div>
+                        <div style="background-color: #000000;" class="yellow-text-300">
+                            <span class="name-class">yellow-text-300</span>
+                            <span class="cod-color">#fff176</span>
+                        </div>
+                        <div style="background-color: #000000;" class="yellow-text-400">
+                            <span class="name-class">yellow-text-400</span>
+                            <span class="cod-color">#ffee58</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="yellow-text-500">
+                            <span class="name-class">yellow-text-500</span>
+                            <span class="cod-color">#ffeb3b</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="yellow-text-600">
+                            <span class="name-class">yellow-text-600</span>
+                            <span class="cod-color">#fdd835</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="yellow-text-700">
+                            <span class="name-class">yellow-text-700</span>
+                            <span class="cod-color">#fbc02d</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="yellow-text-800">
+                            <span class="name-class">yellow-text-800</span>
+                            <span class="cod-color">#f9a825</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="yellow-text-900">
+                            <span class="name-class">yellow-text-900</span>
+                            <span class="cod-color">#f57f17</span>
+                        </div>
+                        <div style="background-color: #000000;" class="yellow-text-A100">
+                            <span class="name-class">yellow-text-A100</span>
+                            <span class="cod-color">#ffff8d</span>
+                        </div>
+                        <div style="background-color: #000000;" class="yellow-text-A200">
+                            <span class="name-class">yellow-text-A200</span>
+                            <span class="cod-color">#ffff00</span>
+                        </div>
+                        <div style="background-color: #000000;" class="yellow-text-A400">
+                            <span class="name-class">yellow-text-A400</span>
+                            <span class="cod-color">#ffea00</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="yellow-text-A700">
+                            <span class="name-class">yellow-text-A700</span>
+                            <span class="cod-color">#ffd600</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="amber-text-50">
+                            <span class="name-class">amber-text-50</span>
+                            <span class="cod-color">#fff8e1</span>
+                        </div>
+                        <div style="background-color: #000000;" class="amber-text-100">
+                            <span class="name-class">amber-text-100</span>
+                            <span class="cod-color">#ffecb3</span>
+                        </div>
+                        <div style="background-color: #000000;" class="amber-text-200">
+                            <span class="name-class">amber-text-200</span>
+                            <span class="cod-color">#ffe082</span>
+                        </div>
+                        <div style="background-color: #000000;" class="amber-text-300">
+                            <span class="name-class">amber-text-300</span>
+                            <span class="cod-color">#ffd54f</span>
+                        </div>
+                        <div style="background-color: #000000;" class="amber-text-400">
+                            <span class="name-class">amber-text-400</span>
+                            <span class="cod-color">#ffca28</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="amber-text-500">
+                            <span class="name-class">amber-text-500</span>
+                            <span class="cod-color">#ffc107</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="amber-text-600">
+                            <span class="name-class">amber-text-600</span>
+                            <span class="cod-color">#ffb300</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="amber-text-700">
+                            <span class="name-class">amber-text-700</span>
+                            <span class="cod-color">#ffa000</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="amber-text-800">
+                            <span class="name-class">amber-text-800</span>
+                            <span class="cod-color">#ff8f00</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="amber-text-900">
+                            <span class="name-class">amber-text-900</span>
+                            <span class="cod-color">#ff6f00</span>
+                        </div>
+                        <div style="background-color: #000000;" class="amber-text-A100">
+                            <span class="name-class">amber-text-A100</span>
+                            <span class="cod-color">#ffe57f</span>
+                        </div>
+                        <div style="background-color: #000000;" class="amber-text-A200">
+                            <span class="name-class">amber-text-A200</span>
+                            <span class="cod-color">#ffd740</span>
+                        </div>
+                        <div style="background-color: #000000;" class="amber-text-A400">
+                            <span class="name-class">amber-text-A400</span>
+                            <span class="cod-color">#ffc400</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="amber-text-A700">
+                            <span class="name-class">amber-text-A700</span>
+                            <span class="cod-color">#ffab00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="orange-text-50">
+                            <span class="name-class">orange-text-50</span>
+                            <span class="cod-color">#fff3e0</span>
+                        </div>
+                        <div style="background-color: #000000;" class="orange-text-100">
+                            <span class="name-class">orange-text-100</span>
+                            <span class="cod-color">#ffe0b2</span>
+                        </div>
+                        <div style="background-color: #000000;" class="orange-text-200">
+                            <span class="name-class">orange-text-200</span>
+                            <span class="cod-color">#ffcc80</span>
+                        </div>
+                        <div style="background-color: #000000;" class="orange-text-300">
+                            <span class="name-class">orange-text-300</span>
+                            <span class="cod-color">#ffb74d</span>
+                        </div>
+                        <div style="background-color: #000000;" class="orange-text-400">
+                            <span class="name-class">orange-text-400</span>
+                            <span class="cod-color">#ffa726</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="orange-text-500">
+                            <span class="name-class">orange-text-500</span>
+                            <span class="cod-color">#ff9800</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="orange-text-600">
+                            <span class="name-class">orange-text-600</span>
+                            <span class="cod-color">#fb8c00</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="orange-text-700">
+                            <span class="name-class">orange-text-700</span>
+                            <span class="cod-color">#f57c00</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="orange-text-800">
+                            <span class="name-class">orange-text-800</span>
+                            <span class="cod-color">#ef6c00</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="orange-text-900">
+                            <span class="name-class">orange-text-900</span>
+                            <span class="cod-color">#e65100</span>
+                        </div>
+                        <div style="background-color: #000000;" class="orange-text-A100">
+                            <span class="name-class">orange-text-A100</span>
+                            <span class="cod-color">#ffd180</span>
+                        </div>
+                        <div style="background-color: #000000;" class="orange-text-A200">
+                            <span class="name-class">orange-text-A200</span>
+                            <span class="cod-color">#ffab40</span>
+                        </div>
+                        <div style="background-color: #000000;" class="orange-text-A400">
+                            <span class="name-class">orange-text-A400</span>
+                            <span class="cod-color">#ff9100</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="orange-text-A700">
+                            <span class="name-class">orange-text-A700</span>
+                            <span class="cod-color">#ff6d00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="deep-orange-text-50">
+                            <span class="name-class">deep-orange-text-50</span>
+                            <span class="cod-color">#fbe9e7</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-orange-text-100">
+                            <span class="name-class">deep-orange-text-100</span>
+                            <span class="cod-color">#ffccbc</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-orange-text-200">
+                            <span class="name-class">deep-orange-text-200</span>
+                            <span class="cod-color">#ffab91</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-orange-text-300">
+                            <span class="name-class">deep-orange-text-300</span>
+                            <span class="cod-color">#ff8a65</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-orange-text-400">
+                            <span class="name-class">deep-orange-text-400</span>
+                            <span class="cod-color">#ff7043</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="deep-orange-text-500">
+                            <span class="name-class">deep-orange-text-500</span>
+                            <span class="cod-color">#ff5722</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="deep-orange-text-600">
+                            <span class="name-class">deep-orange-text-600</span>
+                            <span class="cod-color">#f4511e</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="deep-orange-text-700">
+                            <span class="name-class">deep-orange-text-700</span>
+                            <span class="cod-color">#e64a19</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="deep-orange-text-800">
+                            <span class="name-class">deep-orange-text-800</span>
+                            <span class="cod-color">#d84315</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="deep-orange-text-900">
+                            <span class="name-class">deep-orange-text-900</span>
+                            <span class="cod-color">#bf360c</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-orange-text-A100">
+                            <span class="name-class">deep-orange-text-A100</span>
+                            <span class="cod-color">#ff9e80</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-orange-text-A200">
+                            <span class="name-class">deep-orange-text-A200</span>
+                            <span class="cod-color">#ff6e40</span>
+                        </div>
+                        <div style="background-color: #000000;" class="deep-orange-text-A400">
+                            <span class="name-class">deep-orange-text-A400</span>
+                            <span class="cod-color">#ff3d00</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="deep-orange-text-A700">
+                            <span class="name-class">deep-orange-text-A700</span>
+                            <span class="cod-color">#dd2c00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="brown-text-50">
+                            <span class="name-class">brown-text-50</span>
+                            <span class="cod-color">#efebe9</span>
+                        </div>
+                        <div style="background-color: #000000;" class="brown-text-100">
+                            <span class="name-class">brown-text-100</span>
+                            <span class="cod-color">#d7ccc8</span>
+                        </div>
+                        <div style="background-color: #000000;" class="brown-text-200">
+                            <span class="name-class">brown-text-200</span>
+                            <span class="cod-color">#bcaaa4</span>
+                        </div>
+                        <div style="background-color: #000000;" class="brown-text-300">
+                            <span class="name-class">brown-text-300</span>
+                            <span class="cod-color">#a1887f</span>
+                        </div>
+                        <div style="background-color: #000000;" class="brown-text-400">
+                            <span class="name-class">brown-text-400</span>
+                            <span class="cod-color">#8d6e63</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="brown-text-500">
+                            <span class="name-class">brown-text-500</span>
+                            <span class="cod-color">#795548</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="brown-text-600">
+                            <span class="name-class">brown-text-600</span>
+                            <span class="cod-color">#6d4c41</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="brown-text-700">
+                            <span class="name-class">brown-text-700</span>
+                            <span class="cod-color">#5d4037</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="brown-text-800">
+                            <span class="name-class">brown-text-800</span>
+                            <span class="cod-color">#4e342e</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="brown-text-900">
+                            <span class="name-class">brown-text-900</span>
+                            <span class="cod-color">#3e2723</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="blue-grey-text-50">
+                            <span class="name-class">blue-grey-text-50</span>
+                            <span class="cod-color">#eceff1</span>
+                        </div>
+                        <div style="background-color: #000000;" class="blue-grey-text-100">
+                            <span class="name-class">blue-grey-text-100</span>
+                            <span class="cod-color">#cfd8dc</span>
+                        </div>
+                        <div style="background-color: #000000;" class="blue-grey-text-200">
+                            <span class="name-class">blue-grey-text-200</span>
+                            <span class="cod-color">#b0bec5</span>
+                        </div>
+                        <div style="background-color: #000000;" class="blue-grey-text-300">
+                            <span class="name-class">blue-grey-text-300</span>
+                            <span class="cod-color">#90a4ae</span>
+                        </div>
+                        <div style="background-color: #000000;" class="blue-grey-text-400">
+                            <span class="name-class">blue-grey-text-400</span>
+                            <span class="cod-color">#78909c</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="blue-grey-text-500">
+                            <span class="name-class">blue-grey-text-500</span>
+                            <span class="cod-color">#607d8b</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="blue-grey-text-600">
+                            <span class="name-class">blue-grey-text-600</span>
+                            <span class="cod-color">#546e7a</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="blue-grey-text-700">
+                            <span class="name-class">blue-grey-text-700</span>
+                            <span class="cod-color">#455a64</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="blue-grey-text-800">
+                            <span class="name-class">blue-grey-text-800</span>
+                            <span class="cod-color">#37474f</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="blue-grey-text-900">
+                            <span class="name-class">blue-grey-text-900</span>
+                            <span class="cod-color">#263238</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #000000;" class="grey-text-50">
+                            <span class="name-class">grey-text-50</span>
+                            <span class="cod-color">#fafafa</span>
+                        </div>
+                        <div style="background-color: #000000;" class="grey-text-100">
+                            <span class="name-class">grey-text-100</span>
+                            <span class="cod-color">#f5f5f5</span>
+                        </div>
+                        <div style="background-color: #000000;" class="grey-text-200">
+                            <span class="name-class">grey-text-200</span>
+                            <span class="cod-color">#eeeeee</span>
+                        </div>
+                        <div style="background-color: #000000;" class="grey-text-300">
+                            <span class="name-class">grey-text-300</span>
+                            <span class="cod-color">#e0e0e0</span>
+                        </div>
+                        <div style="background-color: #000000;" class="grey-text-400">
+                            <span class="name-class">grey-text-400</span>
+                            <span class="cod-color">#bdbdbd</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="grey-text-500">
+                            <span class="name-class">grey-text-500</span>
+                            <span class="cod-color">#9e9e9e</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="grey-text-600">
+                            <span class="name-class">grey-text-600</span>
+                            <span class="cod-color">#757575</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="grey-text-700">
+                            <span class="name-class">grey-text-700</span>
+                            <span class="cod-color">#616161</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="grey-text-800">
+                            <span class="name-class">grey-text-800</span>
+                            <span class="cod-color">#424242</span>
+                        </div>
+                        <div style="background-color: #ffffff;" class="grey-text-900">
+                            <span class="name-class">grey-text-900</span>
+                            <span class="cod-color">#212121</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        <div style="background-color: #ffffff;" class="shades-text-black">
+                            <span class="name-class">shades-text-black</span>
+                            <span class="cod-color">#000000</span>
+                        </div>
+                        <div style="background-color: #000000;" class="shades-text-white">
+                            <span class="name-class">shades-text-white</span>
+                            <span class="cod-color">#FFFFFF</span>
+                        </div>
+                        <div style="background-color: #000000;" class="shades-text-transparent">
+                            <span class="name-class">shades-text-transparent</span>
+                            <span class="cod-color">transparent</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+        <!-- Footer -->
+        <footer class="doc-footer bas-ui-section bas-ui-top-padding-6 bas-ui-bottom-padding-6">
+            <div class="container">
+                <ul class="doc-footer-links">
+                    <li><a target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui">GitHub<i class="mdi mdi-open-in-new bas-ui-icon"></i></a></li>
+                    <li><a target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui/blob/master/README.md">Started<i class="mdi mdi-open-in-new bas-ui-icon"></i></a></li>
+                    <li><a href="/showcase/showcase.html">Showcase</a></li>
+                    <li><a href="/help/donate.html">Help</a></li>
+                </ul>
+                <p>Developed by, <a target="_blank" href="http://basgrani.com">Basgrani</a></p>
+                <p>&copy; BasMaterial UI - v0.1.0, <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a></p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="../../assets/js/bas-material-ui.min.js?v=0.1.0"></script>
+    <script src="../../assets/js/bas-material-ui-docs.js?v=0.1.0"></script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-9809953-1', 'bas-material-ui.basgrani.com');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,1058 @@
+---
+section: Components
+chapter: Forms
+slug_section: components
+slug_chapter: forms
+description: Forms provides several form control styles, layout options, and custom components for creating a wide variety of forms.
+---
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>{{chapter}}</h1>
+        <p class="lead">{{description}}</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Input Fields</h2>
+            <p>Input form components.</p>
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="bas-ui-form-group bas-ui-input-field">
+                                    <input id="first_name" type="text" class="bas-ui-input">
+                                    <label for="first_name">First Name</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="bas-ui-form-group bas-ui-input-field">
+                                    <input id="last_name" type="text" class="bas-ui-input">
+                                    <label for="last_name">Last Name</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bas-ui-form-group bas-ui-input-field">
+                            <input id="password" type="password" class="bas-ui-input">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="bas-ui-form-group bas-ui-input-field">
+                                    <input id="email" type="email" class="bas-ui-input">
+                                    <label for="email" data-error="wrong" data-success="right">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="bas-ui-form-group bas-ui-input-field">
+                                    <select id="gender" class="bas-ui-select">
+                                        <option value="" disabled selected>Choose your gender</option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                    </select>
+                                    <label>Gender</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="bas-ui-form-group bas-ui-input-field">
+                                    <input placeholder="Placeholder" id="country" type="text" class="bas-ui-input">
+                                    <label for="country">Country</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="bas-ui-form-group bas-ui-input-field">
+                                    <input id="disabled" type="text" value="I am not editable" class="bas-ui-input" disabled>
+                                    <label for="disabled">Disabled</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;first_name&quot; type=&quot;text&quot; class=&quot;bas-ui-input&quot;&gt;
+                        &lt;label for=&quot;first_name&quot;&gt;First Name&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;last_name&quot; type=&quot;text&quot; class=&quot;bas-ui-input&quot;&gt;
+                        &lt;label for=&quot;last_name&quot;&gt;Last Name&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+                &lt;input id=&quot;password&quot; type=&quot;password&quot; class=&quot;bas-ui-input&quot;&gt;
+                &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;email&quot; type=&quot;email&quot; class=&quot;bas-ui-input&quot;&gt;
+                        &lt;label for=&quot;email&quot; data-error=&quot;wrong&quot; data-success=&quot;right&quot;&gt;Email&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+                        &lt;select id=&quot;gender&quot; class=&quot;bas-ui-select&quot;&gt;
+                            &lt;option value=&quot;&quot; disabled selected&gt;Choose your gender&lt;/option&gt;
+                            &lt;option value=&quot;1&quot;&gt;Male&lt;/option&gt;
+                            &lt;option value=&quot;2&quot;&gt;Female&lt;/option&gt;
+                        &lt;/select&gt;
+                        &lt;label&gt;Gender&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+                        &lt;input placeholder=&quot;Placeholder&quot; id=&quot;country&quot; type=&quot;text&quot; class=&quot;bas-ui-input&quot;&gt;
+                        &lt;label for=&quot;country&quot;&gt;Country&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;disabled&quot; type=&quot;text&quot; value=&quot;I am not editable&quot; class=&quot;bas-ui-input&quot; disabled&gt;
+                        &lt;label for=&quot;disabled&quot;&gt;Disabled&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Text Area</h2>
+            <p>Add the class <code class="language-markup">bas-ui-textarea</code> in the textarea.</p>
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bas-ui-form-group bas-ui-input-field">
+                            <textarea id="textarea_field" rows='1' class="bas-ui-textarea"></textarea>
+                            <label for="textarea_field">Textarea</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+                &lt;textarea id=&quot;textarea_field&quot; rows='1' class=&quot;bas-ui-textarea&quot;&gt;&lt;/textarea&gt;
+                &lt;label for=&quot;textarea_field&quot;&gt;Textarea&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Icon Fields</h2>
+            <p>Add an icon with the class <code class="language-markup">prefix</code> before the input and label.</p>
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="bas-ui-form-group bas-ui-input-field">
+                                    <i class="mdi mdi-account-circle bas-ui-icon prefix"></i>
+                                    <input id="first_name_pre" type="text" class="bas-ui-input">
+                                    <label for="first_name_pre">First Name</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="bas-ui-form-group bas-ui-input-field">
+                                    <i class="mdi mdi-phone bas-ui-icon prefix"></i>
+                                    <input id="icon_telephone" type="tel" class="bas-ui-input">
+                                    <label for="icon_telephone">Telephone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bas-ui-form-group bas-ui-input-field">
+                            <i class="mdi mdi-comment-text bas-ui-icon prefix"></i>
+                            <textarea id="icon_textarea" rows='1' class="bas-ui-textarea"></textarea>
+                            <label for="icon_textarea">Textarea</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+                        &lt;i class=&quot;mdi mdi-account-circle bas-ui-icon prefix&quot;&gt;&lt;/i&gt;
+                        &lt;input id=&quot;first_name_pre&quot; type=&quot;text&quot; class=&quot;bas-ui-input&quot;&gt;
+                        &lt;label for=&quot;first_name_pre&quot;&gt;First Name&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+                        &lt;i class=&quot;mdi mdi-phone bas-ui-icon prefix&quot;&gt;&lt;/i&gt;
+                        &lt;input id=&quot;icon_telephone&quot; type=&quot;tel&quot; class=&quot;bas-ui-input&quot;&gt;
+                        &lt;label for=&quot;icon_telephone&quot;&gt;Telephone&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+                &lt;i class=&quot;mdi mdi-comment-text bas-ui-icon prefix&quot;&gt;&lt;/i&gt;
+                &lt;textarea id=&quot;icon_textarea&quot; rows='1' class=&quot;bas-ui-textarea&quot;&gt;&lt;/textarea&gt;
+                &lt;label for=&quot;icon_textarea&quot;&gt;Textarea&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Validate Fields</h2>
+            <p>You can add custom validation messages by adding either <code class="language-markup">data-error</code> or <code class="language-markup">data-success</code> attributes to your input field labels. For more info for validate, go to: <a href="/form-validation.html">Form Validation</a></p>
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bas-ui-form-group bas-ui-input-field">
+                            <input id="email_val" type="email" class="bas-ui-input validate">
+                            <label for="email_val" data-error="wrong" data-success="right">Email</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+                &lt;input id=&quot;email_val&quot; type=&quot;email&quot; class=&quot;bas-ui-input validate&quot;&gt;
+                &lt;label for=&quot;email_val&quot; data-error=&quot;wrong&quot; data-success=&quot;right&quot;&gt;Email&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div id="forms-select" class="row">
+        <div class="col-md-12">
+            <h2 class="header">Select</h2>
+
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="bas-ui-form-group bas-ui-input-field">
+                            <select class="bas-ui-select">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Normal Select</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+    &lt;select class=&quot;bas-ui-select&quot;&gt;
+        &lt;option value=&quot;&quot; disabled selected&gt;Choose your option&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;label&gt;Normal Select&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+            <br><br>
+
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="bas-ui-form-group bas-ui-input-field">
+                            <select class="bas-ui-select" multiple>
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Multiple Select</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+    &lt;select class=&quot;bas-ui-select&quot; multiple&gt;
+        &lt;option value=&quot;&quot; disabled selected&gt;Choose your option&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;label&gt;Multiple Select&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+            <br><br>
+
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="bas-ui-form-group bas-ui-browser-select-field">
+                            <span class="bas-ui-caret"></span>
+                            <select class="bas-ui-browser-select">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Browser Select</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-form-group bas-ui-browser-select-field&quot;&gt;
+    &lt;span class=&quot;bas-ui-caret&quot;&gt;&lt;/span&gt;
+    &lt;select class=&quot;bas-ui-browser-select&quot;&gt;
+        &lt;option value=&quot;&quot; disabled selected&gt;Choose your option&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;label&gt;Browser Select&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+            <br><br>
+
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="bas-ui-form-group bas-ui-browser-select-field">
+                            <select class="bas-ui-browser-select" disabled>
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <span class="bas-ui-caret"></span>
+                            <label>Disabled Browser Select</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="bas-ui-form-group bas-ui-input-field">
+                            <select class="bas-ui-select" disabled>
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Disabled Normal Select</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;!-- Disabled Browser Select --&gt;
+...
+&lt;select class=&quot;bas-ui-browser-select&quot; disabled&gt;
+...
+
+&lt;!-- Disabled Normal Select --&gt;
+...
+&lt;select class=&quot;bas-ui-select&quot; disabled&gt;
+...</code></pre>
+
+        </div>
+    </div>
+
+    <div id="forms-search" class="row">
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="header">Search</h2>
+                    <form class="doc-form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="bas-ui-search">
+                                    <input type="text" placeholder="Search">
+                                    <i class="bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left"></i>
+                                    <i class="bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="header">Search Expandable</h2>
+                    <form class="doc-form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="bas-ui-search bas-ui-search-expandable">
+                                    <input type="text" placeholder="Search">
+                                    <a class="bas-ui-search-icon-left bas-ui-serach-expandable-show bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                        <i class="mdi mdi mdi-magnify bas-ui-icon"></i>
+                                    </a>
+                                    <i class="bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <pre><code class="language-markup">
+&lt;!-- Search --&gt;
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;bas-ui-search&quot;&gt;
+                &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot;&gt;
+                &lt;i class=&quot;bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+
+&lt;!-- Search Expandable --&gt;
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;bas-ui-search bas-ui-search-expandable&quot;&gt;
+                &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot;&gt;
+                &lt;a class=&quot;bas-ui-search-icon-left bas-ui-serach-expandable-show bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves&quot;&gt;
+                    &lt;i class=&quot;mdi mdi mdi-magnify bas-ui-icon&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;i class=&quot;bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Radio Buttons</h2>
+            <p></p>
+            <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bas-ui-form-group">
+                            <input name="group1" type="radio" id="test1" class="bas-ui-input" />
+                            <label for="test1">Red</label>
+                        </div>
+                        <div class="bas-ui-form-group">
+                            <input name="group1" type="radio" id="test2" class="bas-ui-input" />
+                            <label for="test2">Yellow</label>
+                        </div>
+                        <div class="bas-ui-form-group">
+                            <input name="group1" type="radio" id="test3" class="bas-ui-input with-gap" />
+                            <label for="test3">Green</label>
+                        </div>
+                        <div class="bas-ui-form-group">
+                            <input name="group1" type="radio" id="test4" class="bas-ui-input" disabled="disabled" />
+                            <label for="test4">Brown</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;bas-ui-form-group&quot;&gt;
+                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test1&quot; class=&quot;bas-ui-input&quot; /&gt;
+                &lt;label for=&quot;test1&quot;&gt;Red&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;bas-ui-form-group&quot;&gt;
+                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test2&quot; class=&quot;bas-ui-input&quot; /&gt;
+                &lt;label for=&quot;test2&quot;&gt;Yellow&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;bas-ui-form-group&quot;&gt;
+                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test3&quot; class=&quot;bas-ui-input with-gap&quot; /&gt;
+                &lt;label for=&quot;test3&quot;&gt;Green&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;bas-ui-form-group&quot;&gt;
+                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test4&quot; class=&quot;bas-ui-input&quot; disabled=&quot;disabled&quot; /&gt;
+                &lt;label for=&quot;test4&quot;&gt;Brown&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Checkboxes</h2>
+            <p></p>
+            <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bas-ui-form-group">
+                            <input type="checkbox" id="test5" class="bas-ui-input" />
+                            <label for="test5">Red</label>
+                        </div>
+                        <div class="bas-ui-form-group">
+                            <input type="checkbox" id="test6" class="bas-ui-input" checked="checked" />
+                            <label for="test6">Yellow</label>
+                        </div>
+                        <div class="bas-ui-form-group">
+                            <input type="checkbox" id="test7" class="bas-ui-input filled-in" checked="checked" />
+                            <label for="test7">Filled in</label>
+                        </div>
+                        <div class="bas-ui-form-group">
+                            <input type="checkbox" id="test8" class="bas-ui-input indeterminate-checkbox" />
+                            <label for="test8">Indeterminate Style</label>
+                        </div>
+                        <div class="bas-ui-form-group">
+                            <input type="checkbox" id="test9" class="bas-ui-input" checked="checked" disabled="disabled" />
+                            <label for="test9">Green</label>
+                        </div>
+                        <div class="bas-ui-form-group">
+                            <input type="checkbox" id="test10" class="bas-ui-input" disabled="disabled" />
+                            <label for="test10">Brown</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;bas-ui-form-group&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test5&quot; class=&quot;bas-ui-input&quot; /&gt;
+                &lt;label for=&quot;test5&quot;&gt;Red&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;bas-ui-form-group&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test6&quot; class=&quot;bas-ui-input&quot; checked=&quot;checked&quot; /&gt;
+                &lt;label for=&quot;test6&quot;&gt;Yellow&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;bas-ui-form-group&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test7&quot; class=&quot;bas-ui-input filled-in&quot; checked=&quot;checked&quot; /&gt;
+                &lt;label for=&quot;test7&quot;&gt;Filled in&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;bas-ui-form-group&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test8&quot; class=&quot;bas-ui-input indeterminate-checkbox&quot; /&gt;
+                &lt;label for=&quot;test8&quot;&gt;Indeterminate Style&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;bas-ui-form-group&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test9&quot; class=&quot;bas-ui-input&quot; checked=&quot;checked&quot; disabled=&quot;disabled&quot; /&gt;
+                &lt;label for=&quot;test9&quot;&gt;Green&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;bas-ui-form-group&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test10&quot; class=&quot;bas-ui-input&quot; disabled=&quot;disabled&quot; /&gt;
+                &lt;label for=&quot;test10&quot;&gt;Brown&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Switches</h2>
+            <p></p>
+            <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bas-ui-form-group">
+                            <!-- Switch -->
+                            <div class="bas-ui-switch">
+                                <label>
+                                    Off
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                    On
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bas-ui-form-group">
+                            <!-- Disabled Switch -->
+                            <div class="bas-ui-switch">
+                                <label>
+                                    Off
+                                    <input disabled type="checkbox">
+                                    <span class="lever"></span>
+                                    On
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;bas-ui-form-group&quot;&gt;
+                &lt;!-- Switch --&gt;
+                &lt;div class=&quot;bas-ui-switch&quot;&gt;
+                    &lt;label&gt;
+                        Off
+                        &lt;input type=&quot;checkbox&quot;&gt;
+                        &lt;span class=&quot;lever&quot;&gt;&lt;/span&gt;
+                        On
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;bas-ui-form-group&quot;&gt;
+                &lt;!-- Disabled Switch --&gt;
+                &lt;div class=&quot;bas-ui-switch&quot;&gt;
+                    &lt;label&gt;
+                        Off
+                        &lt;input disabled type=&quot;checkbox&quot;&gt;
+                        &lt;span class=&quot;lever&quot;&gt;&lt;/span&gt;
+                        On
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div id="forms-autocomplete" class="row">
+
+        <div class="col-md-12">
+            <h2 class="header">Autocomplete</h2>
+            <p>Based in <a class="doc-link" target="_blank" href="https://github.com/devbridge/jQuery-Autocomplete">jQuery-Autocomplete</a> plugin. For more info and view the documentation, go to: <a class="doc-link" target="_blank" href="https://www.devbridge.com/sourcery/components/jquery-autocomplete/">jquery-autocomplete</a></p>
+        </div>
+
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="header">Search</h5>
+                    <form class="doc-form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="doc-bas-ui-search-autocomplete" class="bas-ui-search">
+                                    <input type="text" placeholder="Search">
+                                    <i class="bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left"></i>
+                                    <i class="bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="header">Search expandable</h5>
+                    <form class="doc-form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="doc-bas-ui-search-expandable-autocomplete" class="bas-ui-search bas-ui-search-expandable left">
+                                    <input type="text" placeholder="Search">
+                                    <a class="bas-ui-search-icon-left bas-ui-serach-expandable-show bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                        <i class="mdi mdi mdi-magnify bas-ui-icon"></i>
+                                    </a>
+                                    <i class="bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="header">Input</h5>
+                    <form class="doc-form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="doc-text-autocomplete" class="bas-ui-form-group bas-ui-input-field">
+                                    <input id="text-autocomplete" type="text" class="bas-ui-input">
+                                    <label for="text-autocomplete">Text autocomplete</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <br>
+            <p>Sample autocomplete</p>
+
+            <pre><code class="language-markup">
+&lt;!-- Search --&gt;
+&lt;form class=&quot;doc-form&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div id=&quot;doc-bas-ui-search-autocomplete&quot; class=&quot;bas-ui-search&quot;&gt;
+                &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot;&gt;
+                &lt;i class=&quot;bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+
+&lt;!-- Search expandable --&gt;
+&lt;form class=&quot;doc-form&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div id=&quot;doc-bas-ui-search-expandable-autocomplete&quot; class=&quot;bas-ui-search bas-ui-search-expandable left&quot;&gt;
+                &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot;&gt;
+                &lt;a class=&quot;bas-ui-search-icon-left bas-ui-serach-expandable-show bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves&quot;&gt;
+                    &lt;i class=&quot;mdi mdi mdi-magnify bas-ui-icon&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;i class=&quot;bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+
+&lt;!-- Input --&gt;
+&lt;form class=&quot;doc-form&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div id=&quot;doc-text-autocomplete&quot; class=&quot;bas-ui-form-group bas-ui-input-field&quot;&gt;
+                &lt;input id=&quot;text-autocomplete&quot; type=&quot;text&quot; class=&quot;bas-ui-input&quot;&gt;
+                &lt;label for=&quot;text-autocomplete&quot;&gt;Text autocomplete&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+            <br>
+            <p>Sample usage</p>
+
+            <pre><code class="language-javascript">
+    // Sample
+    var countries = [
+        { value: 'Andorra', data: 'AD' },
+        // ...
+        { value: 'Zimbabwe', data: 'ZZ' }
+    ];
+
+    // Autocomplete -> search
+    $('#doc-bas-ui-search-autocomplete input').autocomplete({
+        lookup: countries,
+        appendTo: '#doc-bas-ui-search-autocomplete',
+        minChars: 2,
+        onSelect: function (suggestion) {
+            console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
+        }
+    });
+
+    // Autocomplete -> search expandable
+    $('#doc-bas-ui-search-expandable-autocomplete input').autocomplete({
+        lookup: countries,
+        appendTo: '#doc-bas-ui-search-expandable-autocomplete',
+        minChars: 2,
+        onSelect: function (suggestion) {
+            console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
+        }
+    });
+
+    // Autocomplete -> input
+    $('#doc-text-autocomplete input').autocomplete({
+        lookup: countries,
+        appendTo: '#doc-text-autocomplete',
+        minChars: 2,
+        onSelect: function (suggestion) {
+            console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
+        }
+    });</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">File Input</h2>
+            <p>Simple upload</p>
+
+            <form action="#" class="bas-ui-bottom-margin-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bas-ui-form-group bas-ui-input-file">
+                            <a class="bas-ui-button bas-ui-button-primary bas-ui-waves-light">
+                                Upload
+                                <input id="file_input_test1" type="file">
+                            </a>
+                            <div class="bas-ui-input-file-path">
+                                <input type="text" class="bas-ui-input" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;form action=&quot;#&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;bas-ui-form-group bas-ui-input-file&quot;&gt;
+                &lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-waves-light&quot;&gt;
+                    Upload
+                    &lt;input id=&quot;file_input_test1&quot; type=&quot;file&quot;&gt;
+                &lt;/a&gt;
+                &lt;div class=&quot;bas-ui-input-file-path&quot;&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;bas-ui-input&quot; readonly&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+            <br>
+
+            <p>Multiple upload</p>
+
+            <form action="#" class="bas-ui-bottom-margin-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bas-ui-form-group bas-ui-input-file">
+                            <a class="bas-ui-button bas-ui-button-primary bas-ui-waves-light">
+                                Upload
+                                <input id="file_input_test2" type="file" multiple>
+                            </a>
+                            <div class="bas-ui-input-file-path">
+                                <input type="text" class="bas-ui-input" placeholder="Upload one or more files" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;form action=&quot;#&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;bas-ui-form-group bas-ui-input-file&quot;&gt;
+                &lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-waves-light&quot;&gt;
+                    Upload
+                    &lt;input id=&quot;file_input_test2&quot; type=&quot;file&quot; multiple&gt;
+                &lt;/a&gt;
+                &lt;div class=&quot;bas-ui-input-file-path&quot;&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;bas-ui-input&quot; placeholder=&quot;Upload one or more files&quot; readonly&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+            <h2 class="header">File Input - Image Preview</h2>
+            <p>Image preview for upload</p>
+
+            <!-- Avatar -->
+            <ul class="bas-ui-list bas-ui-hoverable bas-ui-bottom-margin-3">
+                <li id="img-preview-file_input_test3" class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-truncate">
+                    <img class="circle img-preview" src="{{assets}}/img/avatar/avatar_0.jpg">
+                    <h6 class="bas-ui-list-title img-preview-loading">UPLOAD AVATAR</h6>
+                </li>
+            </ul>
+
+            <!-- Form -->
+            <form action="#">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!-- Fake input file -->
+                        <div class="bas-ui-form-group bas-ui-input-file bas-ui-input-file-fake">
+                            <a class="bas-ui-button bas-ui-button-primary bas-ui-waves-light">
+                                Fake
+                                <input id="file_input_test3" type="file"
+                                       data-img-preview="img-preview-file_input_test3"
+                                       data-img-preview-text-loading="Loading...">
+                            </a>
+                            <div class="bas-ui-input-file-path">
+                                <input type="text" class="bas-ui-input" readonly>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;!-- Avatar --&gt;
+&lt;ul class=&quot;bas-ui-list bas-ui-hoverable&quot;&gt;
+    &lt;li id=&quot;img-preview-file_input_test3&quot; class=&quot;bas-ui-list-item bas-ui-list-avatar bas-ui-list-truncate&quot;&gt;
+        &lt;img class=&quot;circle img-preview&quot; src=&quot;assets/img/avatar/avatar_0.jpg&quot;&gt;
+        &lt;h6 class=&quot;bas-ui-list-title img-preview-loading&quot;&gt;UPLOAD AVATAR&lt;/h6&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Form --&gt;
+&lt;form action=&quot;#&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+
+            &lt;!-- Fake input file --&gt;
+            &lt;div class=&quot;bas-ui-form-group bas-ui-input-file bas-ui-input-file-fake&quot;&gt;
+                &lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-waves-light&quot;&gt;
+                    Fake
+                    &lt;input id=&quot;file_input_test3&quot; type=&quot;file&quot;
+                    data-img-preview=&quot;img-preview-file_input_test3&quot;
+                    data-img-preview-text-loading=&quot;Loading...&quot;&gt;
+                &lt;/a&gt;
+                &lt;div class=&quot;bas-ui-input-file-path&quot;&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;bas-ui-input&quot; readonly&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+        </div>
+    </div>
+
+    <div id="forms-file-upload-drop" class="row">
+        <div class="col-md-12">
+            <h2 class="header">File Upload - Drag and Drop</h2>
+            <p>Based in <a class="doc-link" target="_blank" href="https://github.com/enyo/dropzone">DropzoneJS</a> plugin. For more info and view the documentation, go to: <a class="doc-link" target="_blank" href="http://www.dropzonejs.com/#configuration-options">DropzoneJS Doc</a></p>
+
+            <ul class="bas-ui-list bas-ui-file-upload-drop-zone bas-ui-bottom-margin-3">
+                <div class="bas-ui-file-upload-drop-zone-message doc-drop-zone-message">
+                    DRAG & DROP HERE<br>
+                    <span class="doc-drop-zone-message-browse">or <span class="doc-drop-zone-message-browse-link">Browse</span></span>
+                </div>
+            </ul>
+
+            <p>Sample drop zone</p>
+            <pre><code class="language-markup">
+&lt;ul class=&quot;bas-ui-list bas-ui-file-upload-drop-zone&quot;&gt;
+    &lt;div class=&quot;bas-ui-file-upload-drop-zone-message doc-drop-zone-message&quot;&gt;
+        DRAG &amp; DROP HERE&lt;br&gt;
+        &lt;span class=&quot;doc-drop-zone-message-browse&quot;&gt;or &lt;span class=&quot;doc-drop-zone-message-browse-link&quot;&gt;Browse&lt;/span&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/ul&gt;</code></pre>
+
+            <br>
+            <p>Sample usage</p>
+
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+
+    // Create File Upload Drop
+    var _dropzone = BasUI.Forms.fileUploadDrop('.bas-ui-file-upload-drop-zone', {
+        url: 'http://domain/upload/',
+        defaultImageThumbnail: "assets/img/files/empty.png"
+    });
+
+    // File Upload Drop - Sample Event
+    _dropzone.on("addedfile", function(file) {
+        console.log(file);
+    });
+
+});</code></pre>
+
+        </div>
+    </div>
+
+</div>
+</section>

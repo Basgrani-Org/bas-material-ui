@@ -1,0 +1,204 @@
+---
+section: Components
+chapter: List
+slug_section: components
+slug_chapter: list
+description: List are a flexible and powerful component for displaying a series of content.
+---
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>{{chapter}}</h1>
+        <p class="lead">{{description}}</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Basic</h2>
+
+            <ul class="bas-ui-list bas-ui-bottom-margin-3">
+                <li class="bas-ui-list-item">Cras justo odio</li>
+                <li class="bas-ui-list-item">Dapibus ac facilisis in</li>
+                <li class="bas-ui-list-item">Morbi leo risus</li>
+                <li class="bas-ui-list-item">Porta ac consectetur ac</li>
+            </ul>
+
+            <pre><code class="language-markup">
+&lt;ul class=&quot;bas-ui-list&quot;&gt;
+    &lt;li class=&quot;bas-ui-list-item&quot;&gt;Cras justo odio&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-list-item&quot;&gt;Dapibus ac facilisis in&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-list-item&quot;&gt;Morbi leo risus&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-list-item&quot;&gt;Porta ac consectetur ac&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Links</h2>
+
+            <div class="bas-ui-list bas-ui-hoverable bas-ui-bottom-margin-3">
+                <a href="#" class="bas-ui-list-item">Cras justo odio</a>
+                <a href="#" class="bas-ui-list-item active">Dapibus ac facilisis in</a>
+                <a href="#" class="bas-ui-list-item">Morbi leo risus</a>
+                <a href="#" class="bas-ui-list-item">Porta ac consectetur ac</a>
+            </div>
+
+            <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-list bas-ui-hoverable&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;bas-ui-list-item&quot;&gt;Cras justo odio&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;bas-ui-list-item active&quot;&gt;Dapibus ac facilisis in&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;bas-ui-list-item&quot;&gt;Morbi leo risus&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;bas-ui-list-item&quot;&gt;Porta ac consectetur ac&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">With Header</h2>
+
+            <ul class="bas-ui-list bas-ui-hoverable bas-ui-bottom-margin-3">
+                <li class="bas-ui-list-item bas-ui-list-header"><h4>Header</h4></li>
+                <li class="bas-ui-list-item">Dapibus ac facilisis in</li>
+                <li class="bas-ui-list-item">Morbi leo risus</li>
+                <li class="bas-ui-list-item">Porta ac consectetur ac</li>
+            </ul>
+
+            <pre><code class="language-markup">
+&lt;ul class=&quot;bas-ui-list bas-ui-hoverable&quot;&gt;
+    &lt;li class=&quot;bas-ui-list-item bas-ui-list-header&quot;&gt;&lt;h4&gt;Header&lt;/h4&gt;&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-list-item&quot;&gt;Dapibus ac facilisis in&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-list-item&quot;&gt;Morbi leo risus&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-list-item&quot;&gt;Porta ac consectetur ac&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">With Content</h2>
+
+            <ul class="bas-ui-list bas-ui-hoverable bas-ui-bottom-margin-3">
+
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="{{assets}}/img/avatar/avatar_1.jpg">
+                    <h6 class="bas-ui-list-title">Title - Single line</h6>
+                    <a class="bas-ui-list-secondary-content-body"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                </li>
+
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-truncate active">
+                    <img class="circle" src="{{assets}}/img/avatar/avatar_2.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title - Truncate text - Large title sample</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                    </div>
+                </li>
+
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="{{assets}}/img/avatar/avatar_3.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body active"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                </li>
+
+                <li class="bas-ui-list-item">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title - Without Avatar</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                    </div>
+                </li>
+
+            </ul>
+
+            <pre><code class="language-markup">
+&lt;ul class=&quot;bas-ui-list bas-ui-hoverable&quot;&gt;
+
+    &lt;li class=&quot;bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content&quot;&gt;
+        &lt;img class=&quot;circle&quot; src=&quot;assets/img/avatar/avatar_1.jpg&quot;&gt;
+        &lt;h6 class=&quot;bas-ui-list-title&quot;&gt;Title - Single line&lt;/h6&gt;
+        &lt;a class=&quot;bas-ui-list-secondary-content-body&quot;&gt;&lt;i class=&quot;mdi mdi-star bas-ui-icon bas-ui-icon-24&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li class=&quot;bas-ui-list-item bas-ui-list-avatar bas-ui-list-truncate active&quot;&gt;
+        &lt;img class=&quot;circle&quot; src=&quot;assets/img/avatar/avatar_2.jpg&quot;&gt;
+        &lt;div class=&quot;bas-ui-list-body&quot;&gt;
+            &lt;h6 class=&quot;bas-ui-list-title&quot;&gt;Title - Truncate text - Large title sample&lt;/h6&gt;
+            Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+        &lt;/div&gt;
+    &lt;/li&gt;
+
+    &lt;li class=&quot;bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content&quot;&gt;
+        &lt;img class=&quot;circle&quot; src=&quot;assets/img/avatar/avatar_3.jpg&quot;&gt;
+        &lt;div class=&quot;bas-ui-list-body&quot;&gt;
+            &lt;h6 class=&quot;bas-ui-list-title&quot;&gt;Title&lt;/h6&gt;
+            Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+        &lt;/div&gt;
+        &lt;a class=&quot;bas-ui-list-secondary-content-body active&quot;&gt;&lt;i class=&quot;mdi mdi-star bas-ui-icon bas-ui-icon-24&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li class=&quot;bas-ui-list-item&quot;&gt;
+        &lt;div class=&quot;bas-ui-list-body&quot;&gt;
+            &lt;h6 class=&quot;bas-ui-list-title&quot;&gt;Title - Without Avatar&lt;/h6&gt;
+            Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+        &lt;/div&gt;
+    &lt;/li&gt;
+
+&lt;/ul&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Dismissable</h2>
+            <p>Adding the class <code class="language-markup">dismissable</code> after to bas-ui-list-item. This is only for touch enabled devices.</p>
+
+            <ul class="bas-ui-list bas-ui-hoverable bas-ui-secondary-color bas-ui-bottom-margin-3">
+                <li class="bas-ui-list-item dismissable">
+                    Cras justo odio
+                    <i class="mdi mdi-send bas-ui-icon bas-ui-icon-right bas-ui-icon-24 secondary-color-text"></i>
+                </li>
+                <li class="bas-ui-list-item dismissable">
+                    Dapibus ac facilisis in
+                    <i class="mdi mdi-send bas-ui-icon bas-ui-icon-right bas-ui-icon-24 secondary-color-text"></i>
+                </li>
+                <li class="bas-ui-list-item dismissable">
+                    Morbi leo risus
+                    <i class="mdi mdi-send bas-ui-icon bas-ui-icon-right bas-ui-icon-24 secondary-color-text"></i>
+                </li>
+                <li class="bas-ui-list-item dismissable">
+                    Porta ac consectetur ac
+                    <i class="mdi mdi-send bas-ui-icon bas-ui-icon-right bas-ui-icon-24 secondary-color-text"></i>
+                </li>
+            </ul>
+
+            <pre><code class="language-markup">
+&lt;ul class=&quot;bas-ui-list bas-ui-hoverable&quot;&gt;
+    &lt;li class=&quot;bas-ui-list-item dismissable&quot;&gt;
+        Cras justo odio
+        &lt;i class=&quot;mdi mdi-send bas-ui-icon bas-ui-icon-right bas-ui-icon-24 secondary-color-text&quot;&gt;&lt;/i&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;bas-ui-list-item dismissable&quot;&gt;
+        Dapibus ac facilisis in
+        &lt;i class=&quot;mdi mdi-send bas-ui-icon bas-ui-icon-right bas-ui-icon-24 secondary-color-text&quot;&gt;&lt;/i&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;bas-ui-list-item dismissable&quot;&gt;
+        Morbi leo risus
+        &lt;i class=&quot;mdi mdi-send bas-ui-icon bas-ui-icon-right bas-ui-icon-24 secondary-color-text&quot;&gt;&lt;/i&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;bas-ui-list-item dismissable&quot;&gt;
+        Porta ac consectetur ac
+        &lt;i class=&quot;mdi mdi-send bas-ui-icon bas-ui-icon-right bas-ui-icon-24 secondary-color-text&quot;&gt;&lt;/i&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+    </div>
+
+</div>
+</section>

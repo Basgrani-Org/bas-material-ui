@@ -1,0 +1,199 @@
+---
+section: Components
+chapter: Buttons
+slug_section: components
+slug_chapter: buttons
+description: Use custom button styles for actions in forms, dialogs, and more.
+---
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>{{chapter}}</h1>
+        <p class="lead">{{description}}</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">FAB</h2>
+            <p>Fab button variation, add the class <code class="language-markup">bas-ui-button-fab</code>.</p>
+            <p>
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-waves-light"><i class="mdi mdi-plus bas-ui-icon"></i></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-waves-light disabled"><i
+                class="mdi mdi-plus bas-ui-icon"></i></a>
+            </p>
+            <pre><code class="language-markup">
+&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-waves-light&quot;&gt;&lt;i class=&quot;mdi mdi-plus bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-waves-light disabled&quot;&gt;&lt;i class=&quot;mdi mdi-plus bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Size FAB</h2>
+            <p>Size Fab button variation, add the class <code class="language-markup">bas-ui-button-fab-xs</code> or <code class="language-markup">bas-ui-button-fab-sm</code>.</p>
+            <p>
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves-light"><i
+                class="mdi mdi-plus bas-ui-icon"></i></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-button-fab-sm bas-ui-waves-light"><i
+                class="mdi mdi-plus bas-ui-icon"></i></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-button-fab bas-ui-waves-light"><i
+                class="mdi mdi-plus bas-ui-icon"></i></a>
+            </p>
+            <pre><code class="language-markup">
+&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves-light&quot;&gt;&lt;i class=&quot;mdi mdi-plus bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-button-fab-sm bas-ui-waves-light&quot;&gt;&lt;i class=&quot;mdi mdi-plus bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-waves-light&quot;&gt;&lt;i class=&quot;mdi mdi-plus bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Action FAB</h2>
+            <p>Action Fab button variation. You can see in bottom right on this page</p>
+
+            <div class="bas-ui-button-fab-action">
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-waves-light"><i class="mdi mdi-pencil bas-ui-icon"></i></a>
+                <ul>
+                    <li><a href="./buttons.html"
+                           class="bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-button-fab-sm bas-ui-waves-light blue-500"><i
+                    class="mdi mdi-chart-bar bas-ui-icon"></i></a></li>
+                    <li><a href="./buttons.html"
+                           class="bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-button-fab-sm bas-ui-waves-light light-blue-500"><i
+                    class="mdi mdi-format-quote bas-ui-icon"></i></a></li>
+                    <li><a href="./buttons.html"
+                           class="bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-button-fab-sm bas-ui-waves-light red-500"><i
+                    class="mdi mdi-upload bas-ui-icon"></i></a></li>
+                    <li><a href="./buttons.html"
+                           class="bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-button-fab-sm bas-ui-waves-light orange-500"><i
+                    class="mdi mdi-paperclip bas-ui-icon"></i></a></li>
+                </ul>
+            </div>
+
+            <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-button-fab-action&quot;&gt;
+    &lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-waves-light&quot;&gt;&lt;i class=&quot;mdi mdi-pencil bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-button-fab-sm bas-ui-waves-light blue-500&quot;&gt;&lt;i class=&quot;mdi mdi-chart-bar bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-button-fab-sm bas-ui-waves-light light-blue-500&quot;&gt;&lt;i class=&quot;mdi mdi-format-quote bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-button-fab-sm bas-ui-waves-light red-500&quot;&gt;&lt;i class=&quot;mdi mdi-upload bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-button-fab-sm bas-ui-waves-light orange-500&quot;&gt;&lt;i class=&quot;mdi mdi-paperclip bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+            <p>You can also toggle them programmatically:</p>
+
+            <pre><code class="language-javascript">
+$('.bas-ui-button-fab-action').bas_ui_button('toggleFAB');</code></pre>
+
+            <p>You can also open them programmatically:</p>
+
+            <pre><code class="language-javascript">
+$('.bas-ui-button-fab-action').bas_ui_button('openFAB');</code></pre>
+
+            <p>You can also close them programmatically:</p>
+
+            <pre><code class="language-javascript">
+$('.bas-ui-button-fab-action').bas_ui_button('closeFAB');</code></pre>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Flat</h2>
+            <p>Flat button variation, add the class <code class="language-markup">bas-ui-button-flat</code>.</p>
+            <p>
+                <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves">Button</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text">Button</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves disabled">Disabled</a>
+            </p>
+            <pre><code class="language-markup">
+&lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves&quot;&gt;Button&lt;/a&gt;
+&lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text&quot;&gt;Button&lt;/a&gt;
+&lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves disabled&quot;&gt;Disabled&lt;/a&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Raised</h2>
+            <p>Raised button variation, add the class <code class="language-markup">bas-ui-button-default</code>.</p>
+            <p>
+                <a class="bas-ui-button bas-ui-button-default bas-ui-waves">Button</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-default bas-ui-waves disabled">Disabled</a>
+            </p>
+            <pre><code class="language-markup">
+&lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-waves&quot;&gt;Button&lt;/a&gt;
+&lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-waves disabled&quot;&gt;Disabled&lt;/a&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Colored</h2>
+            <p>Colored button variations.</p>
+            <p>
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-waves-light" data-toggle="button">Button</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-success bas-ui-waves-light">Success</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-info bas-ui-waves-light">Info</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-warning bas-ui-waves-light">Warning</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-danger bas-ui-waves-light">Danger</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-waves-light purple-700">Custom</a>
+            </p>
+            <pre><code class="language-markup">
+&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-waves-light&quot;&gt;Button&lt;/a&gt;
+&lt;a class=&quot;bas-ui-button bas-ui-button-success bas-ui-waves-light&quot;&gt;Success&lt;/a&gt;
+&lt;a class=&quot;bas-ui-button bas-ui-button-info bas-ui-waves-light&quot;&gt;Info&lt;/a&gt;
+&lt;a class=&quot;bas-ui-button bas-ui-button-warning bas-ui-waves-light&quot;&gt;Warning&lt;/a&gt;
+&lt;a class=&quot;bas-ui-button bas-ui-button-danger bas-ui-waves-light&quot;&gt;Danger&lt;/a&gt;
+&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-waves-light purple-700&quot;&gt;Custom&lt;/a&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Size</h2>
+            <p>Size button variation, add the class <code class="language-markup">bas-ui-button-lg</code> for large size.</p>
+            <p>
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-waves-light">Button</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-button-lg bas-ui-waves-light">Large Button</a>
+            </p>
+            <pre><code class="language-markup">
+&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-waves-light&quot;&gt;Button&lt;/a&gt;
+&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-button-lg bas-ui-waves-light&quot;&gt;Large Button&lt;/a&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Icon</h2>
+            <p>Icon button variation, add the left or right icon.</p>
+            <p>
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-waves-light"><i class="mdi mdi-cloud bas-ui-icon bas-ui-icon-left bas-ui-icon-18"></i>Button</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-waves-light"><i class="mdi mdi-cloud bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>Button</a>
+            </p>
+            <pre><code class="language-markup">
+&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-waves-light&quot;&gt;&lt;i class=&quot;mdi mdi-cloud bas-ui-icon bas-ui-icon-left bas-ui-icon-18&quot;&gt;&lt;/i&gt;Button&lt;/a&gt;
+&lt;a class=&quot;bas-ui-button bas-ui-button-primary bas-ui-waves-light&quot;&gt;&lt;i class=&quot;mdi mdi-cloud bas-ui-icon bas-ui-icon-right bas-ui-icon-18&quot;&gt;&lt;/i&gt;Button&lt;/a&gt;</code></pre>
+        </div>
+    </div>
+
+</div>
+</section>

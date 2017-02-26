@@ -1,0 +1,378 @@
+/* --------------------------------------- */
+/* Import Fonts                            */
+/* --------------------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,500,700,700italic,900,900italic);
+
+/* --------------------------------------- */
+/* Default Variables                       */
+/* --------------------------------------- */
+/*** Grid Variables ***/
+$bas-ui-num-cols: 12 !default;
+$bas-ui-gutter-width: 32px !default;
+
+/*** Custom Colors ***/
+//$bas-ui-primary-color: #3e50b4 !default;
+//$bas-ui-secondary-color: #FF4081 !default;
+
+/*** Colors -> Common ***/
+$bas-ui-primary-color: color("grey", "900") !default;
+$bas-ui-primary-color-light: lighten($bas-ui-primary-color, 15%) !default;
+$bas-ui-primary-color-dark: darken($bas-ui-primary-color, 15%) !default;
+
+$bas-ui-secondary-color: color("light-green", "700") !default;
+
+$bas-ui-success-color: color("light-green", "700") !default;
+$bas-ui-info-color: color("light-blue", "700") !default;
+$bas-ui-warning-color: color("amber", "700") !default;
+$bas-ui-error-color: color("red", "700") !default;
+
+/*** Colors -> (Gray and brand colors) ***/
+$bas-ui-gray-base: #000 !default;
+$bas-ui-gray-darker: lighten($bas-ui-gray-base, 13.5%) !default; // #222
+$bas-ui-gray-dark: lighten($bas-ui-gray-base, 20%) !default; // #333
+$bas-ui-gray: lighten($bas-ui-gray-base, 33.5%) !default; // #555
+$bas-ui-gray-light: lighten($bas-ui-gray-base, 46.7%) !default; // #777
+$bas-ui-gray-lighter: lighten($bas-ui-gray-base, 93.5%) !default; // #eee
+
+$bas-ui-brand-primary: $bas-ui-primary-color !default;
+$bas-ui-brand-success: $bas-ui-success-color !default;
+$bas-ui-brand-info: $bas-ui-info-color !default;
+$bas-ui-brand-warning: $bas-ui-warning-color !default;
+$bas-ui-brand-danger: $bas-ui-error-color !default;
+
+/*** Colors -> Global ***/
+$bas-ui-body-bg: color("grey", "100") !default;
+$bas-ui-text-color: rgba(0, 0, 0, 0.87) !default;
+
+$bas-ui-link-color: $bas-ui-primary-color !default;
+$bas-ui-link-hover-color: darken($bas-ui-link-color, 15%) !default;
+
+/*** Fonts ***/
+$bas-ui-font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$bas-ui-font-family-serif: "Roboto", Georgia, "Times New Roman", Times, serif !default;
+$bas-ui-font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+
+/*** Typography ***/
+$bas-ui-font-size-base: 16px !default;
+$bas-ui-line-height-base: 1.5 !default;
+
+$bas-ui-h1-fontsize: 4.2rem !default;
+$bas-ui-h2-fontsize: 3.56rem !default;
+$bas-ui-h3-fontsize: 2.92rem !default;
+$bas-ui-h4-fontsize: 2.28rem !default;
+$bas-ui-h5-fontsize: 1.64rem !default;
+$bas-ui-h6-fontsize: 1rem !default;
+
+/*** Global ***/
+$bas-ui-border-radius-base: 2px !default;
+
+$bas-ui-line-height-base: 1.428571429 !default; // 20/14
+$bas-ui-line-height-computed: floor(($bas-ui-font-size-base * $bas-ui-line-height-base)) !default; // ~20px
+
+$bas-ui-hr-border: $bas-ui-gray-lighter !default;
+
+/*** Badges ***/
+$bas-ui-badge-bg-color: $bas-ui-secondary-color !default;
+
+/*** Buttons ***/
+$bas-ui-button-bg-color-disabled: #DFDFDF !default;
+$bas-ui-button-color: $bas-ui-secondary-color !default;
+$bas-ui-button-color-disabled: #9F9F9F !default;
+$bas-ui-button-font-size-shared: 1.3rem !default;
+$bas-ui-button-large-icon-font-size: 1.6rem !default;
+$bas-ui-button-font-size: $bas-ui-font-size-base !default;
+$bas-ui-button-min-width: 64px !default;
+$bas-ui-button-padding: 0 12px !default;
+$bas-ui-button-height: 36px !default;
+$bas-ui-button-line-height: 36px !default;
+
+/*** Buttons -> Size Large ***/
+$bas-ui-button-large-font-size: $bas-ui-button-font-size + 2 !default;
+$bas-ui-button-large-padding: 0 15px !default;
+$bas-ui-button-large-height: $bas-ui-button-height + 12 !default;
+$bas-ui-button-large-line-height: $bas-ui-button-line-height + 12 !default;
+
+/*** Buttons -> Colors ***/
+$bas-ui-button-default-color: color("grey", "800") !default;
+$bas-ui-button-default-bg: color("grey", "100") !default;
+$bas-ui-button-default-border: color("grey", "100") !default;
+
+$bas-ui-button-primary-color: #fff !default;
+$bas-ui-button-primary-bg: $bas-ui-button-color !default;
+$bas-ui-button-primary-border: $bas-ui-button-color !default;
+
+$bas-ui-button-success-color: #fff !default;
+$bas-ui-button-success-bg: $bas-ui-brand-success !default;
+$bas-ui-button-success-border: $bas-ui-brand-success !default;
+
+$bas-ui-button-info-color: #fff !default;
+$bas-ui-button-info-bg: $bas-ui-brand-info !default;
+$bas-ui-button-info-border: $bas-ui-brand-info !default;
+
+$bas-ui-button-warning-color: #fff !default;
+$bas-ui-button-warning-bg: $bas-ui-brand-warning !default;
+$bas-ui-button-warning-border: $bas-ui-brand-warning !default;
+
+$bas-ui-button-danger-color: #fff !default;
+$bas-ui-button-danger-bg: $bas-ui-brand-danger !default;
+$bas-ui-button-danger-border: $bas-ui-brand-danger !default;
+
+/*** Buttons -> FAB ***/
+$bas-ui-button-fab-size: 56px !default;
+$bas-ui-button-fab-size-sm: 40px !default;
+$bas-ui-button-fab-size-xs: 32px !default;
+
+/*** Side Nav ***/
+$bas-ui-side-nav-width: 240px !default;
+$bas-ui-side-nav-font-color: color("grey", "500") !default;
+$bas-ui-side-nav-bg-color: color("shades", "white") !default;
+$bas-ui-side-nav-line-color: color("grey", "300") !default;
+$bas-ui-side-nav-link-bg-color: color("grey", "100") !default;
+$bas-ui-side-nav-menu-padding-left: 16px !default;
+
+/*** Tool bar ***/
+$bas-ui-tool-bar-height: 56px !default;
+$bas-ui-tool-bar-padding-top: ($bas-ui-tool-bar-height - 32) / 2 !default;
+$bas-ui-tool-bar-padding-left: 16px !default;
+$bas-ui-tool-bar-font-color: color("grey", "500") !default;
+$bas-ui-tool-bar-bg-color: #ffffff !default;
+
+/*** Tables ***/
+$table-border: 1px solid rgba(0, 0, 0, .06) !default;
+$row-height: 48px !default;
+$table-striped-color: #f2f2f2 !default;
+
+/*** List ***/
+$bas-ui-list-bg-color: #fff !default;
+$bas-ui-list-active-color: $bas-ui-secondary-color !default;
+$bas-ui-list-hover-bg-color: color("grey", "100") !default;
+$bas-ui-list-line-color: $bas-ui-side-nav-line-color !default;
+$bas-ui-list-primary-line-text-color: $bas-ui-text-color !default;
+$bas-ui-list-secondary-line-text-color: color("grey", "500") !default;
+
+/*** Collapsible ***/
+$bas-ui-collapsible-height: 3rem !default;
+$bas-ui-collapsible-header-color: #fff !default;
+$bas-ui-collapsible-border-color: #ddd !default;
+$bas-ui-collapsible-body-padding: 16px !default;
+
+/*** Modals ***/
+$modals-header-height: 56px !default;
+$modals-header-padding-top: ($modals-header-height - 32) / 2 !default;
+$modals-header-padding-left: 16px !default;
+$modals-footer-height: 36px !default;
+$modals-line-color: $bas-ui-side-nav-line-color !default;
+
+/*** Tabs ***/
+$bas-ui-tabs-text-color: #fff !default;
+$bas-ui-tabs-underline-color: $bas-ui-secondary-color !default;
+
+$bas-ui-tabs-text-color-inverted: $bas-ui-primary-color !default;
+$bas-ui-tabs-underline-color-inverted: $bas-ui-primary-color !default;
+
+/*** Dropdown ***/
+$dropdown-bg-color: #fff !default;
+$dropdown-hover-bg-color: #eee !default;
+$dropdown-color: $bas-ui-text-color !default;
+$dropdown-item-height: 48px;
+
+/*** Forms ***/
+$input-border-color: color("grey", "500") !default;
+$input-bg-color: #fff !default;
+$input-error-color: $bas-ui-error-color !default;
+$input-success-color: $bas-ui-success-color !default;
+$input-focus-color: $bas-ui-secondary-color !default;
+$label-font-size: .8rem !default;
+$input-disabled-color: rgba(0, 0, 0, .26) !default;
+$input-disabled-solid-color: #BDBDBD !default;
+
+/*** Radio Buttons ***/
+$radio-fill-color: $bas-ui-secondary-color !default;
+$radio-empty-color: #5a5a5a !default;
+
+/*** Switches ***/
+$switch-bg-color: $bas-ui-secondary-color !default;
+$switch-checked-lever-bg: desaturate(lighten($bas-ui-secondary-color, 25%), 25%) !default;
+$switch-unchecked-bg: #F1F1F1 !default;
+$switch-unchecked-lever-bg: #818181 !default;
+
+/* Progress Bar */
+$progress-bar-color: $bas-ui-secondary-color !default;
+
+/* z-index master list */
+$bas-ui-zindex-status-bar: 300 !default;
+$bas-ui-zindex-modal: 250 !default;
+$bas-ui-zindex-modal-overlay: 249 !default;
+$bas-ui-zindex-app-bar-primary: 210 !default;
+$bas-ui-zindex-nav-drawer: 200 !default;
+$bas-ui-zindex-nav-drawer-overlay: 199 !default;
+$bas-ui-zindex-app-bar-search: 100 !default;
+$bas-ui-zindex-app-bar-search-overlay: 90 !default;
+$bas-ui-zindex-app-bar-nav-drawer-toggle: 80 !default;
+$bas-ui-zindex-app-bar-fab: 60 !default;
+$bas-ui-zindex-standalone-content: 55 !default;
+$bas-ui-zindex-app-bar: 50 !default;
+$bas-ui-zindex-content: 0 !default;
+
+/* --------------------------------------- */
+/* Animate CSS Default Variables           */
+/* --------------------------------------- */
+
+/** Active all animations
+-------------------------------------------------------------------------------------------------- **/
+
+// Fade Enter
+$use-fadeIn: true !default;
+$use-fadeInUp: true !default;
+$use-fadeInUpBig: true !default;
+$use-fadeInDown: true !default;
+$use-fadeInDownBig: true !default;
+$use-fadeInLeft: true !default;
+$use-fadeInLeftBig: true !default;
+$use-fadeInRight: true !default;
+$use-fadeInRightBig: true !default;
+
+// Fade Exit
+$use-fadeOut: true !default;
+$use-fadeOutUp: true !default;
+$use-fadeOutUpBig: true !default;
+$use-fadeOutDown: true !default;
+$use-fadeOutDownBig: true !default;
+$use-fadeOutLeft: true !default;
+$use-fadeOutLeftBig: true !default;
+$use-fadeOutRight: true !default;
+$use-fadeOutRightBig: true !default;
+
+// Bounce Enter
+$use-bounceIn: true !default;
+$use-bounceInUp: true !default;
+$use-bounceInDown: true !default;
+$use-bounceInLeft: true !default;
+$use-bounceInRight: true !default;
+
+// Bounce Exit
+$use-bounceOut: true !default;
+$use-bounceOutUp: true !default;
+$use-bounceOutDown: true !default;
+$use-bounceOutLeft: true !default;
+$use-bounceOutRight: true !default;
+
+// Rotate Enter
+$use-rotateIn: true !default;
+$use-rotateInUpLeft: true !default;
+$use-rotateInUpRight: true !default;
+$use-rotateInDownLeft: true !default;
+$use-rotateInDownRight: true !default;
+
+// Rotate Exit
+$use-rotateOut: true !default;
+$use-rotateOutUpLeft: true !default;
+$use-rotateOutUpRight: true !default;
+$use-rotateOutDownLeft: true !default;
+$use-rotateOutDownRight: true !default;
+
+// Slide Enter
+$use-slideIn: true !default;
+$use-slideInUp: true !default;
+$use-slideInDown: true !default;
+$use-slideInLeft: true !default;
+$use-slideInRight: true !default;
+
+// Slide Exit
+$use-slideOut: true !default;
+$use-slideOutUp: true !default;
+$use-slideOutDown: true !default;
+$use-slideOutLeft: true !default;
+$use-slideOutRight: true !default;
+
+// Flippers
+$use-flip: true !default;
+$use-flipInX: true !default;
+$use-flipInY: true !default;
+$use-flipOutX: true !default;
+$use-flipOutY: true !default;
+
+// Lightspeed
+$use-lightSpeedIn: true !default;
+$use-lightSpeedOut: true !default;
+
+// Attention Seekers
+$use-bounce: true !default;
+$use-flash: true !default;
+$use-pulse: true !default;
+$use-wiggle: true !default;
+$use-swing: true !default;
+$use-shake: true !default;
+$use-tada: true !default;
+$use-wobble: true !default;
+
+// Special
+$use-hinge: true !default;
+$use-rollIn: true !default;
+$use-rollOut: true !default;
+
+// Zoom In
+$use-zoomIn: true !default;
+$use-zoomInDown: true !default;
+$use-zoomInLeft: true !default;
+$use-zoomInRight: true !default;
+$use-zoomInUp: true !default;
+
+// Zoom Out
+$use-zoomOut: true !default;
+$use-zoomOutDown: true !default;
+$use-zoomOutLeft: true !default;
+$use-zoomOutRight: true !default;
+$use-zoomOutUp: true !default;
+
+/* ---------------------------------------------------------------------- */
+/* Vendor dependences (Bootstrap - Grid)
+/* ---------------------------------------------------------------------- */
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-flex: false !default;
+$enable-grid-classes: true !default;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
+) !default;
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:               $bas-ui-num-cols !default;
+$grid-gutter-width-base:     $bas-ui-gutter-width !default;
+$grid-gutter-widths: (
+    xs: $grid-gutter-width-base,
+    sm: $grid-gutter-width-base,
+    md: $grid-gutter-width-base,
+    lg: $grid-gutter-width-base,
+    xl: $grid-gutter-width-base
+) !default;

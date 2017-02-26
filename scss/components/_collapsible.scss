@@ -1,0 +1,211 @@
+// Collapsible
+
+.bas-ui-collapsible {
+    @extend .z-depth-1;
+    border-top: 1px solid $bas-ui-collapsible-border-color;
+    border-left: 1px solid $bas-ui-collapsible-border-color;
+    border-right: 1px solid $bas-ui-collapsible-border-color;
+    margin-bottom: 24px;
+    padding: 0;
+
+    li {
+        display: block;
+
+        .bas-ui-collapsible-header {
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid $bas-ui-collapsible-border-color;
+            height: $bas-ui-collapsible-height;
+            background-color: $bas-ui-collapsible-header-color;
+            font-size: $bas-ui-font-size-base;
+            line-height: $bas-ui-collapsible-height;
+            cursor: pointer;
+
+            a {
+                user-select: none;
+                display: block;
+                padding: 0 $bas-ui-collapsible-body-padding;
+                line-height: inherit;
+                text-decoration: none;
+                color: inherit;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .bas-ui-collapsible-body {
+            border-bottom: 1px solid $bas-ui-collapsible-border-color;
+
+            &.collapse {
+                display: none;
+
+                &.in {
+                    display: block;
+                }
+            }
+
+            &.collapsing {
+                position: relative;
+                height: 0;
+                overflow: hidden;
+                transition-timing-function: ease;
+                transition-duration: .35s;
+                transition-property: height;
+            }
+
+            .bas-ui-collapsible-body-inner {
+                padding: $bas-ui-collapsible-body-padding;
+            }
+        }
+    }
+}
+
+// Collapsible -> Popout
+
+.bas-ui-collapsible.popout {
+    border: none;
+    box-shadow: none;
+    >li {
+        @extend .z-depth-1;
+        margin: 0 24px;
+        transition: margin .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+        border-left: 1px solid $bas-ui-collapsible-border-color;
+        border-right: 1px solid $bas-ui-collapsible-border-color;
+
+        &:first-child {
+            border-top: 1px solid $bas-ui-collapsible-border-color;
+        }
+
+        .bas-ui-collapsible-header {
+            border-bottom: 1px solid $bas-ui-collapsible-border-color;
+        }
+
+        .bas-ui-collapsible-body {
+            border-bottom: none;
+        }
+    }
+    >li.active {
+        @extend .z-depth-1-half;
+        margin: 16px 0;
+
+        border-top: 1px solid $bas-ui-collapsible-border-color;
+        border-bottom: 1px solid $bas-ui-collapsible-border-color;
+    }
+}
+
+
+// Collapsible -> Side Nav
+
+.bas-ui-side-nav nav {
+
+    .bas-ui-collapsible {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+
+        li {
+            border: none;
+            box-shadow: none;
+            background-color: transparent;
+
+            .bas-ui-collapsible-header {
+                border: none;
+                box-shadow: none;
+                background-color: transparent;
+
+                a {
+                    font-weight: 700;
+                    color: $bas-ui-side-nav-font-color;
+                    padding: 0 16px 0 $bas-ui-side-nav-menu-padding-left;
+                    line-height: $bas-ui-collapsible-height;
+
+                    &:hover, &.active {
+                        color: $bas-ui-link-color;
+                        background-color: $bas-ui-side-nav-link-bg-color;
+                    }
+
+                }
+
+                &.active {
+                    a {
+                        color: $bas-ui-link-color;
+                        background-color: $bas-ui-side-nav-link-bg-color;
+
+                        .bas-ui-collapsible-view-open{
+                            display: inherit;
+                        }
+                        .bas-ui-collapsible-view-close {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:not(.active) {
+                    a {
+                        .bas-ui-collapsible-view-open {
+                            display: none;
+                        }
+                        .bas-ui-collapsible-view-close {
+                            display: inherit;
+                        }
+                    }
+                }
+            }
+
+            .bas-ui-collapsible-body {
+                border: none;
+                box-shadow: none;
+                background-color: transparent;
+
+                a {
+                    padding: 0 16px 0 $bas-ui-side-nav-menu-padding-left+24;
+                    display: block;
+                    color: $bas-ui-side-nav-font-color;
+                    line-height: $bas-ui-collapsible-height;
+                    text-decoration: none;
+                    &:hover, &.active {
+                        text-decoration: none;
+                        color: $bas-ui-link-color;
+                    }
+                }
+            }
+        }
+
+        // Second level not group
+        &:not(.bas-ui-collapsible-group) {
+
+            li {
+
+                .bas-ui-collapsible-header {
+                    a {
+                        padding: 0 16px 0 $bas-ui-side-nav-menu-padding-left;
+                    }
+                }
+
+                .bas-ui-collapsible-body {
+
+                    // Second level
+                    >.bas-ui-collapsible {
+
+                        .bas-ui-collapsible-header {
+                            a {
+                                padding: 0 16px 0 $bas-ui-side-nav-menu-padding-left+24;
+                            }
+                        }
+
+                        .bas-ui-collapsible-body {
+
+                            a {
+                                padding: 0 16px 0 $bas-ui-side-nav-menu-padding-left*2+24;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+}

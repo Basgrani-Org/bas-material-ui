@@ -1,0 +1,336 @@
+---
+section: Components
+chapter: Tabs
+slug_section: components
+slug_chapter: tabs
+description: Tabs make it easy to explore and switch between different views.
+---
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>{{chapter}}</h1>
+        <p class="lead">{{description}}</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Normal</h2>
+            <p><code class="language-markup">bas-ui-scrollbar-wrap</code>  is used to enable the horizontal scroll, when the tabs do not fit on the screen. This is only for touch enabled devices</p>
+
+            <div class="bas-ui-card primary-color bas-ui-bottom-margin-3 doc-tabs">
+                <div class="bas-ui-card-supporting-text">
+
+                    <div class="bas-ui-scrollbar-wrap bas-ui-scrollbar-wrap-x bas-ui-scrollbar-wrap-hide">
+                        <ul class="bas-ui-tabs">
+                            <li class="bas-ui-tab"><a href="#bas-ui-tab-s1-t1">Item one</a></li>
+                            <li class="bas-ui-tab"><a class="active" href="#bas-ui-tab-s1-t2">Item two</a></li>
+                            <li class="bas-ui-tab disabled"><a href="#bas-ui-tab-s1-t3">Disabled</a></li>
+                            <li class="bas-ui-tab"><a href="#bas-ui-tab-s1-t4">Item four</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="bas-ui-tab-s1-t1" class="col-md-12">Item one...</div>
+        <div id="bas-ui-tab-s1-t2" class="col-md-12">Item two...</div>
+        <div id="bas-ui-tab-s1-t3" class="col-md-12">Disabled...</div>
+        <div id="bas-ui-tab-s1-t4" class="col-md-12">Item four...</div>
+
+        <div class="col-md-12">
+            <br>
+            <pre><code class="language-markup">
+&lt;div class=&quot;col-md-12&quot;&gt;
+    &lt;div class=&quot;bas-ui-scrollbar-wrap bas-ui-scrollbar-wrap-x bas-ui-scrollbar-wrap-hide&quot;&gt;
+        &lt;ul class=&quot;bas-ui-tabs&quot;&gt;
+            &lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a href=&quot;#bas-ui-tab-s1-t1&quot;&gt;Item one&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a class=&quot;active&quot; href=&quot;#bas-ui-tab-s1-t2&quot;&gt;Item two&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;bas-ui-tab disabled&quot;&gt;&lt;a href=&quot;#bas-ui-tab-s1-t3&quot;&gt;Disabled&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a href=&quot;#bas-ui-tab-s1-t4&quot;&gt;Item four&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;bas-ui-tab-s1-t1&quot; class=&quot;col-md-12&quot;&gt;Item one...&lt;/div&gt;
+&lt;div id=&quot;bas-ui-tab-s1-t2&quot; class=&quot;col-md-12&quot;&gt;Item two...&lt;/div&gt;
+&lt;div id=&quot;bas-ui-tab-s1-t3&quot; class=&quot;col-md-12&quot;&gt;Disabled...&lt;/div&gt;
+&lt;div id=&quot;bas-ui-tab-s1-t4&quot; class=&quot;col-md-12&quot;&gt;Item four...&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Justified</h2>
+            <p>Inverted color by adding the class <code class="language-markup">bas-ui-tabs-color-inverted</code>. Justified by adding the class <code class="language-markup">bas-ui-tabs-justified</code></p>
+
+            <div class="bas-ui-card bas-ui-bottom-margin-3 doc-tabs doc-tabs-not-padding">
+                <div class="bas-ui-card-supporting-text">
+
+                    <div class="bas-ui-scrollbar-wrap bas-ui-scrollbar-wrap-x bas-ui-scrollbar-wrap-hide">
+                        <ul class="bas-ui-tabs bas-ui-tabs-color-inverted bas-ui-tabs-justified">
+                            <li class="bas-ui-tab"><a href="#bas-ui-tab-s2-t1">Item one</a></li>
+                            <li class="bas-ui-tab"><a class="active" href="#bas-ui-tab-s2-t2">Item two</a></li>
+                            <li class="bas-ui-tab disabled"><a href="#bas-ui-tab-s2-t3">Disabled</a></li>
+                            <li class="bas-ui-tab"><a href="#bas-ui-tab-s2-t4">Item four</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="bas-ui-tab-s2-t1" class="col-md-12">Item one...</div>
+        <div id="bas-ui-tab-s2-t2" class="col-md-12">Item two...</div>
+        <div id="bas-ui-tab-s2-t3" class="col-md-12">Disabled...</div>
+        <div id="bas-ui-tab-s2-t4" class="col-md-12">Item four...</div>
+
+        <div class="col-md-12">
+            <br>
+            <pre><code class="language-markup">
+...
+&lt;ul class=&quot;bas-ui-tabs bas-ui-tabs-color-inverted bas-ui-tabs-justified&quot;&gt;
+...</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Links</h2>
+            <p>You can also use tabs with links</p>
+
+            <div class="bas-ui-card bas-ui-bottom-margin-3 doc-tabs doc-tabs-not-padding">
+                <div class="bas-ui-card-supporting-text">
+
+                    <div class="bas-ui-scrollbar-wrap bas-ui-scrollbar-wrap-x bas-ui-scrollbar-wrap-hide">
+                        <ul class="bas-ui-tabs bas-ui-tabs-color-inverted bas-ui-tabs-justified">
+                            <li class="bas-ui-tab"><a href="/content/color.html">Color</a></li>
+                            <li class="bas-ui-tab"><a class="active" href="/content/helpers.html">Helpers</a></li>
+                            <li class="bas-ui-tab"><a href="/content/table.html">Table</a></li>
+                            <li class="bas-ui-tab"><a href="/content/typography.html">Typography</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-12">
+            <br>
+            <pre><code class="language-markup">
+...
+&lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a href=&quot;/content/color.html&quot;&gt;Color&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a class=&quot;active&quot; href=&quot;/content/helpers.html&quot;&gt;Helpers&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a href=&quot;/content/table.html&quot;&gt;Table&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a href=&quot;/content/typography.html&quot;&gt;Typography&lt;/a&gt;&lt;/li&gt;
+...</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Icons</h2>
+            <p>You can also use tabs with icons by adding the class <code class="language-markup">bas-ui-tabs-with-icons</code></p>
+
+            <div class="bas-ui-card bas-ui-bottom-margin-3 doc-tabs doc-tabs-not-padding">
+                <div class="bas-ui-card-supporting-text">
+
+                    <div class="bas-ui-scrollbar-wrap bas-ui-scrollbar-wrap-x bas-ui-scrollbar-wrap-hide">
+                        <ul class="bas-ui-tabs bas-ui-tabs-with-icons bas-ui-tabs-color-inverted bas-ui-tabs-justified">
+                            <li class="bas-ui-tab"><a href="#bas-ui-tab-s3-t1"><i class="mdi mdi-home bas-ui-icon"></i></a></li>
+                            <li class="bas-ui-tab"><a class="active" href="#bas-ui-tab-s3-t2"><i class="mdi mdi-settings bas-ui-icon"></i></a></li>
+                            <li class="bas-ui-tab disabled"><a href="#bas-ui-tab-s3-t3"><i class="mdi mdi-book-variant bas-ui-icon"></i></a></li>
+                            <li class="bas-ui-tab"><a href="#bas-ui-tab-s3-t4"><i class="mdi mdi-heart bas-ui-icon"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="bas-ui-tab-s3-t1" class="col-md-12">Item one...</div>
+        <div id="bas-ui-tab-s3-t2" class="col-md-12">Item two...</div>
+        <div id="bas-ui-tab-s3-t3" class="col-md-12">Disabled...</div>
+        <div id="bas-ui-tab-s3-t4" class="col-md-12">Item four...</div>
+
+        <div class="col-md-12">
+            <br>
+            <pre><code class="language-markup">
+...
+&lt;ul class=&quot;bas-ui-tabs bas-ui-tabs-with-icons bas-ui-tabs-color-inverted bas-ui-tabs-justified&quot;&gt;
+    &lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a href=&quot;#bas-ui-tab-s3-t1&quot;&gt;&lt;i class=&quot;mdi mdi-home bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a class=&quot;active&quot; href=&quot;#bas-ui-tab-s3-t2&quot;&gt;&lt;i class=&quot;mdi mdi-settings bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-tab disabled&quot;&gt;&lt;a href=&quot;#bas-ui-tab-s3-t3&quot;&gt;&lt;i class=&quot;mdi mdi-book-variant bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a href=&quot;#bas-ui-tab-s3-t4&quot;&gt;&lt;i class=&quot;mdi mdi-heart bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+...</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Left Icons</h2>
+            <p>You can also use tabs with left icons by adding the class <code class="language-markup">bas-ui-tabs-with-left-icons</code></p>
+
+            <div class="bas-ui-card bas-ui-bottom-margin-3 doc-tabs doc-tabs-not-padding">
+                <div class="bas-ui-card-supporting-text">
+
+                    <div class="bas-ui-scrollbar-wrap bas-ui-scrollbar-wrap-x bas-ui-scrollbar-wrap-hide">
+                        <ul class="bas-ui-tabs bas-ui-tabs-with-left-icons bas-ui-tabs-color-inverted bas-ui-tabs-justified">
+                            <li class="bas-ui-tab"><a href="#bas-ui-tab-s4-t1"><i class="mdi mdi-home bas-ui-icon"></i> Home</a></li>
+                            <li class="bas-ui-tab"><a class="active" href="#bas-ui-tab-s4-t2"><i class="mdi mdi-settings bas-ui-icon"></i> Settings</a></li>
+                            <li class="bas-ui-tab disabled"><a href="#bas-ui-tab-s4-t3"><i class="mdi mdi-book-variant bas-ui-icon"></i> Components</a></li>
+                            <li class="bas-ui-tab"><a href="#bas-ui-tab-s4-t4"><i class="mdi mdi-heart bas-ui-icon"></i> Showcase</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="bas-ui-tab-s4-t1" class="col-md-12">Item one...</div>
+        <div id="bas-ui-tab-s4-t2" class="col-md-12">Item two...</div>
+        <div id="bas-ui-tab-s4-t3" class="col-md-12">Disabled...</div>
+        <div id="bas-ui-tab-s4-t4" class="col-md-12">Item four...</div>
+
+        <div class="col-md-12">
+            <br>
+            <pre><code class="language-markup">
+...
+&lt;ul class=&quot;bas-ui-tabs bas-ui-tabs-with-left-icons bas-ui-tabs-color-inverted bas-ui-tabs-justified&quot;&gt;
+    &lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a href=&quot;#bas-ui-tab-s4-t1&quot;&gt;&lt;i class=&quot;mdi mdi-home bas-ui-icon&quot;&gt;&lt;/i&gt; Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a class=&quot;active&quot; href=&quot;#bas-ui-tab-s4-t2&quot;&gt;&lt;i class=&quot;mdi mdi-settings bas-ui-icon&quot;&gt;&lt;/i&gt; Settings&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-tab disabled&quot;&gt;&lt;a href=&quot;#bas-ui-tab-s4-t3&quot;&gt;&lt;i class=&quot;mdi mdi-book-variant bas-ui-icon&quot;&gt;&lt;/i&gt; Components&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a href=&quot;#bas-ui-tab-s4-t4&quot;&gt;&lt;i class=&quot;mdi mdi-heart bas-ui-icon&quot;&gt;&lt;/i&gt; Showcase&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+...</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Top Icons</h2>
+            <p>You can also use tabs with top icons by adding the class <code class="language-markup">bas-ui-tabs-with-top-icons</code></p>
+
+            <div class="bas-ui-card bas-ui-bottom-margin-3 doc-tabs doc-tabs-not-padding">
+                <div class="bas-ui-card-supporting-text">
+
+                    <div class="bas-ui-scrollbar-wrap bas-ui-scrollbar-wrap-x bas-ui-scrollbar-wrap-hide">
+                        <ul class="bas-ui-tabs bas-ui-tabs-with-top-icons bas-ui-tabs-color-inverted bas-ui-tabs-justified">
+                            <li class="bas-ui-tab"><a href="#bas-ui-tab-s5-t1"><i class="mdi mdi-home bas-ui-icon"></i><br>Home</a></li>
+                            <li class="bas-ui-tab ">
+                                <a class="active" href="#bas-ui-tab-s5-t2">
+                                    <i class="mdi mdi-settings bas-ui-icon bas-ui-badge bas-ui-badge-overlap" data-badge="12"></i><br>Settings
+                                </a>
+                            </li>
+                            <li class="bas-ui-tab disabled"><a href="#bas-ui-tab-s5-t3"><i class="mdi mdi-book-variant bas-ui-icon"></i><br>Components</a></li>
+                            <li class="bas-ui-tab"><a href="#bas-ui-tab-s5-t4"><i class="mdi mdi-heart bas-ui-icon bas-ui-badge"></i><br>Showcase</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="bas-ui-tab-s5-t1" class="col-md-12">Item one...</div>
+        <div id="bas-ui-tab-s5-t2" class="col-md-12">Item two...</div>
+        <div id="bas-ui-tab-s5-t3" class="col-md-12">Disabled...</div>
+        <div id="bas-ui-tab-s5-t4" class="col-md-12">Item four...</div>
+
+        <div class="col-md-12">
+            <br>
+            <pre><code class="language-markup">
+...
+&lt;ul class=&quot;bas-ui-tabs bas-ui-tabs-with-top-icons bas-ui-tabs-color-inverted bas-ui-tabs-justified&quot;&gt;
+    &lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a href=&quot;#bas-ui-tab-s5-t1&quot;&gt;&lt;i class=&quot;mdi mdi-home bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;br&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-tab &quot;&gt;
+        &lt;a class=&quot;active&quot; href=&quot;#bas-ui-tab-s5-t2&quot;&gt;
+            &lt;i class=&quot;mdi mdi-settings bas-ui-icon bas-ui-badge bas-ui-badge-overlap&quot; data-badge=&quot;12&quot;&gt;&lt;/i&gt;&lt;br&gt;Settings
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;bas-ui-tab disabled&quot;&gt;&lt;a href=&quot;#bas-ui-tab-s5-t3&quot;&gt;&lt;i class=&quot;mdi mdi-book-variant bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;br&gt;Components&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;bas-ui-tab&quot;&gt;&lt;a href=&quot;#bas-ui-tab-s5-t4&quot;&gt;&lt;i class=&quot;mdi mdi-heart bas-ui-icon&quot;&gt;&lt;/i&gt;&lt;br&gt;Showcase&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+...</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Initialization</h2>
+            <p>Tabs are initialized automatically, but if you add tabs dynamically you will have to initialize them like this.</p>
+
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+    $('ul.bas-ui-tabs').bas_ui_tabs();
+});</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Methods</h2>
+            <p>You can programmatically trigger a tab change with our <code class=" language-markup">select_tab</code> method. You have to input the id of the tab you want to switch to. For sample id: <code class=" language-markup">#bas-ui-tab-s3-t1</code></p>
+
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+    $('#bas-ui-tabs-custom-1').bas_ui_tabs('select_tab', 'bas-ui-tab-s3-t1');
+});</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Events</h2>
+
+            <table class="bas-ui-data-table bas-ui-striped z-depth-1 bas-ui-bottom-margin-3">
+                <thead>
+                <tr>
+                    <th class="bas-ui-data-table-cell-non-numeric">Option Name</th>
+                    <th class="bas-ui-data-table-cell-non-numeric">Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">show.bas.tabs</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event fires immediately when the show instance method is called.</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">shown.bas.tabs</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event is fired when a content element has been made visible to the user (will wait for CSS transitions to complete).</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">hide.bas.tabs</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event is fired immediately when the hide method has been called.</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">hidden.bas.tabs</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event is fired when a content element has been hidden from the user (will wait for CSS transitions to complete).</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p>Sample event.</p>
+
+            <pre><code class="language-javascript">
+$('#bas-ui-tab-s3-t1').on('shown.bas.tabs', function () {
+    // do something...
+});
+</code></pre>
+        </div>
+    </div>
+
+</div>
+</section>

@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="shortcut icon" type="image/png" href="../../assets/img/favicon.png">
+    <meta name="description" content="Cards | A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content.">
+    <title>Cards | BasMaterial UI</title>
+
+    <!-- CSS-->
+    <link href="../../assets/css/bas-material-ui.css?v=0.0.0" rel="stylesheet">
+    <link href="../../assets/css/bas-material-ui-docs.css?v=0.0.0" rel="stylesheet">
+</head>
+<body class="bas-ui-layout-header-fixed bas-ui-side-nav-auto bas-ui-side-nav-hide-off bas-ui-side-nav-with-overlay-off">
+    <!--[if lt IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Header -->
+    <!-- Layout Header -->
+    <header class="bas-ui-layout-header">
+    
+        <div id="doc-ui-app-bar" class="bas-ui-app-bar">
+    
+            <!-- Toggle -->
+            <div class="bas-ui-side-nav-toggle"><i class="mdi mdi-menu bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i></div>
+    
+            <!-- Breadcrumb -->
+            <div class="bas-ui-breadcrumb">
+                <a href="/" class="bas-ui-breadcrumb-item"><span>Components</span></a>
+                <a href="../components/cards.html" class="bas-ui-breadcrumb-item"><span>Cards</span></a>
+            </div>
+    
+            <!-- Nav Menu -->
+            <ul class="right bas-ui-nav-menu">
+                <li class="bas-ui-nav-menu-item-icon hidden-xs-down">
+                    <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-top-search-show">
+                        <i class="mdi mdi-magnify bas-ui-icon"></i>
+                    </a>
+                </li>
+                <li class="bas-ui-nav-menu-item-icon hidden-xs-down">
+                    <a data-target="bas-ui-modal-header-doc-1"  class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-modal-trigger">
+                        <i class="mdi mdi-apps bas-ui-icon"></i>
+                    </a>
+                </li>
+                <li class="bas-ui-nav-menu-item-icon">
+                    <a data-target="bas-ui-modal-header-doc-1"  class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-modal-trigger">
+                        <i class="mdi mdi-bell bas-ui-icon"></i>
+                    </a>
+                    <span class="bas-ui-badge bas-ui-badge-overlap" data-badge="12"></span>
+                </li>
+                <li class="bas-ui-nav-menu-item-icon">
+                    <a data-target="doc-dropdown-app-bar-user" data-hover="false" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves dropdown-trigger">
+                        <i class="mdi mdi-account bas-ui-icon"></i>
+                    </a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-app-bar-user" class="bas-ui-dropdown bas-ui-dropdown-right-top">
+                        <li><a href="#!">Profile</a></li>
+                        <li><a href="#!">Logout</a></li>
+                    </ul>
+                </li>
+                <li class="bas-ui-nav-menu-item-icon hidden-sm-up">
+                    <a data-target="doc-dropdown-app-bar" data-hover="false" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves dropdown-trigger">
+                        <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                    </a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-app-bar" class="bas-ui-dropdown bas-ui-dropdown-right-top">
+                        <li><a class="bas-ui-top-search-show"><i class="mdi mdi-magnify bas-ui-icon"></i> Search</a></li>
+                        <li><a data-target="bas-ui-modal-header-doc-1" class="bas-ui-modal-trigger"><i class="mdi mdi-apps bas-ui-icon"></i> Apps</a></li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <!-- Top Search -->
+            <div class="bas-ui-top-search">
+                <i class="bas-ui-top-search-close mdi mdi-arrow-left bas-ui-icon bas-ui-icon-left"></i>
+                <!-- Search -->
+                <div id="doc-bas-ui-top-search-autocomplete" class="bas-ui-search">
+                    <input type="text" placeholder="Search">
+                    <i class="bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left"></i>
+                    <i class="bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right"></i>
+                </div>
+            </div>
+    
+        </div>
+    
+    
+    </header>
+    
+    <!-- Layout Side Nav -->
+    <div class="bas-ui-side-nav">
+    
+        <div class="bas-ui-side-nav-wrapper">
+    
+            <div class="brand">
+                <div class="bas-ui-side-nav-toggle"><i class="mdi mdi-menu bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i></div>
+                <a target="_blank" href="http://basgrani.com"><img src="../../assets/img/logo.svg" alt="BasMaterial UI logo"></a>
+            </div>
+    
+            <div class="bas-ui-side-nav-content-wrapper">
+                <nav>
+    
+                    <!-- Search -->
+                    <div id="doc-bas-ui-side-nav-search-autocomplete" class="bas-ui-search">
+                        <input type="text" placeholder="Search">
+                        <i class="bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left"></i>
+                        <i class="bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>
+                    </div>
+    
+                    <!-- Collapsible Menu -->
+                    <ul class="bas-ui-collapsible" data-collapsible="accordion">
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-index" href="/">
+                                    <i class="mdi mdi-hexagon bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Overview
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves">
+                                <a id="collapsible-nav-getting-started" target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui/blob/master/README.md">
+                                    <i class="mdi mdi-settings bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    <i class="mdi mdi-open-in-new bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>
+                                    Getting Started
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-help" href="/help/donate.html">
+                                    <i class="mdi mdi-heart-pulse bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Help This Project
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-layout">
+                                    <i class="mdi mdi-view-quilt bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Layout
+                                </a>
+                            </div>
+                            <div class="bas-ui-collapsible-body collapse ">
+                                        <a id="collapsible-nav-layout-grid" class="" href="../layout/grid.html">Grid</a>
+                                        <a id="collapsible-nav-layout-structuring" class="" href="../layout/structuring.html">Structuring</a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-content">
+                                    <i class="mdi mdi-layers bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Content
+                                </a>
+                            </div>
+                            <div class="bas-ui-collapsible-body collapse ">
+                                        <a id="collapsible-nav-content-icons" class="" href="../content/icons.html">Icons</a>
+                                        <a id="collapsible-nav-content-badges" class="" href="../content/badges.html">Badges</a>
+                                        <a id="collapsible-nav-content-color" class="" href="../content/color.html">Color</a>
+                                        <a id="collapsible-nav-content-helpers" class="" href="../content/helpers.html">Helpers</a>
+                                        <a id="collapsible-nav-content-progress" class="" href="../content/progress.html">Progress</a>
+                                        <a id="collapsible-nav-content-table" class="" href="../content/table.html">Table</a>
+                                        <a id="collapsible-nav-content-typography" class="" href="../content/typography.html">Typography</a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves active">
+                                <a id="collapsible-nav-components">
+                                    <i class="mdi mdi-puzzle bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Components
+                                </a>
+                            </div>
+                            <div class="bas-ui-collapsible-body collapse in">
+                                        <a id="collapsible-nav-components-cards" class="active" href="cards.html">Cards</a>
+                                        <a id="collapsible-nav-components-collapsible" class="" href="collapsible.html">Collapsible</a>
+                                        <a id="collapsible-nav-components-dropdown" class="" href="dropdown.html">Dropdown</a>
+                                        <a id="collapsible-nav-components-form-validation" class="" href="form-validation.html">Form Validation</a>
+                                        <a id="collapsible-nav-components-forms" class="" href="forms.html">Forms</a>
+                                        <a id="collapsible-nav-components-buttons" class="" href="buttons.html">Buttons</a>
+                                        <a id="collapsible-nav-components-list" class="" href="list.html">List</a>
+                                        <a id="collapsible-nav-components-messages" class="" href="messages.html">Messages (Soon)</a>
+                                        <a id="collapsible-nav-components-modals" class="" href="modals.html">Modals</a>
+                                        <a id="collapsible-nav-components-tabs" class="" href="tabs.html">Tabs</a>
+                                        <a id="collapsible-nav-components-toast" class="" href="toast.html">Toast (Soon)</a>
+                                        <a id="collapsible-nav-components-tooltips" class="" href="tooltips.html">Tooltips (Soon)</a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-showcase" href="/showcase/showcase.html">
+                                    <i class="mdi mdi-web bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Showcase
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves">
+                                <a id="collapsible-nav-download" class="download-in-git-hub-href" href="https://github.com/Basgrani-Org/bas-material-ui/archive/master.zip">
+                                    <i class="mdi mdi-download bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Download
+                                </a>
+                            </div>
+                        </li>
+    
+                    </ul>
+    
+                </nav>
+            </div>
+    
+            <div class="footer">
+                <a target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui"><i class="mdi mdi-github-circle bas-ui-icon bas-ui-icon-left bas-ui-icon-18"></i></a><p class="copyright">&copy; BasMaterial UI - v0.1.0</p>
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    <!-- Modal Right (Notifications) -->
+    <div id="bas-ui-modal-header-doc-1" class="bas-ui-modal bas-ui-modal-fixed bas-ui-modal-right-sheet">
+    
+        <!-- Header -->
+        <div class="bas-ui-modal-header">
+            <div class="header-title">
+                <!--i class="mdi mdi-close bas-ui-icon bas-ui-icon-left bas-ui-icon-24 bas-ui-modal-close"></i-->
+                <span class="section-title">Notifications</span>
+            </div>
+            <ul class="right bas-ui-nav-menu">
+                <li class="bas-ui-nav-menu-item-icon">
+                    <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-modal-close">
+                        <i class="mdi mdi-close bas-ui-icon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- Content -->
+        <div class="bas-ui-modal-content">
+    
+            <ul class="bas-ui-list bas-ui-hoverable">
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_1.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_2.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_3.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_1.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_2.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_3.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_1.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_2.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_3.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_1.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_2.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_3.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+            </ul>
+    
+        </div>
+    
+        <!-- Footer -->
+        <div class="bas-ui-modal-footer">
+            <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves bas-ui-modal-close">View All</a>
+        </div>
+    
+    </div>
+
+    <main class="bas-ui-main bas-ui-scrollbar-y">
+        
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>Cards</h1>
+        <p class="lead">A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content.</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="header">Basic</h2>
+
+                    <div class="bas-ui-card bas-ui-bottom-margin-3">
+                        <div class="bas-ui-card-title">
+                            <h2 class="bas-ui-card-title-text">Welcome</h2>
+                        </div>
+                        <div class="bas-ui-card-supporting-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Mauris sagittis pellentesque lacus eleifend lacinia...
+                        </div>
+                        <div class="bas-ui-card-actions bas-ui-card-border">
+                            <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat secondary-color-text bas-ui-waves">Get Started</a>
+                        </div>
+                        <div class="bas-ui-card-menu">
+                            <ul class="right bas-ui-nav-menu">
+                                <li class="bas-ui-nav-menu-item-icon">
+                                    <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                        <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="header">Panel</h2>
+
+                    <div class="bas-ui-card bas-ui-bottom-margin-3">
+                        <div class="bas-ui-card-supporting-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet eros quis sapien mollis congue eu a libero. Fusce blandit purus vel est sodales, consequat gravida felis condimentum. Suspendisse quis odio pulvinar neque condimentum congue ut et nisl. Cras nec neque eu urna euismod iaculis. Mauris facilisis arcu at eros porttitor, non consectetur ante rhoncus.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <pre><code class="language-markup">
+&lt;!-- Basic --&gt;
+&lt;div class=&quot;bas-ui-card&quot;&gt;
+    &lt;div class=&quot;bas-ui-card-title&quot;&gt;
+        &lt;h2 class=&quot;bas-ui-card-title-text&quot;&gt;Welcome&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bas-ui-card-supporting-text&quot;&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Mauris sagittis pellentesque lacus eleifend lacinia...
+    &lt;/div&gt;
+    &lt;div class=&quot;bas-ui-card-actions bas-ui-card-border&quot;&gt;
+        &lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat secondary-color-text bas-ui-waves&quot;&gt;Get Started&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bas-ui-card-menu&quot;&gt;
+        &lt;ul class=&quot;right bas-ui-nav-menu&quot;&gt;
+            &lt;li class=&quot;bas-ui-nav-menu-item-icon&quot;&gt;
+                &lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves&quot;&gt;
+                    &lt;i class=&quot;mdi mdi-dots-vertical bas-ui-icon&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Panel --&gt;
+&lt;div class=&quot;bas-ui-card&quot;&gt;
+    &lt;div class=&quot;bas-ui-card-supporting-text&quot;&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet eros quis sapien mollis congue eu a libero. Fusce blandit purus vel est sodales, consequat gravida felis condimentum. Suspendisse quis odio pulvinar neque condimentum congue ut et nisl. Cras nec neque eu urna euismod iaculis. Mauris facilisis arcu at eros porttitor, non consectetur ante rhoncus.
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">With Image</h2>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="bas-ui-card doc-card-head-image bas-ui-bottom-margin-3">
+                        <div class="bas-ui-card-title">
+                            <h2 class="bas-ui-card-title-text">Welcome</h2>
+                        </div>
+                        <div class="bas-ui-card-supporting-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Mauris sagittis pellentesque lacus eleifend lacinia...
+                        </div>
+                        <div class="bas-ui-card-actions bas-ui-card-border">
+                            <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat secondary-color-text bas-ui-waves">Get Started</a>
+                        </div>
+                        <div class="bas-ui-card-menu">
+                            <ul class="right bas-ui-nav-menu">
+                                <li class="bas-ui-nav-menu-item-icon">
+                                    <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                        <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+
+            <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-card&quot;&gt;
+    &lt;div class=&quot;bas-ui-card-title&quot;&gt;
+        &lt;h2 class=&quot;bas-ui-card-title-text&quot;&gt;Welcome&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bas-ui-card-supporting-text&quot;&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Mauris sagittis pellentesque lacus eleifend lacinia...
+    &lt;/div&gt;
+    &lt;div class=&quot;bas-ui-card-actions bas-ui-card-border&quot;&gt;
+        &lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat secondary-color-text bas-ui-waves&quot;&gt;Get Started&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bas-ui-card-menu&quot;&gt;
+        &lt;ul class=&quot;right bas-ui-nav-menu&quot;&gt;
+            &lt;li class=&quot;bas-ui-nav-menu-item-icon&quot;&gt;
+                &lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves&quot;&gt;
+                    &lt;i class=&quot;mdi mdi-dots-vertical bas-ui-icon&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="header">With Table</h2>
+
+                    <div class="bas-ui-card bas-ui-card-with-table bas-ui-bottom-margin-3">
+                        <div class="bas-ui-card-title">
+                            <h2 class="bas-ui-card-title-text">List Materials</h2>
+                        </div>
+                        <table class="table bas-ui-data-table bas-ui-data-table-js bas-ui-with-checkbox">
+                            <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" class="bas-ui-input filled-in" id="checkbox-all" />
+                                    <label for="checkbox-all"></label>
+                                </th>
+                                <th class="bas-ui-data-table-cell-non-numeric">Material</th>
+                                <th>Quantity</th>
+                                <th>Unit price</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="bas-ui-input filled-in" id="checkbox-1" />
+                                    <label for="checkbox-1"></label>
+                                </td>
+                                <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                                <td>25</td>
+                                <td>$2.90</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="bas-ui-input filled-in" id="checkbox-2" />
+                                    <label for="checkbox-2"></label>
+                                </td>
+                                <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                                <td>50</td>
+                                <td>$1.25</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="bas-ui-input filled-in" id="checkbox-3" />
+                                    <label for="checkbox-3"></label>
+                                </td>
+                                <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                                <td>10</td>
+                                <td>$2.35</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="bas-ui-card-actions bas-ui-card-border">
+                            <ul class="right bas-ui-nav-menu">
+                                <li>Rows per page:</li>
+                                <li><a href="#">10<i class="mdi mdi-menu-down bas-ui-icon bas-ui-icon-right" style="margin-left: 5px;"></i></a></li>
+                                <li><a>1 - 3 of 100</a></li>
+                                <li class="bas-ui-nav-menu-item-icon">
+                                    <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                        <i class="mdi mdi-chevron-left bas-ui-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="bas-ui-nav-menu-item-icon">
+                                    <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                        <i class="mdi mdi-chevron-right bas-ui-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bas-ui-card-menu">
+                            <ul class="right bas-ui-nav-menu">
+                                <li class="bas-ui-nav-menu-item-icon">
+                                    <div class="bas-ui-search bas-ui-search-expandable">
+                                        <input type="text" placeholder="Search">
+                                        <a class="bas-ui-search-icon-left bas-ui-serach-expandable-show btn btn-default bas-ui-btn-flat bas-ui-btn-fab bas-ui-btn-menu-fab bas-ui-waves">
+                                            <i class="mdi mdi mdi-magnify bas-ui-icon"></i>
+                                        </a>
+                                        <i class="bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>
+                                    </div>
+                                </li>
+                                <li class="bas-ui-nav-menu-item-icon">
+                                    <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                        <i class="mdi mdi-filter-variant bas-ui-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="bas-ui-nav-menu-item-icon">
+                                    <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                        <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="header">With List</h2>
+
+                    <div class="bas-ui-card bas-ui-card-with-list bas-ui-bottom-margin-3">
+                        <div class="bas-ui-card-title bas-ui-card-border">
+                            <h2 class="bas-ui-card-title-text">Messages</h2>
+                        </div>
+                        <ul class="bas-ui-list bas-ui-hoverable">
+
+                            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-truncate bas-ui-list-secondary-content">
+                                <img class="circle" src="/assets/img/avatar/avatar_1.jpg">
+                                <div class="bas-ui-list-body">
+                                    <h6 class="bas-ui-list-title">Title</h6>
+                                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                                </div>
+                                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                            </li>
+
+                            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-truncate bas-ui-list-secondary-content">
+                                <img class="circle" src="/assets/img/avatar/avatar_2.jpg">
+                                <div class="bas-ui-list-body">
+                                    <h6 class="bas-ui-list-title">Title</h6>
+                                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                                </div>
+                                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                            </li>
+
+                            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-truncate bas-ui-list-secondary-content">
+                                <img class="circle" src="/assets/img/avatar/avatar_3.jpg">
+                                <div class="bas-ui-list-body">
+                                    <h6 class="bas-ui-list-title">Title</h6>
+                                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                                </div>
+                                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                            </li>
+
+                        </ul>
+                        <div class="bas-ui-card-actions bas-ui-card-border center">
+                            <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves shades-text-black">View all</a>
+                        </div>
+                        <div class="bas-ui-card-menu">
+                            <ul class="right bas-ui-nav-menu">
+                                <li class="bas-ui-nav-menu-item-icon">
+                                    <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                        <i class="mdi mdi-check-all bas-ui-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <pre><code class="language-markup">
+&lt;!--  With Table --&gt;
+&lt;div class=&quot;bas-ui-card bas-ui-card-with-table&quot;&gt;
+    &lt;div class=&quot;bas-ui-card-title&quot;&gt;
+        &lt;h2 class=&quot;bas-ui-card-title-text&quot;&gt;List Materials&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;table class=&quot;table bas-ui-data-table bas-ui-with-checkbox&quot;&gt;
+        &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                &lt;input type=&quot;checkbox&quot; class=&quot;bas-ui-input filled-in&quot; id=&quot;checkbox-all&quot; /&gt;
+                &lt;label for=&quot;checkbox-all&quot;&gt;&lt;/label&gt;
+            &lt;/th&gt;
+            &lt;th class=&quot;bas-ui-data-table-cell-non-numeric&quot;&gt;Material&lt;/th&gt;
+            &lt;th&gt;Quantity&lt;/th&gt;
+            &lt;th&gt;Unit price&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+
+        &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;input type=&quot;checkbox&quot; class=&quot;bas-ui-input filled-in&quot; id=&quot;checkbox-1&quot; /&gt;
+                &lt;label for=&quot;checkbox-1&quot;&gt;&lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;bas-ui-data-table-cell-non-numeric&quot;&gt;Acrylic (Transparent)&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+            &lt;td&gt;$2.90&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;input type=&quot;checkbox&quot; class=&quot;bas-ui-input filled-in&quot; id=&quot;checkbox-2&quot; /&gt;
+                &lt;label for=&quot;checkbox-2&quot;&gt;&lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;bas-ui-data-table-cell-non-numeric&quot;&gt;Plywood (Birch)&lt;/td&gt;
+            &lt;td&gt;50&lt;/td&gt;
+            &lt;td&gt;$1.25&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;input type=&quot;checkbox&quot; class=&quot;bas-ui-input filled-in&quot; id=&quot;checkbox-3&quot; /&gt;
+                &lt;label for=&quot;checkbox-3&quot;&gt;&lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;bas-ui-data-table-cell-non-numeric&quot;&gt;Laminate (Gold on Blue)&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+            &lt;td&gt;$2.35&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;div class=&quot;bas-ui-card-actions bas-ui-card-border&quot;&gt;
+        &lt;ul class=&quot;right bas-ui-nav-menu&quot;&gt;
+            &lt;li&gt;Rows per page:&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;10&lt;i class=&quot;mdi mdi-menu-down bas-ui-icon bas-ui-icon-right&quot; style=&quot;margin-left: 5px;&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a&gt;1 - 3 of 100&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;bas-ui-nav-menu-item-icon&quot;&gt;
+                &lt;a class=&quot;btn btn-default bas-ui-btn-flat bas-ui-btn-fab bas-ui-btn-menu-fab bas-ui-waves&quot;&gt;
+                    &lt;i class=&quot;mdi mdi-chevron-left bas-ui-icon&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;bas-ui-nav-menu-item-icon&quot;&gt;
+                &lt;a class=&quot;btn btn-default bas-ui-btn-flat bas-ui-btn-fab bas-ui-btn-menu-fab bas-ui-waves&quot;&gt;
+                    &lt;i class=&quot;mdi mdi-chevron-right bas-ui-icon&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bas-ui-card-menu&quot;&gt;
+        &lt;ul class=&quot;right bas-ui-nav-menu&quot;&gt;
+            &lt;li class=&quot;bas-ui-nav-menu-item-icon&quot;&gt;
+                &lt;div class=&quot;bas-ui-search bas-ui-search-expandable&quot;&gt;
+                    &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot;&gt;
+                    &lt;a class=&quot;bas-ui-search-icon-left bas-ui-serach-expandable-show btn btn-default bas-ui-btn-flat bas-ui-btn-fab bas-ui-btn-menu-fab bas-ui-waves&quot;&gt;
+                        &lt;i class=&quot;mdi mdi mdi-magnify bas-ui-icon&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;i class=&quot;bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;bas-ui-nav-menu-item-icon&quot;&gt;
+                &lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves&quot;&gt;
+                    &lt;i class=&quot;mdi mdi-filter-variant bas-ui-icon&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;bas-ui-nav-menu-item-icon&quot;&gt;
+                &lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves&quot;&gt;
+                    &lt;i class=&quot;mdi mdi-dots-vertical bas-ui-icon&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--  With List --&gt;
+&lt;div class=&quot;bas-ui-card bas-ui-card-with-list&quot;&gt;
+    &lt;div class=&quot;bas-ui-card-title bas-ui-card-border&quot;&gt;
+        &lt;h2 class=&quot;bas-ui-card-title-text&quot;&gt;Messages&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;bas-ui-list bas-ui-hoverable&quot;&gt;
+
+        &lt;li class=&quot;bas-ui-list-item bas-ui-list-avatar bas-ui-list-truncate bas-ui-list-secondary-content&quot;&gt;
+            &lt;img class=&quot;circle&quot; src=&quot;/assets/img/avatar/avatar_1.jpg&quot;&gt;
+            &lt;div class=&quot;bas-ui-list-body&quot;&gt;
+                &lt;h6 class=&quot;bas-ui-list-title&quot;&gt;Title&lt;/h6&gt;
+                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+            &lt;/div&gt;
+            &lt;a class=&quot;bas-ui-list-secondary-content-body shades-text-black-hover&quot;&gt;&lt;i class=&quot;mdi mdi-close-circle bas-ui-icon bas-ui-icon-18&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li class=&quot;bas-ui-list-item bas-ui-list-avatar bas-ui-list-truncate bas-ui-list-secondary-content&quot;&gt;
+            &lt;img class=&quot;circle&quot; src=&quot;/assets/img/avatar/avatar_2.jpg&quot;&gt;
+            &lt;div class=&quot;bas-ui-list-body&quot;&gt;
+                &lt;h6 class=&quot;bas-ui-list-title&quot;&gt;Title&lt;/h6&gt;
+                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+            &lt;/div&gt;
+            &lt;a class=&quot;bas-ui-list-secondary-content-body shades-text-black-hover&quot;&gt;&lt;i class=&quot;mdi mdi-close-circle bas-ui-icon bas-ui-icon-18&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li class=&quot;bas-ui-list-item bas-ui-list-avatar bas-ui-list-truncate bas-ui-list-secondary-content&quot;&gt;
+            &lt;img class=&quot;circle&quot; src=&quot;/assets/img/avatar/avatar_3.jpg&quot;&gt;
+            &lt;div class=&quot;bas-ui-list-body&quot;&gt;
+                &lt;h6 class=&quot;bas-ui-list-title&quot;&gt;Title&lt;/h6&gt;
+                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+            &lt;/div&gt;
+            &lt;a class=&quot;bas-ui-list-secondary-content-body shades-text-black-hover&quot;&gt;&lt;i class=&quot;mdi mdi-close-circle bas-ui-icon bas-ui-icon-18&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+
+    &lt;/ul&gt;
+    &lt;div class=&quot;bas-ui-card-actions bas-ui-card-border center&quot;&gt;
+        &lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves shades-text-black&quot;&gt;View all&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bas-ui-card-menu&quot;&gt;
+        &lt;ul class=&quot;right bas-ui-nav-menu&quot;&gt;
+            &lt;li class=&quot;bas-ui-nav-menu-item-icon&quot;&gt;
+                &lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves&quot;&gt;
+                    &lt;i class=&quot;mdi mdi-check-all bas-ui-icon&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="header">Image</h2>
+
+                    <div class="bas-ui-card bas-ui-card-image doc-card-image bas-ui-bottom-margin-3">
+                        <div class="bas-ui-card-title bas-ui-card-title-expand"></div>
+                        <div class="bas-ui-card-actions">
+                            <span class="shades-text-white">Image.jpg</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="header">Event</h2>
+
+                    <div class="bas-ui-card bas-ui-card-event primary-color doc-card-event bas-ui-bottom-margin-3">
+                        <div class="bas-ui-card-title bas-ui-card-title-expand">
+                            <h4 class="shades-text-white">
+                                Featured event:<br>
+                                May 24, 2016<br>
+                                7-11pm
+                            </h4>
+                        </div>
+                        <div class="bas-ui-card-actions bas-ui-card-border">
+                            <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat shades-text-white bas-ui-waves">Add to Calendar</a>
+                            <i class="mdi mdi-calendar bas-ui-icon bas-ui-icon-right bas-ui-icon-24 shades-text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <pre><code class="language-markup">
+&lt;!-- Image --&gt;
+&lt;div class=&quot;bas-ui-card bas-ui-card-image&quot;&gt;
+    &lt;div class=&quot;bas-ui-card-title bas-ui-card-title-expand&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bas-ui-card-actions&quot;&gt;
+        &lt;span class=&quot;shades-text-white&quot;&gt;Image.jpg&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Event --&gt;
+ &lt;div class=&quot;bas-ui-card bas-ui-card-event primary-color&quot;&gt;
+    &lt;div class=&quot;bas-ui-card-title bas-ui-card-title-expand&quot;&gt;
+        &lt;h4 class=&quot;shades-text-white&quot;&gt;
+            Featured event:&lt;br&gt;
+            May 24, 2016&lt;br&gt;
+            7-11pm
+        &lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bas-ui-card-actions bas-ui-card-border&quot;&gt;
+        &lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat shades-text-white bas-ui-waves&quot;&gt;Add to Calendar&lt;/a&gt;
+        &lt;i class=&quot;mdi mdi-calendar bas-ui-icon bas-ui-icon-right bas-ui-icon-24 shades-text-white&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+
+</div>
+</section>
+
+
+        <!-- Footer -->
+        <footer class="doc-footer bas-ui-section bas-ui-top-padding-6 bas-ui-bottom-padding-6">
+            <div class="container">
+                <ul class="doc-footer-links">
+                    <li><a target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui">GitHub<i class="mdi mdi-open-in-new bas-ui-icon"></i></a></li>
+                    <li><a target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui/blob/master/README.md">Started<i class="mdi mdi-open-in-new bas-ui-icon"></i></a></li>
+                    <li><a href="/showcase/showcase.html">Showcase</a></li>
+                    <li><a href="/help/donate.html">Help</a></li>
+                </ul>
+                <p>Developed by, <a target="_blank" href="http://basgrani.com">Basgrani</a></p>
+                <p>&copy; BasMaterial UI - v0.1.0, <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a></p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="../../assets/js/bas-material-ui.js?v=0.0.0"></script>
+    <script src="../../assets/js/bas-material-ui-docs.js?v=0.0.0"></script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-XXXXX-X', 'bas-material-ui.basgrani.com');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+// Search
+
+.bas-ui-search {
+    line-height: 48px;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    padding: 0 14px;
+
+    // Hide clear
+    .bas-ui-search-clear {
+        display: none;
+        cursor: pointer;
+    }
+
+    input {
+        font-size: 16px;
+        height: 32px;
+        border: 0;
+        width: calc(100% - 39px);
+        margin: 0;
+        line-height: 32px;
+        vertical-align: middle;
+        background-color: transparent;
+
+        &:focus {
+            border: 0;
+            box-shadow: none;
+        }
+    }
+
+    .bas-ui-search-icon-left {
+        color: #9b9b9b;
+    }
+
+    &.active {
+        border: 1px solid #9b9b9b;
+
+        input {
+            width: calc(100% - 72px);
+        }
+        .bas-ui-search-clear {
+            display: inherit;
+        }
+        .bas-ui-search-icon-left {
+            color: inherit;
+        }
+    }
+
+    // Expandable
+    &.bas-ui-search-expandable {
+        display: inline-block;
+        /*overflow: hidden;*/
+        position: relative;
+        line-height: 32px;
+        border: 0 solid #e1e1e1;
+        border-radius: 0;
+        padding: 8px 0;
+        min-width: 32px;
+        width: auto;
+
+        input {
+            width: calc(100% - 32px);
+            border-bottom: 1px solid #e1e1e1;
+            margin-left: 32px;
+            max-width: .1px;
+
+            transition-duration: .2s;
+            transition-timing-function: cubic-bezier(.4,0,.2,1);
+        }
+
+        .bas-ui-search-icon-left {
+            top: 8px;
+            left: 0;
+            position: absolute;
+
+            i {
+                pointer-events: none;
+            }
+        }
+
+        &.active {
+
+            input {
+                padding-right: 20px;
+                border-bottom: 1px solid $input-border-color;
+
+                max-width: 600px;
+            }
+            .bas-ui-search-clear {
+                position: absolute;
+                right: 0;
+                top: 8px;
+            }
+            .bas-ui-search-icon-left {
+
+            }
+        }
+
+        // Autocomplete
+        .autocomplete-suggestions {
+            border: 1px solid #e1e1e1;
+            top: 40px;
+            left: 32px;
+            right: 0;
+
+            // Group
+            .autocomplete-group {
+                border-top: 1px solid #e1e1e1;
+            }
+        }
+    }
+
+    // Autocomplete
+    .autocomplete-suggestions {
+        right: 16px;
+        left: 16px;
+    }
+}
+
+
+// Top Search
+
+.bas-ui-top-search {
+    position: absolute;
+    display: block;
+    height: 100%;
+    left: 0;
+    right: 0;
+    padding-left: 55px;
+    padding-right: 16px;
+    background-color: #fff;
+    color: $bas-ui-tool-bar-font-color;
+
+    // Hide
+    top: -$bas-ui-tool-bar-height;
+    visibility: hidden;
+
+    @include bas-ui-transition(top);
+
+    .bas-ui-top-search-close {
+        position: absolute;
+        left: 16px;
+        cursor: pointer;
+        line-height: $bas-ui-tool-bar-height;
+    }
+
+    // Search in top
+    .bas-ui-search {
+        line-height: $bas-ui-tool-bar-height;
+        border: none;
+        padding: 0;
+
+        input {
+            font-size: 18px;
+            width: 100%;
+        }
+        &.active {
+            border: none;
+
+            input {
+                width: calc(100% - 39px);
+            }
+        }
+        .bas-ui-search-icon-left {
+            display: none;
+        }
+
+        // Autocomplete
+        .autocomplete-suggestions {
+            border: 1px solid #e1e1e1;
+            right: 0;
+            left: 0;
+
+            // Suggestion
+            .autocomplete-suggestion {
+                padding: 0 24px;
+            }
+
+            // Group
+            .autocomplete-group {
+                border-top: 1px solid #e1e1e1;
+
+                strong {
+                    padding: 0 24px;
+                }
+            }
+        }
+    }
+
+}
+
+// In Side Nav
+
+.bas-ui-side-nav nav {
+    .bas-ui-search {
+        margin: 0 8px 16px 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+
+        // Autocomplete
+        .autocomplete-suggestions {
+            right: 8px;
+            left: 8px;
+        }
+    }
+}
+
+
+// In Card
+
+.bas-ui-card {
+    .bas-ui-search {
+
+        // Expandable
+        &.bas-ui-search-expandable {
+            padding: 0;
+
+            input {
+
+            }
+
+            .bas-ui-search-icon-left {
+                top: 0;
+                color: color("grey", "600");
+            }
+
+            &.active {
+
+                input {
+
+                }
+                .bas-ui-search-clear {
+                    top: 0;
+                }
+                .bas-ui-search-icon-left {
+
+                }
+            }
+        }
+    }
+}

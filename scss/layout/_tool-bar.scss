@@ -1,0 +1,15 @@
+/* Vars */
+
+// Tool bar
+.bas-ui-tool-bar {
+    position: relative;
+    color: $bas-ui-tool-bar-font-color;
+    background-color: $bas-ui-tool-bar-bg-color;
+    height: $bas-ui-tool-bar-height;
+    line-height: $bas-ui-tool-bar-height - $bas-ui-tool-bar-padding-top*2;
+    padding: $bas-ui-tool-bar-padding-top $bas-ui-tool-bar-padding-left;
+}
+
+@include bas-ui-media-breakpoint-down(sm) {
+
+}

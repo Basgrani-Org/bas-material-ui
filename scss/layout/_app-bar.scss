@@ -1,0 +1,30 @@
+/* Vars */
+
+
+// App bar
+.bas-ui-app-bar {
+    position: relative;
+    color: color("shades", "white");
+    background-color: $bas-ui-primary-color;
+    height: $bas-ui-tool-bar-height;
+    line-height: $bas-ui-tool-bar-height - $bas-ui-tool-bar-padding-top*2;
+    padding: $bas-ui-tool-bar-padding-top $bas-ui-tool-bar-padding-left;
+
+    .bas-ui-side-nav-toggle {
+        // Hide nav toggle
+        display: none;
+        float: left;
+    }
+}
+
+// Show nav toggle
+body.bas-ui-side-nav-hide .bas-ui-app-bar .bas-ui-side-nav-toggle {
+    display: block;
+}
+
+@include bas-ui-media-breakpoint-down(sm) {
+    // Show nav toggle
+    .bas-ui-app-bar .bas-ui-side-nav-toggle {
+        display: block;
+    }
+}

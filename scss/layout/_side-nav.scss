@@ -1,0 +1,144 @@
+/* Vars */
+
+
+// Side nav
+.bas-ui-side-nav {
+	@extend .z-depth-1;
+	border-right: 1px solid $bas-ui-side-nav-line-color;
+
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+    bottom: 0;
+
+    background: $bas-ui-side-nav-bg-color;
+    color: $bas-ui-side-nav-font-color;
+
+    width: $bas-ui-side-nav-width;
+    z-index: $bas-ui-zindex-nav-drawer;
+
+    @include bas-ui-transition(transform);
+
+    .bas-ui-side-nav-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+    	.brand {
+		    border-bottom: 1px solid $bas-ui-side-nav-line-color;
+		    display: block;
+            width: 100%;
+		    height: $bas-ui-tool-bar-height;
+		    line-height: $bas-ui-tool-bar-height - (16 + 16);
+		    padding: 16px 0 16px 16px;
+		    position: absolute;
+		}
+
+		.bas-ui-side-nav-content-wrapper {
+            position: relative;
+            margin-top: $bas-ui-tool-bar-height;
+            overflow: hidden;
+            width: 100%;
+            // Offset Header + Footer
+            height: calc(100% - #{$bas-ui-tool-bar-height*2});
+
+            nav {
+                position: absolute;
+                padding: 16px 0;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                overflow-y: auto;
+                overflow-x: hidden;
+                word-wrap: break-word;
+
+                @extend .bas-ui-scrollbar-y;
+            }
+		}
+
+    	.footer {
+		    border-top: 1px solid $bas-ui-side-nav-line-color;
+		    bottom: 0;
+		    color: inherit;
+		    font-size: 13px;
+		    height: $bas-ui-tool-bar-height;
+		    line-height: $bas-ui-tool-bar-height - (16 + 16);
+		    padding: 16px 16px 16px 16px;
+		    position: absolute;
+		    width: 100%;
+		    a:not(:hover) {
+		    	color: inherit;
+		    }
+		    p {
+		    	margin: 0;
+		    }
+		}
+    }
+}
+
+// overlay
+.bas-ui-side-nav-overlay {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    display: none;
+    will-change: opacity;
+}
+
+// fix ios
+html.is-touch {
+    .bas-ui-side-nav-overlay {
+        cursor: pointer;
+    }
+}
+
+// Show Side nav
+body.bas-ui-side-nav-visible {
+
+    &.bas-ui-side-nav-with-overlay {
+        .bas-ui-main {
+            overflow-y: hidden;
+            padding-left: 0 !important;
+        }
+
+        .bas-ui-side-nav-overlay {
+            z-index: $bas-ui-zindex-nav-drawer-overlay;
+            display: block;
+            opacity: 0.5;
+        }
+    }
+
+    @include bas-ui-media-breakpoint-down(sm) {
+        .bas-ui-side-nav-overlay {
+            z-index: $bas-ui-zindex-nav-drawer-overlay;
+            display: block;
+            opacity: 0.5;
+        }
+    }
+
+    .bas-ui-side-nav {
+        transform: translateX(0);
+    }
+}
+
+// Hide Side nav
+body.bas-ui-side-nav-hide .bas-ui-side-nav {
+	transform: translateX(-($bas-ui-side-nav-width+1));
+}
+
+@include bas-ui-media-breakpoint-down(sm) {
+    // Hide Side nav
+    body:not(.bas-ui-side-nav-visible) .bas-ui-side-nav {
+        transform: translateX(-($bas-ui-side-nav-width+1));
+    }
+}

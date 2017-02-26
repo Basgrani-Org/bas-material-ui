@@ -1,0 +1,118 @@
+---
+section: Content
+chapter: Color
+slug_section: content
+slug_chapter: color
+description: Color in material design is inspired by bold hues juxtaposed with muted environments, deep shadows, and bright highlights.
+---
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>{{chapter}}</h1>
+        <p class="lead">{{description}}</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="header">Normal</h2>
+                <p>To apply a background color, add the color name <code class="language-markup">grey-900</code>. To apply a text color, add the color name <code class="language-markup">light-green-text-700</code></p>
+
+                <div class="bas-ui-card bas-ui-bottom-margin-3 grey-900 light-green-text-700">
+                    <div class="bas-ui-card-supporting-text">
+                        Sample color usage
+                    </div>
+                </div>
+
+                <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-card grey-900 light-green-text-700&quot;&gt;
+    &lt;div class=&quot;bas-ui-card-supporting-text&quot;&gt;
+        Sample color usage
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            </div>
+
+            <div class="col-md-6">
+                <h2 class="header">Hover</h2>
+                <p>To apply a hover for background color and text color, add <code class="language-markup">-hover</code> after the name color.</p>
+
+                <div class="bas-ui-card bas-ui-bottom-margin-3 grey-900-hover light-green-text-700-hover">
+                    <div class="bas-ui-card-supporting-text">
+                        Sample hover color usage
+                    </div>
+                </div>
+
+                <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-card grey-900-hover light-green-text-700-hover&quot;&gt;
+    &lt;div class=&quot;bas-ui-card-supporting-text&quot;&gt;
+        Sample hover color usage
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Sass</h2>
+                <p>You can apply the color simply by extending the classes like the example below</p>
+
+                <pre><code class="language-scss">
+.custom-container {
+    @extend .grey-900;
+}</code></pre>
+
+            </div>
+        </div>
+
+        <!-- Render color palette -->
+        <div class="doc-color-palette">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="header">Material Palette (Background)</h2>
+                </div>
+
+                {{#each color as |value name|}}
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        {{#each value as |value_c name_c|}}
+                        <div style="color: {{colorLabel name_c}};" class="{{colorClassBackground name name_c}}">
+                            <span class="name-class">{{colorClassBackground name name_c}}</span>
+                            <span class="cod-color">{{value_c}}</span>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="header">Material Palette (Text)</h2>
+                </div>
+
+                {{#each color as |value name|}}
+                <div class="col-xs-12 col-sm-6 col-md-4 palette">
+                    <div class="color-wrap z-depth-1">
+                        {{#each value as |value_c name_c|}}
+                        <div style="background-color: {{colorLabel name_c}};" class="{{colorClass name name_c}}">
+                            <span class="name-class">{{colorClass name name_c}}</span>
+                            <span class="cod-color">{{value_c}}</span>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+
+        </div>
+
+    </div>
+</section>

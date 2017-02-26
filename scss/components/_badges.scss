@@ -1,0 +1,61 @@
+// Badge
+
+.bas-ui-badge {
+    position: relative;
+    white-space: nowrap;
+    margin-right: 20px;
+
+    &:not([data-badge]) {
+        margin-right: auto;
+    }
+
+    &[data-badge]:after {
+        line-height: 16px;
+        pointer-events: none;
+        content: attr(data-badge);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        position: absolute;
+        top: -6px;
+        right: -20px;
+        font-family: $bas-ui-font-family-sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 10px;
+        //width: 20px;
+        padding: 0 5px;
+        height: 16px;
+        border-radius: 8px;
+        background: #fc344d;
+        color: #fff;
+    }
+
+    // overlap
+    &.bas-ui-badge-overlap {
+        margin-right: 0;
+
+        &:after {
+            right: -8px;
+        }
+    }
+
+    // Auto hide
+    &[data-badge='0']:after {
+        display: none;
+    }
+
+}
+
+// In span
+span.bas-ui-badge {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    right: 2px;
+    top: 2px;
+    bottom: 0;
+}

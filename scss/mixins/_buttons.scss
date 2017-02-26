@@ -1,0 +1,75 @@
+// variant
+@mixin bas-ui-button-variant($color, $background, $background_hover) {
+    color: $color;
+    background-color: $background;
+
+    // FLAT
+    &.bas-ui-button-flat {
+        background-color: transparent;
+    }
+
+    &:focus,
+    &.focus {
+        @extend .z-depth-1;
+        color: $color;
+        background-color: $background_hover;
+    }
+    &:hover {
+        @extend .z-depth-1-half;
+        color: $color;
+        background-color: $background_hover;
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        color: $color;
+        background-color: $background_hover;
+
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $color;
+            background-color: $background_hover;
+        }
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            @extend .z-depth-1;
+            pointer-events: none;
+            opacity:1;
+            color: $bas-ui-button-color-disabled;
+            background-color: $bas-ui-button-bg-color-disabled;
+        }
+    }
+
+    // FLAT
+    &.bas-ui-button-flat.disabled {
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .badge {
+        color: $background;
+        background-color: $color;
+    }
+}
+
+// Button sizes
+@mixin bas-ui-button-size($padding, $font-size, $line-height, $height) {
+    padding: $padding;
+    font-size: $font-size;
+    line-height: $line-height;
+    height: $height;
+}

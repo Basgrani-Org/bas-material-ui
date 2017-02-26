@@ -1,0 +1,357 @@
+<!-- Layout Header -->
+<header class="bas-ui-layout-header">
+
+    <div id="doc-ui-app-bar" class="bas-ui-app-bar">
+
+        <!-- Toggle -->
+        <div class="bas-ui-side-nav-toggle"><i class="mdi mdi-menu bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i></div>
+
+        <!-- Breadcrumb -->
+        <div class="bas-ui-breadcrumb">
+        {{#if page.slug_section}}
+            <a href="/" class="bas-ui-breadcrumb-item"><span>{{page.section}}</span></a>
+        {{/if}}
+        {{#if page.slug_chapter}}
+            <a href="{{page.relativeLink}}" class="bas-ui-breadcrumb-item"><span>{{page.chapter}}</span></a>
+        {{/if}}
+        </div>
+
+        <!-- Nav Menu -->
+        <ul class="right bas-ui-nav-menu">
+            <li class="bas-ui-nav-menu-item-icon hidden-xs-down">
+                <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-top-search-show">
+                    <i class="mdi mdi-magnify bas-ui-icon"></i>
+                </a>
+            </li>
+            <li class="bas-ui-nav-menu-item-icon hidden-xs-down">
+                <a data-target="bas-ui-modal-header-doc-1"  class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-modal-trigger">
+                    <i class="mdi mdi-apps bas-ui-icon"></i>
+                </a>
+            </li>
+            <li class="bas-ui-nav-menu-item-icon">
+                <a data-target="bas-ui-modal-header-doc-1"  class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-modal-trigger">
+                    <i class="mdi mdi-bell bas-ui-icon"></i>
+                </a>
+                <span class="bas-ui-badge bas-ui-badge-overlap" data-badge="12"></span>
+            </li>
+            <li class="bas-ui-nav-menu-item-icon">
+                <a data-target="doc-dropdown-app-bar-user" data-hover="false" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves dropdown-trigger">
+                    <i class="mdi mdi-account bas-ui-icon"></i>
+                </a>
+                <!-- Dropdown Structure -->
+                <ul id="doc-dropdown-app-bar-user" class="bas-ui-dropdown bas-ui-dropdown-right-top">
+                    <li><a href="#!">Profile</a></li>
+                    <li><a href="#!">Logout</a></li>
+                </ul>
+            </li>
+            <li class="bas-ui-nav-menu-item-icon hidden-sm-up">
+                <a data-target="doc-dropdown-app-bar" data-hover="false" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves dropdown-trigger">
+                    <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                </a>
+                <!-- Dropdown Structure -->
+                <ul id="doc-dropdown-app-bar" class="bas-ui-dropdown bas-ui-dropdown-right-top">
+                    <li><a class="bas-ui-top-search-show"><i class="mdi mdi-magnify bas-ui-icon"></i> Search</a></li>
+                    <li><a data-target="bas-ui-modal-header-doc-1" class="bas-ui-modal-trigger"><i class="mdi mdi-apps bas-ui-icon"></i> Apps</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Top Search -->
+        <div class="bas-ui-top-search">
+            <i class="bas-ui-top-search-close mdi mdi-arrow-left bas-ui-icon bas-ui-icon-left"></i>
+            <!-- Search -->
+            <div id="doc-bas-ui-top-search-autocomplete" class="bas-ui-search">
+                <input type="text" placeholder="Search">
+                <i class="bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left"></i>
+                <i class="bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right"></i>
+            </div>
+        </div>
+
+    </div>
+
+    {{#is page.slug_chapter "buttons"}}
+    <div class="bas-ui-tool-bar">
+        <div class="header-title">
+            <span class="section-title">Tool Bar</span>
+        </div>
+    </div>
+
+    <!-- Floating Button -->
+    <div class="bas-ui-button-fab-floating">
+        <a class="bas-ui-button bas-ui-button-primary bas-ui-button-fab bas-ui-waves-light"><i class="mdi mdi-plus bas-ui-icon"></i></a>
+    </div>
+    {{/is}}
+
+</header>
+
+<!-- Layout Side Nav -->
+<div class="bas-ui-side-nav">
+
+    <div class="bas-ui-side-nav-wrapper">
+
+        <div class="brand">
+            <div class="bas-ui-side-nav-toggle"><i class="mdi mdi-menu bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i></div>
+            <a target="_blank" href="{{site.basgrani_link}}"><img src="{{assets}}/img/logo.svg" alt="{{site.title}} logo"></a>
+        </div>
+
+        <div class="bas-ui-side-nav-content-wrapper">
+            <nav>
+
+                <!-- Search -->
+                <div id="doc-bas-ui-side-nav-search-autocomplete" class="bas-ui-search">
+                    <input type="text" placeholder="Search">
+                    <i class="bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left"></i>
+                    <i class="bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>
+                </div>
+
+                <!-- Collapsible Menu -->
+                <ul class="bas-ui-collapsible" data-collapsible="accordion">
+
+                    <li>
+                        <div class="bas-ui-collapsible-header bas-ui-waves {{#is page.slug_section "home"}}active{{/is}}">
+                            <a id="collapsible-nav-index" href="/">
+                                <i class="mdi mdi-hexagon bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                Overview
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="bas-ui-collapsible-header bas-ui-waves">
+                            <a id="collapsible-nav-getting-started" target="_blank" href="{{site.readme_git}}">
+                                <i class="mdi mdi-settings bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                <i class="mdi mdi-open-in-new bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>
+                                Getting Started
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="bas-ui-collapsible-header bas-ui-waves {{#is page.slug_section "help"}}active{{/is}}">
+                            <a id="collapsible-nav-help" href="/help/donate.html">
+                                <i class="mdi mdi-heart-pulse bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                Help This Project
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="bas-ui-collapsible-header bas-ui-waves {{#is page.slug_section "layout"}}active{{/is}}">
+                            <a id="collapsible-nav-layout">
+                                <i class="mdi mdi-view-quilt bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                Layout
+                            </a>
+                        </div>
+                        <div class="bas-ui-collapsible-body collapse {{#is page.slug_section "layout"}}in{{/is}}">
+                            {{#each pages}}
+                                {{#is data.slug_section "layout"}}
+                                    <a id="collapsible-nav-{{data.slug_section}}-{{data.slug_chapter}}" class="{{isActive}}" href="{{autolink}}">{{data.chapter}}</a>
+                                {{/is}}
+                            {{/each}}
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="bas-ui-collapsible-header bas-ui-waves {{#is page.slug_section "content"}}active{{/is}}">
+                            <a id="collapsible-nav-content">
+                                <i class="mdi mdi-layers bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                Content
+                            </a>
+                        </div>
+                        <div class="bas-ui-collapsible-body collapse {{#is page.slug_section "content"}}in{{/is}}">
+                            {{#each pages}}
+                                {{#is data.slug_section "content"}}
+                                    <a id="collapsible-nav-{{data.slug_section}}-{{data.slug_chapter}}" class="{{isActive}}" href="{{autolink}}">{{data.chapter}}</a>
+                                {{/is}}
+                            {{/each}}
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="bas-ui-collapsible-header bas-ui-waves {{#is page.slug_section "components"}}active{{/is}}">
+                            <a id="collapsible-nav-components">
+                                <i class="mdi mdi-puzzle bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                Components
+                            </a>
+                        </div>
+                        <div class="bas-ui-collapsible-body collapse {{#is page.slug_section "components"}}in{{/is}}">
+                            {{#each pages}}
+                                {{#is data.slug_section "components"}}
+                                    <a id="collapsible-nav-{{data.slug_section}}-{{data.slug_chapter}}" class="{{isActive}}" href="{{autolink}}">{{data.chapter}}</a>
+                                {{/is}}
+                            {{/each}}
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="bas-ui-collapsible-header bas-ui-waves {{#is page.slug_section "showcase"}}active{{/is}}">
+                            <a id="collapsible-nav-showcase" href="/showcase/showcase.html">
+                                <i class="mdi mdi-web bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                Showcase
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="bas-ui-collapsible-header bas-ui-waves">
+                            <a id="collapsible-nav-download" class="download-in-git-hub-href" href="{{site.zip_git}}">
+                                <i class="mdi mdi-download bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                Download
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </div>
+
+        <div class="footer">
+            <a target="_blank" href="{{site.homepage_git}}"><i class="mdi mdi-github-circle bas-ui-icon bas-ui-icon-left bas-ui-icon-18"></i></a><p class="copyright">&copy; {{site.title}} - v{{package.version}}</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Modal Right (Notifications) -->
+<div id="bas-ui-modal-header-doc-1" class="bas-ui-modal bas-ui-modal-fixed bas-ui-modal-right-sheet">
+
+    <!-- Header -->
+    <div class="bas-ui-modal-header">
+        <div class="header-title">
+            <!--i class="mdi mdi-close bas-ui-icon bas-ui-icon-left bas-ui-icon-24 bas-ui-modal-close"></i-->
+            <span class="section-title">Notifications</span>
+        </div>
+        <ul class="right bas-ui-nav-menu">
+            <li class="bas-ui-nav-menu-item-icon">
+                <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-modal-close">
+                    <i class="mdi mdi-close bas-ui-icon"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="bas-ui-modal-content">
+
+        <ul class="bas-ui-list bas-ui-hoverable">
+
+            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                <img class="circle" src="{{assets}}/img/avatar/avatar_1.jpg">
+                <div class="bas-ui-list-body">
+                    <h6 class="bas-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+            </li>
+
+            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                <img class="circle" src="{{assets}}/img/avatar/avatar_2.jpg">
+                <div class="bas-ui-list-body">
+                    <h6 class="bas-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+            </li>
+
+            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                <img class="circle" src="{{assets}}/img/avatar/avatar_3.jpg">
+                <div class="bas-ui-list-body">
+                    <h6 class="bas-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+            </li>
+
+            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                <img class="circle" src="{{assets}}/img/avatar/avatar_1.jpg">
+                <div class="bas-ui-list-body">
+                    <h6 class="bas-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+            </li>
+
+            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                <img class="circle" src="{{assets}}/img/avatar/avatar_2.jpg">
+                <div class="bas-ui-list-body">
+                    <h6 class="bas-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+            </li>
+
+            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                <img class="circle" src="{{assets}}/img/avatar/avatar_3.jpg">
+                <div class="bas-ui-list-body">
+                    <h6 class="bas-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+            </li>
+
+            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                <img class="circle" src="{{assets}}/img/avatar/avatar_1.jpg">
+                <div class="bas-ui-list-body">
+                    <h6 class="bas-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+            </li>
+
+            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                <img class="circle" src="{{assets}}/img/avatar/avatar_2.jpg">
+                <div class="bas-ui-list-body">
+                    <h6 class="bas-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+            </li>
+
+            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                <img class="circle" src="{{assets}}/img/avatar/avatar_3.jpg">
+                <div class="bas-ui-list-body">
+                    <h6 class="bas-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+            </li>
+
+            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                <img class="circle" src="{{assets}}/img/avatar/avatar_1.jpg">
+                <div class="bas-ui-list-body">
+                    <h6 class="bas-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+            </li>
+
+            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                <img class="circle" src="{{assets}}/img/avatar/avatar_2.jpg">
+                <div class="bas-ui-list-body">
+                    <h6 class="bas-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+            </li>
+
+            <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                <img class="circle" src="{{assets}}/img/avatar/avatar_3.jpg">
+                <div class="bas-ui-list-body">
+                    <h6 class="bas-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="bas-ui-modal-footer">
+        <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves bas-ui-modal-close">View All</a>
+    </div>
+
+</div>

@@ -1,0 +1,356 @@
+---
+section: Components
+chapter: Dropdown
+slug_section: components
+slug_chapter: dropdown
+description: Dropdowns are toggleable, contextual overlays for displaying lists of links and more.
+---
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>{{chapter}}</h1>
+        <p class="lead">{{description}}</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="header">Top Left</h2>
+            <p>For open to below the origin add <code class="language-markup">data-below-origin="true"</code>, in trigger.</p>
+
+            <div class="bas-ui-card bas-ui-bottom-margin-3 doc-bas-ui-card-dropdown doc-bas-ui-card-dropdown-left">
+                <div class="bas-ui-card-menu">
+                    <ul class="right bas-ui-nav-menu">
+                        <li class="bas-ui-nav-menu-item-icon">
+                            <!-- Dropdown Trigger -->
+                            <a data-target="dropdown-test1" data-hover="false" data-below-origin="true" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves dropdown-trigger">
+                                <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                            </a>
+                            <!-- Dropdown Structure -->
+                            <ul id="dropdown-test1" class="bas-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2 class="header">Right Top</h2>
+            <p>For open to right top add <code class="language-markup">bas-ui-dropdown-right-top</code> after <code class="language-markup">bas-ui-dropdown</code></p>
+
+            <div class="bas-ui-card bas-ui-bottom-margin-3 doc-bas-ui-card-dropdown">
+                <div class="bas-ui-card-menu">
+                    <ul class="right bas-ui-nav-menu">
+                        <li class="bas-ui-nav-menu-item-icon">
+                            <!-- Dropdown Trigger -->
+                            <a data-target="dropdown-test2" data-hover="false" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves dropdown-trigger">
+                                <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                            </a>
+                            <!-- Dropdown Structure -->
+                            <ul id="dropdown-test2" class="bas-ui-dropdown bas-ui-dropdown-right-top">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="header">Left Bottom</h2>
+            <p>For open to left bottom add <code class="language-markup">bas-ui-dropdown-left-bottom</code> after <code class="language-markup">bas-ui-dropdown</code></p>
+
+            <div class="bas-ui-card bas-ui-bottom-margin-3 doc-bas-ui-card-dropdown doc-bas-ui-card-dropdown-left doc-bas-ui-card-dropdown-bottom">
+                <div class="bas-ui-card-menu">
+                    <ul class="right bas-ui-nav-menu">
+                        <li class="bas-ui-nav-menu-item-icon">
+                            <!-- Dropdown Trigger -->
+                            <a data-target="dropdown-test3" data-hover="false" data-below-origin="true" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves dropdown-trigger">
+                                <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                            </a>
+                            <!-- Dropdown Structure -->
+                            <ul id="dropdown-test3" class="bas-ui-dropdown bas-ui-dropdown-left-bottom">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2 class="header">Right Bottom</h2>
+            <p>For open to right bottom add <code class="language-markup">bas-ui-dropdown-right-bottom</code> after <code class="language-markup">bas-ui-dropdown</code></p>
+
+            <div class="bas-ui-card bas-ui-bottom-margin-3 doc-bas-ui-card-dropdown doc-bas-ui-card-dropdown-bottom">
+                <div class="bas-ui-card-menu">
+                    <ul class="right bas-ui-nav-menu">
+                        <li class="bas-ui-nav-menu-item-icon">
+                            <!-- Dropdown Trigger -->
+                            <a data-target="dropdown-test4" data-hover="false" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves dropdown-trigger">
+                                <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                            </a>
+                            <!-- Dropdown Structure -->
+                            <ul id="dropdown-test4" class="bas-ui-dropdown bas-ui-dropdown-right-bottom">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Structure</h2>
+            <p>Add class <code class="language-markup">dropdown-trigger</code> for trigger element. And add target id for dropdown in <code class="language-markup">data-target</code> attr.</p>
+
+            <pre><code class="language-markup">
+&lt;!-- Dropdown Trigger --&gt;
+&lt;a data-target=&quot;dropdown-test1&quot; class=&quot;bas-ui-btn bas-ui-btn-default bas-ui-waves dropdown-trigger&quot;&gt;&lt;/a&gt;
+
+&lt;!-- Dropdown Structure --&gt;
+&lt;ul id=&quot;dropdown-test1&quot; class=&quot;bas-ui-dropdown&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Some Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#!&quot;&gt;Disabled Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#!&quot; class=&quot;active&quot;&gt;Item Active&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Sub Menu (desktop aplications)</h2>
+            <p>Use only in desktop aplications.</p>
+
+            <div class="bas-ui-card bas-ui-bottom-margin-3 doc-bas-ui-card-dropdown doc-bas-ui-card-dropdown-left">
+                <div class="bas-ui-card-menu">
+                    <ul class="right bas-ui-nav-menu">
+                        <li class="bas-ui-nav-menu-item-icon">
+                            <!-- Dropdown Trigger -->
+                            <a data-target="dropdown-test5" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves dropdown-trigger">
+                                <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                            </a>
+                            <!-- Dropdown Structure -->
+                            <ul id="dropdown-test5" class="bas-ui-dropdown">
+                                <li><a href="#!"><i class="mdi mdi-home bas-ui-icon"></i> Some Action</a></li>
+                                <li><a href="#!"><i class="mdi mdi-puzzle bas-ui-icon"></i> Another Action</a></li>
+                                <li class="divider"></li>
+                                <li>
+                                    <i class="mdi mdi-menu-right bas-ui-icon"></i>
+                                    <!-- Dropdown Trigger -->
+                                    <a data-target="dropdown-test5-sub" class="dropdown-trigger">
+                                        <i class="mdi mdi-layers bas-ui-icon"></i> Another Action
+                                    </a>
+                                    <!-- Dropdown Sub -->
+                                    <ul id="dropdown-test5-sub" class="bas-ui-dropdown">
+                                        <li><a href="#!"><i class="mdi mdi-home bas-ui-icon"></i> Some Action</a></li>
+                                        <li><a href="#!"><i class="mdi mdi-puzzle bas-ui-icon"></i> Another Action</a></li>
+                                        <li>
+                                            <i class="mdi mdi-menu-right bas-ui-icon"></i>
+                                            <!-- Dropdown Trigger -->
+                                            <a data-target="dropdown-test5-sub2" class="dropdown-trigger">
+                                                <i class="mdi mdi-layers bas-ui-icon"></i> Another Action
+                                            </a>
+                                            <!-- Dropdown Sub -->
+                                            <ul id="dropdown-test5-sub2" class="bas-ui-dropdown">
+                                                <li><a href="#!"><i class="mdi mdi-home bas-ui-icon"></i> Some Action</a></li>
+                                                <li><a href="#!"><i class="mdi mdi-layers bas-ui-icon"></i> Another Action</a></li>
+                                                <li><a href="#!"><i class="mdi mdi-settings bas-ui-icon"></i> Yet Another Action</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#!"><i class="mdi mdi-settings bas-ui-icon"></i> Yet Another Action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <p>Structure for sub menu.</p>
+
+            <pre><code class="language-markup">
+&lt;!-- Dropdown Trigger --&gt;
+&lt;a data-target=&quot;dropdown-test5&quot; class=&quot;bas-ui-btn bas-ui-btn-default bas-ui-waves dropdown-trigger&quot;&gt;&lt;/a&gt;
+
+&lt;!-- Dropdown Structure --&gt;
+&lt;ul id=&quot;dropdown-test5&quot; class=&quot;bas-ui-dropdown&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-home bas-ui-icon&quot;&gt;&lt;/i&gt; Some Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-puzzle bas-ui-icon&quot;&gt;&lt;/i&gt; Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;i class=&quot;mdi mdi-menu-right bas-ui-icon&quot;&gt;&lt;/i&gt;
+        &lt;!-- Dropdown Trigger --&gt;
+        &lt;a data-target=&quot;dropdown-test5-sub&quot; class=&quot;dropdown-trigger&quot;&gt;
+            &lt;i class=&quot;mdi mdi-layers bas-ui-icon&quot;&gt;&lt;/i&gt; Another Action
+        &lt;/a&gt;
+        &lt;!-- Dropdown Sub --&gt;
+        &lt;ul id=&quot;dropdown-test5-sub&quot; class=&quot;bas-ui-dropdown&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-home bas-ui-icon&quot;&gt;&lt;/i&gt; Some Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-puzzle bas-ui-icon&quot;&gt;&lt;/i&gt; Another Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;
+                &lt;i class=&quot;mdi mdi-menu-right bas-ui-icon&quot;&gt;&lt;/i&gt;
+                &lt;!-- Dropdown Trigger --&gt;
+                &lt;a data-target=&quot;dropdown-test5-sub2&quot; class=&quot;dropdown-trigger&quot;&gt;
+                    &lt;i class=&quot;mdi mdi-layers bas-ui-icon&quot;&gt;&lt;/i&gt; Another Action
+                &lt;/a&gt;
+                &lt;!-- Dropdown Sub --&gt;
+                &lt;ul id=&quot;dropdown-test5-sub2&quot; class=&quot;bas-ui-dropdown&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-home bas-ui-icon&quot;&gt;&lt;/i&gt; Some Action&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-layers bas-ui-icon&quot;&gt;&lt;/i&gt; Another Action&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-settings bas-ui-icon&quot;&gt;&lt;/i&gt; Yet Another Action&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-settings bas-ui-icon&quot;&gt;&lt;/i&gt; Yet Another Action&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Initialization</h2>
+            <p>Initialization for dropdowns is only necessary if you create them dynamically.</p>
+
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+    $('.dropdown-trigger').bas_ui_dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        hover: true,
+        gutter: 0,
+        belowOrigin: false
+    });
+});</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Options</h2>
+
+            <table class="table bas-ui-data-table z-depth-1 bas-ui-bottom-margin-3">
+                <thead>
+                <tr>
+                    <th class="bas-ui-data-table-cell-non-numeric">Option Name</th>
+                    <th class="bas-ui-data-table-cell-non-numeric">Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td style="width: 25%;" class="bas-ui-data-table-cell-non-numeric">inDuration</td>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">The duration of the transition enter in milliseconds. Default: 300</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">outDuration</td>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">The duration of the transition out in milliseconds. Default: 225</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">hover</td>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">If true, the dropdown will open on hover. Default: false</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">gutter</td>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">This defines the spacing from the aligned edge. Default: 0</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">belowOrigin</td>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">If true, the dropdown will show below the trigger. Default: false</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p>To use these inline you have to add them as data attributes.</p>
+
+            <pre><code class="language-markup">
+&lt;!-- Dropdown Trigger --&gt;
+&lt;a data-target=&quot;dropdown-test3&quot; data-hover=&quot;false&quot; data-below-origin=&quot;true&quot; class=&quot;bas-ui-btn bas-ui-btn-default dropdown-trigger&quot;&gt;&lt;/a&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Methods</h2>
+
+            <p>Shows a dropdown element.</p>
+
+            <pre><code class="language-javascript">
+$('.dropdown-trigger-custom-1').bas_ui_dropdown('show');
+</code></pre>
+
+            <p>Hides a dropdown element.</p>
+
+            <pre><code class="language-javascript">
+$('.dropdown-trigger-custom-1').bas_ui_dropdown('hide');
+</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Events</h2>
+
+            <table class="bas-ui-data-table bas-ui-striped z-depth-1 bas-ui-bottom-margin-3">
+                <thead>
+                <tr>
+                    <th class="bas-ui-data-table-cell-non-numeric">Option Name</th>
+                    <th class="bas-ui-data-table-cell-non-numeric">Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">show.bas.tabs</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event fires immediately when the show instance method is called.</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">shown.bas.tabs</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event is fired when a dropdown has been made visible to the user (will wait for CSS transitions to complete).</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">hide.bas.tabs</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event is fired immediately when the hide method has been called.</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">hidden.bas.tabs</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event is fired when a dropdown has been hidden from the user (will wait for CSS transitions to complete).</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p>Sample event.</p>
+
+            <pre><code class="language-javascript">
+$('#dropdown-test3').on('shown.bas.dropdown', function () {
+    // do something...
+});
+</code></pre>
+        </div>
+    </div>
+
+</div>
+</section>

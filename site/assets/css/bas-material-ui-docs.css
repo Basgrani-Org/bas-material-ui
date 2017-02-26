@@ -1,0 +1,505 @@
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  background: none;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+.token.punctuation {
+  color: #999;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+.token.function {
+  color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Global Docs
+/* ---------------------------------------------------------------------- */
+.doc-link {
+  color: #689f38;
+}
+
+/*** Code  ***/
+pre[class*="language-"] {
+  position: relative;
+  padding: 45px 35px 25px;
+  border: solid 1px rgba(51, 51, 51, 0.12);
+  font-size: .85rem;
+}
+
+pre[class*="language-"]:before {
+  position: absolute;
+  padding: 1px 5px;
+  background: #e8e6e3;
+  top: 0;
+  left: 0;
+  color: #555;
+  content: attr(class);
+  font-size: .9rem;
+  border: solid 1px rgba(51, 51, 51, 0.12);
+  border-top: none;
+  border-left: none;
+}
+
+:not(pre) > code[class*=language-] {
+  background: #e8e6e3;
+}
+
+.bas-ui-side-nav .bas-ui-side-nav-wrapper .brand a img {
+  max-width: 155px;
+  margin-right: 10px;
+}
+
+.header-doc {
+  background-color: #2d2d2d;
+  color: #fff;
+}
+
+.header-doc .container h1 {
+  font-size: 72px;
+  color: #689f38;
+}
+
+.header-doc .container h1 i {
+  font-size: 72px;
+}
+
+.header-doc .container p {
+  margin-bottom: 25px;
+}
+
+.header-doc.header-doc-center {
+  text-align: center;
+}
+
+.header-doc.home .getting-started {
+  text-align: right;
+}
+
+.header-doc.home .source-in-git-hub {
+  text-align: left;
+}
+
+.header-doc.home p.last-commit-in-git-hub-p {
+  font-weight: 300;
+}
+
+.header-doc.home .last-commit-in-git-hub, .header-doc.home .last-commit-in-git-hub:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .header-doc.home h1 {
+    font-size: 52px;
+  }
+  .header-doc.home .getting-started,
+  .header-doc.home .source-in-git-hub {
+    text-align: center;
+  }
+}
+
+/* Section */
+.doc-section .doc-promo-img i {
+  line-height: 182px;
+}
+
+@media (max-width: 767px) {
+  .doc-section .doc-promo-img {
+    text-align: center;
+  }
+  .doc-section .doc-promo-img i {
+    float: none;
+    margin: 0;
+  }
+}
+
+.doc-section .doc-promo-text p {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 767px) {
+  .doc-section .doc-promo-text {
+    text-align: center;
+  }
+}
+
+.doc-section.doc-section-black {
+  background-color: #2d2d2d;
+  color: #fff;
+}
+
+/* Footer */
+.doc-footer {
+  font-size: 85%;
+  text-align: center;
+  color: #fff;
+  margin-top: 4rem;
+  background-color: #2d2d2d;
+}
+
+.doc-footer p {
+  margin: 0;
+}
+
+.doc-footer a {
+  color: #689f38;
+}
+
+.doc-footer a:hover {
+  color: #fff;
+}
+
+.doc-footer a i {
+  font-size: 14px;
+  float: right;
+  margin-left: 2px;
+}
+
+.doc-footer .doc-footer-links {
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.doc-footer .doc-footer-links li {
+  display: inline-block;
+}
+
+.doc-footer .doc-footer-links li + li {
+  margin-left: 1rem;
+}
+
+@media (min-width: 576px) {
+  .doc-footer {
+    text-align: left;
+  }
+}
+
+/* Helpers */
+.valign-demo {
+  padding: 24px;
+  height: 500px;
+}
+
+.valign-demo h3 {
+  width: 100%;
+}
+
+/* Notifications modal */
+#bas-ui-modal-header-doc-1 {
+  width: 360px;
+}
+
+@media (max-width: 480px) {
+  #bas-ui-modal-header-doc-1 {
+    width: 320px;
+  }
+}
+
+#bas-ui-modal-header-doc-1 .bas-ui-modal-header {
+  background-color: #fff;
+  padding-left: 16px;
+  padding-right: 10px;
+}
+
+#bas-ui-modal-header-doc-1 .section-title {
+  font-size: 20px;
+}
+
+#bas-ui-modal-header-doc-1 .bas-ui-modal-content {
+  background-color: #fff;
+  padding: 0;
+}
+
+#bas-ui-modal-header-doc-1 .bas-ui-modal-content .bas-ui-list {
+  border: none;
+  border-radius: 0;
+}
+
+#bas-ui-modal-header-doc-1 .bas-ui-modal-footer {
+  background-color: #fff;
+  text-align: center;
+}
+
+#bas-ui-modal-header-doc-1 .bas-ui-modal-footer a {
+  float: none;
+}
+
+/* Cards -> Head Image */
+.doc-card-head-image .bas-ui-card-title {
+  color: #fff;
+  height: 176px;
+  background: url("../img/welcome_card.jpg") center/cover;
+}
+
+.doc-card-head-image .bas-ui-card-menu i {
+  color: #fff;
+}
+
+/* Cards -> Image */
+.doc-card-image {
+  width: 256px;
+  height: 256px;
+  background: url("../img/image_card.jpg") center/cover;
+}
+
+/* Cards -> Event */
+.doc-card-event {
+  width: 256px;
+  height: 256px;
+}
+
+.doc-form {
+  margin-bottom: 25px;
+}
+
+.doc-form .bas-ui-search-expandable {
+  float: right;
+}
+
+/* Dropdown */
+.doc-bas-ui-card-dropdown {
+  min-height: 250px;
+  overflow: visible;
+}
+
+.doc-bas-ui-card-dropdown-bottom .bas-ui-card-menu {
+  bottom: 16px;
+  top: auto;
+}
+
+.doc-bas-ui-card-dropdown-left .bas-ui-card-menu {
+  left: 16px;
+  right: auto;
+}
+
+/* Tabs */
+.doc-tabs {
+  background-color: #f5f5f5;
+  height: 56px;
+}
+
+.doc-tabs .bas-ui-card-supporting-text {
+  padding: 0 16px;
+  line-height: 0;
+  height: 100%;
+}
+
+.doc-tabs.doc-tabs-not-padding .bas-ui-card-supporting-text {
+  padding: 0;
+}
+
+/* Drop zone */
+.doc-drop-zone-message {
+  text-align: center;
+  font-weight: 500;
+  color: #4e4e4e;
+}
+
+.doc-drop-zone-message .doc-drop-zone-message-browse {
+  font-weight: 400;
+}
+
+.doc-drop-zone-message .doc-drop-zone-message-browse-link {
+  text-decoration: underline;
+}
+
+/* Badges */
+.doc-badge-icon {
+  line-height: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.doc-badge-text {
+  line-height: 28px;
+}
+
+/* Icons */
+.doc-icons-icon {
+  display: inline-block;
+}
+
+.doc-icons-icon.doc-icons-icon-align {
+  width: 100%;
+}
+
+/* Color */
+.doc-color-palette .color-wrap {
+  margin-bottom: 25px;
+}
+
+.doc-color-palette .color-wrap > div {
+  padding: 15px;
+}
+
+.doc-color-palette .color-wrap div .cod-color {
+  float: right;
+}
+
+.doc-color-palette .palette {
+  min-height: 786px;
+}
+
+/* Grid */
+.doc-grid .row > .col {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+}
+
+.doc-grid .row + .row {
+  margin-top: 1rem;
+}
+
+/* Structuring */
+.doc-structuring {
+  min-width: 16rem;
+  max-width: 25rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.doc-structuring .doc-structuring-header {
+  height: 1rem;
+  margin-left: 4.5rem;
+  margin-bottom: .5rem;
+  border-radius: .25rem;
+}
+
+.doc-structuring .doc-structuring-sidebar {
+  float: left;
+  width: 4rem;
+  height: 9.5rem;
+  border-radius: .25rem;
+}
+
+.doc-structuring .doc-structuring-body {
+  height: 8rem;
+  margin-left: 4.5rem;
+  border-radius: .25rem;
+}
+/*# sourceMappingURL=bas-material-ui-docs.css.map */

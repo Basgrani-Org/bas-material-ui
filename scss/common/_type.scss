@@ -1,0 +1,103 @@
+/* --------------------------------------- */
+/* Typography                              */
+/* --------------------------------------- */
+
+/*** Header Styles ***/
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size: $bas-ui-h1-fontsize; line-height: 110%; margin: ($bas-ui-h1-fontsize / 2) 0 ($bas-ui-h1-fontsize / 2.5) 0;}
+h2 { font-size: $bas-ui-h2-fontsize; line-height: 110%; margin: ($bas-ui-h2-fontsize / 2) 0 ($bas-ui-h2-fontsize / 2.5) 0;}
+h3 { font-size: $bas-ui-h3-fontsize; line-height: 110%; margin: ($bas-ui-h3-fontsize / 2) 0 ($bas-ui-h3-fontsize / 2.5) 0;}
+h4 { font-size: $bas-ui-h4-fontsize; line-height: 110%; margin: ($bas-ui-h4-fontsize / 2) 0 ($bas-ui-h4-fontsize / 2.5) 0;}
+h5 { font-size: $bas-ui-h5-fontsize; line-height: 110%; margin: ($bas-ui-h5-fontsize / 2) 0 ($bas-ui-h5-fontsize / 2.5) 0;}
+h6 { font-size: $bas-ui-h6-fontsize; line-height: 110%; margin: ($bas-ui-h6-fontsize / 2) 0 ($bas-ui-h6-fontsize / 2.5) 0;}
+
+/*** Text Styles ***/
+
+em { font-style: italic; }
+strong { font-weight: 500; }
+small, .small { font-size: 65%; font-weight: 400; line-height: 1; color: #777;}
+.light { font-weight: 300; }
+.thin { font-weight: 200; }
+
+/*** Body text ***/
+
+p {
+  margin: 0 0 ($bas-ui-line-height-computed / 2);
+}
+
+.lead {
+    font-size: $bas-ui-font-size-base + 4;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+/*** Emphasis & misc ***/
+
+mark,
+.mark {
+  background-color: $bas-ui-warning-color;
+  padding: .2em;
+}
+
+// Lists
+// -------------------------
+
+ul li {
+    list-style: none;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+// Misc
+// -------------------------
+
+// Abbreviations and acronyms
+abbr[title], abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted $bas-ui-gray-light;
+}
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+// Blockquotes
+blockquote {
+    font-size: $bas-ui-font-size-base;
+    margin: 20px 0;
+    padding: 1em 1.5em 1em 1.5em;
+    border-left: 5px solid $bas-ui-primary-color;
+
+    footer {
+        display: block;
+        font-size: $bas-ui-font-size-base;
+        line-height: $bas-ui-line-height-base;
+        color: color("grey", "600");
+
+        &:before {
+            content: '\2014 \00A0';
+        }
+        cite {
+            font-size: $bas-ui-font-size-base;
+            line-height: $bas-ui-line-height-base;
+            font-style: italic;
+            color: color("grey", "600");
+        }
+    }
+}
+
+// Addresses
+address {
+  margin-bottom: $bas-ui-line-height-computed;
+  font-style: normal;
+  line-height: $bas-ui-line-height-base;
+}

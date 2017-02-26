@@ -1,0 +1,82 @@
+---
+section: Content
+chapter: Helpers
+slug_section: content
+slug_chapter: helpers
+description: Helper classes with a single purpose to reduce the frequency of highly repetitive declarations.
+---
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>{{chapter}}</h1>
+        <p class="lead">{{description}}</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Vertical Align</h2>
+                <p>Align vertically center things by adding the class <code class="language-markup">valign-wrapper</code> to the container holding the items.</p>
+                <div class="bas-ui-card bas-ui-bottom-margin-3 valign-demo valign-wrapper">
+                    <h3 class="valign center">Align vertically center</h3>
+                </div>
+                <pre><code class="language-markup">
+&lt;div class=&quot;valign-wrapper&quot;&gt;
+  &lt;h3 class=&quot;valign center&quot;&gt;Align vertically center&lt;/h3&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Text Align</h2>
+                <p>For horizontally aligning content. We have <code class=" language-markup">.left-align</code>, <code class=" language-markup">.right-align</code> and <code class=" language-markup">.center-align</code></p>
+                <div class="bas-ui-card bas-ui-bottom-margin-3">
+                    <div class="bas-ui-card-supporting-text">
+                        <h5 class="left-align">Left aligned</h5>
+                    </div>
+                </div>
+                <div class="bas-ui-card bas-ui-bottom-margin-3">
+                    <div class="bas-ui-card-supporting-text">
+                        <h5 class="right-align">Right aligned</h5>
+                    </div>
+                </div>
+                <div class="bas-ui-card bas-ui-bottom-margin-3">
+                    <div class="bas-ui-card-supporting-text">
+                        <h5 class="center-align">Center aligned</h5>
+                    </div>
+                </div>
+                <pre><code class="language-markup">
+&lt;div&gt;
+    &lt;h5 class=&quot;left-align&quot;&gt;Left aligned&lt;/h5&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;h5 class=&quot;right-align&quot;&gt;Right aligned&lt;/h5&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;h5 class=&quot;center-align&quot;&gt;Center aligned&lt;/h5&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Truncate Text</h2>
+                <p>For truncate text, add <code class=" language-markup">truncate</code> class</p>
+
+                <div class="bas-ui-card bas-ui-bottom-margin-3">
+                    <div class="bas-ui-card-supporting-text">
+                        <h5 class="truncate">Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum mauris sit amet nisl augue nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.</h5>
+                    </div>
+                </div>
+
+                <pre><code class="language-markup">
+&lt;h5 class=&quot;truncate&quot;&gt;Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum mauris sit amet nisl augue nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.&lt;/h5&gt;</code></pre>
+            </div>
+        </div>
+
+    </div>
+</section>

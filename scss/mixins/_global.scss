@@ -1,0 +1,119 @@
+/* --------------------------------------- */
+/* Media
+/* --------------------------------------- */
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin bas-ui-media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+    @include media-breakpoint-up($name, $breakpoints) {
+        @content;
+    }
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin bas-ui-media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+    @include media-breakpoint-down($name, $breakpoints) {
+        @content;
+    }
+}
+
+// Media between the breakpoint's minimum and maximum widths.
+// No minimum for the smallest breakpoint, and no maximum for the largest one.
+// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
+@mixin bas-ui-media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
+    @include media-breakpoint-only($name, $breakpoints) {
+        @content;
+    }
+}
+
+// Media that spans multiple breakpoint widths.
+// Makes the @content apply between the min and max breakpoints
+@mixin bas-ui-media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+    @include media-breakpoint-between($lower, $upper, $breakpoints) {
+        @content;
+    }
+}
+
+/* --------------------------------------- */
+/* Various
+/* --------------------------------------- */
+
+@mixin bas-ui-clearfix() {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin bas-ui-select-caret() {
+    span.bas-ui-caret {
+        color: color("grey", "800");
+        position: absolute;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        right: 10px;
+        top: 21px;
+        border-top: 6px dashed;
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent;
+        pointer-events: none;
+
+        &.disabled {
+            color: $input-disabled-color;
+        }
+    }
+}
+
+@mixin bas-ui-tab-focus() {
+    // Default
+    outline: thin dotted;
+    // WebKit
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+/* --------------------------------------- */
+/* Image
+/* --------------------------------------- */
+
+// Responsive image
+// Keep images from scaling beyond the width of their parents.
+@mixin bas-ui-img-responsive($display: block) {
+    display: $display;
+    max-width: 100%; // Part 1: Set a maximum relative to the parent
+    height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+/* --------------------------------------- */
+/* Helps
+/* --------------------------------------- */
+
+@mixin _assert-ascending($map, $map-name) {
+    $prev-key: null;
+    $prev-num: null;
+    @each $key, $num in $map {
+        @if $prev-num == null {
+            // Do nothing
+        } @else if not comparable($prev-num, $num) {
+            @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+        } @else if $prev-num >= $num {
+            @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+        }
+        $prev-key: $key;
+        $prev-num: $num;
+    }
+}
+
+@mixin _assert-starts-at-zero($map) {
+    $values: map-values($map);
+    $first-value: nth($values, 1);
+    @if $first-value != 0 {
+        @warn "First breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.";
+    }
+}

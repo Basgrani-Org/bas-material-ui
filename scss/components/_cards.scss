@@ -1,0 +1,172 @@
+// Cards
+
+.bas-ui-card {
+    @extend .z-depth-1;
+    /*z-index: $bas-ui-zindex-content;*/
+    position: relative;
+    background: #fff;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    // Title
+    .bas-ui-card-title {
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        padding: 16px;
+        box-sizing: border-box;
+
+        .bas-ui-card-title-text {
+            display: flex;
+            align-self: flex-end;
+            color: inherit;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: normal;
+            margin: 0;
+        }
+
+        &.bas-ui-card-border {
+            border-bottom: 1px solid rgba(0,0,0,.1);
+        }
+
+        &.bas-ui-card-title-expand {
+            flex-grow: 1;
+        }
+    }
+
+    // Supporting text
+    .bas-ui-card-supporting-text {
+        display: block;
+        padding: 16px;
+    }
+
+    // Actions
+    .bas-ui-card-actions {
+        padding: 8px;
+
+        &.bas-ui-card-border {
+            border-top: 1px solid rgba(0,0,0,.1);
+        }
+
+        .bas-ui-button {
+            padding: 0 8px;
+        }
+    }
+
+    // Menu
+    .bas-ui-card-menu {
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+    }
+
+    // Nav Menu
+    .bas-ui-nav-menu {
+        height: 32px;
+        line-height: 32px;
+        >li {
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+
+            >.bas-ui-button {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    // Image Style
+    &.bas-ui-card-image {
+
+        // Actions
+        .bas-ui-card-actions {
+            height: 52px;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    // Event Style
+    &.bas-ui-card-event {
+
+        // Title
+        .bas-ui-card-title {
+            align-items: flex-start;
+
+            h4 {
+                margin-top: 0;
+                font-size: 24px;
+                line-height: 32px;
+                font-weight: 500;
+            }
+        }
+
+        // Actions
+        .bas-ui-card-actions {
+
+            &.bas-ui-card-border {
+                border-top: 1px solid rgba(255,255,255,.2);
+            }
+        }
+    }
+
+    // With Table
+    &.bas-ui-card-with-table {
+
+        // Title
+        .bas-ui-card-title {
+            padding: 24px;
+        }
+
+        // Table
+        .bas-ui-data-table {
+            margin: 0;
+            border: none;
+            tbody tr:last-child td {
+                border-bottom: none;
+            }
+        }
+
+        // Actions
+        .bas-ui-card-actions {
+            padding: 16px;
+        }
+
+        // Menu
+        .bas-ui-card-menu {
+            right: 16px;
+            top: 22px;
+        }
+
+        // Nav Menu
+        .bas-ui-nav-menu {
+
+            >li {
+                &:not(:last-child) {
+
+                }
+                >.bas-ui-button:not(.disabled) {
+                    color: color("grey", "600");
+                }
+                >.bas-ui-button.disabled {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+
+    // With List
+    &.bas-ui-card-with-list {
+
+        // List
+        .bas-ui-list {
+            border: none;
+            border-radius: 0;
+        }
+    }
+}

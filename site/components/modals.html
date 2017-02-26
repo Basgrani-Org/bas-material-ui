@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="shortcut icon" type="image/png" href="../../assets/img/favicon.png">
+    <meta name="description" content="Modals | They support a number of use cases from user notification to completely custom content and feature a subcomponents, sizes, and more.">
+    <title>Modals | BasMaterial UI</title>
+
+    <!-- CSS-->
+    <link href="../../assets/css/bas-material-ui.css?v=0.0.0" rel="stylesheet">
+    <link href="../../assets/css/bas-material-ui-docs.css?v=0.0.0" rel="stylesheet">
+</head>
+<body class="bas-ui-layout-header-fixed bas-ui-side-nav-auto bas-ui-side-nav-hide-off bas-ui-side-nav-with-overlay-off">
+    <!--[if lt IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Header -->
+    <!-- Layout Header -->
+    <header class="bas-ui-layout-header">
+    
+        <div id="doc-ui-app-bar" class="bas-ui-app-bar">
+    
+            <!-- Toggle -->
+            <div class="bas-ui-side-nav-toggle"><i class="mdi mdi-menu bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i></div>
+    
+            <!-- Breadcrumb -->
+            <div class="bas-ui-breadcrumb">
+                <a href="/" class="bas-ui-breadcrumb-item"><span>Components</span></a>
+                <a href="modals.html" class="bas-ui-breadcrumb-item"><span>Modals</span></a>
+            </div>
+    
+            <!-- Nav Menu -->
+            <ul class="right bas-ui-nav-menu">
+                <li class="bas-ui-nav-menu-item-icon hidden-xs-down">
+                    <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-top-search-show">
+                        <i class="mdi mdi-magnify bas-ui-icon"></i>
+                    </a>
+                </li>
+                <li class="bas-ui-nav-menu-item-icon hidden-xs-down">
+                    <a data-target="bas-ui-modal-header-doc-1"  class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-modal-trigger">
+                        <i class="mdi mdi-apps bas-ui-icon"></i>
+                    </a>
+                </li>
+                <li class="bas-ui-nav-menu-item-icon">
+                    <a data-target="bas-ui-modal-header-doc-1"  class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-modal-trigger">
+                        <i class="mdi mdi-bell bas-ui-icon"></i>
+                    </a>
+                    <span class="bas-ui-badge bas-ui-badge-overlap" data-badge="12"></span>
+                </li>
+                <li class="bas-ui-nav-menu-item-icon">
+                    <a data-target="doc-dropdown-app-bar-user" data-hover="false" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves dropdown-trigger">
+                        <i class="mdi mdi-account bas-ui-icon"></i>
+                    </a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-app-bar-user" class="bas-ui-dropdown bas-ui-dropdown-right-top">
+                        <li><a href="#!">Profile</a></li>
+                        <li><a href="#!">Logout</a></li>
+                    </ul>
+                </li>
+                <li class="bas-ui-nav-menu-item-icon hidden-sm-up">
+                    <a data-target="doc-dropdown-app-bar" data-hover="false" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves dropdown-trigger">
+                        <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                    </a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-app-bar" class="bas-ui-dropdown bas-ui-dropdown-right-top">
+                        <li><a class="bas-ui-top-search-show"><i class="mdi mdi-magnify bas-ui-icon"></i> Search</a></li>
+                        <li><a data-target="bas-ui-modal-header-doc-1" class="bas-ui-modal-trigger"><i class="mdi mdi-apps bas-ui-icon"></i> Apps</a></li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <!-- Top Search -->
+            <div class="bas-ui-top-search">
+                <i class="bas-ui-top-search-close mdi mdi-arrow-left bas-ui-icon bas-ui-icon-left"></i>
+                <!-- Search -->
+                <div id="doc-bas-ui-top-search-autocomplete" class="bas-ui-search">
+                    <input type="text" placeholder="Search">
+                    <i class="bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left"></i>
+                    <i class="bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right"></i>
+                </div>
+            </div>
+    
+        </div>
+    
+    
+    </header>
+    
+    <!-- Layout Side Nav -->
+    <div class="bas-ui-side-nav">
+    
+        <div class="bas-ui-side-nav-wrapper">
+    
+            <div class="brand">
+                <div class="bas-ui-side-nav-toggle"><i class="mdi mdi-menu bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i></div>
+                <a target="_blank" href="http://basgrani.com"><img src="../../assets/img/logo.svg" alt="BasMaterial UI logo"></a>
+            </div>
+    
+            <div class="bas-ui-side-nav-content-wrapper">
+                <nav>
+    
+                    <!-- Search -->
+                    <div id="doc-bas-ui-side-nav-search-autocomplete" class="bas-ui-search">
+                        <input type="text" placeholder="Search">
+                        <i class="bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left"></i>
+                        <i class="bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>
+                    </div>
+    
+                    <!-- Collapsible Menu -->
+                    <ul class="bas-ui-collapsible" data-collapsible="accordion">
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-index" href="/">
+                                    <i class="mdi mdi-hexagon bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Overview
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves">
+                                <a id="collapsible-nav-getting-started" target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui/blob/master/README.md">
+                                    <i class="mdi mdi-settings bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    <i class="mdi mdi-open-in-new bas-ui-icon bas-ui-icon-right bas-ui-icon-18"></i>
+                                    Getting Started
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-help" href="/help/donate.html">
+                                    <i class="mdi mdi-heart-pulse bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Help This Project
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-layout">
+                                    <i class="mdi mdi-view-quilt bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Layout
+                                </a>
+                            </div>
+                            <div class="bas-ui-collapsible-body collapse ">
+                                        <a id="collapsible-nav-layout-grid" class="" href="../layout/grid.html">Grid</a>
+                                        <a id="collapsible-nav-layout-structuring" class="" href="../layout/structuring.html">Structuring</a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-content">
+                                    <i class="mdi mdi-layers bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Content
+                                </a>
+                            </div>
+                            <div class="bas-ui-collapsible-body collapse ">
+                                        <a id="collapsible-nav-content-icons" class="" href="../content/icons.html">Icons</a>
+                                        <a id="collapsible-nav-content-badges" class="" href="../content/badges.html">Badges</a>
+                                        <a id="collapsible-nav-content-color" class="" href="../content/color.html">Color</a>
+                                        <a id="collapsible-nav-content-helpers" class="" href="../content/helpers.html">Helpers</a>
+                                        <a id="collapsible-nav-content-progress" class="" href="../content/progress.html">Progress</a>
+                                        <a id="collapsible-nav-content-table" class="" href="../content/table.html">Table</a>
+                                        <a id="collapsible-nav-content-typography" class="" href="../content/typography.html">Typography</a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves active">
+                                <a id="collapsible-nav-components">
+                                    <i class="mdi mdi-puzzle bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Components
+                                </a>
+                            </div>
+                            <div class="bas-ui-collapsible-body collapse in">
+                                        <a id="collapsible-nav-components-cards" class="" href="cards.html">Cards</a>
+                                        <a id="collapsible-nav-components-collapsible" class="" href="collapsible.html">Collapsible</a>
+                                        <a id="collapsible-nav-components-dropdown" class="" href="dropdown.html">Dropdown</a>
+                                        <a id="collapsible-nav-components-form-validation" class="" href="form-validation.html">Form Validation</a>
+                                        <a id="collapsible-nav-components-forms" class="" href="forms.html">Forms</a>
+                                        <a id="collapsible-nav-components-buttons" class="" href="buttons.html">Buttons</a>
+                                        <a id="collapsible-nav-components-list" class="" href="list.html">List</a>
+                                        <a id="collapsible-nav-components-messages" class="" href="messages.html">Messages (Soon)</a>
+                                        <a id="collapsible-nav-components-modals" class="active" href="modals.html">Modals</a>
+                                        <a id="collapsible-nav-components-tabs" class="" href="tabs.html">Tabs</a>
+                                        <a id="collapsible-nav-components-toast" class="" href="toast.html">Toast (Soon)</a>
+                                        <a id="collapsible-nav-components-tooltips" class="" href="tooltips.html">Tooltips (Soon)</a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves ">
+                                <a id="collapsible-nav-showcase" href="/showcase/showcase.html">
+                                    <i class="mdi mdi-web bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Showcase
+                                </a>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="bas-ui-collapsible-header bas-ui-waves">
+                                <a id="collapsible-nav-download" class="download-in-git-hub-href" href="https://github.com/Basgrani-Org/bas-material-ui/archive/master.zip">
+                                    <i class="mdi mdi-download bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                    Download
+                                </a>
+                            </div>
+                        </li>
+    
+                    </ul>
+    
+                </nav>
+            </div>
+    
+            <div class="footer">
+                <a target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui"><i class="mdi mdi-github-circle bas-ui-icon bas-ui-icon-left bas-ui-icon-18"></i></a><p class="copyright">&copy; BasMaterial UI - v0.1.0</p>
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    <!-- Modal Right (Notifications) -->
+    <div id="bas-ui-modal-header-doc-1" class="bas-ui-modal bas-ui-modal-fixed bas-ui-modal-right-sheet">
+    
+        <!-- Header -->
+        <div class="bas-ui-modal-header">
+            <div class="header-title">
+                <!--i class="mdi mdi-close bas-ui-icon bas-ui-icon-left bas-ui-icon-24 bas-ui-modal-close"></i-->
+                <span class="section-title">Notifications</span>
+            </div>
+            <ul class="right bas-ui-nav-menu">
+                <li class="bas-ui-nav-menu-item-icon">
+                    <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-modal-close">
+                        <i class="mdi mdi-close bas-ui-icon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- Content -->
+        <div class="bas-ui-modal-content">
+    
+            <ul class="bas-ui-list bas-ui-hoverable">
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_1.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_2.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_3.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_1.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_2.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_3.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_1.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_2.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_3.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_1.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_2.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+                <li class="bas-ui-list-item bas-ui-list-avatar bas-ui-list-secondary-content">
+                    <img class="circle" src="../../assets/img/avatar/avatar_3.jpg">
+                    <div class="bas-ui-list-body">
+                        <h6 class="bas-ui-list-title">Title</h6>
+                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                    </div>
+                    <a class="bas-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle bas-ui-icon bas-ui-icon-18"></i></a>
+                </li>
+    
+            </ul>
+    
+        </div>
+    
+        <!-- Footer -->
+        <div class="bas-ui-modal-footer">
+            <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves bas-ui-modal-close">View All</a>
+        </div>
+    
+    </div>
+
+    <main class="bas-ui-main bas-ui-scrollbar-y">
+        
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>Modals</h1>
+        <p class="lead">They support a number of use cases from user notification to completely custom content and feature a subcomponents, sizes, and more.</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Modal Types</h2>
+            <p>For fixed mode add <code class="language-markup">bas-ui-modal-fixed</code> after <code class="language-markup">bas-ui-modal</code>.</p>
+
+            <p>
+                <a data-target="bas-ui-modal-sample1" class="bas-ui-button bas-ui-button-primary bas-ui-waves-light bas-ui-modal-trigger bas-ui-modal-trigger-custom-1">Basic</a>
+                &nbsp;&nbsp;&nbsp;
+                <a data-target="bas-ui-modal-sample2" class="bas-ui-button bas-ui-button-primary bas-ui-waves-light bas-ui-modal-trigger">With Header</a>
+                &nbsp;&nbsp;&nbsp;
+                <a data-target="bas-ui-modal-sample3"  class="bas-ui-button bas-ui-button-primary bas-ui-waves-light bas-ui-modal-trigger">Fixed</a>
+            </p>
+
+            <br>
+
+            <!-- Modal Basic -->
+            <div id="bas-ui-modal-sample1" class="bas-ui-modal">
+
+                <!-- Content -->
+                <div class="bas-ui-modal-content">
+                    <h5>Title</h5>
+                    <p>Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci. Suspendisse viverra lorem vitae eros tristique, nec sagittis lectus molestie.</p>
+                </div>
+
+                <!-- Footer -->
+                <div class="bas-ui-modal-footer">
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Agree</a>
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Disagree</a>
+                </div>
+
+            </div>
+
+            <!-- Modal With Header -->
+            <div id="bas-ui-modal-sample2" class="bas-ui-modal">
+
+                <!-- Header -->
+                <div class="bas-ui-modal-header">
+                    <div class="header-title">
+                        <i class="mdi mdi-settings bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                        <span class="section-title">Modal Header</span>
+                    </div>
+                    <ul class="right bas-ui-nav-menu">
+                        <li class="bas-ui-nav-menu-item-icon">
+                            <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Content -->
+                <div class="bas-ui-modal-content">
+                    <h5>Title</h5>
+                    <p>Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci. Suspendisse viverra lorem vitae eros tristique, nec sagittis lectus molestie.</p>
+                </div>
+
+                <!-- Footer -->
+                <div class="bas-ui-modal-footer">
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Agree</a>
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Disagree</a>
+                </div>
+
+            </div>
+
+            <!-- Modal Fixed -->
+            <div id="bas-ui-modal-sample3" class="bas-ui-modal bas-ui-modal-fixed">
+
+                <!-- Header -->
+                <div class="bas-ui-modal-header">
+                    <div class="header-title">
+                        <i class="mdi mdi-settings bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                        <span class="section-title">Modal Header</span>
+                    </div>
+                    <ul class="right bas-ui-nav-menu">
+                        <li class="bas-ui-nav-menu-item-icon">
+                            <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Content -->
+                <div class="bas-ui-modal-content">
+                    <h5>Title</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec commodo neque, ac feugiat nibh. Praesent sagittis velit quis felis consequat, sit amet vulputate mi ornare. Phasellus tempor leo in ante semper, sit amet mattis ligula commodo. Aenean ornare consectetur eros, non sagittis dui aliquam ac. Sed id orci id dolor molestie gravida. Quisque sit amet laoreet nibh. Quisque luctus lectus tincidunt nunc interdum, nec luctus justo aliquam. Proin eget risus tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam tempus turpis et enim ornare placerat. Donec tempor turpis velit, eget scelerisque velit tristique a. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                    <p>Vestibulum placerat et metus ut semper. Aenean vitae quam non orci rutrum mollis ac non eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean porttitor efficitur tristique. Cras lobortis sapien in libero tristique, a pretium turpis ullamcorper. Vivamus quis purus vitae metus laoreet posuere sit amet nec orci. Integer molestie lectus eget viverra efficitur. Phasellus viverra suscipit orci, eget faucibus nunc aliquam id. Nulla facilisi. Nullam accumsan finibus lacinia.</p>
+
+                    <p>Curabitur mattis magna nec lorem ornare, id pharetra velit pretium. Integer finibus ex non tempor pretium. Sed suscipit fringilla mauris ac lacinia. Aliquam nec sodales justo. Etiam porttitor, augue vel cursus eleifend, nibh lorem ornare tortor, sit amet sodales felis lorem sit amet nisi. Sed feugiat turpis vel tellus venenatis, non aliquet metus rutrum. Cras a magna in nulla mollis pellentesque vel quis est. Morbi quam quam, congue et hendrerit id, imperdiet id nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum laoreet lobortis elit, ac pretium ex sollicitudin et. Integer consectetur tortor vel tortor facilisis laoreet.</p>
+
+                    <p>Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci. Suspendisse viverra lorem vitae eros tristique, nec sagittis lectus molestie. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam ut sollicitudin ex, non lacinia orci. Curabitur eleifend malesuada congue.</p>
+
+                    <p>Fusce sit amet libero lorem. Nunc pellentesque consequat nisi, ut posuere lorem viverra id. Aenean tincidunt nulla nec felis lacinia, dignissim efficitur ipsum aliquet. Donec aliquet, sem vel posuere posuere, dui nisi elementum lectus, eget sollicitudin urna sem in arcu. Mauris aliquet, felis quis tempor accumsan, urna quam fringilla leo, a consectetur magna nulla non tortor. Fusce condimentum ultricies odio, sit amet tristique arcu elementum non. Quisque facilisis, ipsum at gravida iaculis, mauris dui congue lectus, sit amet elementum tellus odio id elit. Proin eget sagittis augue. Curabitur sagittis tellus et mi lobortis varius. Duis iaculis orci non tellus suscipit, eget bibendum tortor fringilla.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec commodo neque, ac feugiat nibh. Praesent sagittis velit quis felis consequat, sit amet vulputate mi ornare. Phasellus tempor leo in ante semper, sit amet mattis ligula commodo. Aenean ornare consectetur eros, non sagittis dui aliquam ac. Sed id orci id dolor molestie gravida. Quisque sit amet laoreet nibh. Quisque luctus lectus tincidunt nunc interdum, nec luctus justo aliquam. Proin eget risus tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam tempus turpis et enim ornare placerat. Donec tempor turpis velit, eget scelerisque velit tristique a. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                    <p>Vestibulum placerat et metus ut semper. Aenean vitae quam non orci rutrum mollis ac non eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean porttitor efficitur tristique. Cras lobortis sapien in libero tristique, a pretium turpis ullamcorper. Vivamus quis purus vitae metus laoreet posuere sit amet nec orci. Integer molestie lectus eget viverra efficitur. Phasellus viverra suscipit orci, eget faucibus nunc aliquam id. Nulla facilisi. Nullam accumsan finibus lacinia.</p>
+
+                    <p>Curabitur mattis magna nec lorem ornare, id pharetra velit pretium. Integer finibus ex non tempor pretium. Sed suscipit fringilla mauris ac lacinia. Aliquam nec sodales justo. Etiam porttitor, augue vel cursus eleifend, nibh lorem ornare tortor, sit amet sodales felis lorem sit amet nisi. Sed feugiat turpis vel tellus venenatis, non aliquet metus rutrum. Cras a magna in nulla mollis pellentesque vel quis est. Morbi quam quam, congue et hendrerit id, imperdiet id nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum laoreet lobortis elit, ac pretium ex sollicitudin et. Integer consectetur tortor vel tortor facilisis laoreet.</p>
+
+                    <p>Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci. Suspendisse viverra lorem vitae eros tristique, nec sagittis lectus molestie. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam ut sollicitudin ex, non lacinia orci. Curabitur eleifend malesuada congue.</p>
+
+                    <p>Fusce sit amet libero lorem. Nunc pellentesque consequat nisi, ut posuere lorem viverra id. Aenean tincidunt nulla nec felis lacinia, dignissim efficitur ipsum aliquet. Donec aliquet, sem vel posuere posuere, dui nisi elementum lectus, eget sollicitudin urna sem in arcu. Mauris aliquet, felis quis tempor accumsan, urna quam fringilla leo, a consectetur magna nulla non tortor. Fusce condimentum ultricies odio, sit amet tristique arcu elementum non. Quisque facilisis, ipsum at gravida iaculis, mauris dui congue lectus, sit amet elementum tellus odio id elit. Proin eget sagittis augue. Curabitur sagittis tellus et mi lobortis varius. Duis iaculis orci non tellus suscipit, eget bibendum tortor fringilla.</p>
+                </div>
+
+                <!-- Footer -->
+                <div class="bas-ui-modal-footer">
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Agree</a>
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Disagree</a>
+                </div>
+
+                <!-- Close Top Right -->
+                <!--div class="bas-ui-modal-top-close">
+                    <i class="mdi mdi-close bas-ui-icon bas-ui-icon-24 bas-ui-modal-close"></i>
+                </div-->
+
+            </div>
+
+            <h2 class="header">Modal Sizes</h2>
+            <p>For diferent modal sizes add the <code class="language-markup">bas-ui-modal-small</code> or <code class="language-markup">bas-ui-modal-medium</code> after <code class="language-markup">bas-ui-modal</code>.</p>
+
+            <p>
+                <a data-target="bas-ui-modal-sample4" class="bas-ui-button bas-ui-button-primary bas-ui-waves-light bas-ui-modal-trigger">Small</a>
+                &nbsp;&nbsp;&nbsp;
+                <a data-target="bas-ui-modal-sample5" class="bas-ui-button bas-ui-button-primary bas-ui-waves-light bas-ui-modal-trigger">Medium</a>
+            </p>
+
+            <br>
+
+            <!-- Modal Basic Small -->
+            <div id="bas-ui-modal-sample4" class="bas-ui-modal bas-ui-modal-small">
+
+                <!-- Content -->
+                <div class="bas-ui-modal-content">
+                    <h5>Title</h5>
+                    <p>Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci. Suspendisse viverra lorem vitae eros tristique, nec sagittis lectus molestie.</p>
+                </div>
+
+                <!-- Footer -->
+                <div class="bas-ui-modal-footer">
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Agree</a>
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Disagree</a>
+                </div>
+
+            </div>
+
+            <!-- Modal Basic Medium -->
+            <div id="bas-ui-modal-sample5" class="bas-ui-modal bas-ui-modal-medium">
+
+                <!-- Content -->
+                <div class="bas-ui-modal-content">
+                    <h5>Title</h5>
+                    <p>Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci. Suspendisse viverra lorem vitae eros tristique, nec sagittis lectus molestie.</p>
+                </div>
+
+                <!-- Footer -->
+                <div class="bas-ui-modal-footer">
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Agree</a>
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Disagree</a>
+                </div>
+
+            </div>
+
+            <h2 class="header">Modal Positions</h2>
+            <p>For diferent positions add the <code class="language-markup">bas-ui-modal-top-sheet</code> or <code class="language-markup">bas-ui-modal-bottom-sheet</code> <br/> or <code class="language-markup">bas-ui-modal-left-sheet</code> or <code class="language-markup">bas-ui-modal-right-sheet</code> or <code class="language-markup">bas-ui-modal-full-sheet</code> after <code class="language-markup">bas-ui-modal</code>.</p>
+
+            <p>
+                <a data-target="bas-ui-modal-sample6" class="bas-ui-button bas-ui-button-primary bas-ui-waves-light bas-ui-modal-trigger">Top</a>
+                &nbsp;&nbsp;&nbsp;
+                <a data-target="bas-ui-modal-sample7" class="bas-ui-button bas-ui-button-primary bas-ui-waves-light bas-ui-modal-trigger">Bottom</a>
+                &nbsp;&nbsp;&nbsp;
+                <a data-target="bas-ui-modal-sample9" class="bas-ui-button bas-ui-button-primary bas-ui-waves-light bas-ui-modal-trigger">Left</a>
+                &nbsp;&nbsp;&nbsp;
+                <a data-target="bas-ui-modal-sample10" class="bas-ui-button bas-ui-button-primary bas-ui-waves-light bas-ui-modal-trigger">Right</a>
+                &nbsp;&nbsp;&nbsp;
+                <a data-target="bas-ui-modal-sample8" class="bas-ui-button bas-ui-button-primary bas-ui-waves-light bas-ui-modal-trigger">Full</a>
+            </p>
+
+            <br>
+
+            <!-- Modal Bottom -->
+            <div id="bas-ui-modal-sample6" class="bas-ui-modal bas-ui-modal-top-sheet">
+
+                <!-- Content -->
+                <div class="bas-ui-modal-content">
+                    <h5>Title</h5>
+                    <ul class="bas-ui-list bas-ui-hoverable">
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_1.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_2.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body active"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_3.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_4.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body active"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Footer -->
+                <!--div class="bas-ui-modal-footer">
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Agree</a>
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Disagree</a>
+                </div-->
+
+            </div>
+
+            <!-- Modal Bottom -->
+            <div id="bas-ui-modal-sample7" class="bas-ui-modal bas-ui-modal-bottom-sheet">
+
+                <!-- Content -->
+                <div class="bas-ui-modal-content">
+                    <h5>Title</h5>
+                    <ul class="bas-ui-list bas-ui-hoverable">
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_1.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_2.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body active"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_3.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_4.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body active"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Footer -->
+                <!--div class="bas-ui-modal-footer">
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves bas-ui-secondary-color-text bas-ui-modal-close">Agree</a>
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves bas-ui-secondary-color-text bas-ui-modal-close">Disagree</a>
+                </div-->
+
+            </div>
+
+            <!-- Modal Full -->
+            <div id="bas-ui-modal-sample8" class="bas-ui-modal bas-ui-modal-fixed bas-ui-modal-full-sheet">
+
+                <!-- Header -->
+                <div class="bas-ui-modal-header">
+                    <div class="header-title">
+                        <i class="mdi mdi-close bas-ui-icon bas-ui-icon-left bas-ui-icon-24 bas-ui-modal-close"></i>
+                        <span class="section-title">Modal Header</span>
+                    </div>
+                    <ul class="right bas-ui-nav-menu">
+                        <li class="bas-ui-nav-menu-item-icon">
+                            <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Content -->
+                <div class="bas-ui-modal-content">
+                    <h5>Title</h5>
+                    <ul class="bas-ui-list bas-ui-hoverable">
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_1.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_2.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body active"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_3.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_4.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body active"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Footer -->
+                <div class="bas-ui-modal-footer">
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Save</a>
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Cancel</a>
+                </div>
+
+            </div>
+
+            <!-- Modal Left -->
+            <div id="bas-ui-modal-sample9" class="bas-ui-modal bas-ui-modal-fixed bas-ui-modal-left-sheet">
+
+                <!-- Header -->
+                <div class="bas-ui-modal-header">
+                    <div class="header-title">
+                        <i class="mdi mdi-close bas-ui-icon bas-ui-icon-left bas-ui-icon-24 bas-ui-modal-close"></i>
+                        <span class="section-title">Modal Header</span>
+                    </div>
+                    <ul class="right bas-ui-nav-menu">
+                        <li class="bas-ui-nav-menu-item-icon">
+                            <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Content -->
+                <div class="bas-ui-modal-content">
+                    <h5>Title</h5>
+                    <ul class="bas-ui-list bas-ui-hoverable">
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_1.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_2.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body active"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_3.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_4.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body active"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Footer -->
+                <div class="bas-ui-modal-footer">
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Save</a>
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Cancel</a>
+                </div>
+
+            </div>
+
+            <!-- Modal Right -->
+            <div id="bas-ui-modal-sample10" class="bas-ui-modal bas-ui-modal-fixed bas-ui-modal-right-sheet">
+
+                <!-- Header -->
+                <div class="bas-ui-modal-header">
+                    <div class="header-title">
+                        <i class="mdi mdi-close bas-ui-icon bas-ui-icon-left bas-ui-icon-24 bas-ui-modal-close"></i>
+                        <span class="section-title">Modal Header</span>
+                    </div>
+                    <ul class="right bas-ui-nav-menu">
+                        <li class="bas-ui-nav-menu-item-icon">
+                            <a class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves">
+                                <i class="mdi mdi-dots-vertical bas-ui-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Content -->
+                <div class="bas-ui-modal-content">
+                    <h5>Title</h5>
+                    <ul class="bas-ui-list bas-ui-hoverable">
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_1.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_2.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body active"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_3.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                        <li class="bas-ui-list-item bas-ui-list-avatar  bas-ui-list-truncate bas-ui-list-secondary-content">
+                            <img class="circle" src="/assets/img/avatar/avatar_4.jpg">
+                            <div class="bas-ui-list-body">
+                                <h6 class="bas-ui-list-title">Title</h6>
+                                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+                            </div>
+                            <a class="bas-ui-list-secondary-content-body active"><i class="mdi mdi-star bas-ui-icon bas-ui-icon-24"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Footer -->
+                <div class="bas-ui-modal-footer">
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Save</a>
+                    <a href="#" class="bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close">Cancel</a>
+                </div>
+
+            </div>
+
+
+            <h2 class="header">Modal Structure</h2>
+            <p>For set Trigger, specify the Modal ID in data-target or href and add <code class="language-markup">bas-ui-modal-trigger</code> in the class item.</p>
+
+            <pre><code class="language-markup">
+&lt;!-- Modal Trigger --&gt;
+&lt;a data-target=&quot;bas-ui-modal-sample1&quot; class=&quot;bas-ui-button bas-ui-button-primary bas-ui-waves-light bas-ui-modal-trigger&quot;&gt;Show Modal&lt;/a&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div id=&quot;bas-ui-modal-sample1&quot; class=&quot;bas-ui-modal&quot;&gt;
+
+    &lt;!-- Header --&gt;
+    &lt;div class=&quot;bas-ui-modal-header&quot;&gt;
+        &lt;div class=&quot;header-title&quot;&gt;
+            &lt;i class=&quot;mdi mdi-settings bas-ui-icon bas-ui-icon-left bas-ui-icon-24&quot;&gt;&lt;/i&gt;
+            &lt;span class=&quot;section-title&quot;&gt;Modal Header&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;ul class=&quot;right bas-ui-nav-menu&quot;&gt;
+            &lt;li class=&quot;bas-ui-nav-menu-item-icon&quot;&gt;
+                &lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves&quot;&gt;
+                    &lt;i class=&quot;mdi mdi-dots-vertical bas-ui-icon&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Content --&gt;
+    &lt;div class=&quot;bas-ui-modal-content&quot;&gt;
+        &lt;h5&gt;Title&lt;/h5&gt;
+        &lt;p&gt;Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;div class=&quot;bas-ui-modal-footer&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close&quot;&gt;Agree&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-waves secondary-color-text bas-ui-modal-close&quot;&gt;Disagree&lt;/a&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Initialization</h2>
+            <p>Initialization for modals is only necessary if you create them dynamically.</p>
+
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+    $('.bas-ui-modal-trigger').bas_ui_modals({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        opacity: 0.5, // Opacity of modal background
+        in_duration: 300, // Transition in duration
+        out_duration: 200, // Transition out duration
+    });
+});</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Options</h2>
+
+            <table class="table bas-ui-data-table z-depth-1 bas-ui-bottom-margin-3">
+                <thead>
+                <tr>
+                    <th class="bas-ui-data-table-cell-non-numeric">Option Name</th>
+                    <th class="bas-ui-data-table-cell-non-numeric">Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td style="width: 25%;" class="bas-ui-data-table-cell-non-numeric">in_duration</td>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">The duration of the transition enter in milliseconds. Default: 300</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">out_duration</td>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">The duration of the transition out in milliseconds. Default: 200</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">opacity</td>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Opacity of modal background. Default: 0.5</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">dismissible</td>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Modal can be dismissed by clicking outside of the modal. Default: true</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p>To use these inline you have to add them as data attributes.</p>
+
+            <pre><code class="language-markup">
+&lt;!-- Modal Trigger --&gt;
+&lt;a data-target=&quot;bas-ui-modal-sample1&quot; data-opacity=&quot;0.8&quot; data-dismissible=&quot;true&quot; class=&quot;bas-ui-button bas-ui-button-primary bas-ui-waves-light bas-ui-modal-trigger&quot;&gt;&lt;/a&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Methods</h2>
+
+            <p>Shows a modal element.</p>
+
+            <pre><code class="language-javascript">
+$('.bas-ui-modal-trigger-custom-1').bas_ui_modals('show');
+</code></pre>
+
+            <p>Hides a modal element.</p>
+
+            <pre><code class="language-javascript">
+$('.bas-ui-modal-trigger-custom-1').bas_ui_modals('hide');
+</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Events</h2>
+
+            <table class="bas-ui-data-table bas-ui-striped z-depth-1 bas-ui-bottom-margin-3">
+                <thead>
+                <tr>
+                    <th class="bas-ui-data-table-cell-non-numeric">Option Name</th>
+                    <th class="bas-ui-data-table-cell-non-numeric">Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">show.bas.tabs</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event fires immediately when the show instance method is called.</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">shown.bas.tabs</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event is fired when a modal has been made visible to the user (will wait for CSS transitions to complete).</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">hide.bas.tabs</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event is fired immediately when the hide method has been called.</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">hidden.bas.tabs</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event is fired when a modal has been hidden from the user (will wait for CSS transitions to complete).</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p>Sample event.</p>
+
+            <pre><code class="language-javascript">
+$('#bas-ui-modal-sample1').on('shown.bas.modals', function () {
+    // do something...
+});
+</code></pre>
+        </div>
+    </div>
+
+
+</div>
+</section>
+
+
+        <!-- Footer -->
+        <footer class="doc-footer bas-ui-section bas-ui-top-padding-6 bas-ui-bottom-padding-6">
+            <div class="container">
+                <ul class="doc-footer-links">
+                    <li><a target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui">GitHub<i class="mdi mdi-open-in-new bas-ui-icon"></i></a></li>
+                    <li><a target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui/blob/master/README.md">Started<i class="mdi mdi-open-in-new bas-ui-icon"></i></a></li>
+                    <li><a href="/showcase/showcase.html">Showcase</a></li>
+                    <li><a href="/help/donate.html">Help</a></li>
+                </ul>
+                <p>Developed by, <a target="_blank" href="http://basgrani.com">Basgrani</a></p>
+                <p>&copy; BasMaterial UI - v0.1.0, <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a></p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="../../assets/js/bas-material-ui.js?v=0.0.0"></script>
+    <script src="../../assets/js/bas-material-ui-docs.js?v=0.0.0"></script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-XXXXX-X', 'bas-material-ui.basgrani.com');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

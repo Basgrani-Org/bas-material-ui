@@ -1,0 +1,288 @@
+---
+section: Layout
+chapter: Structuring
+slug_section: layout
+slug_chapter: structuring
+description: Options for structuring your pages.
+---
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>{{chapter}}</h1>
+        <p class="lead">{{description}}</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Layout Structuring</h2>
+
+                <div class="bas-ui-card bas-ui-bottom-margin-3">
+                    <div class="bas-ui-card-supporting-text">
+                        <div class="doc-structuring">
+                            <div class="doc-structuring-sidebar orange-100"></div>
+                            <div class="doc-structuring-header blue-100"></div>
+                            <div class="doc-structuring-body purple-100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+    &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
+
+    &lt;!-- BasMaterial UI CSS --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bas-material-ui.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bas-ui-layout-header-fixed bas-ui-side-nav-auto&quot; &gt;
+
+    &lt;!-- Layout Header --&gt;
+    &lt;header class=&quot;bas-ui-layout-header&quot;&gt;
+
+        &lt;div class=&quot;bas-ui-app-bar&quot;&gt;
+            ...
+        &lt;/div&gt;
+
+        &lt;div class=&quot;bas-ui-tool-bar&quot;&gt;
+            ...
+        &lt;/div&gt;
+
+    &lt;/header&gt;
+
+    &lt;!-- Layout Side Nav --&gt;
+    &lt;div class=&quot;bas-ui-side-nav&quot;&gt;
+
+        &lt;div class=&quot;bas-ui-side-nav-wrapper&quot;&gt;
+
+            &lt;div class=&quot;brand&quot;&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class=&quot;bas-ui-side-nav-content-wrapper&quot;&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class=&quot;footer&quot;&gt;
+                ...
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;!-- Layout Body --&gt;
+    &lt;main class=&quot;bas-ui-main bas-ui-scrollbar-y&quot;&gt;
+        ...
+    &lt;/main&gt;
+
+    &lt;!-- jQuery first, then BasMaterial JS. --&gt;
+    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/bas-material-ui.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Layout Header</h2>
+                <p>Add <code class="language-markup">bas-ui-layout-header-fixed</code> to body for header fixed or remove for not.</p>
+
+                <div class="bas-ui-card bas-ui-bottom-margin-3">
+                    <div class="bas-ui-card-supporting-text">
+                        <div class="doc-structuring">
+                            <!--div class="doc-structuring-sidebar orange-100"></div-->
+                            <div class="doc-structuring-header blue-100"></div>
+                            <!--div class="doc-structuring-body purple-100"></div-->
+                        </div>
+                    </div>
+                </div>
+
+                <pre><code class="language-markup">
+...
+&lt;body class=&quot;bas-ui-layout-header-fixed&quot; &gt;
+
+    &lt;!-- Layout Header --&gt;
+    &lt;header class=&quot;bas-ui-layout-header&quot;&gt;
+
+        &lt;div class=&quot;bas-ui-app-bar&quot;&gt;
+
+            &lt;!-- Toggle --&gt;
+            &lt;div class=&quot;bas-ui-side-nav-toggle&quot;&gt;&lt;i class=&quot;mdi mdi-menu bas-ui-icon bas-ui-icon-left bas-ui-icon-24&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+
+            &lt;!-- Breadcrumb --&gt;
+            &lt;div class=&quot;bas-ui-breadcrumb&quot;&gt;
+                &lt;a href=&quot;/&quot; class=&quot;bas-ui-breadcrumb-item&quot;&gt;&lt;span&gt;Layout&lt;/span&gt;&lt;/a&gt;
+                &lt;a href=&quot;/&quot; class=&quot;bas-ui-breadcrumb-item&quot;&gt;&lt;span&gt;Structuring&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Nav Menu --&gt;
+            &lt;ul class=&quot;right bas-ui-nav-menu&quot;&gt;
+                &lt;li class=&quot;bas-ui-nav-menu-item-icon&quot;&gt;
+                    &lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves bas-ui-top-search-show&quot;&gt;
+                        &lt;i class=&quot;mdi mdi-magnify bas-ui-icon&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;bas-ui-nav-menu-item-icon&quot;&gt;
+                    &lt;a class=&quot;bas-ui-button bas-ui-button-default bas-ui-button-flat bas-ui-button-fab bas-ui-button-fab-xs bas-ui-waves&quot;&gt;
+                        &lt;i class=&quot;mdi mdi-bell bas-ui-icon&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;span class=&quot;bas-ui-badge bas-ui-badge-overlap&quot; data-badge=&quot;12&quot;&gt;&lt;/span&gt;
+                &lt;/li&gt;
+                ...
+            &lt;/ul&gt;
+
+            &lt;!-- Top Search --&gt;
+            &lt;div class=&quot;bas-ui-top-search&quot;&gt;
+                &lt;i class=&quot;bas-ui-top-search-close mdi mdi-arrow-left bas-ui-icon bas-ui-icon-left&quot;&gt;&lt;/i&gt;
+                &lt;!-- Search --&gt;
+                &lt;div class=&quot;bas-ui-search&quot;&gt;
+                    &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot;&gt;
+                    &lt;i class=&quot;bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left&quot;&gt;&lt;/i&gt;
+                    &lt;i class=&quot;bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class=&quot;bas-ui-tool-bar&quot;&gt;
+            &lt;div class=&quot;header-title&quot;&gt;
+                &lt;span class=&quot;section-title&quot;&gt;Tool Bar&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/header&gt;
+
+&lt;/body&gt;
+...</code></pre>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Layout Side Nav</h2>
+                <p>Add <code class="language-markup">bas-ui-side-nav-auto</code> to body for auto side nav.</p>
+                <p>or add <code class="language-markup">bas-ui-side-nav-hide</code> and <code class="language-markup">bas-ui-side-nav-with-overlay</code> to body for manual show and overlay side nav.</p>
+
+                <div class="bas-ui-card bas-ui-bottom-margin-3">
+                    <div class="bas-ui-card-supporting-text">
+                        <div class="doc-structuring">
+                            <div class="doc-structuring-sidebar orange-100"></div>
+                            <!--div class="doc-structuring-header blue-100"></div-->
+                            <!--div class="doc-structuring-body purple-100"></div-->
+                        </div>
+                    </div>
+                </div>
+
+                <pre><code class="language-markup">
+...
+&lt;body class=&quot;bas-ui-side-nav-auto&quot; &gt;
+
+    &lt;!-- Layout Side Nav --&gt;
+    &lt;div class=&quot;bas-ui-side-nav&quot;&gt;
+
+        &lt;div class=&quot;bas-ui-side-nav-wrapper&quot;&gt;
+
+            &lt;div class=&quot;brand&quot;&gt;
+                &lt;div class=&quot;bas-ui-side-nav-toggle&quot;&gt;&lt;i class=&quot;mdi mdi-menu bas-ui-icon bas-ui-icon-left bas-ui-icon-24&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;a target=&quot;_blank&quot; href=&quot;/&quot;&gt;&lt;img src=&quot;/img/logo.svg&quot; alt=&quot;logo&quot;&gt;&lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;bas-ui-side-nav-content-wrapper&quot;&gt;
+                &lt;nav&gt;
+
+                    &lt;!-- Search --&gt;
+                    &lt;div class=&quot;bas-ui-search&quot;&gt;
+                        &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot;&gt;
+                        &lt;i class=&quot;bas-ui-search-icon-left mdi mdi-magnify bas-ui-icon bas-ui-icon-left&quot;&gt;&lt;/i&gt;
+                        &lt;i class=&quot;bas-ui-search-clear mdi mdi-close bas-ui-icon bas-ui-icon-right bas-ui-icon-18&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Collapsible Menu --&gt;
+                    &lt;ul class=&quot;bas-ui-collapsible&quot; data-collapsible=&quot;accordion&quot;&gt;
+                        &lt;li&gt;
+                            &lt;div class=&quot;bas-ui-collapsible-header bas-ui-waves active&quot;&gt;
+                                &lt;a id=&quot;collapsible-nav-index&quot; href=&quot;/&quot;&gt;
+                                    &lt;i class=&quot;mdi mdi-hexagon bas-ui-icon bas-ui-icon-left bas-ui-icon-24&quot;&gt;&lt;/i&gt;
+                                    Overview
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;div class=&quot;bas-ui-collapsible-header bas-ui-waves&quot;&gt;
+                                &lt;a id=&quot;collapsible-nav-layout&quot;&gt;
+                                    &lt;i class=&quot;mdi mdi-view-quilt bas-ui-icon bas-ui-icon-left bas-ui-icon-24&quot;&gt;&lt;/i&gt;
+                                    Layout
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;bas-ui-collapsible-body collapse in&quot;&gt;
+                                  &lt;a id=&quot;collapsible-nav-layout-1&quot; href=&quot;/&quot;&gt;Layout 1&lt;/a&gt;
+                                  &lt;a id=&quot;collapsible-nav-layout-2&quot; href=&quot;/&quot;&gt;Layout 2&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+                        ...
+                    &lt;/ul&gt;
+
+                &lt;/nav&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;footer&quot;&gt;
+                &lt;a target=&quot;_blank&quot; href=&quot;/&quot;&gt;&lt;i class=&quot;mdi mdi-github-circle bas-ui-icon bas-ui-icon-left bas-ui-icon-18&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;p class=&quot;copyright&quot;&gt;&amp;copy; Site - v0.0.0&lt;/p&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+...</code></pre>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Layout Body</h2>
+
+                <div class="bas-ui-card bas-ui-bottom-margin-3">
+                    <div class="bas-ui-card-supporting-text">
+                        <div class="doc-structuring">
+                            <!--div class="doc-structuring-sidebar orange-100"></div-->
+                            <!--div class="doc-structuring-header blue-100"></div-->
+                            <div class="doc-structuring-body purple-100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <pre><code class="language-markup">
+...
+&lt;body&gt;
+
+    &lt;!-- Layout Body --&gt;
+    &lt;main class=&quot;bas-ui-main bas-ui-scrollbar-y&quot;&gt;
+        &lt;section class=&quot;bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                ...
+            &lt;/div&gt;
+        &lt;/section&gt;
+        ...
+    &lt;/main&gt;
+
+&lt;/body&gt;
+...</code></pre>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>

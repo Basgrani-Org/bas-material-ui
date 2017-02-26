@@ -1,0 +1,57 @@
+// Icon Styles
+.icon, .bas-ui-icon  {
+	line-height: inherit;
+	font-size: 24px;
+
+	// Align
+	&.icon-left, &.bas-ui-icon-left {
+		float: left;
+		margin-right: 15px;
+	}
+	&.icon-right, &.bas-ui-icon-right {
+		float: right;
+		margin-left: 15px;
+	}
+
+    // Sizing
+    $bas-ui-icons-sizes: (
+        "12": 12px,
+        "18": 18px,
+        "24": 24px,
+        "36": 36px,
+        "48": 48px,
+        "96": 96px,
+        "128": 128px,
+        "134": 134px,
+        "140": 140px,
+        "146": 146px,
+        "152": 152px,
+        "158": 158px,
+        "164": 164px,
+        "170": 170px,
+        "176": 176px,
+        "182": 182px
+    );
+
+    @each $name, $value in $bas-ui-icons-sizes {
+        &.icon-#{$name}, &.bas-ui-icon-#{$name} {
+            font-size: $value;
+        }
+    }
+
+	// Black on a light background
+	&.icon-dark, &.bas-ui-icon-dark {
+		color: rgba(0, 0, 0, 0.54);
+		&.icon-inactive, .bas-ui-icon-inactive {
+			color: rgba(0, 0, 0, 0.26);
+		}
+	}
+
+	// White on a dark background
+	&.icon-light, &.bas-ui-icon-light {
+		color: rgba(255, 255, 255, 1);
+		&.icon-inactive, .bas-ui-icon-inactive {
+			color: rgba(255, 255, 255, 0.3);
+		}
+	}
+}

@@ -1,0 +1,168 @@
+// Buttons
+
+.bas-ui-button {
+    @include bas-ui-transition(box-shadow);
+    @extend .z-depth-1;
+    z-index: $bas-ui-zindex-content;
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    user-select: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: $bas-ui-button-font-size;
+    min-width: $bas-ui-button-min-width;
+    padding: $bas-ui-button-padding;
+    height: $bas-ui-button-height;
+    line-height: $bas-ui-button-line-height;
+
+    // FLAT
+    &.bas-ui-button-flat {
+        box-shadow: none;
+    }
+
+    // FAB
+    &.bas-ui-button-fab {
+        border-radius: 50%;
+        width: $bas-ui-button-fab-size;
+        min-width: $bas-ui-button-fab-size;
+        height: $bas-ui-button-fab-size;
+        padding: 0;
+        i {
+            line-height: $bas-ui-button-fab-size;
+            width: inherit;
+        }
+    }
+
+    // FAB SM
+    &.bas-ui-button-fab.bas-ui-button-fab-sm {
+        width: $bas-ui-button-fab-size-sm;
+        min-width: $bas-ui-button-fab-size-sm;
+        height: $bas-ui-button-fab-size-sm;
+        i {
+            line-height: $bas-ui-button-fab-size-sm;
+        }
+    }
+
+    // FAB XS
+    &.bas-ui-button-fab.bas-ui-button-fab-xs {
+        width: $bas-ui-button-fab-size-xs;
+        min-width: $bas-ui-button-fab-size-xs;
+        height: $bas-ui-button-fab-size-xs;
+        i {
+            line-height: $bas-ui-button-fab-size-xs;
+        }
+    }
+}
+
+// Alternate buttons
+
+.bas-ui-button-default {
+    @include bas-ui-button-variant($bas-ui-button-default-color, $bas-ui-button-default-bg, rgba(158, 158, 158, .2));
+}
+
+.bas-ui-button-primary {
+    @include bas-ui-button-variant($bas-ui-button-primary-color, $bas-ui-button-primary-bg, $bas-ui-button-primary-bg);
+}
+
+.bas-ui-button-success {
+    @include bas-ui-button-variant($bas-ui-button-success-color, $bas-ui-button-success-bg, $bas-ui-button-success-bg);
+}
+
+.bas-ui-button-info {
+    @include bas-ui-button-variant($bas-ui-button-info-color, $bas-ui-button-info-bg, $bas-ui-button-info-bg);
+}
+
+.bas-ui-button-warning {
+    @include bas-ui-button-variant($bas-ui-button-warning-color, $bas-ui-button-warning-bg, $bas-ui-button-warning-bg);
+}
+
+.bas-ui-button-danger {
+    @include bas-ui-button-variant($bas-ui-button-danger-color, $bas-ui-button-danger-bg, $bas-ui-button-danger-bg);
+}
+
+// Button Sizes
+
+.bas-ui-button-lg {
+    @include bas-ui-button-size($bas-ui-button-large-padding, $bas-ui-button-large-font-size, $bas-ui-button-large-line-height, $bas-ui-button-large-height);
+}
+
+// Block button
+
+.bas-ui-button-block {
+    display: block;
+    width: 100%;
+}
+
+// Vertically space out multiple block buttons
+
+.bas-ui-button-block + .bas-ui-button-block {
+    margin-top: 5px;
+}
+
+// Specificity overrides
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.bas-ui-button-block {
+        width: 100%;
+    }
+}
+
+// FAB Action Button
+
+.bas-ui-button-fab-action {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    padding-top: 16px;
+    margin-bottom: 0;
+    z-index: $bas-ui-zindex-app-bar-fab;
+
+    a {
+        z-index: 1;
+
+        i {
+            pointer-events: none;
+        }
+    }
+
+    ul {
+        left: 0;
+        right: 0;
+        height: 0;
+        text-align: center;
+        position: absolute;
+        bottom: $bas-ui-button-fab-size;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        z-index: -1;
+
+        li {
+            margin-bottom: 16px;
+            width: 100%;
+            opacity: 0;
+        }
+    }
+}
+
+// Floating Button
+
+.bas-ui-button-fab-floating {
+    display: block;
+    position: absolute;
+    right: 24px;
+    bottom: -28px;
+    z-index: $bas-ui-zindex-app-bar-fab;
+    a {
+        display: block;
+        position: relative;
+    }
+}

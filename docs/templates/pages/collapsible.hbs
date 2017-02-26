@@ -1,0 +1,299 @@
+---
+section: Components
+chapter: Collapsible
+slug_section: components
+slug_chapter: collapsible
+description: Collapsibles are accordion elements that expand when clicked on. They allow you to hide content that is not immediately relevant to the user.
+---
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>{{chapter}}</h1>
+        <p class="lead">{{description}}</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <h2 class="header">Accordion</h2>
+            <p>Basic collapsible.</p>
+
+            <ul class="bas-ui-collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="bas-ui-collapsible-header">
+                        <a><i class="mdi mdi-image-filter-drama bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>Collapsible #1</a>
+                    </div>
+                    <div class="bas-ui-collapsible-body collapse in">
+                        <div class="bas-ui-collapsible-body-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bas-ui-collapsible-header">
+                        <a><i class="mdi mdi-map-marker bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>Collapsible #2</a>
+                    </div>
+                    <div class="bas-ui-collapsible-body collapse">
+                        <div class="bas-ui-collapsible-body-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bas-ui-collapsible-header">
+                        <a><i class="mdi mdi-fire bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>Collapsible #3</a>
+                    </div>
+                    <div class="bas-ui-collapsible-body collapse">
+                        <div class="bas-ui-collapsible-body-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <pre><code class="language-markup">
+&lt;ul class=&quot;bas-ui-collapsible&quot; data-collapsible=&quot;accordion&quot;&gt;
+    &lt;li&gt;
+        &lt;div class=&quot;bas-ui-collapsible-header&quot;&gt;
+            &lt;a&gt;&lt;i class=&quot;mdi mdi-image-filter-drama bas-ui-icon bas-ui-icon-left bas-ui-icon-24&quot;&gt;&lt;/i&gt;Collapsible #1&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;bas-ui-collapsible-body collapse in&quot;&gt;
+            &lt;div class=&quot;bas-ui-collapsible-body-inner&quot;&gt;
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class=&quot;bas-ui-collapsible-header&quot;&gt;
+            &lt;a&gt;&lt;i class=&quot;mdi mdi-map-marker bas-ui-icon bas-ui-icon-left bas-ui-icon-24&quot;&gt;&lt;/i&gt;Collapsible #2&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;bas-ui-collapsible-body collapse&quot;&gt;
+            &lt;div class=&quot;bas-ui-collapsible-body-inner&quot;&gt;
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class=&quot;bas-ui-collapsible-header&quot;&gt;
+            &lt;a&gt;&lt;i class=&quot;mdi mdi-fire bas-ui-icon bas-ui-icon-left bas-ui-icon-24&quot;&gt;&lt;/i&gt;Collapsible #3&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;bas-ui-collapsible-body collapse&quot;&gt;
+            &lt;div class=&quot;bas-ui-collapsible-body-inner&quot;&gt;
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <h2 class="header">Popout</h2>
+            <p>For create collapsible popout add the class <code class="language-markup">popout</code>.</p>
+
+            <ul class="bas-ui-collapsible popout" data-collapsible="accordion">
+                <li>
+                    <div class="bas-ui-collapsible-header">
+                        <a><i class="mdi mdi-image-filter-drama bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>Collapsible #1</a>
+                    </div>
+                    <div class="bas-ui-collapsible-body collapse">
+                        <div class="bas-ui-collapsible-body-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        </div>
+                    </div>
+                </li>
+                <li class="active">
+                    <div class="bas-ui-collapsible-header">
+                        <a><i class="mdi mdi-map-marker bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>Collapsible #2</a>
+                    </div>
+                    <div class="bas-ui-collapsible-body collapse in">
+                        <div class="bas-ui-collapsible-body-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bas-ui-collapsible-header">
+                        <a><i class="mdi mdi-fire bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>Collapsible #3</a>
+                    </div>
+                    <div class="bas-ui-collapsible-body collapse">
+                        <div class="bas-ui-collapsible-body-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <pre><code class="language-markup">
+&lt;ul class=&quot;bas-ui-collapsible popout&quot; data-collapsible=&quot;accordion&quot;&gt;
+...&lt;li class=&quot;active&quot;&gt;
+        &lt;div class=&quot;bas-ui-collapsible-header&quot;&gt;...</code></pre>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <h2 class="header">Expandable</h2>
+            <p>For create collapsible expandable add in the data-collapsible <code class="language-markup">expandable</code>.</p>
+
+            <ul class="bas-ui-collapsible" data-collapsible="expandable">
+                <li>
+                    <div class="bas-ui-collapsible-header">
+                        <a><i class="mdi mdi-image-filter-drama bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>Collapsible #1</a>
+                    </div>
+                    <div class="bas-ui-collapsible-body collapse">
+                        <div class="bas-ui-collapsible-body-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bas-ui-collapsible-header">
+                        <a><i class="mdi mdi-map-marker bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>Collapsible #2</a>
+                    </div>
+                    <div class="bas-ui-collapsible-body collapse">
+                        <div class="bas-ui-collapsible-body-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bas-ui-collapsible-header">
+                        <a><i class="mdi mdi-fire bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>Collapsible #3</a>
+                    </div>
+                    <div class="bas-ui-collapsible-body collapse">
+                        <div class="bas-ui-collapsible-body-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <pre><code class="language-markup">
+&lt;ul class=&quot;bas-ui-collapsible&quot; data-collapsible=&quot;expandable&quot;&gt;
+...</code></pre>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Initialization</h2>
+            <p>JavaScript dynamic initialization (Optional).</p>
+
+            <pre><code class="language-javascript">
+$('.bas-ui-collapsible-body').bas_ui_collapsible();
+</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Options</h2>
+
+            <table class="table bas-ui-data-table z-depth-1 bas-ui-bottom-margin-3">
+                <thead>
+                <tr>
+                    <th class="bas-ui-data-table-cell-non-numeric">Option Name</th>
+                    <th class="bas-ui-data-table-cell-non-numeric">Type</th>
+                    <th class="bas-ui-data-table-cell-non-numeric">Default</th>
+                    <th class="bas-ui-data-table-cell-non-numeric">Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">toggle</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">boolean</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">true</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">Toggles the collapsible element on invocation</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p>Sample use to options.</p>
+
+            <pre><code class="language-javascript">
+$('.bas-ui-collapsible-body').bas_ui_collapsible({
+    toggle: false
+});
+</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Methods</h2>
+            <p>Toggles a collapsible element to shown or hidden.</p>
+
+            <pre><code class="language-javascript">
+$('.bas-ui-collapsible-body').bas_ui_collapsible('toggle');
+</code></pre>
+
+            <p>Shows a collapsible element.</p>
+
+            <pre><code class="language-javascript">
+$('.bas-ui-collapsible-body').bas_ui_collapsible('show');
+</code></pre>
+
+            <p>Hides a collapsible element.</p>
+
+            <pre><code class="language-javascript">
+$('.bas-ui-collapsible-body').bas_ui_collapsible('hide');
+</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Events</h2>
+
+            <table class="bas-ui-data-table bas-ui-striped z-depth-1 bas-ui-bottom-margin-3">
+                <thead>
+                <tr>
+                    <th class="bas-ui-data-table-cell-non-numeric">Option Name</th>
+                    <th class="bas-ui-data-table-cell-non-numeric">Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">show.bas.collapsible</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event fires immediately when the show instance method is called.</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">shown.bas.collapsible</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event is fired when a collapsible element has been made visible to the user (will wait for CSS transitions to complete).</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">hide.bas.collapsible</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event is fired immediately when the hide method has been called.</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric">hidden.bas.collapsible</td>
+                    <td class="bas-ui-data-table-cell-non-numeric">This event is fired when a collapsible element has been hidden from the user (will wait for CSS transitions to complete).</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p>Sample event.</p>
+
+            <pre><code class="language-javascript">
+$('.bas-ui-collapsible-body').on('hidden.bas.collapsible', function () {
+    // do something...
+});
+</code></pre>
+        </div>
+    </div>
+
+</div>
+</section>

@@ -1,0 +1,117 @@
+// Tabs
+
+.bas-ui-tabs {
+    position: absolute;
+    display: inline-block;
+    height: 48px;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+
+    .bas-ui-tab {
+        display: inline-block;
+        text-align: center;
+        line-height: 48px;
+        height: 48px;
+        padding: 0 20px;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: .8px;
+
+        a {
+            line-height: 48px;
+            height: 48px;
+            color: $bas-ui-tabs-text-color;
+            font-weight: 500;
+            opacity: 0.6;
+            display: block;
+            width: 100%;
+            text-decoration: none;
+
+            @include bas-ui-transition-ease(opacity);
+
+            &:hover,&.active {
+                opacity: 1;
+            }
+        }
+
+        &.disabled a {
+            opacity: 0.3;
+            pointer-events: none;
+            cursor: default;
+        }
+    }
+
+    .bas-ui-indicator {
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background-color: $bas-ui-tabs-underline-color;
+        will-change: left, right;
+    }
+
+    // With-icons
+    &.bas-ui-tabs-with-icons {
+        .bas-ui-tab {
+            a {
+
+                i.icon, i.bas-ui-icon {
+                    font-size: 24px;
+                    width: 24px;
+                }
+            }
+        }
+    }
+
+    // With-left-icons
+    &.bas-ui-tabs-with-left-icons {
+        .bas-ui-tab {
+            a {
+
+                i.icon, i.bas-ui-icon {
+                    font-size: 18px;
+                    width: 18px;
+                }
+            }
+        }
+    }
+
+    // With-top-icons
+    &.bas-ui-tabs-with-top-icons {
+        .bas-ui-tab {
+            a {
+                line-height: 15px;
+                font-size: 11px;
+                padding-top: 4px;
+                i.icon, i.bas-ui-icon {
+                    font-size: 24px;
+                    line-height: 24px;
+                    width: 24px;
+                }
+            }
+        }
+    }
+
+    // Color inverted
+    &.bas-ui-tabs-color-inverted {
+        .bas-ui-tab {
+            a {
+                color: $bas-ui-tabs-text-color-inverted;
+            }
+        }
+        .bas-ui-indicator {
+            background-color: $bas-ui-tabs-underline-color-inverted;
+        }
+    }
+
+    // Justified
+    &.bas-ui-tabs-justified {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        .bas-ui-tab {
+            width: 100%;
+        }
+    }
+}

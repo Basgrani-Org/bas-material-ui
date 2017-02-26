@@ -1,0 +1,15 @@
+// Mixins
+// --------------------------------------------------
+
+// Utilities
+@import "../../bower_components/bootstrap/scss/mixins/breakpoints"; // TODO - Remplace for owner grid system
+@import "../mixins/global";
+@import "../mixins/transitions";
+
+// Layout
+@import "../mixins/clearfix";
+@import "../../bower_components/bootstrap/scss/mixins/grid-framework"; // TODO - Remplace for owner grid system
+@import "../../bower_components/bootstrap/scss/mixins/grid"; // TODO - Remplace for owner grid system
+@import "../mixins/buttons";
+
+

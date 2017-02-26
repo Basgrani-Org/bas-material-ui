@@ -1,0 +1,118 @@
+---
+section: Content
+chapter: Progress
+slug_section: content
+slug_chapter: progress
+description: Use our custom progress component for displaying simple or complex progress bars.
+---
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>{{chapter}}</h1>
+        <p class="lead">{{description}}</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="header">Normal</h2>
+
+                <div class="bas-ui-card bas-ui-bottom-margin-3">
+                    <div class="bas-ui-card-supporting-text">
+                        <div class="bas-ui-progress">
+                            <div class="bas-ui-determinate" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-progress&quot;&gt;
+    &lt;div class=&quot;bas-ui-determinate&quot; style=&quot;width: 50%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            </div>
+
+            <div class="col-md-6">
+                <h2 class="header">Custom color</h2>
+
+                <div class="bas-ui-card bas-ui-bottom-margin-3">
+                    <div class="bas-ui-card-supporting-text">
+                        <div class="bas-ui-progress grey-500">
+                            <div class="bas-ui-determinate blue-500" style="width: 40%;"></div>
+                        </div>
+                        <div class="bas-ui-progress grey-500">
+                            <div class="bas-ui-determinate purple-500" style="width: 60%;"></div>
+                        </div>
+                        <div class="bas-ui-progress grey-500">
+                            <div class="bas-ui-determinate deep-orange-500" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-progress grey-500&quot;&gt;
+    &lt;div class=&quot;bas-ui-determinate blue-500&quot; style=&quot;width: 40%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;bas-ui-progress grey-500&quot;&gt;
+    &lt;div class=&quot;bas-ui-determinate purple-500&quot; style=&quot;width: 60%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;bas-ui-progress grey-500&quot;&gt;
+    &lt;div class=&quot;bas-ui-determinate deep-orange-500&quot; style=&quot;width: 80%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="header">Height & Label</h2>
+
+                <div class="bas-ui-card bas-ui-bottom-margin-3">
+                    <div class="bas-ui-card-supporting-text">
+                        <div class="bas-ui-progress" style="line-height: 8px;">
+                            <div class="bas-ui-determinate" style="width: 50%; height: 8px;"></div>
+                        </div>
+                        <div class="bas-ui-progress" style="line-height: 16px;">
+                            <div class="bas-ui-determinate" style="width: 50%; height: 16px;">50%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-progress&quot; style=&quot;line-height: 8px;&quot;&gt;
+    &lt;div class=&quot;bas-ui-determinate&quot; style=&quot;width: 50%; height: 8px;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;bas-ui-progress&quot; style=&quot;line-height: 16px;&quot;&gt;
+    &lt;div class=&quot;bas-ui-determinate&quot; style=&quot;width: 50%; height: 16px;&quot;&gt;50%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            </div>
+
+            <div class="col-md-6">
+                <h2 class="header">Multiple bars</h2>
+
+                <div class="bas-ui-card bas-ui-bottom-margin-3">
+                    <div class="bas-ui-card-supporting-text">
+                        <div class="bas-ui-progress grey-500">
+                            <div class="bas-ui-determinate blue-500" style="width: 15%;"></div>
+                            <div class="bas-ui-determinate purple-500" style="width: 30%;"></div>
+                            <div class="bas-ui-determinate deep-orange-500" style="width: 20%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <pre><code class="language-markup">
+&lt;div class=&quot;bas-ui-progress grey-500&quot;&gt;
+    &lt;div class=&quot;bas-ui-determinate blue-500&quot; style=&quot;width: 15%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bas-ui-determinate purple-500&quot; style=&quot;width: 30%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bas-ui-determinate deep-orange-500&quot; style=&quot;width: 20%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            </div>
+        </div>
+
+    </div>
+</section>

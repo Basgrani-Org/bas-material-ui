@@ -1,0 +1,58 @@
+/* Vars */
+
+
+// Layout header
+.bas-ui-layout-header {
+    position: relative;
+    @extend .z-depth-1;
+	z-index: $bas-ui-zindex-app-bar;
+	padding-left: $bas-ui-side-nav-width;
+	@include bas-ui-transition(padding-left);
+
+    @include bas-ui-media-breakpoint-down(sm) {
+        padding-left: 0;
+        left: $bas-ui-side-nav-width;
+        @include bas-ui-transition(left);
+    }
+
+    .header-title {
+        font-size: 20px;
+        .section-title {
+            float: left;
+        }
+        i {
+            margin: 0 10px;
+        }
+        .chapter-title {
+            float: left;
+        }
+    }
+}
+
+body.bas-ui-layout-header-fixed .bas-ui-layout-header {
+	display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 48px;
+}
+
+// Visible
+body.bas-ui-side-nav-visible {
+
+    &.bas-ui-side-nav-with-overlay {
+        .bas-ui-layout-header {
+            padding-left: 0 !important;
+        }
+    }
+}
+
+// Hide
+body.bas-ui-side-nav-hide, body:not(.bas-ui-side-nav-visible)  {
+
+    .bas-ui-layout-header  {
+        padding-left: 0;
+        left: 0;
+    }
+}

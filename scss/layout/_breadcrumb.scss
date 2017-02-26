@@ -1,0 +1,82 @@
+/* Breadcrumb */
+
+.bas-ui-breadcrumb {
+    display: inline-block;
+    position: relative;
+    line-height: inherit;
+    float: left;
+
+    .bas-ui-breadcrumb-item {
+        display: inline-block;
+        position: relative;
+        line-height: inherit;
+        color: inherit;
+        font-size: 20px;
+        text-decoration: none;
+        float: left;
+
+        &:not(.bas-ui-breadcrumb-item-hide):not(:first-of-type):after {
+            font: normal normal normal 24px / 1 "Material Design Icons";
+            @extend .mdi-chevron-right:before;
+            line-height: inherit;
+            margin: 0 4px;
+            float: left;
+        }
+
+        &.bas-ui-breadcrumb-item-hide {
+            display: none;
+        }
+
+        &.bas-ui-breadcrumb-item-truncate {
+            @extend .truncate;
+            float: none;
+        }
+
+        @include bas-ui-media-breakpoint-down(sm) {
+            display: none;
+            &:last-of-type {
+                display: inline-block;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // Hide first divider
+    .bas-ui-breadcrumb-item-hide + .bas-ui-breadcrumb-item {
+
+        &:after {
+            content: "";
+            display: none;
+        }
+    }
+
+    // First min
+    .bas-ui-breadcrumb-item.bas-ui-breadcrumb-item-hide.bas-ui-breadcrumb-item-min {
+        display: inline-block;
+
+        span {
+            display: none;
+        }
+
+        &:after {
+            display: inline-block;
+            font: normal normal normal 24px / 1 "Material Design Icons";
+            @extend .mdi-arrow-left:before;
+            line-height: inherit;
+            margin: 0 4px;
+            float: left;
+        }
+
+        + .bas-ui-breadcrumb-item {
+            @extend .truncate;
+            float: none;
+
+            span {
+                @extend .truncate;
+                float: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,238 @@
+// Modal
+
+.bas-ui-modal {
+    @extend .z-depth-4;
+
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 0;
+    max-height: 70%;
+    width: 55%;
+    margin: auto;
+
+    background-color: #fafafa;
+    border-radius: 2px;
+    will-change: top, opacity;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    @extend .bas-ui-scrollbar-y;
+
+    // Sizes
+    &.bas-ui-modal-small {
+        width: 360px;
+
+        @include bas-ui-media-breakpoint-down(sm) {
+            width: 80%;
+        }
+    }
+    &.bas-ui-modal-medium {
+        width: 720px;
+
+        @include bas-ui-media-breakpoint-down(sm) {
+            width: 80%;
+        }
+    }
+
+    @include bas-ui-media-breakpoint-down(sm) {
+        width: 80%;
+    }
+
+    // Header
+    .bas-ui-modal-header {
+        position: relative;
+        display: block;
+        min-height: $modals-header-height;
+        line-height: $modals-header-height - $modals-header-padding-top*2;
+        width: 100%;
+        padding: $modals-header-padding-top $modals-header-padding-left;
+
+        .header-title {
+            font-size: 24px;
+            .section-title {
+                float: left;
+            }
+        }
+    }
+
+    // Content
+    .bas-ui-modal-content {
+        position: relative;
+        width: 100%;
+        padding: 24px;
+    }
+
+    // Footer
+    .bas-ui-modal-footer {
+        position: relative;
+        width: 100%;
+        min-height: $modals-footer-height + 16;
+        line-height: $modals-footer-height;
+        padding: 8px 16px;
+
+        border-radius: 0 0 2px 2px;
+        background-color: #fafafa;
+
+        .bas-ui-button {
+            float: right;
+            padding: 0 8px;
+        }
+    }
+
+    // Reset
+    h1,h2,h3,h4,h5,h6 {
+        margin-top: 0;
+    }
+
+    // Close
+    .bas-ui-modal-close {
+        cursor: pointer;
+        line-height: inherit;
+    }
+
+    // Top close
+    .bas-ui-modal-top-close {
+        position: fixed;
+        right: 0;
+        top: -36px;
+        i {
+            color: #fff;
+            margin-right: 2px;
+        }
+    }
+}
+
+// Modal with fixed header and footer
+
+.bas-ui-modal.bas-ui-modal-fixed {
+    height: 70%;
+
+    // Header
+    .bas-ui-modal-header {
+        position: absolute;
+        border-bottom: 1px solid $modals-line-color;
+    }
+
+    .bas-ui-modal-content {
+        position: absolute;
+        width: 100%;
+
+        height: calc(100% - #{$modals-footer-height + 16 + 1});
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        @extend .bas-ui-scrollbar-y;
+    }
+
+    .bas-ui-modal-footer {
+        position: absolute;
+        min-height: $modals-footer-height + 16 + 1;
+        bottom: 0;
+        border-top: 1px solid $modals-line-color;
+    }
+
+    // Header Active
+    .bas-ui-modal-header {
+        &+.bas-ui-modal-content {
+            margin-top: $modals-header-height + 1;
+            height: calc(100% - #{$modals-header-height + 1 + $modals-footer-height + 16 + 1});
+        }
+    }
+
+    // Without Footer
+    &.bas-ui-modal-without-footer {
+        .bas-ui-modal-header {
+            &+.bas-ui-modal-content {
+                height: calc(100% - #{$modals-header-height + 1});
+            }
+        }
+    }
+}
+
+// Modal Top, Bottom, Left, Right and Full Sheet Style
+
+.bas-ui-modal {
+
+    // Modal Top
+    &.bas-ui-modal-top-sheet {
+        top: -100%;
+        bottom: auto;
+        margin: 0;
+        width: 100%;
+        max-height: 45%;
+        border-radius: 0;
+        will-change: bottom, opacity;
+    }
+
+    // Modal Bottom
+    &.bas-ui-modal-bottom-sheet {
+        top: auto;
+        bottom: -100%;
+        margin: 0;
+        width: 100%;
+        max-height: 45%;
+        border-radius: 0;
+        will-change: bottom, opacity;
+    }
+
+    // Modal Left
+    &.bas-ui-modal-left-sheet {
+        right: auto;
+        left: -100%;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        width: 320px;
+        max-height: 100%;
+        height: 100%;
+        border-radius: 0;
+        will-change: left, opacity;
+    }
+
+    // Modal Right
+    &.bas-ui-modal-right-sheet {
+        left: auto;
+        right: -100%;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        width: 320px;
+        max-height: 100%;
+        height: 100%;
+        border-radius: 0;
+        will-change: right, opacity;
+    }
+
+    // Modal Full
+    &.bas-ui-modal-full-sheet {
+        top: -100%;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 100%;
+        height: 100%;
+        border-radius: 0;
+        will-change: bottom, opacity;
+    }
+}
+
+// Modal Overlay
+
+.bas-ui-modal-overlay {
+    position: fixed;
+    z-index:999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    display: none;
+
+    will-change: opacity;
+}

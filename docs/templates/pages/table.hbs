@@ -1,0 +1,290 @@
+---
+section: Content
+chapter: Table
+slug_section: content
+slug_chapter: table
+description: Display sets of raw data. They usually appear in desktop enterprise products.
+---
+
+<section class="header-doc bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+    <div class="container">
+        <h1>{{chapter}}</h1>
+        <p class="lead">{{description}}</p>
+    </div>
+</section>
+
+<section class="bas-ui-section bas-ui-top-padding-3 bas-ui-bottom-padding-3">
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Basic</h2>
+            <p>Basic table for organize data</p>
+            <table class="bas-ui-data-table z-depth-1">
+                <thead>
+                <tr>
+                    <th class="bas-ui-data-table-cell-non-numeric">Material</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                </tbody>
+            </table>
+            <pre><code class="language-markup">
+&lt;table class=&quot;bas-ui-data-table z-depth-1&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th class=&quot;bas-ui-data-table-cell-non-numeric&quot;&gt;Material&lt;/th&gt;
+        &lt;th&gt;Quantity&lt;/th&gt;
+        &lt;th&gt;Unit price&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate&quot;&gt;Acrylic (Transparent)&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+        &lt;td&gt;$2.90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate&quot;&gt;Plywood (Birch)&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;$1.25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate&quot;&gt;Laminate (Gold on Blue)&lt;/td&gt;
+        &lt;td&gt;10&lt;/td&gt;
+        &lt;td&gt;$2.35&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">With Checkbox</h2>
+            <p>For checkbox table mode. We have than add <code class="language-markup">bas-ui-data-table-js bas-ui-with-checkbox</code></p>
+            <table class="bas-ui-data-table bas-ui-data-table-js bas-ui-with-checkbox bas-ui-hoverable z-depth-1">
+                <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" class="bas-ui-input filled-in" id="checkbox-all" />
+                        <label for="checkbox-all"></label>
+                    </th>
+                    <th class="bas-ui-data-table-cell-non-numeric">Material</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="bas-ui-input filled-in" id="checkbox-1" />
+                        <label for="checkbox-1"></label>
+                    </td>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="bas-ui-input filled-in" id="checkbox-2" />
+                        <label for="checkbox-2"></label>
+                    </td>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="bas-ui-input filled-in" id="checkbox-3" />
+                        <label for="checkbox-3"></label>
+                    </td>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                </tbody>
+            </table>
+            <pre><code class="language-markup">
+&lt;table class=&quot;bas-ui-data-table bas-ui-data-table-js bas-ui-with-checkbox z-depth-1&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;bas-ui-input filled-in&quot; id=&quot;checkbox-all&quot; /&gt;
+            &lt;label for=&quot;checkbox-all&quot;&gt;&lt;/label&gt;
+        &lt;/th&gt;
+        &lt;th class=&quot;bas-ui-data-table-cell-non-numeric&quot;&gt;Material&lt;/th&gt;
+        &lt;th&gt;Quantity&lt;/th&gt;
+        &lt;th&gt;Unit price&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;bas-ui-input filled-in&quot; id=&quot;checkbox-1&quot; /&gt;
+            &lt;label for=&quot;checkbox-1&quot;&gt;&lt;/label&gt;
+        &lt;/td&gt;
+        &lt;td class=&quot;bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate&quot;&gt;Acrylic (Transparent)&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+        &lt;td&gt;$2.90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;bas-ui-input filled-in&quot; id=&quot;checkbox-2&quot; /&gt;
+            &lt;label for=&quot;checkbox-2&quot;&gt;&lt;/label&gt;
+        &lt;/td&gt;
+        &lt;td class=&quot;bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate&quot;&gt;Plywood (Birch)&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;$1.25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;bas-ui-input filled-in&quot; id=&quot;checkbox-3&quot; /&gt;
+            &lt;label for=&quot;checkbox-3&quot;&gt;&lt;/label&gt;
+        &lt;/td&gt;
+        &lt;td class=&quot;bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate&quot;&gt;Laminate (Gold on Blue)&lt;/td&gt;
+        &lt;td&gt;10&lt;/td&gt;
+        &lt;td&gt;$2.35&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Striped</h2>
+            <p>For striped table mode. We have than add <code class=" language-markup">.bas-ui-striped</code></p>
+            <table class="bas-ui-data-table bas-ui-striped z-depth-1">
+                <thead>
+                <tr>
+                    <th class="bas-ui-data-table-cell-non-numeric">Material</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                </tbody>
+            </table>
+            <pre><code class="language-markup">
+&lt;table class=&quot;bas-ui-data-table bas-ui-striped z-depth-1&quot;&gt;
+    ...
+&lt;/table&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Hoverable</h2>
+            <p>For hoverable table mode. We have than add <code class=" language-markup">.bas-ui-hoverable</code></p>
+            <table class="bas-ui-data-table bas-ui-hoverable z-depth-1">
+                <thead>
+                <tr>
+                    <th class="bas-ui-data-table-cell-non-numeric">Material</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                </tbody>
+            </table>
+            <pre><code class="language-markup">
+&lt;table class=&quot;bas-ui-data-table bas-ui-hoverable z-depth-1&quot;&gt;
+    ...
+&lt;/table&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Centered</h2>
+            <p>For centered table mode. We have than add <code class=" language-markup">.bas-ui-centered</code></p>
+            <table class="bas-ui-data-table bas-ui-centered z-depth-1">
+                <thead>
+                <tr>
+                    <th class="bas-ui-data-table-cell-non-numeric">Material</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="bas-ui-data-table-cell-non-numeric bas-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                </tbody>
+            </table>
+            <pre><code class="language-markup">
+&lt;table class=&quot;bas-ui-data-table bas-ui-centered z-depth-1&quot;&gt;
+    ...
+&lt;/table&gt;</code></pre>
+        </div>
+    </div>
+
+</div>
+</section>

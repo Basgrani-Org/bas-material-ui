@@ -108,12 +108,16 @@
                 <ul class="bas-ui-collapsible" data-collapsible="accordion">
 
                     <li>
-                        <div class="bas-ui-collapsible-header bas-ui-waves {{#is page.slug_section "home"}}active{{/is}}">
-                            <a id="collapsible-nav-index" href="/">
-                                <i class="mdi mdi-hexagon bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
-                                Overview
-                            </a>
-                        </div>
+                        {{#each pages}}
+                            {{#is data.slug_chapter "overview"}}
+                                <div class="bas-ui-collapsible-header bas-ui-waves {{isActive}}">
+                                    <a id="collapsible-nav-index" href="{{autolink}}">
+                                        <i class="mdi mdi-hexagon bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                        {{data.chapter}}
+                                    </a>
+                                </div>
+                            {{/is}}
+                        {{/each}}
                     </li>
 
                     <li>
@@ -127,12 +131,16 @@
                     </li>
 
                     <li>
-                        <div class="bas-ui-collapsible-header bas-ui-waves {{#is page.slug_section "help"}}active{{/is}}">
-                            <a id="collapsible-nav-help" href="/help/donate.html">
-                                <i class="mdi mdi-heart-pulse bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
-                                Help This Project
-                            </a>
-                        </div>
+                        {{#each pages}}
+                            {{#is data.slug_chapter "donate"}}
+                                <div class="bas-ui-collapsible-header bas-ui-waves {{isActive}}">
+                                    <a id="collapsible-nav-help" href="{{autolink}}">
+                                        <i class="mdi mdi-heart-pulse bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                        {{data.chapter}}
+                                    </a>
+                                </div>
+                            {{/is}}
+                        {{/each}}
                     </li>
 
                     <li>
@@ -184,12 +192,16 @@
                     </li>
 
                     <li>
-                        <div class="bas-ui-collapsible-header bas-ui-waves {{#is page.slug_section "showcase"}}active{{/is}}">
-                            <a id="collapsible-nav-showcase" href="/showcase/showcase.html">
-                                <i class="mdi mdi-web bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
-                                Showcase
-                            </a>
-                        </div>
+                        {{#each pages}}
+                            {{#is data.slug_chapter "showcase"}}
+                                <div class="bas-ui-collapsible-header bas-ui-waves {{isActive}}">
+                                    <a id="collapsible-nav-showcase" href="{{autolink}}">
+                                        <i class="mdi mdi-web bas-ui-icon bas-ui-icon-left bas-ui-icon-24"></i>
+                                        {{data.chapter}}
+                                    </a>
+                                </div>
+                            {{/is}}
+                        {{/each}}
                     </li>
 
                     <li>

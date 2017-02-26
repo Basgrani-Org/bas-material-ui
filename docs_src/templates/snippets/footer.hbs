@@ -3,8 +3,16 @@
         <ul class="doc-footer-links">
             <li><a target="_blank" href="{{site.homepage_git}}">GitHub<i class="mdi mdi-open-in-new bas-ui-icon"></i></a></li>
             <li><a target="_blank" href="{{site.homepage_git}}/blob/master/README.md">Started<i class="mdi mdi-open-in-new bas-ui-icon"></i></a></li>
-            <li><a href="/showcase/showcase.html">Showcase</a></li>
-            <li><a href="/help/donate.html">Help</a></li>
+            {{#each pages}}
+                {{#is data.slug_chapter "showcase"}}
+                    <li><a href="{{autolink}}">{{data.chapter}}</a></li>
+                {{/is}}
+            {{/each}}
+            {{#each pages}}
+                {{#is data.slug_chapter "donate"}}
+                    <li><a href="{{autolink}}">{{data.chapter}}</a></li>
+                {{/is}}
+            {{/each}}
         </ul>
         <p>Developed by, <a target="_blank" href="http://basgrani.com">Basgrani</a></p>
         <p>&copy; {{site.title}} - v{{package.version}}, <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a></p>

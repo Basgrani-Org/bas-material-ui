@@ -31,4 +31,14 @@ module.exports.register = function (Handlebars, options) {
             return '#ffffff';
         }
     });
+
+    Handlebars.registerHelper("assetsFix", function(path, options) {
+        if(path === "../../assets"){
+            return "../assets";
+        }
+        if(path === "../assets"){
+            return "assets";
+        }
+        return path;
+    });
 };

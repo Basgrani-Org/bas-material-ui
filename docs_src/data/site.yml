@@ -4,8 +4,8 @@
 
 production: <%= production %>
 
-source: ./docs_src
-destination: ./docs
+source: docs_src
+destination: docs
 
 title: "BasMaterial UI"
 homepage_git: "https://github.com/Basgrani-Org/bas-material-ui"

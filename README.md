@@ -90,6 +90,8 @@ Use the files in the "dist" folder
 </html>
 ```
 
+- [More information about the layout...](http://bas-material-ui.basgrani.com/layout/structuring.html)
+
 ## Package dependencies
 
 No need to separately include the following libraries, are already included in this library:
@@ -146,7 +148,7 @@ These amazing people are maintaining this project:
 
 ### Sponsors
 
-No sponsors yet! Will you be the first? [I want to be a sponsor...](mailto:dev@basgrani.com?subject=I want to be a sponsor to BasMaterial UI)
+No sponsors yet! Will you be the first?
 
 [![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VKV3GRW7R6MLW)
 
@@ -171,3 +173,7 @@ If you wish you can contribute to the development of this project:
 ## License
 
 - View the [LICENSE](https://github.com/Basgrani-Org/bas-material-ui/blob/master/LICENSE.md)
+
+## Contact
+
+- dev@basgrani.com

@@ -258,7 +258,7 @@ module.exports = function ( grunt ) {
                 helpers: '<%= site.source %>/helpers/helper-*.js',
                 partials: ['<%= site.source %>/templates/snippets/**/*.hbs'],
                 layoutdir: '<%= site.source %>/templates/layouts',
-                data: ['<%= site.source %>/**/*.{json,yml}','package.json']
+                data: ['<%= site.source %>/**/*.{json,yml}','bower.json','package.json']
             },
             site: {
                 options: {layout: 'default.hbs'},

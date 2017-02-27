@@ -6,6 +6,17 @@
 - ...
 
 **Updates**
+- ...
+
+**Fixes**
+- ...
+
+### v0.1.1 (Feb 27, 2017)
+
+**New**
+- ...
+
+**Updates**
 - Readme
 
 **Fixes**

@@ -9961,6 +9961,7 @@ body:not(.bas-ui-side-nav-visible) .bas-ui-main, body.bas-ui-side-nav-hide .bas-
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  z-index: 0;
   /*** Scrollbar Y ***/
   /*** Scrollbar X ***/
 }

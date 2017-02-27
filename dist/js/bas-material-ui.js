@@ -15377,6 +15377,11 @@ var Modals = function ($) {
             _self._overlayID = Modals._generateID();
             _self._lStack = ++stack;
 
+            // Move modal to body
+            if (_self._target.hasClass(ClassName.MODAL)) {
+                _self._target.appendTo(document.body);
+            }
+
             // Set config
             _self.config = config;
 

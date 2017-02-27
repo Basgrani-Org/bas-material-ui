@@ -36,6 +36,7 @@ body {
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: $bas-ui-zindex-content;
 
     /*** Scrollbar Y ***/
     &.bas-ui-scrollbar-y {

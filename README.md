@@ -1,9 +1,11 @@
 # BasMaterial UI
 
-**Note:** Coming soon available for production!! Meanwhile use only for test purpose.
+[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VKV3GRW7R6MLW)
 
-- Ready for meteor!!
-- Ready for reactive app's!!
+- Ready for Meteor!!
+- Ready for reactive App's!!
+
+**NOTE:** Coming soon available for production!! Meanwhile use only for test purpose.
 
 ## Introduction
 
@@ -12,6 +14,18 @@ BasMaterial UI, is a natural user interface based in Google's Material Design.
 - View the [DEMO & DOC](http://bas-material-ui.basgrani.com)
 
 - View the [CHANGELOG](https://github.com/Basgrani-Org/bas-material-ui/blob/master/CHANGELOG.md)
+
+## Install
+
+```
+npm install bas-material-ui
+```
+
+or
+
+```
+bower install bas-material-ui
+```
 
 ## HTML Setup
 
@@ -121,6 +135,34 @@ grunt
 ```
 
 Grunt will then watch concurrently for changes to src and hbs folders, scss and hbs files build each as required.
+
+## Backers
+
+### Maintainers
+
+These amazing people are maintaining this project:
+
+- [Basgrani](http://basgrani.com) - [view contributions](https://github.com/Basgrani-Org/bas-material-ui/commits?author=Basgrani)
+
+### Sponsors
+
+No sponsors yet! Will you be the first? [I want to be a sponsor...](mailto:dev@basgrani.com?subject=I want to be a sponsor to BasMaterial UI)
+
+[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VKV3GRW7R6MLW)
+
+### Contributors
+
+These amazing people have contributed code to this project:
+
+- [Basgrani](http://basgrani.com) - [view contributions](https://github.com/Basgrani-Org/bas-material-ui/commits?author=Basgrani)
+
+### Contribute
+
+If you wish you can contribute to the development of this project:
+
+- Install tools and contribute with your code
+
+- [Donate](http://bas-material-ui.basgrani.com/home/donate.html)
 
 ## Links
 

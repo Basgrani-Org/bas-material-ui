@@ -130,7 +130,7 @@ BasUIDocs.site.build_git_home = function () {
                 if (data.length === 0) {
                     return;
                 }
-                _download_in_git_hub.html('<i class="mdi mdi-download icon icon-right icon-18"></i> Download v.' + data[0].name).attr('href', data[0].zipball_url);
+                _download_in_git_hub.html('<i class="mdi mdi-download icon icon-right icon-18"></i> Download ' + data[0].name).attr('href', data[0].zipball_url);
                 _download_in_git_hub_href.attr('href', data[0].zipball_url);
             }
         });

@@ -1,5 +1,5 @@
 /*!
- * BasMaterial UI v0.1.1 (http://bas-material-ui.basgrani.com)
+ * BasMaterial UI v0.1.2 (http://bas-material-ui.basgrani.com)
  * Copyright 2012-2017 Jorge Gonzalez
  * Licensed under MIT (https://github.com/Basgrani-Org/bas-material-ui/blob/master/LICENSE)
  */
@@ -17118,6 +17118,8 @@ var Site = function ($) {
         }, {
             key: 'load',
             value: function load() {
+                Site.resize();
+
                 var _html = $('html');
                 _html.velocity({ opacity: 1 }, {
                     duration: 300,
@@ -17128,16 +17130,9 @@ var Site = function ($) {
         }, {
             key: 'setSettings',
             value: function setSettings() {
-                Site.resize();
-
-                var _side_nav = $(Selector.SIDE_NAV);
-                if (_side_nav !== undefined) {
-                    var _side_nav_overlay = $('<div class="bas-ui-side-nav-overlay"></div>');
-                    _side_nav.after(_side_nav_overlay);
-                }
-
+                var _html = $('html');
                 if (_util2.default.isTouch) {
-                    $('html').addClass("is-touch");
+                    _html.addClass("is-touch");
                 }
             }
 
@@ -17191,6 +17186,12 @@ var Site = function ($) {
         }, {
             key: 'openSideNav',
             value: function openSideNav() {
+                var _side_nav = $(Selector.SIDE_NAV);
+                if (_side_nav !== undefined) {
+                    var _side_nav_overlay = $('<div class="bas-ui-side-nav-overlay"></div>');
+                    _side_nav.after(_side_nav_overlay);
+                }
+
                 var _body = $('body');
                 _body.removeClass(ClassName.SIDE_NAV_HIDE);
                 _body.addClass(ClassName.SIDE_NAV_VISIBLE);
@@ -17198,6 +17199,11 @@ var Site = function ($) {
         }, {
             key: 'closeSideNav',
             value: function closeSideNav() {
+                var _side_nav_overlay = $('.bas-ui-side-nav-overlay');
+                if (_side_nav_overlay !== undefined) {
+                    _side_nav_overlay.remove();
+                }
+
                 var _body = $('body');
                 _body.removeClass(ClassName.SIDE_NAV_VISIBLE);
                 _body.addClass(ClassName.SIDE_NAV_HIDE);
@@ -17318,6 +17324,11 @@ var Site = function ($) {
         Site.closeSideNav();
     });
 
+    // Side Nav TRANSITION END
+    $(document).on(_util2.default.TRANSITION_END, Selector.SIDE_NAV, function (event) {
+        //console.log('TRANSITION END...');
+    });
+
     // Ready
     $(document).ready(function () {
         // Set global settings
@@ -17348,6 +17359,9 @@ var Site = function ($) {
         });
         $(document).bas_ui_observe(Selector.LAYOUT_HEADER, function () {
             Site.renderLayoutHeader(this);
+        });
+        $(document).bas_ui_observe(Selector.WAVES + ',' + Selector.WAVES_LIGHT, function () {
+            Site.waves(this);
         });
     }
 

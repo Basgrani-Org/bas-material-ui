@@ -225,6 +225,8 @@ const Site = (($) => {
         }
 
         static load() {
+            Site.resize();
+
             let _html = $('html');
             _html.velocity({opacity: 1}, {
                 duration: 300,
@@ -234,16 +236,9 @@ const Site = (($) => {
         }
 
         static setSettings() {
-            Site.resize();
-
-            let _side_nav = $(Selector.SIDE_NAV);
-            if (_side_nav !== undefined) {
-                let _side_nav_overlay = $('<div class="bas-ui-side-nav-overlay"></div>');
-                _side_nav.after(_side_nav_overlay);
-            }
-
+            let _html = $('html');
             if (Util.isTouch) {
-                $('html').addClass("is-touch");
+                _html.addClass("is-touch");
             }
         }
 
@@ -294,12 +289,23 @@ const Site = (($) => {
         }
 
         static openSideNav() {
+            let _side_nav = $(Selector.SIDE_NAV);
+            if (_side_nav !== undefined) {
+                let _side_nav_overlay = $('<div class="bas-ui-side-nav-overlay"></div>');
+                _side_nav.after(_side_nav_overlay);
+            }
+
             let _body = $('body');
             _body.removeClass(ClassName.SIDE_NAV_HIDE);
             _body.addClass(ClassName.SIDE_NAV_VISIBLE);
         }
 
         static closeSideNav() {
+            let _side_nav_overlay = $('.bas-ui-side-nav-overlay');
+            if (_side_nav_overlay !== undefined) {
+                _side_nav_overlay.remove();
+            }
+
             let _body = $('body');
             _body.removeClass(ClassName.SIDE_NAV_VISIBLE);
             _body.addClass(ClassName.SIDE_NAV_HIDE);
@@ -411,6 +417,11 @@ const Site = (($) => {
         Site.closeSideNav();
     });
 
+    // Side Nav TRANSITION END
+    $(document).on(Util.TRANSITION_END, Selector.SIDE_NAV, (event) => {
+        //console.log('TRANSITION END...');
+    });
+
     // Ready
     $(document).ready(function () {
         // Set global settings
@@ -441,6 +452,9 @@ const Site = (($) => {
         });
         $(document).bas_ui_observe(Selector.LAYOUT_HEADER, function () {
             Site.renderLayoutHeader(this);
+        });
+        $(document).bas_ui_observe(Selector.WAVES + ',' + Selector.WAVES_LIGHT, function () {
+            Site.waves(this);
         });
     }
 

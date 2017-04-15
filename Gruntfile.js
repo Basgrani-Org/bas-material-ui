@@ -347,6 +347,12 @@ module.exports = function ( grunt ) {
                         'style="display:inline-block;width:320px;height:100px"\n'+
                         'data-ad-client="ca-pub-4029620086579540"\n'+
                         'data-ad-slot="4966707614"></ins>\n'
+                    },
+                    {
+                        from: "<!-- ADS-PAGE-LEVEL -->",
+                        to: '<script>\n'+
+                        '(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-4029620086579540", enable_page_level_ads: true});\n'+
+                        '</script>\n'
                     }
                 ]
             }

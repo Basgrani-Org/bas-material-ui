@@ -1,5 +1,5 @@
 /*!
- * BasMaterial UI v0.1.2 (http://bas-material-ui.basgrani.com)
+ * BasMaterial UI v0.1.3 (http://bas-material-ui.basgrani.com)
  * Copyright 2012-2017 Jorge Gonzalez
  * Licensed under MIT (https://github.com/Basgrani-Org/bas-material-ui/blob/master/LICENSE)
  */

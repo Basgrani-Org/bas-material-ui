@@ -1,20 +1,27 @@
 <footer class="doc-footer bas-ui-section bas-ui-top-padding-6 bas-ui-bottom-padding-6">
     <div class="container">
-        <ul class="doc-footer-links">
-            <li><a target="_blank" href="{{site.homepage_git}}">GitHub<i class="mdi mdi-open-in-new bas-ui-icon"></i></a></li>
-            <li><a target="_blank" href="{{site.homepage_git}}/blob/master/README.md">Started<i class="mdi mdi-open-in-new bas-ui-icon"></i></a></li>
-            {{#each pages}}
-                {{#is data.slug_chapter "showcase"}}
-                    <li><a href="{{autolink}}">{{data.chapter}}</a></li>
-                {{/is}}
-            {{/each}}
-            {{#each pages}}
-                {{#is data.slug_chapter "donate"}}
-                    <li><a href="{{autolink}}">{{data.chapter}}</a></li>
-                {{/is}}
-            {{/each}}
-        </ul>
-        <p>Developed by <a target="_blank" href="http://basgrani.com">Basgrani</a></p>
-        <p>&copy; {{site.title}} - v{{bower.version}}, <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a></p>
+        <div class="row">
+            <div class="col-sm-6">
+                <ul class="doc-footer-links">
+                    <li><a target="_blank" href="{{site.homepage_git}}">GitHub<i class="mdi mdi-open-in-new bas-ui-icon"></i></a></li>
+                    <li><a target="_blank" href="{{site.homepage_git}}/blob/master/README.md">Started<i class="mdi mdi-open-in-new bas-ui-icon"></i></a></li>
+                    {{#each pages}}
+                        {{#is data.slug_chapter "showcase"}}
+                            <li><a href="{{autolink}}">{{data.chapter}}</a></li>
+                        {{/is}}
+                    {{/each}}
+                    {{#each pages}}
+                        {{#is data.slug_chapter "donate"}}
+                            <li><a href="{{autolink}}">{{data.chapter}}</a></li>
+                        {{/is}}
+                    {{/each}}
+                </ul>
+                <p>Developed by <a target="_blank" href="http://basgrani.com">Basgrani</a></p>
+                <p class="bas-ui-bottom-padding-2">&copy; {{site.title}} - v{{bower.version}}, <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a></p>
+            </div>
+            <div class="col-sm-6 center">
+                <!-- ADS-BOTTOM -->
+            </div>
+        </div>
     </div>
 </footer>

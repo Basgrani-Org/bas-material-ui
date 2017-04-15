@@ -323,6 +323,36 @@ module.exports = function ( grunt ) {
                         to: "UA-9809953-1"
                     }
                 ]
+            },
+            ads: {
+                src: ['docs/**/*.html'],
+                overwrite: true, // overwrite matched source files
+                replacements: [
+                    {
+                        from: "<!-- ADS-TOP -->",
+                        to: '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>\n'+
+                        '<!-- bas-material-ui-top -->\n'+
+                        '<ins class="adsbygoogle"\n'+
+                        'style="display:inline-block;width:320px;height:100px"\n'+
+                        'data-ad-client="ca-pub-4029620086579540"\n'+
+                        'data-ad-slot="2571644411"></ins>\n'+
+                        '   <script>\n'+
+                        '    (adsbygoogle = window.adsbygoogle || []).push({});\n'+
+                        '   </script>\n'
+                    },
+                    {
+                        from: "<!-- ADS-BOTTOM -->",
+                        to: '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>\n'+
+                        '<!-- bas-material-ui-bottom -->\n'+
+                        '<ins class="adsbygoogle"\n'+
+                        'style="display:inline-block;width:320px;height:100px"\n'+
+                        'data-ad-client="ca-pub-4029620086579540"\n'+
+                        'data-ad-slot="4966707614"></ins>\n'+
+                        '   <script>\n'+
+                        '    (adsbygoogle = window.adsbygoogle || []).push({});\n'+
+                        '   </script>\n'
+                    }
+                ]
             }
         },
 
@@ -583,6 +613,7 @@ module.exports = function ( grunt ) {
         'replace:version',
         'replace:min',
         'replace:analytics',
+        'replace:ads',
         'notify:release_compile'
     ]);
 };

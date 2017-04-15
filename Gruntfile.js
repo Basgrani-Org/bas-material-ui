@@ -332,13 +332,22 @@ module.exports = function ( grunt ) {
                         from: "<!-- ADS-ASYNC -->",
                         to:   '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>\n'
                     },
+                    /*{
+                        from: "<!-- ADS-PAGE-LEVEL -->",
+                        to: '<script>\n'+
+                        '(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-4029620086579540", enable_page_level_ads: true});\n'+
+                        '</script>\n'
+                    },*/
                     {
                         from: "<!-- ADS-TOP -->",
                         to: '<!-- bas-material-ui-top -->\n'+
                         '<ins class="adsbygoogle"\n'+
                         'style="display:inline-block;width:320px;height:100px"\n'+
                         'data-ad-client="ca-pub-4029620086579540"\n'+
-                        'data-ad-slot="2571644411"></ins>\n'
+                        'data-ad-slot="2571644411"></ins>\n'+
+                        '<script>\n'+
+                        '(adsbygoogle = window.adsbygoogle || []).push({});\n'+
+                        '</script>\n'
                     },
                     {
                         from: "<!-- ADS-BOTTOM -->",
@@ -346,12 +355,9 @@ module.exports = function ( grunt ) {
                         '<ins class="adsbygoogle"\n'+
                         'style="display:inline-block;width:320px;height:100px"\n'+
                         'data-ad-client="ca-pub-4029620086579540"\n'+
-                        'data-ad-slot="4966707614"></ins>\n'
-                    },
-                    {
-                        from: "<!-- ADS-PAGE-LEVEL -->",
-                        to: '<script>\n'+
-                        '(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-4029620086579540", enable_page_level_ads: true});\n'+
+                        'data-ad-slot="4966707614"></ins>\n'+
+                        '<script>\n'+
+                        '(adsbygoogle = window.adsbygoogle || []).push({});\n'+
                         '</script>\n'
                     }
                 ]

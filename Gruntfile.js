@@ -329,28 +329,24 @@ module.exports = function ( grunt ) {
                 overwrite: true, // overwrite matched source files
                 replacements: [
                     {
+                        from: "<!-- ADS-ASYNC -->",
+                        to:   '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>\n'
+                    },
+                    {
                         from: "<!-- ADS-TOP -->",
-                        to: '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>\n'+
-                        '<!-- bas-material-ui-top -->\n'+
+                        to: '<!-- bas-material-ui-top -->\n'+
                         '<ins class="adsbygoogle"\n'+
                         'style="display:inline-block;width:320px;height:100px"\n'+
                         'data-ad-client="ca-pub-4029620086579540"\n'+
-                        'data-ad-slot="2571644411"></ins>\n'+
-                        '   <script>\n'+
-                        '    (adsbygoogle = window.adsbygoogle || []).push({});\n'+
-                        '   </script>\n'
+                        'data-ad-slot="2571644411"></ins>\n'
                     },
                     {
                         from: "<!-- ADS-BOTTOM -->",
-                        to: '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>\n'+
-                        '<!-- bas-material-ui-bottom -->\n'+
+                        to: '<!-- bas-material-ui-bottom -->\n'+
                         '<ins class="adsbygoogle"\n'+
                         'style="display:inline-block;width:320px;height:100px"\n'+
                         'data-ad-client="ca-pub-4029620086579540"\n'+
-                        'data-ad-slot="4966707614"></ins>\n'+
-                        '   <script>\n'+
-                        '    (adsbygoogle = window.adsbygoogle || []).push({});\n'+
-                        '   </script>\n'
+                        'data-ad-slot="4966707614"></ins>\n'
                     }
                 ]
             }

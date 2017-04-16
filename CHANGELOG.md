@@ -3,7 +3,7 @@
 ### vNEXT
 
 **New**
-- ADS
+- Add ADS
 
 ### v0.1.3 (Mar 13, 2017)
 

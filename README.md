@@ -103,6 +103,7 @@ No need to separately include the following libraries, are already included in t
 - jQuery Element Resize (v0.2.2)
 - Ajax AutoComplete for jQuery (v1.2.24)
 - Dropzone (v4.2.0)
+- Toastr (v2.1.3)
 - Autosize (v3.0.8)
 - tether (v1.1.1)
 - VelocityJS (v1.2.2)

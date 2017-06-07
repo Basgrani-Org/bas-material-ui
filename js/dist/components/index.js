@@ -15,3 +15,5 @@ require('./modals');
 require('./select');
 
 require('./tabs');
+
+require('./toast');

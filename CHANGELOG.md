@@ -3,7 +3,18 @@
 ### vNEXT
 
 **New**
+- Add Messages component
+- Add Tooltips component
+
+### v0.2.0 (June 7, 2017)
+
+**New**
+- Ready for Production!!
 - Add ADS
+- Add Toast component
+
+**Fixes**
+- Event name in modals
 
 ### v0.1.3 (Mar 13, 2017)
 

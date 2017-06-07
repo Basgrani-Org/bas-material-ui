@@ -7,8 +7,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="msapplication-tap-highlight" content="no">
     <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
-    <meta name="description" content="Toast (Soon) | Is a non-blocking notifications.">
-    <title>Toast (Soon) | BasMaterial UI</title>
+    <meta name="description" content="Toast | Is a non-blocking notifications.">
+    <title>Toast | BasMaterial UI</title>
 
     <!-- CSS-->
     <link href="../assets/css/bas-material-ui.min.css?v=0.1.3" rel="stylesheet">
@@ -34,7 +34,7 @@
             <!-- Breadcrumb -->
             <div class="bas-ui-breadcrumb">
                 <a href="/" class="bas-ui-breadcrumb-item"><span>Components</span></a>
-                <a href="toast.html" class="bas-ui-breadcrumb-item"><span>Toast (Soon)</span></a>
+                <a href="toast.html" class="bas-ui-breadcrumb-item"><span>Toast</span></a>
             </div>
     
             <!-- Nav Menu -->
@@ -193,7 +193,7 @@
                                         <a id="collapsible-nav-components-messages" class="" href="messages.html">Messages (Soon)</a>
                                         <a id="collapsible-nav-components-modals" class="" href="modals.html">Modals</a>
                                         <a id="collapsible-nav-components-tabs" class="" href="tabs.html">Tabs</a>
-                                        <a id="collapsible-nav-components-toast" class="active" href="toast.html">Toast (Soon)</a>
+                                        <a id="collapsible-nav-components-toast" class="active" href="toast.html">Toast</a>
                                         <a id="collapsible-nav-components-tooltips" class="" href="tooltips.html">Tooltips (Soon)</a>
                             </div>
                         </li>
@@ -222,7 +222,7 @@
             </div>
     
             <div class="footer">
-                <a target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui"><i class="mdi mdi-github-circle bas-ui-icon bas-ui-icon-left bas-ui-icon-18"></i></a><p class="copyright">&copy; BasMaterial UI - v0.1.3</p>
+                <a target="_blank" href="https://github.com/Basgrani-Org/bas-material-ui"><i class="mdi mdi-github-circle bas-ui-icon bas-ui-icon-left bas-ui-icon-18"></i></a><p class="copyright">&copy; BasMaterial UI - v0.2.0</p>
             </div>
     
         </div>
@@ -378,7 +378,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
-                <h1>Toast (Soon)</h1>
+                <h1>Toast</h1>
                 <p class="lead">Is a non-blocking notifications.</p>
             </div>
             <div class="col-sm-4 bas-ui-top-padding-3 center">
@@ -401,13 +401,54 @@ data-ad-slot="2571644411"></ins>
 
     <div class="row">
         <div class="col-md-12">
-            <h2 class="header">Coming soon...</h2>
+            <h2 class="header">Types</h2>
+            <p><strong>Here, we will not reinvent the wheel.</strong> Toast is based in Toastr proyect.</p>
+            <p>For more info and view the documentation, go to: <a class="doc-link" target="_blank" href="http://www.toastrjs.com">Toastr Doc</a></p>
 
-            <pre><code class="language-markup">
-Coming soon...</code></pre>
+            <p class="bas-ui-bottom-padding-1">
+                <a class="bas-ui-button bas-ui-button-success bas-ui-waves-light doc-toast-success-trigger">Success</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-info bas-ui-waves-light doc-toast-info-trigger">Info</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-warning bas-ui-waves-light doc-toast-warning-trigger">Warning</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-danger bas-ui-waves-light doc-toast-error-trigger">Error</a>
+            </p>
 
-            <p class="lead bas-ui-top-padding-3 center">If you wish you can contribute to the development of this component.</p>
-            <p class="bas-ui-bottom-padding-3 center"><a class="bas-ui-button bas-ui-button-primary bas-ui-button-lg bas-ui-waves-light" href="/help/donate.html">Contribute...</a></p>
+            <pre><code class="language-javascript">
+// Show the success Toast
+BasUI.Toast.success('Are you the 6 fingered man?','Success');
+
+// Show the info Toast
+BasUI.Toast.info('Are you the 6 fingered man?','Info');
+
+// Show the warning Toast
+BasUI.Toast.warning('Are you the 6 fingered man?','Warning');
+
+// Show the error Toast
+BasUI.Toast.error('Are you the 6 fingered man?','Error');
+            </code></pre>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Methods</h2>
+
+            <p class="bas-ui-bottom-padding-1">
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-waves-light doc-toast-clear-trigger">Clear</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="bas-ui-button bas-ui-button-primary bas-ui-waves-light doc-toast-remove-trigger">Remove</a>
+            </p>
+
+            <pre><code class="language-javascript">
+// Remove current toasts using animation
+BasUI.Toast.clear();
+
+// Immediately remove current toasts without using animation
+BasUI.Toast.remove();
+            </code></pre>
 
         </div>
     </div>
@@ -428,7 +469,7 @@ Coming soon...</code></pre>
                                     <li><a href="../home/donate.html">Donate</a></li>
                         </ul>
                         <p>Developed by <a target="_blank" href="http://basgrani.com">Basgrani</a></p>
-                        <p class="bas-ui-bottom-padding-3">&copy; BasMaterial UI - v0.1.3, <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a></p>
+                        <p class="bas-ui-bottom-padding-3">&copy; BasMaterial UI - v0.2.0, <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a></p>
                     </div>
                     <div class="col-sm-4 center">
                         <!-- bas-material-ui-bottom -->

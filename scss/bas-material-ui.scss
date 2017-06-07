@@ -2,6 +2,7 @@
 
 // Vendors
 @import "../bower_components/mdi/scss/materialdesignicons";
+@import "../bower_components/toastr/toastr.scss";
 @import "../bower_components/animate-sass/animate";
 @import "../bower_components/waves/src/sass/waves";
 
@@ -36,3 +37,4 @@
 @import "components/search";
 @import "components/table";
 @import "components/tabs";
+@import "components/toast";

@@ -6,3 +6,4 @@ import './forms';
 import './modals';
 import './select';
 import './tabs';
+import './toast';

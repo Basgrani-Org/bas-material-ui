@@ -2,10 +2,10 @@
 
 [![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VKV3GRW7R6MLW)
 
-- Ready for Meteor!!
-- Ready for reactive App's!!
-
-**NOTE:** Coming soon available for production!! Meanwhile use only for test purpose.
+- Ready for Production!!
+- Ready for Isomorphic Applications!!
+- Ready for Meteor Applications!!
+- Ready for Cordova Applications!!
 
 ## Introduction
 

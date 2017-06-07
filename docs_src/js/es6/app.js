@@ -22,6 +22,28 @@ $(document).ready(function () {
         });
     }
 
+    // Toast
+    if (toastr) {
+        $('.doc-toast-success-trigger').on("click", function (e) {
+            BasUI.Toast.success('Are you the 6 fingered man?','Success');
+        });
+        $('.doc-toast-info-trigger').on("click", function (e) {
+            BasUI.Toast.info('Are you the 6 fingered man?','Info');
+        });
+        $('.doc-toast-warning-trigger').on("click", function (e) {
+            BasUI.Toast.warning('Are you the 6 fingered man?','Warning');
+        });
+        $('.doc-toast-error-trigger').on("click", function (e) {
+            BasUI.Toast.error('Are you the 6 fingered man?','Error');
+        });
+        $('.doc-toast-clear-trigger').on("click", function (e) {
+            BasUI.Toast.clear();
+        });
+        $('.doc-toast-remove-trigger').on("click", function (e) {
+            BasUI.Toast.remove();
+        });
+    }
+
     // Validate form (Test 1)
     let _val_form_test1        = $('#form-validation-test1');
     let _val_form_test1_submit = $('#form-validation-test1-submit');

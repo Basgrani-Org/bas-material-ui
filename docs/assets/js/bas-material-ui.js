@@ -8394,6 +8394,486 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],8:[function(require,module,exports){
+(function (global){
+/*
+ * Toastr
+ * Copyright 2012-2015
+ * Authors: John Papa, Hans Fjällemark, and Tim Ferrell.
+ * All Rights Reserved.
+ * Use, reproduction, distribution, and modification of this code is subject to the terms and
+ * conditions of the MIT license, available at http://www.opensource.org/licenses/mit-license.php
+ *
+ * ARIA Support: Greta Krafsig
+ *
+ * Project: https://github.com/CodeSeven/toastr
+ */
+/* global define */
+(function (define) {
+    define(['jquery'], function ($) {
+        return (function () {
+            var $container;
+            var listener;
+            var toastId = 0;
+            var toastType = {
+                error: 'error',
+                info: 'info',
+                success: 'success',
+                warning: 'warning'
+            };
+
+            var toastr = {
+                clear: clear,
+                remove: remove,
+                error: error,
+                getContainer: getContainer,
+                info: info,
+                options: {},
+                subscribe: subscribe,
+                success: success,
+                version: '2.1.3',
+                warning: warning
+            };
+
+            var previousToast;
+
+            return toastr;
+
+            ////////////////
+
+            function error(message, title, optionsOverride) {
+                return notify({
+                    type: toastType.error,
+                    iconClass: getOptions().iconClasses.error,
+                    message: message,
+                    optionsOverride: optionsOverride,
+                    title: title
+                });
+            }
+
+            function getContainer(options, create) {
+                if (!options) { options = getOptions(); }
+                $container = $('#' + options.containerId);
+                if ($container.length) {
+                    return $container;
+                }
+                if (create) {
+                    $container = createContainer(options);
+                }
+                return $container;
+            }
+
+            function info(message, title, optionsOverride) {
+                return notify({
+                    type: toastType.info,
+                    iconClass: getOptions().iconClasses.info,
+                    message: message,
+                    optionsOverride: optionsOverride,
+                    title: title
+                });
+            }
+
+            function subscribe(callback) {
+                listener = callback;
+            }
+
+            function success(message, title, optionsOverride) {
+                return notify({
+                    type: toastType.success,
+                    iconClass: getOptions().iconClasses.success,
+                    message: message,
+                    optionsOverride: optionsOverride,
+                    title: title
+                });
+            }
+
+            function warning(message, title, optionsOverride) {
+                return notify({
+                    type: toastType.warning,
+                    iconClass: getOptions().iconClasses.warning,
+                    message: message,
+                    optionsOverride: optionsOverride,
+                    title: title
+                });
+            }
+
+            function clear($toastElement, clearOptions) {
+                var options = getOptions();
+                if (!$container) { getContainer(options); }
+                if (!clearToast($toastElement, options, clearOptions)) {
+                    clearContainer(options);
+                }
+            }
+
+            function remove($toastElement) {
+                var options = getOptions();
+                if (!$container) { getContainer(options); }
+                if ($toastElement && $(':focus', $toastElement).length === 0) {
+                    removeToast($toastElement);
+                    return;
+                }
+                if ($container.children().length) {
+                    $container.remove();
+                }
+            }
+
+            // internal functions
+
+            function clearContainer (options) {
+                var toastsToClear = $container.children();
+                for (var i = toastsToClear.length - 1; i >= 0; i--) {
+                    clearToast($(toastsToClear[i]), options);
+                }
+            }
+
+            function clearToast ($toastElement, options, clearOptions) {
+                var force = clearOptions && clearOptions.force ? clearOptions.force : false;
+                if ($toastElement && (force || $(':focus', $toastElement).length === 0)) {
+                    $toastElement[options.hideMethod]({
+                        duration: options.hideDuration,
+                        easing: options.hideEasing,
+                        complete: function () { removeToast($toastElement); }
+                    });
+                    return true;
+                }
+                return false;
+            }
+
+            function createContainer(options) {
+                $container = $('<div/>')
+                    .attr('id', options.containerId)
+                    .addClass(options.positionClass);
+
+                $container.appendTo($(options.target));
+                return $container;
+            }
+
+            function getDefaults() {
+                return {
+                    tapToDismiss: true,
+                    toastClass: 'toast',
+                    containerId: 'toast-container',
+                    debug: false,
+
+                    showMethod: 'fadeIn', //fadeIn, slideDown, and show are built into jQuery
+                    showDuration: 300,
+                    showEasing: 'swing', //swing and linear are built into jQuery
+                    onShown: undefined,
+                    hideMethod: 'fadeOut',
+                    hideDuration: 1000,
+                    hideEasing: 'swing',
+                    onHidden: undefined,
+                    closeMethod: false,
+                    closeDuration: false,
+                    closeEasing: false,
+                    closeOnHover: true,
+
+                    extendedTimeOut: 1000,
+                    iconClasses: {
+                        error: 'toast-error',
+                        info: 'toast-info',
+                        success: 'toast-success',
+                        warning: 'toast-warning'
+                    },
+                    iconClass: 'toast-info',
+                    positionClass: 'toast-top-right',
+                    timeOut: 5000, // Set timeOut and extendedTimeOut to 0 to make it sticky
+                    titleClass: 'toast-title',
+                    messageClass: 'toast-message',
+                    escapeHtml: false,
+                    target: 'body',
+                    closeHtml: '<button type="button">&times;</button>',
+                    closeClass: 'toast-close-button',
+                    newestOnTop: true,
+                    preventDuplicates: false,
+                    progressBar: false,
+                    progressClass: 'toast-progress',
+                    rtl: false
+                };
+            }
+
+            function publish(args) {
+                if (!listener) { return; }
+                listener(args);
+            }
+
+            function notify(map) {
+                var options = getOptions();
+                var iconClass = map.iconClass || options.iconClass;
+
+                if (typeof (map.optionsOverride) !== 'undefined') {
+                    options = $.extend(options, map.optionsOverride);
+                    iconClass = map.optionsOverride.iconClass || iconClass;
+                }
+
+                if (shouldExit(options, map)) { return; }
+
+                toastId++;
+
+                $container = getContainer(options, true);
+
+                var intervalId = null;
+                var $toastElement = $('<div/>');
+                var $titleElement = $('<div/>');
+                var $messageElement = $('<div/>');
+                var $progressElement = $('<div/>');
+                var $closeElement = $(options.closeHtml);
+                var progressBar = {
+                    intervalId: null,
+                    hideEta: null,
+                    maxHideTime: null
+                };
+                var response = {
+                    toastId: toastId,
+                    state: 'visible',
+                    startTime: new Date(),
+                    options: options,
+                    map: map
+                };
+
+                personalizeToast();
+
+                displayToast();
+
+                handleEvents();
+
+                publish(response);
+
+                if (options.debug && console) {
+                    console.log(response);
+                }
+
+                return $toastElement;
+
+                function escapeHtml(source) {
+                    if (source == null) {
+                        source = '';
+                    }
+
+                    return source
+                        .replace(/&/g, '&amp;')
+                        .replace(/"/g, '&quot;')
+                        .replace(/'/g, '&#39;')
+                        .replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;');
+                }
+
+                function personalizeToast() {
+                    setIcon();
+                    setTitle();
+                    setMessage();
+                    setCloseButton();
+                    setProgressBar();
+                    setRTL();
+                    setSequence();
+                    setAria();
+                }
+
+                function setAria() {
+                    var ariaValue = '';
+                    switch (map.iconClass) {
+                        case 'toast-success':
+                        case 'toast-info':
+                            ariaValue =  'polite';
+                            break;
+                        default:
+                            ariaValue = 'assertive';
+                    }
+                    $toastElement.attr('aria-live', ariaValue);
+                }
+
+                function handleEvents() {
+                    if (options.closeOnHover) {
+                        $toastElement.hover(stickAround, delayedHideToast);
+                    }
+
+                    if (!options.onclick && options.tapToDismiss) {
+                        $toastElement.click(hideToast);
+                    }
+
+                    if (options.closeButton && $closeElement) {
+                        $closeElement.click(function (event) {
+                            if (event.stopPropagation) {
+                                event.stopPropagation();
+                            } else if (event.cancelBubble !== undefined && event.cancelBubble !== true) {
+                                event.cancelBubble = true;
+                            }
+
+                            if (options.onCloseClick) {
+                                options.onCloseClick(event);
+                            }
+
+                            hideToast(true);
+                        });
+                    }
+
+                    if (options.onclick) {
+                        $toastElement.click(function (event) {
+                            options.onclick(event);
+                            hideToast();
+                        });
+                    }
+                }
+
+                function displayToast() {
+                    $toastElement.hide();
+
+                    $toastElement[options.showMethod](
+                        {duration: options.showDuration, easing: options.showEasing, complete: options.onShown}
+                    );
+
+                    if (options.timeOut > 0) {
+                        intervalId = setTimeout(hideToast, options.timeOut);
+                        progressBar.maxHideTime = parseFloat(options.timeOut);
+                        progressBar.hideEta = new Date().getTime() + progressBar.maxHideTime;
+                        if (options.progressBar) {
+                            progressBar.intervalId = setInterval(updateProgress, 10);
+                        }
+                    }
+                }
+
+                function setIcon() {
+                    if (map.iconClass) {
+                        $toastElement.addClass(options.toastClass).addClass(iconClass);
+                    }
+                }
+
+                function setSequence() {
+                    if (options.newestOnTop) {
+                        $container.prepend($toastElement);
+                    } else {
+                        $container.append($toastElement);
+                    }
+                }
+
+                function setTitle() {
+                    if (map.title) {
+                        var suffix = map.title;
+                        if (options.escapeHtml) {
+                            suffix = escapeHtml(map.title);
+                        }
+                        $titleElement.append(suffix).addClass(options.titleClass);
+                        $toastElement.append($titleElement);
+                    }
+                }
+
+                function setMessage() {
+                    if (map.message) {
+                        var suffix = map.message;
+                        if (options.escapeHtml) {
+                            suffix = escapeHtml(map.message);
+                        }
+                        $messageElement.append(suffix).addClass(options.messageClass);
+                        $toastElement.append($messageElement);
+                    }
+                }
+
+                function setCloseButton() {
+                    if (options.closeButton) {
+                        $closeElement.addClass(options.closeClass).attr('role', 'button');
+                        $toastElement.prepend($closeElement);
+                    }
+                }
+
+                function setProgressBar() {
+                    if (options.progressBar) {
+                        $progressElement.addClass(options.progressClass);
+                        $toastElement.prepend($progressElement);
+                    }
+                }
+
+                function setRTL() {
+                    if (options.rtl) {
+                        $toastElement.addClass('rtl');
+                    }
+                }
+
+                function shouldExit(options, map) {
+                    if (options.preventDuplicates) {
+                        if (map.message === previousToast) {
+                            return true;
+                        } else {
+                            previousToast = map.message;
+                        }
+                    }
+                    return false;
+                }
+
+                function hideToast(override) {
+                    var method = override && options.closeMethod !== false ? options.closeMethod : options.hideMethod;
+                    var duration = override && options.closeDuration !== false ?
+                        options.closeDuration : options.hideDuration;
+                    var easing = override && options.closeEasing !== false ? options.closeEasing : options.hideEasing;
+                    if ($(':focus', $toastElement).length && !override) {
+                        return;
+                    }
+                    clearTimeout(progressBar.intervalId);
+                    return $toastElement[method]({
+                        duration: duration,
+                        easing: easing,
+                        complete: function () {
+                            removeToast($toastElement);
+                            clearTimeout(intervalId);
+                            if (options.onHidden && response.state !== 'hidden') {
+                                options.onHidden();
+                            }
+                            response.state = 'hidden';
+                            response.endTime = new Date();
+                            publish(response);
+                        }
+                    });
+                }
+
+                function delayedHideToast() {
+                    if (options.timeOut > 0 || options.extendedTimeOut > 0) {
+                        intervalId = setTimeout(hideToast, options.extendedTimeOut);
+                        progressBar.maxHideTime = parseFloat(options.extendedTimeOut);
+                        progressBar.hideEta = new Date().getTime() + progressBar.maxHideTime;
+                    }
+                }
+
+                function stickAround() {
+                    clearTimeout(intervalId);
+                    progressBar.hideEta = 0;
+                    $toastElement.stop(true, true)[options.showMethod](
+                        {duration: options.showDuration, easing: options.showEasing}
+                    );
+                }
+
+                function updateProgress() {
+                    var percentage = ((progressBar.hideEta - (new Date().getTime())) / progressBar.maxHideTime) * 100;
+                    $progressElement.width(percentage + '%');
+                }
+            }
+
+            function getOptions() {
+                return $.extend({}, getDefaults(), toastr.options);
+            }
+
+            function removeToast($toastElement) {
+                if (!$container) { $container = getContainer(); }
+                if ($toastElement.is(':visible')) {
+                    return;
+                }
+                $toastElement.remove();
+                $toastElement = null;
+                if ($container.children().length === 0) {
+                    $container.remove();
+                    previousToast = undefined;
+                }
+            }
+
+        })();
+    });
+}(typeof define === 'function' && define.amd ? define : function (deps, factory) {
+    if (typeof module !== 'undefined' && module.exports) { //Node
+        module.exports = factory((typeof window !== "undefined" ? window['jQuery'] : typeof global !== "undefined" ? global['jQuery'] : null));
+    } else {
+        window.toastr = factory(window.jQuery);
+    }
+}));
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],9:[function(require,module,exports){
 /*! VelocityJS.org (1.2.3). (C) 2014 Julian Shapiro. MIT @license: en.wikipedia.org/wiki/MIT_License */
 
 /*************************
@@ -12280,7 +12760,7 @@ return function (global, window, document, undefined) {
 /* The CSS spec mandates that the translateX/Y/Z transforms are %-relative to the element itself -- not its parent.
 Velocity, however, doesn't make this distinction. Thus, converting to or from the % unit with these subproperties
 will produce an inaccurate conversion value. The same issue exists with the cx/cy attributes of SVG circles and ellipses. */
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /**********************
    Velocity UI Pack
 **********************/
@@ -13043,7 +13523,7 @@ return function (global, window, document, undefined) {
     };
 }((window.jQuery || window.Zepto || window), window, document);
 }));
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 (function (global){
 /*!
  * Waves v0.7.5
@@ -13629,7 +14109,7 @@ return function (global, window, document, undefined) {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 'use strict';
 
 require('./vendors');
@@ -13642,7 +14122,7 @@ require('./site');
 
 require('./components');
 
-},{"./components":17,"./init":21,"./lib/observe":22,"./site":24,"./vendors":25}],12:[function(require,module,exports){
+},{"./components":18,"./init":23,"./lib/observe":24,"./site":26,"./vendors":27}],13:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13866,7 +14346,7 @@ var Button = function ($) {
 BasUI.Button = Button;
 exports.default = Button;
 
-},{"../lib/util":23}],13:[function(require,module,exports){
+},{"../lib/util":25}],14:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13997,7 +14477,7 @@ var Cards = function ($) {
 BasUI.Cards = Cards;
 exports.default = Cards;
 
-},{"../lib/util":23}],14:[function(require,module,exports){
+},{"../lib/util":25}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14369,7 +14849,7 @@ var Collapsible = function ($) {
 BasUI.Collapsible = Collapsible;
 exports.default = Collapsible;
 
-},{"../lib/util":23}],15:[function(require,module,exports){
+},{"../lib/util":25}],16:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14801,7 +15281,7 @@ var Dropdown = function ($) {
 BasUI.Dropdown = Dropdown;
 exports.default = Dropdown;
 
-},{"../lib/util":23}],16:[function(require,module,exports){
+},{"../lib/util":25}],17:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15254,7 +15734,7 @@ var Forms = function ($) {
 BasUI.Forms = Forms;
 exports.default = Forms;
 
-},{"../lib/util":23}],17:[function(require,module,exports){
+},{"../lib/util":25}],18:[function(require,module,exports){
 'use strict';
 
 require('./buttons');
@@ -15273,7 +15753,9 @@ require('./select');
 
 require('./tabs');
 
-},{"./buttons":12,"./cards":13,"./collapsible":14,"./dropdown":15,"./forms":16,"./modals":18,"./select":19,"./tabs":20}],18:[function(require,module,exports){
+require('./toast');
+
+},{"./buttons":13,"./cards":14,"./collapsible":15,"./dropdown":16,"./forms":17,"./modals":19,"./select":20,"./tabs":21,"./toast":22}],19:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15781,7 +16263,7 @@ var Modals = function ($) {
 BasUI.Modals = Modals;
 exports.default = Modals;
 
-},{"../lib/util":23}],19:[function(require,module,exports){
+},{"../lib/util":25}],20:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16102,7 +16584,7 @@ var Select = function ($) {
 BasUI.Select = Select;
 exports.default = Select;
 
-},{"../lib/util":23,"./dropdown":15,"./forms":16}],20:[function(require,module,exports){
+},{"../lib/util":25,"./dropdown":16,"./forms":17}],21:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16415,7 +16897,186 @@ var Tabs = function ($) {
 BasUI.Tabs = Tabs;
 exports.default = Tabs;
 
-},{"../lib/util":23}],21:[function(require,module,exports){
+},{"../lib/util":25}],22:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _util = require('../lib/util');
+
+var _util2 = _interopRequireDefault(_util);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Toast = function ($) {
+
+    // ------------------------------------------------------------------------
+    // Constants
+    // ------------------------------------------------------------------------
+
+    var VERSION = _util2.default.VERSION;
+    var NAME = _util2.default.PREFIX + '_toast';
+    var NAME_CLASS = _util2.default.CLASS_PREFIX + '-toast';
+    var DATA_KEY = _util2.default.API_PREFIX + '.toast';
+    var EVENT_KEY = '.' + DATA_KEY;
+    var DATA_API_KEY = '.data-api';
+
+    var Default = {};
+
+    var DefaultType = {};
+
+    var ClassName = {};
+
+    var Selector = {};
+
+    var Event = {
+        CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
+    };
+
+    // ------------------------------------------------------------------------
+    // Class Definition
+    // ------------------------------------------------------------------------
+
+    var Toast = function () {
+        function Toast(element, config) {
+            _classCallCheck(this, Toast);
+
+            var _self = this;
+        }
+
+        // Getters
+        // ------------------------------------------------------------------------
+
+        _createClass(Toast, [{
+            key: 'dispose',
+
+
+            // Public
+            // ------------------------------------------------------------------------
+
+            value: function dispose() {
+                $.removeData(this._trigger, DATA_KEY);
+            }
+
+            // Private
+            // ------------------------------------------------------------------------
+
+
+            // Static
+            // ------------------------------------------------------------------------
+
+        }], [{
+            key: 'success',
+
+
+            // Public
+            // ------------------------------------------------------------------------
+
+            value: function success() {
+                toastr.success.apply(this, arguments);
+            }
+        }, {
+            key: 'info',
+            value: function info() {
+                toastr.info.apply(this, arguments);
+            }
+        }, {
+            key: 'warning',
+            value: function warning() {
+                toastr.warning.apply(this, arguments);
+            }
+        }, {
+            key: 'error',
+            value: function error() {
+                toastr.error.apply(this, arguments);
+            }
+        }, {
+            key: 'remove',
+            value: function remove() {
+                toastr.remove();
+            }
+        }, {
+            key: 'clear',
+            value: function clear() {
+                toastr.clear();
+            }
+        }, {
+            key: '_jQueryInterface',
+            value: function _jQueryInterface(config) {
+                return this.each(function () {
+                    var $this = $(this);
+                    var data = $this.data(DATA_KEY);
+                    var _config = $.extend({}, Default, $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);
+
+                    if (!data) {
+                        data = new Cards(this, _config);
+                        $this.data(DATA_KEY, data);
+                    }
+
+                    if (typeof config === 'string') {
+                        if (data[config] === undefined) {
+                            throw new Error('No method named "' + config + '"');
+                        }
+                        data[config]();
+                    }
+                });
+            }
+        }, {
+            key: 'VERSION',
+            get: function get() {
+                return VERSION;
+            }
+        }, {
+            key: 'options',
+            get: function get() {
+                return toastr.options;
+            }
+
+            // Setters
+            // ------------------------------------------------------------------------
+
+            ,
+            set: function set(opt) {
+                toastr.options = opt;
+            }
+        }]);
+
+        return Toast;
+    }();
+
+    // ------------------------------------------------------------------------
+    // Data Api implementation
+    // ------------------------------------------------------------------------
+
+    // READY & OBSERVE
+
+
+    if (_util2.default.mutationObserver === null) {} else {}
+    // .bas_ui_observe(selector, onAdded, onRemoved)
+
+
+    // ------------------------------------------------------------------------
+    // jQuery
+    // ------------------------------------------------------------------------
+
+    $.fn[NAME] = Toast._jQueryInterface;
+    $.fn[NAME].Constructor = Toast;
+
+    return Toast;
+}(jQuery);
+
+BasUI.Toast = Toast;
+exports.default = Toast;
+
+},{"../lib/util":25}],23:[function(require,module,exports){
 (function (global){
 "use strict";
 
@@ -16424,7 +17085,7 @@ if (typeof global.BasUI === "undefined") {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],22:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16533,7 +17194,7 @@ var jQueryPlugin_Observer = function ($) {
 
 exports.default = jQueryPlugin_Observer;
 
-},{"../lib/util":23}],23:[function(require,module,exports){
+},{"../lib/util":25}],25:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16871,7 +17532,7 @@ var Util = function ($) {
 BasUI.Util = Util;
 exports.default = Util;
 
-},{}],24:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17371,7 +18032,7 @@ var Site = function ($) {
 BasUI.Site = Site;
 exports.default = Site;
 
-},{"./lib/util":23}],25:[function(require,module,exports){
+},{"./lib/util":25}],27:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -17393,12 +18054,13 @@ require('./../../../bower_components/velocity/velocity.ui');
 
 // Import Vendors Dependencies
 window.Dropzone = global.Dropzone = require('./../../../bower_components/dropzone/dist/dropzone');
+window.toastr = global.toastr = require('./../../../bower_components/toastr/toastr');
 window.autosize = global.autosize = require('./../../../bower_components/autosize/dist/autosize');
 
 window.Waves = global.Waves = require('./../../../bower_components/waves/dist/waves');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./../../../bower_components/autosize/dist/autosize":1,"./../../../bower_components/devbridge-autocomplete/dist/jquery.autocomplete":2,"./../../../bower_components/dropzone/dist/dropzone":3,"./../../../bower_components/hammerjs/hammer":4,"./../../../bower_components/jquery-elementresize/dist/jquery.elementresize":5,"./../../../bower_components/jquery.easing/js/jquery.easing":6,"./../../../bower_components/parsleyjs/dist/parsley":7,"./../../../bower_components/velocity/velocity":8,"./../../../bower_components/velocity/velocity.ui":9,"./../../../bower_components/waves/dist/waves":10,"./jquery.hammer":26}],26:[function(require,module,exports){
+},{"./../../../bower_components/autosize/dist/autosize":1,"./../../../bower_components/devbridge-autocomplete/dist/jquery.autocomplete":2,"./../../../bower_components/dropzone/dist/dropzone":3,"./../../../bower_components/hammerjs/hammer":4,"./../../../bower_components/jquery-elementresize/dist/jquery.elementresize":5,"./../../../bower_components/jquery.easing/js/jquery.easing":6,"./../../../bower_components/parsleyjs/dist/parsley":7,"./../../../bower_components/toastr/toastr":8,"./../../../bower_components/velocity/velocity":9,"./../../../bower_components/velocity/velocity.ui":10,"./../../../bower_components/waves/dist/waves":11,"./jquery.hammer":28}],28:[function(require,module,exports){
 "use strict";
 
 (function ($, Hammer) {
@@ -17427,6 +18089,6 @@ window.Waves = global.Waves = require('./../../../bower_components/waves/dist/wa
     }(Hammer.Manager.prototype.emit);
 })(jQuery, Hammer);
 
-},{}]},{},[11]);
+},{}]},{},[12]);
 
 }(jQuery);

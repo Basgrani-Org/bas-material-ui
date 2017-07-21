@@ -2,6 +2,11 @@
 
 ### vNEXT
 
+### v0.2.2 (July 21, 2017)
+
+**Fixes**
+- Version info
+
 ### v0.2.1 (July 21, 2017)
 
 **New**

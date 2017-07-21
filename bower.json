@@ -1,6 +1,6 @@
 {
     "name": "bas-material-ui",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "homepage": "http://bas-material-ui.basgrani.com",
     "description": "BasMaterial UI, is a natural user interface based in Google's Material Design.",
     "moduleType": "globals",

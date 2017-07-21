@@ -2,6 +2,8 @@
 
 ### vNEXT
 
+### v0.2.1 (July 21, 2017)
+
 **New**
 - Select: sync selected data in both directions (Good for Isomorphic Applications)
 - Add new variables for customize

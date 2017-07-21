@@ -3,6 +3,7 @@
 .bas-ui-button {
     @include bas-ui-transition(box-shadow);
     @extend .z-depth-1;
+    border-radius: $bas-ui-button-border-radius;
     z-index: $bas-ui-zindex-content;
     display: inline-block;
     margin: 0;
@@ -15,6 +16,7 @@
     user-select: none;
     text-transform: uppercase;
     font-weight: 500;
+    font-family: $bas-ui-button-font-family;
     font-size: $bas-ui-button-font-size;
     min-width: $bas-ui-button-min-width;
     padding: $bas-ui-button-padding;

@@ -85,7 +85,7 @@ const Modals = (($) => {
             _self._lStack    = (++stack);
 
             // Move modal to body
-            if(_self._target.hasClass(ClassName.MODAL)){
+            if(_self._target.hasClass(ClassName.MODAL) && !_self._target.parent().is('body')){
                 _self._target.appendTo(document.body);
             }
 

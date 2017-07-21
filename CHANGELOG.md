@@ -3,8 +3,14 @@
 ### vNEXT
 
 **New**
-- Add Messages component
-- Add Tooltips component
+- Select: sync selected data in both directions (Good for Isomorphic Applications)
+- Add new variables for customize
+
+**Fixes**
+- Move modal to body
+- Pointer events label in forms
+- duplicate overlay side nav
+- Color to label in forms
 
 ### v0.2.0 (June 7, 2017)
 

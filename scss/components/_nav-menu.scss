@@ -9,12 +9,12 @@
     >li {
         position: relative;
         color: inherit;
-        margin-right: 15px;
+        margin-left: 15px;
         line-height: inherit;
         float: left;
 
-        &:last-child {
-            margin-right: 0;
+        &:first-child {
+            margin-left: 0;
         }
 
         >a {

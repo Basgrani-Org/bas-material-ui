@@ -75,6 +75,8 @@ $bas-ui-hr-border: $bas-ui-gray-lighter !default;
 $bas-ui-badge-bg-color: $bas-ui-secondary-color !default;
 
 /*** Buttons ***/
+$bas-ui-button-font-family: $bas-ui-font-family-sans-serif !default;
+$bas-ui-button-border-radius: 0px !default;
 $bas-ui-button-bg-color-disabled: #DFDFDF !default;
 $bas-ui-button-color: $bas-ui-secondary-color !default;
 $bas-ui-button-color-disabled: #9F9F9F !default;
@@ -160,10 +162,14 @@ $bas-ui-collapsible-body-padding: 16px !default;
 $modals-header-height: 56px !default;
 $modals-header-padding-top: ($modals-header-height - 32) / 2 !default;
 $modals-header-padding-left: 16px !default;
+$modals-footer-button-padding: 0 8px !default;
 $modals-footer-height: 36px !default;
 $modals-line-color: $bas-ui-side-nav-line-color !default;
 
 /*** Tabs ***/
+$bas-ui-tabs-font-family: $bas-ui-font-family-sans-serif !default;
+$bas-ui-tabs-indicator-height: 2px !default;
+
 $bas-ui-tabs-text-color: #fff !default;
 $bas-ui-tabs-underline-color: $bas-ui-secondary-color !default;
 

@@ -61,9 +61,15 @@ textarea.bas-ui-textarea {
         color: $input-focus-color;
     }
 
+    // Valid label Style
+    &.valid:not([readonly])+label,
+    &:focus.valid:not([readonly])+label{
+        color: $input-success-color;
+    }
+
     // Valid Input Style
     &.valid,
-    &:focus.valid {
+    &:focus.valid{
         border-bottom: 1px solid $input-success-color;
         box-shadow: 0 1px 0 0 $input-success-color;
     }
@@ -90,6 +96,12 @@ textarea.bas-ui-textarea {
         content: attr(data-success);
         color: $input-success-color;
         opacity: 1;
+    }
+
+    // Invalid label Style
+    &.invalid:not([readonly])+label,
+    &:focus.invalid:not([readonly])+label{
+        color: $input-error-color;
     }
 
     // Invalid Input Style
@@ -127,6 +139,7 @@ textarea.bas-ui-textarea {
         right: 0;
         cursor: text;
         transition: .2s ease-out;
+        pointer-events: none;
     }
     label.active {
         font-size: $label-font-size;

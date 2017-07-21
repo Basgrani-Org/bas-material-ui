@@ -50,6 +50,7 @@ const Select = (($) => {
             _self._is_multiple    = !!_self._select.attr('multiple');
             _self._unique_ID      = Util.getUID(_self._select_id);
             _self._label          = '';
+            _self._is_dropdown_click          = false;
 
             // Set ID
             _self._select.attr('data-select-id', _self._unique_ID);
@@ -139,8 +140,40 @@ const Select = (($) => {
                     }
 
                     curr_select.find('option').eq(i).prop('selected', element.hasClass('active'));
+                    _self._is_dropdown_click = true;
                     curr_select.trigger('change');
                 });
+            });
+
+            // Select change event
+            _self._select.change(function (e) {
+                let i = $(this).prop('selectedIndex');
+                let element = select_dropdown.find('li a').eq(i);
+                let curr_select = _self._select;
+
+                if(_self._is_dropdown_click){
+                    _self._is_dropdown_click = false;
+                    return;
+                }
+
+                if (_self._is_multiple) {
+                    _self._valuesSelected = [];
+                    select_dropdown.find('li a').removeClass('active');
+                    $(this).children('option:selected').each(function () {
+                        let i = $(this).index();
+                        let element = select_dropdown.find('li a').eq(i);
+                        element.toggleClass('active');
+                        Select._buildValuesSelectedFromMultiple(_self._valuesSelected, i, curr_select);
+                    });
+                    if($(this).children('option:selected').length === 0){
+                        Select._buildValuesSelectedFromMultiple(_self._valuesSelected, 0, curr_select);
+                    }
+                    select_dropdown.find('li a').eq(0).removeClass('active');
+                } else {
+                    select_dropdown.find('li a').removeClass('active');
+                    element.toggleClass('active');
+                    curr_select.siblings('input.' + ClassName.SELECT + '-fake').val(element.find('span').text());
+                }
             });
 
             // Set initialized

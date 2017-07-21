@@ -1,6 +1,7 @@
 // Tabs
 
 .bas-ui-tabs {
+    font-family: $bas-ui-tabs-font-family;
     position: absolute;
     display: inline-block;
     height: 48px;
@@ -46,7 +47,7 @@
     .bas-ui-indicator {
         position: absolute;
         bottom: 0;
-        height: 2px;
+        height: $bas-ui-tabs-indicator-height;
         background-color: $bas-ui-tabs-underline-color;
         will-change: left, right;
     }

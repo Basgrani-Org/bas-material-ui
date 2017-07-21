@@ -315,7 +315,9 @@ var Site = function ($) {
                 var _side_nav = $(Selector.SIDE_NAV);
                 if (_side_nav !== undefined) {
                     var _side_nav_overlay = $('<div class="bas-ui-side-nav-overlay"></div>');
-                    _side_nav.after(_side_nav_overlay);
+                    if ($('.bas-ui-side-nav-overlay').length === 0) {
+                        _side_nav.after(_side_nav_overlay);
+                    }
                 }
 
                 var _body = $('body');

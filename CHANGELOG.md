@@ -1,6 +1,9 @@
 ## CHANGELOG
 
-### vNEXT
+### v0.2.3 (Aug 1, 2017)
+
+**Fixes**
+- Collapsible: divider
 
 ### v0.2.2 (July 21, 2017)
 

@@ -10562,7 +10562,7 @@ fieldset[disabled] .bas-ui-button-danger.active, .bas-ui-card, .bas-ui-collapsib
 .divider {
   height: 1px;
   overflow: hidden;
-  background-color: #e0e0e0;
+  background-color: #e0e0e0 !important;
 }
 
 /*** Nav Toggle  ***/
@@ -13429,6 +13429,10 @@ input[type="button"].bas-ui-button-block {
 .bas-ui-side-nav nav .bas-ui-collapsible li .bas-ui-collapsible-body a:hover, .bas-ui-side-nav nav .bas-ui-collapsible li .bas-ui-collapsible-body a.active {
   text-decoration: none;
   color: #212121;
+}
+
+.bas-ui-side-nav nav .bas-ui-collapsible li.divider {
+  margin: 8px 0;
 }
 
 .bas-ui-side-nav nav .bas-ui-collapsible:not(.bas-ui-collapsible-group) li .bas-ui-collapsible-header a {

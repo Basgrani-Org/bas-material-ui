@@ -12456,6 +12456,10 @@ html.is-touch .bas-ui-side-nav-overlay {
   cursor: pointer;
 }
 
+html.is-touch .bas-ui-side-nav .bas-ui-side-nav-wrapper .bas-ui-side-nav-content-wrapper nav ul {
+  height: calc(100% + 1px);
+}
+
 body.bas-ui-side-nav-visible.bas-ui-side-nav-with-overlay .bas-ui-main {
   overflow-y: hidden;
   padding-left: 0 !important;

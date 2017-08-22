@@ -100,6 +100,18 @@ html.is-touch {
     .bas-ui-side-nav-overlay {
         cursor: pointer;
     }
+    // Scroll
+    .bas-ui-side-nav {
+        .bas-ui-side-nav-wrapper {
+            .bas-ui-side-nav-content-wrapper {
+                nav {
+                    ul {
+                        height: calc(100% + 1px);
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Show Side nav

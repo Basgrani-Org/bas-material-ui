@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### v0.2.4 (Aug 22, 2017)
+
+**Fixes**
+- Web kit scroll in Side Nav
+
 ### v0.2.3 (Aug 1, 2017)
 
 **Fixes**

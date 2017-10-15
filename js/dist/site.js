@@ -246,12 +246,21 @@ var Site = function ($) {
             value: function load() {
                 Site.resize();
 
-                var _html = $('html');
-                _html.velocity({ opacity: 1 }, {
-                    duration: 300,
-                    queue: false,
-                    ease: "easeOutCubic"
-                });
+                // Fix load bugs
+                setTimeout(function () {
+
+                    var _html = $('html');
+                    _html.velocity({ opacity: 1 }, {
+                        duration: 300,
+                        queue: false,
+                        ease: "easeOutCubic"
+                    });
+
+                    // Remove all hover's in Touch devices
+                    if (_util2.default.isTouch) {
+                        Site.removeHover();
+                    }
+                }, 100);
             }
         }, {
             key: 'setSettings',
@@ -335,6 +344,57 @@ var Site = function ($) {
                 var _body = $('body');
                 _body.removeClass(ClassName.SIDE_NAV_VISIBLE);
                 _body.addClass(ClassName.SIDE_NAV_HIDE);
+            }
+        }, {
+            key: 'removeHover',
+            value: function removeHover() {
+                var hoverRegex = /:hover/;
+                var sheets = document.styleSheets,
+                    sheetIndex = void 0,
+                    ruleIndex = void 0,
+                    selIndex = void 0,
+                    sheet = void 0,
+                    rule = void 0,
+                    rulsLn = void 0,
+                    selectors = void 0,
+                    selectorText = void 0;
+
+                if (!('ontouchend' in document) || !sheets || !sheets.length) {
+                    return;
+                }
+
+                for (sheetIndex = 0; sheetIndex < sheets.length; ++sheetIndex) {
+                    sheet = sheets[sheetIndex];
+                    if (!sheet.cssRules) {
+                        continue;
+                    }
+
+                    rulsLn = sheet.cssRules.length;
+                    for (ruleIndex = 0; ruleIndex < rulsLn; ++ruleIndex) {
+                        rule = sheet.cssRules[ruleIndex];
+
+                        if (rule && rule.selectorText && hoverRegex.test(rule.selectorText)) {
+                            selectors = rule.selectorText.split(',');
+                            selectorText = '';
+
+                            for (selIndex = 0; selIndex < selectors.length; ++selIndex) {
+                                if (!hoverRegex.test(selectors[selIndex])) {
+                                    if (selectorText) {
+                                        selectorText += ',';
+                                    }
+                                    selectorText += selectors[selIndex];
+                                }
+                            }
+
+                            if (selectorText) {
+                                rule.selectorText = selectorText;
+                                // All selectors contain :hover.
+                            } else {
+                                sheet.deleteRule(ruleIndex);
+                            }
+                        }
+                    }
+                }
             }
         }, {
             key: 'VERSION',
@@ -456,6 +516,13 @@ var Site = function ($) {
     $(document).on(_util2.default.TRANSITION_END, Selector.SIDE_NAV, function (event) {
         //console.log('TRANSITION END...');
     });
+
+    // Do not trigger keyboard popup on iOS
+    if (_util2.default.isTouch) {
+        $(document).on('mousedown', 'input[readonly]', function (e) {
+            e.preventDefault();
+        });
+    }
 
     // Ready
     $(document).ready(function () {

@@ -1,5 +1,15 @@
 ## CHANGELOG
 
+### v0.2.5 (Oct 14, 2017)
+
+**Fixes**
+- Bug in ios to input with readonly
+- Bug in ios to input field text turns white
+- Bug opacity animation to html on load page
+
+**New**
+- Remove all hover's in Touch devices
+
 ### v0.2.4 (Aug 22, 2017)
 
 **Fixes**

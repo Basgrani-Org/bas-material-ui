@@ -1,5 +1,5 @@
 /*!
- * BasMaterial UI v0.2.3 (http://bas-material-ui.basgrani.com)
+ * BasMaterial UI v0.2.4 (http://bas-material-ui.basgrani.com)
  * Copyright 2012-2017 Jorge Gonzalez
  * Licensed under MIT (https://github.com/Basgrani-Org/bas-material-ui/blob/master/LICENSE)
  */
@@ -15064,6 +15064,7 @@ var Dropdown = function ($) {
                             object.trigger(Event.SHOWN);
                             object.addClass('open');
                             $(this).css('height', '');
+                            object.focus();
                         }
                     });
                 }
@@ -16378,13 +16379,13 @@ var Select = function ($) {
                 dropdown_icon.addClass('disabled');
             }
             var sanitizedLabelHtml = _self._label && _self._label.replace(/"/g, '&quot;');
-            var select_fake = $('' + '<input id="' + _self._input_id + '" data-target="dropdown-' + _self._unique_ID + '" type="text" class="' + _forms2.default.ClassName.INPUT + ' ' + ClassName.SELECT + '-fake ' + ClassName.SELECT + '-input-' + _self._unique_ID + '" readonly="true" ' + (_self._select.is(':disabled') ? 'disabled' : '') + ' value="' + sanitizedLabelHtml + '"/>' + '<span class="' + ClassName.SELECT + '-fake-msg-error">' + label_text_error + '</span>' + '<span class="' + ClassName.SELECT + '-fake-msg-success">' + label_text_success + '</span>');
+            var select_fake = $('' + '<input id="' + _self._input_id + '" data-target="dropdown-' + _self._unique_ID + '" type="text" class="' + _forms2.default.ClassName.INPUT + ' ' + ClassName.SELECT + '-fake ' + ClassName.SELECT + '-input-' + _self._unique_ID + '" readonly ' + (_self._select.is(':disabled') ? 'disabled' : '') + ' value="' + sanitizedLabelHtml + '"/>' + '<span class="' + ClassName.SELECT + '-fake-msg-error">' + label_text_error + '</span>' + '<span class="' + ClassName.SELECT + '-fake-msg-success">' + label_text_success + '</span>');
 
             // Add select fake
             _self._select.before(select_fake);
 
             // Dropdown
-            var select_dropdown = $('<ul id="dropdown-' + _self._unique_ID + '" class="' + _dropdown2.default.ClassName.DROPDOWN + '"></ul>');
+            var select_dropdown = $('<ul tabindex="0" id="dropdown-' + _self._unique_ID + '" class="' + _dropdown2.default.ClassName.DROPDOWN + '"></ul>');
 
             // Create dropdown structure
             if (select_options.length) {
@@ -17814,12 +17815,21 @@ var Site = function ($) {
             value: function load() {
                 Site.resize();
 
-                var _html = $('html');
-                _html.velocity({ opacity: 1 }, {
-                    duration: 300,
-                    queue: false,
-                    ease: "easeOutCubic"
-                });
+                // Fix load bugs
+                setTimeout(function () {
+
+                    var _html = $('html');
+                    _html.velocity({ opacity: 1 }, {
+                        duration: 300,
+                        queue: false,
+                        ease: "easeOutCubic"
+                    });
+
+                    // Remove all hover's in Touch devices
+                    if (_util2.default.isTouch) {
+                        Site.removeHover();
+                    }
+                }, 100);
             }
         }, {
             key: 'setSettings',
@@ -17903,6 +17913,57 @@ var Site = function ($) {
                 var _body = $('body');
                 _body.removeClass(ClassName.SIDE_NAV_VISIBLE);
                 _body.addClass(ClassName.SIDE_NAV_HIDE);
+            }
+        }, {
+            key: 'removeHover',
+            value: function removeHover() {
+                var hoverRegex = /:hover/;
+                var sheets = document.styleSheets,
+                    sheetIndex = void 0,
+                    ruleIndex = void 0,
+                    selIndex = void 0,
+                    sheet = void 0,
+                    rule = void 0,
+                    rulsLn = void 0,
+                    selectors = void 0,
+                    selectorText = void 0;
+
+                if (!('ontouchend' in document) || !sheets || !sheets.length) {
+                    return;
+                }
+
+                for (sheetIndex = 0; sheetIndex < sheets.length; ++sheetIndex) {
+                    sheet = sheets[sheetIndex];
+                    if (!sheet.cssRules) {
+                        continue;
+                    }
+
+                    rulsLn = sheet.cssRules.length;
+                    for (ruleIndex = 0; ruleIndex < rulsLn; ++ruleIndex) {
+                        rule = sheet.cssRules[ruleIndex];
+
+                        if (rule && rule.selectorText && hoverRegex.test(rule.selectorText)) {
+                            selectors = rule.selectorText.split(',');
+                            selectorText = '';
+
+                            for (selIndex = 0; selIndex < selectors.length; ++selIndex) {
+                                if (!hoverRegex.test(selectors[selIndex])) {
+                                    if (selectorText) {
+                                        selectorText += ',';
+                                    }
+                                    selectorText += selectors[selIndex];
+                                }
+                            }
+
+                            if (selectorText) {
+                                rule.selectorText = selectorText;
+                                // All selectors contain :hover.
+                            } else {
+                                sheet.deleteRule(ruleIndex);
+                            }
+                        }
+                    }
+                }
             }
         }, {
             key: 'VERSION',
@@ -18024,6 +18085,13 @@ var Site = function ($) {
     $(document).on(_util2.default.TRANSITION_END, Selector.SIDE_NAV, function (event) {
         //console.log('TRANSITION END...');
     });
+
+    // Do not trigger keyboard popup on iOS
+    if (_util2.default.isTouch) {
+        $(document).on('mousedown', 'input[readonly]', function (e) {
+            e.preventDefault();
+        });
+    }
 
     // Ready
     $(document).ready(function () {

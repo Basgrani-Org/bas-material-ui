@@ -227,12 +227,22 @@ const Site = (($) => {
         static load() {
             Site.resize();
 
-            let _html = $('html');
-            _html.velocity({opacity: 1}, {
-                duration: 300,
-                queue   : false,
-                ease    : "easeOutCubic"
-            });
+            // Fix load bugs
+            setTimeout(function () {
+
+                let _html = $('html');
+                _html.velocity({opacity: 1}, {
+                    duration: 300,
+                    queue   : false,
+                    ease    : "easeOutCubic"
+                });
+
+                // Remove all hover's in Touch devices
+                if (Util.isTouch) {
+                    Site.removeHover();
+                }
+
+            }, 100);
         }
 
         static setSettings() {
@@ -292,7 +302,7 @@ const Site = (($) => {
             let _side_nav = $(Selector.SIDE_NAV);
             if (_side_nav !== undefined) {
                 let _side_nav_overlay = $('<div class="bas-ui-side-nav-overlay"></div>');
-                if($('.bas-ui-side-nav-overlay').length === 0){
+                if ($('.bas-ui-side-nav-overlay').length === 0) {
                     _side_nav.after(_side_nav_overlay);
                 }
             }
@@ -313,6 +323,50 @@ const Site = (($) => {
             _body.addClass(ClassName.SIDE_NAV_HIDE);
         }
 
+        static removeHover() {
+            let hoverRegex = /:hover/;
+            let sheets     = document.styleSheets,
+                sheetIndex, ruleIndex, selIndex,
+                sheet, rule, rulsLn,
+                selectors, selectorText;
+
+            if (!('ontouchend' in document) || !sheets || !sheets.length) {
+                return;
+            }
+
+            for (sheetIndex = 0; sheetIndex < sheets.length; ++sheetIndex) {
+                sheet = sheets[sheetIndex];
+                if (!sheet.cssRules) {
+                    continue;
+                }
+
+                rulsLn = sheet.cssRules.length;
+                for (ruleIndex = 0; ruleIndex < rulsLn; ++ruleIndex) {
+                    rule = sheet.cssRules[ruleIndex];
+
+                    if (rule && rule.selectorText && hoverRegex.test(rule.selectorText)) {
+                        selectors    = rule.selectorText.split(',');
+                        selectorText = '';
+
+                        for (selIndex = 0; selIndex < selectors.length; ++selIndex) {
+                            if (!hoverRegex.test(selectors[selIndex])) {
+                                if (selectorText) {
+                                    selectorText += ',';
+                                }
+                                selectorText += selectors[selIndex];
+                            }
+                        }
+
+                        if (selectorText) {
+                            rule.selectorText = selectorText;
+                            // All selectors contain :hover.
+                        } else {
+                            sheet.deleteRule(ruleIndex);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     // ------------------------------------------------------------------------
@@ -423,6 +477,13 @@ const Site = (($) => {
     $(document).on(Util.TRANSITION_END, Selector.SIDE_NAV, (event) => {
         //console.log('TRANSITION END...');
     });
+
+    // Do not trigger keyboard popup on iOS
+    if (Util.isTouch) {
+        $(document).on('mousedown', 'input[readonly]', function (e) {
+            e.preventDefault();
+        });
+    }
 
     // Ready
     $(document).ready(function () {

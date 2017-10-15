@@ -13628,6 +13628,8 @@ textarea.bas-ui-textarea {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
+  -webkit-transform: translateZ(0px);
+          transform: translateZ(0px);
 }
 
 input.bas-ui-input[type=text]:disabled, input.bas-ui-input[type=text][readonly="readonly"],

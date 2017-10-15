@@ -36,6 +36,7 @@ textarea.bas-ui-textarea {
     box-shadow: none;
     box-sizing:content-box;
     transition: all .3s;
+    transform: translateZ(0px); // Fix ios bug
 
 
     // Disabled input style

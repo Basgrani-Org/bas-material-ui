@@ -206,6 +206,7 @@ const Dropdown = (($) => {
                         object.trigger(Event.SHOWN);
                         object.addClass('open');
                         $(this).css('height', '');
+                        object.focus();
                     }
                 });
             }

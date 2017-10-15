@@ -90,7 +90,7 @@ const Select = (($) => {
             }
             let sanitizedLabelHtml = _self._label && _self._label.replace(/"/g, '&quot;');
             let select_fake        = $('' +
-                '<input id="' + _self._input_id + '" data-target="dropdown-' + _self._unique_ID + '" type="text" class="' + Forms.ClassName.INPUT + ' ' + ClassName.SELECT + '-fake ' + ClassName.SELECT + '-input-' + _self._unique_ID + '" readonly="true" ' + ((_self._select.is(':disabled')) ? 'disabled' : '') + ' value="' + sanitizedLabelHtml + '"/>' +
+                '<input id="' + _self._input_id + '" data-target="dropdown-' + _self._unique_ID + '" type="text" class="' + Forms.ClassName.INPUT + ' ' + ClassName.SELECT + '-fake ' + ClassName.SELECT + '-input-' + _self._unique_ID + '" readonly ' + ((_self._select.is(':disabled')) ? 'disabled' : '') + ' value="' + sanitizedLabelHtml + '"/>' +
                 '<span class="' + ClassName.SELECT + '-fake-msg-error">' + label_text_error + '</span>' +
                 '<span class="' + ClassName.SELECT + '-fake-msg-success">' + label_text_success + '</span>'
             );
@@ -99,7 +99,7 @@ const Select = (($) => {
             _self._select.before(select_fake);
 
             // Dropdown
-            let select_dropdown = $('<ul id="dropdown-' + _self._unique_ID + '" class="' + Dropdown.ClassName.DROPDOWN + '"></ul>');
+            let select_dropdown = $('<ul tabindex="0" id="dropdown-' + _self._unique_ID + '" class="' + Dropdown.ClassName.DROPDOWN + '"></ul>');
 
             // Create dropdown structure
             if (select_options.length) {

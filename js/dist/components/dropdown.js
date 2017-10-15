@@ -212,6 +212,7 @@ var Dropdown = function ($) {
                             object.trigger(Event.SHOWN);
                             object.addClass('open');
                             $(this).css('height', '');
+                            object.focus();
                         }
                     });
                 }

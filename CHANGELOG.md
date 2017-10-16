@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### v0.2.6 (Oct 16, 2017)
+
+**Fixes**
+- Correct version number
+
 ### v0.2.5 (Oct 14, 2017)
 
 **Fixes**

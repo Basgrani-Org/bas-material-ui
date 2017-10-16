@@ -17,7 +17,7 @@ module.exports = function ( grunt ) {
         // Meta
         // ------------------------------------------------------------------------
 
-        pkg : grunt.file.readJSON('package.json'),
+        pkg : grunt.file.readJSON('bower.json'),
         site: grunt.file.readYAML('docs_src/data/site.yml'),
 
         meta: {

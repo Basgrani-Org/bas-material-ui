@@ -16,19 +16,19 @@ const Button = (($) => {
     const ClassName = {
         TOGGLE_FAB_ACTIVE: 'active',
         TOGGLE_FAB       : 'bas-ui-button-fab-action',
-        BUTTON           : 'bas-ui-button'
+        BUTTON           : 'bas-ui-button',
     };
 
     const Selector = {
         TOGGLE_FAB_ACTIVE: `.${ClassName.TOGGLE_FAB_ACTIVE}`,
         TOGGLE_FAB       : `.${ClassName.TOGGLE_FAB}`,
-        BUTTON           : `.${ClassName.BUTTON}`
+        BUTTON           : `.${ClassName.BUTTON}`,
     };
 
     const Event = {
         MOUSE_ENTER_LEAVE_DATA_API: `mouseenter${EVENT_KEY}${DATA_API_KEY}, mouseleave${EVENT_KEY}${DATA_API_KEY}`,
         TOUCH_START_DATA_API      : `touchstart${EVENT_KEY}${DATA_API_KEY}`,
-        CLICK_DATA_API            : `click${EVENT_KEY}${DATA_API_KEY}`
+        CLICK_DATA_API            : `click${EVENT_KEY}${DATA_API_KEY}`,
     };
 
     // ------------------------------------------------------------------------
@@ -95,14 +95,14 @@ const Button = (($) => {
                 // Set start position
                 rootElement.find('ul li').velocity(
                     {opacity: "0", scaleY: ".4", scaleX: ".4", translateY: "40px"},
-                    {duration: 0}
+                    {duration: 0},
                 );
 
                 // Set animations show
                 rootElement.find('ul li').reverse().each(function (index) {
                     $(this).velocity(
                         {opacity: "1", scaleX: "1", scaleY: "1", translateY: "0"},
-                        {duration: animationDuration, delay: time}
+                        {duration: animationDuration, delay: time},
                     );
                     time += animationDelay;
                 });
@@ -125,7 +125,7 @@ const Button = (($) => {
 
                     $(this).velocity(
                         {opacity: "0", scaleX: ".4", scaleY: ".4", translateY: "40px"},
-                        {duration: animationDuration, delay: time, complete: onAnimationEnd}
+                        {duration: animationDuration, delay: time, complete: onAnimationEnd},
                     );
                     time += animationDelay;
                 });

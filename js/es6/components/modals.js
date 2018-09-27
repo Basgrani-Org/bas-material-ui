@@ -18,7 +18,7 @@ const Modals = (($) => {
         opacity     : 0.5,
         in_duration : 300,
         out_duration: 200,
-        starting_top: '4%'
+        starting_top: '4%',
     };
 
     const DefaultType = {
@@ -26,7 +26,7 @@ const Modals = (($) => {
         opacity     : 'number',
         in_duration : 'number',
         out_duration: 'number',
-        starting_top: 'string'
+        starting_top: 'string',
     };
 
     const ClassName = {
@@ -38,7 +38,7 @@ const Modals = (($) => {
         MODAL_BOTTOM_SHEET: 'bas-ui-modal-bottom-sheet',
         MODAL_LEFT_SHEET  : 'bas-ui-modal-left-sheet',
         MODAL_RIGHT_SHEET : 'bas-ui-modal-right-sheet',
-        MODAL_FULL_SHEET  : 'bas-ui-modal-full-sheet'
+        MODAL_FULL_SHEET  : 'bas-ui-modal-full-sheet',
     };
 
     const Selector = {
@@ -50,7 +50,7 @@ const Modals = (($) => {
         MODAL_BOTTOM_SHEET: `.${ClassName.MODAL_BOTTOM_SHEET}`,
         MODAL_LEFT_SHEET  : `.${ClassName.MODAL_LEFT_SHEET}`,
         MODAL_RIGHT_SHEET : `.${ClassName.MODAL_RIGHT_SHEET}`,
-        MODAL_FULL_SHEET  : `.${ClassName.MODAL_FULL_SHEET}`
+        MODAL_FULL_SHEET  : `.${ClassName.MODAL_FULL_SHEET}`,
     };
 
     const Event = {
@@ -59,7 +59,7 @@ const Modals = (($) => {
         HIDE          : `hide${EVENT_KEY}`,
         HIDDEN        : `hidden${EVENT_KEY}`,
         KEYUP_DATA_API: `keyup${EVENT_KEY}${DATA_API_KEY}`,
-        CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`
+        CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`,
     };
 
     // ------------------------------------------------------------------------
@@ -197,7 +197,7 @@ const Modals = (($) => {
 
             object.css({
                 display: "block",
-                opacity: 0
+                opacity: 0,
             });
 
             object.data('associated-overlay', _self._overlay[0]);
@@ -206,7 +206,7 @@ const Modals = (($) => {
             _self._overlay.velocity({opacity: _self._config.opacity}, {
                 duration: _self._config.in_duration,
                 queue   : false,
-                ease    : "easeOutCubic"
+                ease    : "easeOutCubic",
             });
 
             // Top and Full Sheet
@@ -219,7 +219,7 @@ const Modals = (($) => {
                     // Handle modal ready callback
                     complete: function () {
                         object.trigger(Event.SHOWN);
-                    }
+                    },
                 });
             } // Bottom Sheet
             else if (object.hasClass(ClassName.MODAL_BOTTOM_SHEET)) {
@@ -230,7 +230,7 @@ const Modals = (($) => {
                     // Handle modal ready callback
                     complete: function () {
                         object.trigger(Event.SHOWN);
-                    }
+                    },
                 });
             } // Left Sheet
             else if (object.hasClass(ClassName.MODAL_LEFT_SHEET)) {
@@ -241,7 +241,7 @@ const Modals = (($) => {
                     // Handle modal ready callback
                     complete: function () {
                         object.trigger(Event.SHOWN);
-                    }
+                    },
                 });
             } // Right Sheet
             else if (object.hasClass(ClassName.MODAL_RIGHT_SHEET)) {
@@ -252,7 +252,7 @@ const Modals = (($) => {
                     // Handle modal ready callback
                     complete: function () {
                         object.trigger(Event.SHOWN);
-                    }
+                    },
                 });
             } // Normal
             else {
@@ -265,7 +265,7 @@ const Modals = (($) => {
                     // Handle modal ready callback
                     complete: function () {
                         object.trigger(Event.SHOWN);
-                    }
+                    },
                 });
             }
         }
@@ -283,7 +283,7 @@ const Modals = (($) => {
 
             // Hide overlay
             _self._overlay.velocity({opacity: 0}, {
-                duration: _self._config.out_duration, queue: false, ease: "easeOutQuart"
+                duration: _self._config.out_duration, queue: false, ease: "easeOutQuart",
             });
 
             // Top and Full Sheet
@@ -301,7 +301,7 @@ const Modals = (($) => {
 
                         _self._overlay.remove();
                         stack--;
-                    }
+                    },
                 });
             } // Bottom Sheet
             else if (object.hasClass(ClassName.MODAL_BOTTOM_SHEET)) {
@@ -317,7 +317,7 @@ const Modals = (($) => {
 
                         _self._overlay.remove();
                         stack--;
-                    }
+                    },
                 });
             } // Left Sheet
             else if (object.hasClass(ClassName.MODAL_LEFT_SHEET)) {
@@ -333,7 +333,7 @@ const Modals = (($) => {
 
                         _self._overlay.remove();
                         stack--;
-                    }
+                    },
                 });
             } // Right Sheet
             else if (object.hasClass(ClassName.MODAL_RIGHT_SHEET)) {
@@ -349,7 +349,7 @@ const Modals = (($) => {
 
                         _self._overlay.remove();
                         stack--;
-                    }
+                    },
                 });
             } // Normal
             else {
@@ -364,8 +364,8 @@ const Modals = (($) => {
 
                             _self._overlay.remove();
                             stack--;
-                        }
-                    }
+                        },
+                    },
                 );
             }
         }
@@ -420,7 +420,7 @@ const Modals = (($) => {
                     {},
                     Default,
                     $this.data(),
-                    typeof config === 'object' && config
+                    typeof config === 'object' && config,
                 );
 
                 if (!data) {

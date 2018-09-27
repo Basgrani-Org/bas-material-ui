@@ -20,7 +20,7 @@ const Util = (($) => {
         WebkitTransition: 'webkitTransitionEnd',
         MozTransition   : 'transitionend',
         OTransition     : 'oTransitionEnd otransitionend',
-        transition      : 'transitionend'
+        transition      : 'transitionend',
     };
 
     // ------------------------------------------------------------------------
@@ -119,7 +119,7 @@ const Util = (($) => {
             $(element).velocity({opacity: 1}, {
                 duration: 650,
                 queue   : false,
-                easing  : 'easeOutSine'
+                easing  : 'easeOutSine',
             });
             $(element).velocity({opacity: 1}, {
                 duration: 1300,
@@ -136,10 +136,10 @@ const Util = (($) => {
                     if (now >= 0) {
                         $(this).css({
                             "-webkit-filter": "grayscale(" + grayscale_setting + ")" + "brightness(" + brightness_setting + "%)",
-                            "filter"        : "grayscale(" + grayscale_setting + ")" + "brightness(" + brightness_setting + "%)"
+                            "filter"        : "grayscale(" + grayscale_setting + ")" + "brightness(" + brightness_setting + "%)",
                         });
                     }
-                }
+                },
             });
         }
 
@@ -237,7 +237,7 @@ const Util = (($) => {
                         return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
                     }
                     return undefined;
-                }
+                },
             };
         }
 

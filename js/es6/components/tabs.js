@@ -20,13 +20,13 @@ const Tabs = (($) => {
     const ClassName = {
         TABS         : 'bas-ui-tabs',
         TAB          : 'bas-ui-tab',
-        TAB_INDICATOR: 'bas-ui-indicator'
+        TAB_INDICATOR: 'bas-ui-indicator',
     };
 
     const Selector = {
         TABS         : `.${ClassName.TABS}`,
         TAB          : `.${ClassName.TAB}`,
-        TAB_INDICATOR: `.${ClassName.TAB_INDICATOR}`
+        TAB_INDICATOR: `.${ClassName.TAB_INDICATOR}`,
     };
 
     const Event = {
@@ -34,7 +34,7 @@ const Tabs = (($) => {
         SHOWN         : `shown${EVENT_KEY}`,
         HIDE          : `hide${EVENT_KEY}`,
         HIDDEN        : `hidden${EVENT_KEY}`,
-        CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`
+        CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`,
     };
 
     // ------------------------------------------------------------------------
@@ -237,7 +237,7 @@ const Tabs = (($) => {
                     {},
                     Default,
                     $this.data(),
-                    typeof config === 'object' && config
+                    typeof config === 'object' && config,
                 );
 
                 if (!data) {

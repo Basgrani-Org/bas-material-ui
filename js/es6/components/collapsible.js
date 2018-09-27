@@ -15,11 +15,11 @@ const Collapsible = (($) => {
     const TRANSITION_DURATION = 600;
 
     const Default = {
-        toggle: true
+        toggle: true,
     };
 
     const DefaultType = {
-        toggle: 'boolean'
+        toggle: 'boolean',
     };
 
     const Event = {
@@ -27,7 +27,7 @@ const Collapsible = (($) => {
         SHOWN         : `shown${EVENT_KEY}`,
         HIDE          : `hide${EVENT_KEY}`,
         HIDDEN        : `hidden${EVENT_KEY}`,
-        CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`
+        CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`,
     };
 
     const ClassName = {
@@ -37,19 +37,19 @@ const Collapsible = (($) => {
         IN        : 'in',
         COLLAPSE  : 'collapse',
         COLLAPSING: 'collapsing',
-        COLLAPSED : 'collapsed'
+        COLLAPSED : 'collapsed',
     };
 
     const Dimension = {
         WIDTH : 'width',
-        HEIGHT: 'height'
+        HEIGHT: 'height',
     };
 
     const Selector = {
         HEADER     : `.${Util.CLASS_PREFIX}-collapsible-header`,
         BODY       : `.${Util.CLASS_PREFIX}-collapsible-body`,
         ACTIVES    : `li > .in, li > .collapsing`,
-        DATA_TOGGLE: `[data-collapsible="accordion"] .${Util.CLASS_PREFIX}-collapsible-header, [data-collapsible="expandable"] .${Util.CLASS_PREFIX}-collapsible-header`
+        DATA_TOGGLE: `[data-collapsible="accordion"] .${Util.CLASS_PREFIX}-collapsible-header, [data-collapsible="expandable"] .${Util.CLASS_PREFIX}-collapsible-header`,
 
     };
 
@@ -311,7 +311,7 @@ const Collapsible = (($) => {
                     {},
                     Default,
                     $this.data(),
-                    typeof config === 'object' && config
+                    typeof config === 'object' && config,
                 );
 
                 if (!data && _config.toggle && /show|hide/.test(config)) {

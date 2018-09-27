@@ -20,18 +20,18 @@ const Select = (($) => {
     const DefaultType = {};
 
     const ClassName = {
-        SELECT: 'bas-ui-select'
+        SELECT: 'bas-ui-select',
     };
 
     const Selector = {
-        SELECT: `.${ClassName.SELECT}`
+        SELECT: `.${ClassName.SELECT}`,
     };
 
     const Event = {
         TOUCH_START_DATA_API: `touchstart${EVENT_KEY}${DATA_API_KEY}`,
         MOUSE_ENTER_DATA_API: `mouseenter${EVENT_KEY}${DATA_API_KEY}`,
         MOUSE_LEAVE_DATA_API: `mouseleave${EVENT_KEY}${DATA_API_KEY}`,
-        CLICK_DATA_API      : `click${EVENT_KEY}${DATA_API_KEY}`
+        CLICK_DATA_API      : `click${EVENT_KEY}${DATA_API_KEY}`,
     };
 
     // ------------------------------------------------------------------------
@@ -92,7 +92,7 @@ const Select = (($) => {
             let select_fake        = $('' +
                 '<input id="' + _self._input_id + '" data-target="dropdown-' + _self._unique_ID + '" type="text" class="' + Forms.ClassName.INPUT + ' ' + ClassName.SELECT + '-fake ' + ClassName.SELECT + '-input-' + _self._unique_ID + '" readonly ' + ((_self._select.is(':disabled')) ? 'disabled' : '') + ' value="' + sanitizedLabelHtml + '"/>' +
                 '<span class="' + ClassName.SELECT + '-fake-msg-error">' + label_text_error + '</span>' +
-                '<span class="' + ClassName.SELECT + '-fake-msg-success">' + label_text_success + '</span>'
+                '<span class="' + ClassName.SELECT + '-fake-msg-success">' + label_text_success + '</span>',
             );
 
             // Add select fake
@@ -119,7 +119,7 @@ const Select = (($) => {
                 outDuration: 225,
                 hover      : false,
                 gutter     : -62,
-                belowOrigin: false
+                belowOrigin: false,
             });
 
             // Add select dropdown events
@@ -275,7 +275,7 @@ const Select = (($) => {
                     {},
                     Default,
                     $this.data(),
-                    typeof config === 'object' && config
+                    typeof config === 'object' && config,
                 );
 
                 if (!data) {

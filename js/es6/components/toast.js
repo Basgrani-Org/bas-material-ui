@@ -1,4 +1,5 @@
 import Util from '../lib/util';
+import Cards from "./cards";
 
 const Toast = (($) => {
 
@@ -22,7 +23,7 @@ const Toast = (($) => {
     const Selector = {};
 
     const Event = {
-        CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`
+        CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`,
     };
 
     // ------------------------------------------------------------------------
@@ -103,7 +104,7 @@ const Toast = (($) => {
                     {},
                     Default,
                     $this.data(),
-                    typeof config === 'object' && config
+                    typeof config === 'object' && config,
                 );
 
                 if (!data) {

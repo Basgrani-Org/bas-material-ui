@@ -12,6 +12,10 @@ var _util = require('../lib/util');
 
 var _util2 = _interopRequireDefault(_util);
 
+var _cards = require('./cards');
+
+var _cards2 = _interopRequireDefault(_cards);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -117,7 +121,7 @@ var Toast = function ($) {
                     var _config = $.extend({}, Default, $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);
 
                     if (!data) {
-                        data = new Cards(this, _config);
+                        data = new _cards2.default(this, _config);
                         $this.data(DATA_KEY, data);
                     }
 

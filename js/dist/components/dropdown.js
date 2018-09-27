@@ -121,38 +121,36 @@ var Dropdown = function ($) {
 
                 // Hover
                 if (_self._config.hover) {
-                    (function () {
-                        var _close_process = false;
+                    var _close_process = false;
 
-                        _self._trigger.on(Event.MOUSE_ENTER_DATA_API, function (e) {
-                            _self.show();
-                            _close_process = false;
-                        });
+                    _self._trigger.on(Event.MOUSE_ENTER_DATA_API, function (e) {
+                        _self.show();
+                        _close_process = false;
+                    });
 
-                        _self._trigger.on(Event.MOUSE_LEAVE_DATA_API, function (e) {
-                            _close_process = true;
-                            setTimeout(function () {
-                                if (_close_process) {
-                                    _self.hide();
-                                    _close_process = false;
-                                }
-                            }, 350);
-                        });
+                    _self._trigger.on(Event.MOUSE_LEAVE_DATA_API, function (e) {
+                        _close_process = true;
+                        setTimeout(function () {
+                            if (_close_process) {
+                                _self.hide();
+                                _close_process = false;
+                            }
+                        }, 350);
+                    });
 
-                        _self._target.on(Event.MOUSE_LEAVE_DATA_API, function (e) {
-                            _close_process = true;
-                            setTimeout(function () {
-                                if (_close_process) {
-                                    _self.hide();
-                                    _close_process = false;
-                                }
-                            }, 350);
-                        });
+                    _self._target.on(Event.MOUSE_LEAVE_DATA_API, function (e) {
+                        _close_process = true;
+                        setTimeout(function () {
+                            if (_close_process) {
+                                _self.hide();
+                                _close_process = false;
+                            }
+                        }, 350);
+                    });
 
-                        _self._target.on(Event.MOUSE_ENTER_DATA_API, function (e) {
-                            _close_process = false;
-                        });
-                    })();
+                    _self._target.on(Event.MOUSE_ENTER_DATA_API, function (e) {
+                        _close_process = false;
+                    });
                 } else {
                     // Click
                     _self._trigger.on(Event.CLICK_DATA_API, function (e) {

@@ -141,8 +141,6 @@ var Site = function ($) {
                             }
                         }
                     }).bind('panend', function (e) {
-                        var _this2 = this;
-
                         // Reset if collection is moved back into original position
                         if (Math.abs(e.gesture.deltaX) < $(this).innerWidth() / 2) {
                             swipeRight = false;
@@ -150,38 +148,36 @@ var Site = function ($) {
                         }
 
                         if (e.gesture.pointerType === "touch") {
-                            (function () {
-                                var $this = $(_this2);
-                                if (swipeLeft || swipeRight) {
-                                    var fullWidth = void 0;
-                                    if (swipeLeft) {
-                                        fullWidth = $this.innerWidth();
-                                    } else {
-                                        fullWidth = -1 * $this.innerWidth();
-                                    }
-
-                                    $this.velocity({
-                                        translateX: fullWidth
-                                    }, {
-                                        duration: 100, queue: false, easing: 'easeOutQuad', complete: function complete() {
-                                            $this.css('border', 'none');
-                                            $this.velocity({
-                                                height: 0, padding: 0
-                                            }, {
-                                                duration: 200, queue: false, easing: 'easeOutQuad', complete: function complete() {
-                                                    $this.remove();
-                                                }
-                                            });
-                                        }
-                                    });
+                            var $this = $(this);
+                            if (swipeLeft || swipeRight) {
+                                var fullWidth = void 0;
+                                if (swipeLeft) {
+                                    fullWidth = $this.innerWidth();
                                 } else {
-                                    $this.velocity({
-                                        translateX: 0
-                                    }, { duration: 100, queue: false, easing: 'easeOutQuad' });
+                                    fullWidth = -1 * $this.innerWidth();
                                 }
-                                swipeLeft = false;
-                                swipeRight = false;
-                            })();
+
+                                $this.velocity({
+                                    translateX: fullWidth
+                                }, {
+                                    duration: 100, queue: false, easing: 'easeOutQuad', complete: function complete() {
+                                        $this.css('border', 'none');
+                                        $this.velocity({
+                                            height: 0, padding: 0
+                                        }, {
+                                            duration: 200, queue: false, easing: 'easeOutQuad', complete: function complete() {
+                                                $this.remove();
+                                            }
+                                        });
+                                    }
+                                });
+                            } else {
+                                $this.velocity({
+                                    translateX: 0
+                                }, { duration: 100, queue: false, easing: 'easeOutQuad' });
+                            }
+                            swipeLeft = false;
+                            swipeRight = false;
                         }
                     });
                 });

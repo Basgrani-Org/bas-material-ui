@@ -18,7 +18,7 @@ const Dropdown = (($) => {
         outDuration: 225,
         hover      : true,
         gutter     : 0,
-        belowOrigin: false
+        belowOrigin: false,
     };
 
     const DefaultType = {
@@ -26,7 +26,7 @@ const Dropdown = (($) => {
         outDuration: 'number',
         hover      : 'boolean',
         gutter     : 'number',
-        belowOrigin: 'boolean'
+        belowOrigin: 'boolean',
     };
 
     const ClassName = {
@@ -34,7 +34,7 @@ const Dropdown = (($) => {
         DROPDOWN_TRIGGER     : 'dropdown-trigger',
         DROPDOWN_BELOW_ORIGIN: 'bas-ui-dropdown-below-origin',
         DROPDOWN_LEFT_BOTTOM : 'bas-ui-dropdown-left-bottom',
-        DROPDOWN_RIGHT_BOTTOM: 'bas-ui-dropdown-right-bottom'
+        DROPDOWN_RIGHT_BOTTOM: 'bas-ui-dropdown-right-bottom',
     };
 
     const Selector = {
@@ -42,7 +42,7 @@ const Dropdown = (($) => {
         DROPDOWN_TRIGGER     : `.${ClassName.DROPDOWN_TRIGGER}`,
         DROPDOWN_BELOW_ORIGIN: `.${ClassName.DROPDOWN_BELOW_ORIGIN}`,
         DROPDOWN_LEFT_BOTTOM : `.${ClassName.DROPDOWN_LEFT_BOTTOM}`,
-        DROPDOWN_RIGHT_BOTTOM: `.${ClassName.DROPDOWN_RIGHT_BOTTOM}`
+        DROPDOWN_RIGHT_BOTTOM: `.${ClassName.DROPDOWN_RIGHT_BOTTOM}`,
     };
 
     const Event = {
@@ -53,7 +53,7 @@ const Dropdown = (($) => {
         TOUCH_START_DATA_API: `touchstart${EVENT_KEY}${DATA_API_KEY}`,
         MOUSE_ENTER_DATA_API: `mouseenter${EVENT_KEY}${DATA_API_KEY}`,
         MOUSE_LEAVE_DATA_API: `mouseleave${EVENT_KEY}${DATA_API_KEY}`,
-        CLICK_DATA_API      : `click${EVENT_KEY}${DATA_API_KEY}`
+        CLICK_DATA_API      : `click${EVENT_KEY}${DATA_API_KEY}`,
     };
 
     // ------------------------------------------------------------------------
@@ -207,7 +207,7 @@ const Dropdown = (($) => {
                         object.addClass('open');
                         $(this).css('height', '');
                         object.focus();
-                    }
+                    },
                 });
             }
         }
@@ -227,7 +227,7 @@ const Dropdown = (($) => {
                         object.trigger(Event.HIDDEN);
                         object.removeClass('open');
                         $(this).css('height', '');
-                    }
+                    },
                 });
 
                 // Close all dropdown children
@@ -246,7 +246,7 @@ const Dropdown = (($) => {
                             element.trigger(Event.HIDDEN);
                             $(this).removeClass('open');
                             $(this).css('height', '');
-                        }
+                        },
                     });
                 });
             }
@@ -266,14 +266,14 @@ const Dropdown = (($) => {
 
                 // CSS
                 object.css({
-                    bottom: origin_height + _self._config.gutter
+                    bottom: origin_height + _self._config.gutter,
                 });
 
             } else { // Top
 
                 // CSS
                 object.css({
-                    top: origin_height + _self._config.gutter
+                    top: origin_height + _self._config.gutter,
                 });
             }
         }
@@ -338,7 +338,7 @@ const Dropdown = (($) => {
                     {},
                     Default,
                     $this.data(),
-                    typeof config === 'object' && config
+                    typeof config === 'object' && config,
                 );
 
                 if (!data) {

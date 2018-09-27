@@ -9722,7 +9722,6 @@ a:hover {
 
 abbr[title] {
   border-bottom: none;
-  text-decoration: underline;
   text-decoration: underline dotted;
 }
 
@@ -13993,8 +13992,7 @@ select.bas-ui-browser-select {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-color: transparent;
-  background-image: none;
+  background: transparent none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -15241,11 +15239,10 @@ input.bas-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 
 .bas-ui-data-table.bas-ui-with-checkbox thead tr th input[type=checkbox] + label, .bas-ui-data-table.bas-ui-with-checkbox tbody tr td input[type=checkbox] + label {
   padding: 0;
-  margin: 0;
   height: 20px;
   width: 20px;
   vertical-align: top;
-  margin-top: 1px;
+  margin: 1px 0 0;
   border-color: transparent;
 }
 

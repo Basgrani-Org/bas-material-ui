@@ -151,17 +151,13 @@ var Forms = function ($) {
 
                 // Trigger - Image preview
                 $(object_class).find('input[type=file]').each(function () {
-                    var _this2 = this;
-
                     var img_preview = $("#" + $(this).attr('data-img-preview'));
                     if (img_preview.length) {
-                        (function () {
-                            var _parent = $(_this2).closest('.bas-ui-input-file');
-                            var file_input = _parent.find('input[type=file]');
-                            img_preview.on('click', function () {
-                                file_input.trigger('click');
-                            });
-                        })();
+                        var _parent = $(this).closest('.bas-ui-input-file');
+                        var file_input = _parent.find('input[type=file]');
+                        img_preview.on('click', function () {
+                            file_input.trigger('click');
+                        });
                     }
                 });
 

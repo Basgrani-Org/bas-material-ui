@@ -22,7 +22,7 @@ const Cards = (($) => {
     const Selector = {};
 
     const Event = {
-        CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`
+        CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`,
     };
 
     // ------------------------------------------------------------------------
@@ -65,7 +65,7 @@ const Cards = (($) => {
                     {},
                     Default,
                     $this.data(),
-                    typeof config === 'object' && config
+                    typeof config === 'object' && config,
                 );
 
                 if (!data) {

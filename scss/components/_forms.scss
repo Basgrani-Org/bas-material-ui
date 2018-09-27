@@ -198,8 +198,7 @@ textarea.bas-ui-textarea {
 select.bas-ui-browser-select {
     border: none;
     box-shadow: none;
-    background-color: transparent;
-    background-image: none;
+    background: transparent none;
     appearance: none;
 
     font-size: $bas-ui-font-size-base;

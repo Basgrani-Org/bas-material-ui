@@ -34,7 +34,7 @@ const Site = (($) => {
         SIDE_NAV_VISIBLE       : 'bas-ui-side-nav-visible',
         SIDE_NAV_HIDE          : 'bas-ui-side-nav-hide',
         SIDE_NAV_TOGGLE        : 'bas-ui-side-nav-toggle',
-        SIDE_NAV_OVERLAY       : 'bas-ui-side-nav-overlay'
+        SIDE_NAV_OVERLAY       : 'bas-ui-side-nav-overlay',
 
 
     };
@@ -60,7 +60,7 @@ const Site = (($) => {
         SIDE_NAV_VISIBLE       : `.${ClassName.SIDE_NAV_VISIBLE}`,
         SIDE_NAV_HIDE          : `.${ClassName.SIDE_NAV_HIDE}`,
         SIDE_NAV_TOGGLE        : `.${ClassName.SIDE_NAV_TOGGLE}`,
-        SIDE_NAV_OVERLAY       : `.${ClassName.SIDE_NAV_OVERLAY}`
+        SIDE_NAV_OVERLAY       : `.${ClassName.SIDE_NAV_OVERLAY}`,
     };
 
     const Event = {
@@ -106,7 +106,7 @@ const Site = (($) => {
 
             $(selector).each(function () {
                 $(this).hammer({
-                    prevent_default: false
+                    prevent_default: false,
                 }).bind('pan', function (e) {
                     if (e.gesture.pointerType === "touch") {
                         let $this     = $(this);
@@ -115,7 +115,7 @@ const Site = (($) => {
                         let velocityX = e.gesture.velocityX;
 
                         $this.velocity({
-                            translateX: x
+                            translateX: x,
                         }, {duration: 50, queue: false, easing: 'easeOutQuad'});
 
                         // Swipe Left
@@ -147,23 +147,23 @@ const Site = (($) => {
                             }
 
                             $this.velocity({
-                                translateX: fullWidth
+                                translateX: fullWidth,
                             }, {
                                 duration: 100, queue: false, easing: 'easeOutQuad', complete: function () {
                                     $this.css('border', 'none');
                                     $this.velocity({
-                                        height: 0, padding: 0
+                                        height: 0, padding: 0,
                                     }, {
                                         duration: 200, queue: false, easing: 'easeOutQuad', complete: function () {
                                             $this.remove();
-                                        }
+                                        },
                                     });
-                                }
+                                },
                             });
                         }
                         else {
                             $this.velocity({
-                                translateX: 0
+                                translateX: 0,
                             }, {duration: 100, queue: false, easing: 'easeOutQuad'});
                         }
                         swipeLeft  = false;
@@ -234,7 +234,7 @@ const Site = (($) => {
                 _html.velocity({opacity: 1}, {
                     duration: 300,
                     queue   : false,
-                    ease    : "easeOutCubic"
+                    ease    : "easeOutCubic",
                 });
 
                 // Remove all hover's in Touch devices

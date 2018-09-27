@@ -12,7 +12,7 @@ $(document).ready(function () {
     // Create File Upload Drop
     let _dropzone = BasUI.Forms.fileUploadDrop('.bas-ui-file-upload-drop-zone', {
         url                  : 'http://localhost:8888/upload/',
-        defaultImageThumbnail: "/assets/img/files/empty.png"
+        defaultImageThumbnail: "/assets/img/files/empty.png",
     });
 
     if (_dropzone) {
@@ -83,7 +83,7 @@ $(document).ready(function () {
         minChars: autocomplete_minChars,
         onSelect: function (suggestion) {
             console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
-        }
+        },
     });
 
     // Autocomplete -> Side nav -> search
@@ -94,7 +94,7 @@ $(document).ready(function () {
         minChars: autocomplete_minChars,
         onSelect: function (suggestion) {
             console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
-        }
+        },
     });
 
     // Autocomplete -> search
@@ -105,7 +105,7 @@ $(document).ready(function () {
         minChars: autocomplete_minChars,
         onSelect: function (suggestion) {
             console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
-        }
+        },
     });
 
     // Autocomplete -> search expandable
@@ -116,7 +116,7 @@ $(document).ready(function () {
         minChars: autocomplete_minChars,
         onSelect: function (suggestion) {
             console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
-        }
+        },
     });
 
     // Autocomplete -> input
@@ -127,7 +127,7 @@ $(document).ready(function () {
         minChars: autocomplete_minChars,
         onSelect: function (suggestion) {
             console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
-        }
+        },
     });
 
     // Build Git in Home
@@ -152,7 +152,7 @@ BasUIDocs.site.build_git_home = function () {
                 }
                 _download_in_git_hub.html('<i class="mdi mdi-download icon icon-right icon-18"></i> Download ' + data[0].name).attr('href', data[0].zipball_url);
                 _download_in_git_hub_href.attr('href', data[0].zipball_url);
-            }
+            },
         });
     }
     let _last_commit_in_git_hub = $('.last-commit-in-git-hub');
@@ -166,7 +166,7 @@ BasUIDocs.site.build_git_home = function () {
                 }
                 let date = $.timeago(data.commit.author.date);
                 _last_commit_in_git_hub.html(date).attr('href', data.html_url);
-            }
+            },
         });
     }
 };
@@ -443,5 +443,5 @@ BasUIDocs.site.countries = {
     EH: 'Western Sahara',
     YE: 'Yemen',
     ZM: 'Zambia',
-    ZW: 'Zimbabwe'
+    ZW: 'Zimbabwe',
 };

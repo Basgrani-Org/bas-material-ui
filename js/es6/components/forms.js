@@ -15,7 +15,7 @@ const Forms = (($) => {
 
     const ClassName = {
         ACTIVE: 'active',
-        INPUT : 'bas-ui-input'
+        INPUT : 'bas-ui-input',
     };
 
     const Selector = {
@@ -25,14 +25,14 @@ const Forms = (($) => {
         CHECKBOX  : 'input.bas-ui-input[type=checkbox]',
         TEXTAREA  : 'textarea.bas-ui-textarea',
         FORM      : 'form',
-        INPUT_FILE: '.bas-ui-input-file'
+        INPUT_FILE: '.bas-ui-input-file',
     };
 
     const Event = {
         CHANGE_DATA_API: `change${EVENT_KEY}${DATA_API_KEY}`,
         FOCUS_DATA_API : `focus${EVENT_KEY}${DATA_API_KEY}`,
         BLUR_DATA_API  : `blur${EVENT_KEY}${DATA_API_KEY}`,
-        RESET_DATA_API : `reset${EVENT_KEY}${DATA_API_KEY}`
+        RESET_DATA_API : `reset${EVENT_KEY}${DATA_API_KEY}`,
     };
 
     // ------------------------------------------------------------------------
@@ -196,7 +196,7 @@ const Forms = (($) => {
             // Defaults
             let defaults = {
                 previewTemplate      : '',
-                defaultImageThumbnail: ""
+                defaultImageThumbnail: "",
             };
             let _options = $.extend({}, defaults, options);
 

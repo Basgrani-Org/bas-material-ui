@@ -1,3 +1,3 @@
-if (typeof global.BasUI === "undefined") {
-    window.BasUI = global.BasUI = {};
+if (typeof global.BasUI === 'undefined') {
+  window.BasUI = global.BasUI = {}
 }

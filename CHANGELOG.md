@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### v0.2.7 (Sept 28, 2018)
+
+**Fixes**
+- Small fixes
+
 ### v0.2.6 (Oct 16, 2017)
 
 **Fixes**

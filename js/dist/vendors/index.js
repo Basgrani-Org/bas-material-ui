@@ -20,5 +20,4 @@ require('./../../../bower_components/velocity/velocity.ui');
 window.Dropzone = global.Dropzone = require('./../../../bower_components/dropzone/dist/dropzone');
 window.toastr = global.toastr = require('./../../../bower_components/toastr/toastr');
 window.autosize = global.autosize = require('./../../../bower_components/autosize/dist/autosize');
-
 window.Waves = global.Waves = require('./../../../bower_components/waves/dist/waves');

@@ -1,18 +1,18 @@
 // Import Vendors Dependencies
-import './vendors';
+import './vendors'
 
 // Import Init
-import './init';
+import './init'
 
 // Import libs
-import './lib/observe';
+import './lib/observe'
 
 // Import Site
-import './site';
+import './site'
 
 // Import Components
-import './components';
+import './components'
 
 // Debug
-//console.log(BasUI);
-//console.log(BasUI.Button.VERSION);
+// console.log(BasUI);
+// console.log(BasUI.Button.VERSION);

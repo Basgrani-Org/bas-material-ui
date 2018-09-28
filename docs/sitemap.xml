@@ -1,152 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://bas-material-ui.basgrani.com/content/icons.html</loc>
-    <lastmod>2017-10-16T07:47:08.021Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/icons.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/content/badges.html</loc>
-    <lastmod>2017-10-16T07:47:08.021Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/badges.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/components/cards.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/cards.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/components/collapsible.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/collapsible.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/content/color.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/color.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/home/donate.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/donate.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/components/dropdown.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/dropdown.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/empty/empty.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/empty.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/components/form-validation.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/form-validation.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/components/forms.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/forms.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/layout/grid.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/grid.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/content/helpers.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/helpers.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/components/buttons.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/buttons.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://bas-material-ui.basgrani.com/index.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/components/list.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/list.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/components/messages.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/messages.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/components/modals.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/modals.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/content/progress.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/progress.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/home/showcase.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/showcase.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/layout/structuring.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/structuring.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/content/table.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/table.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/components/tabs.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/tabs.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/components/toast.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/toast.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/components/tooltips.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/tooltips.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://bas-material-ui.basgrani.com/content/typography.html</loc>
-    <lastmod>2017-10-16T07:47:08.022Z</lastmod>
+    <loc>http://bas-material-ui.basgrani.com/typography.html</loc>
+    <lastmod>2018-09-28T17:56:43.680Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

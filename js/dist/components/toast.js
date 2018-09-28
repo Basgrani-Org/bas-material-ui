@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -21,160 +21,161 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Toast = function ($) {
+  // ------------------------------------------------------------------------
+  // Constants
+  // ------------------------------------------------------------------------
 
-    // ------------------------------------------------------------------------
-    // Constants
-    // ------------------------------------------------------------------------
+  var VERSION = _util2.default.VERSION;
+  var NAME = _util2.default.PREFIX + '_toast';
+  // const NAME_CLASS = `${Util.CLASS_PREFIX}-toast`
+  var DATA_KEY = _util2.default.API_PREFIX + '.toast';
+  // const EVENT_KEY = `.${DATA_KEY}`
+  // const DATA_API_KEY = '.data-api'
 
-    var VERSION = _util2.default.VERSION;
-    var NAME = _util2.default.PREFIX + '_toast';
-    var NAME_CLASS = _util2.default.CLASS_PREFIX + '-toast';
-    var DATA_KEY = _util2.default.API_PREFIX + '.toast';
-    var EVENT_KEY = '.' + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
+  var Default = {};
 
-    var Default = {};
+  // const DefaultType = {}
 
-    var DefaultType = {};
+  // const ClassName = {}
 
-    var ClassName = {};
+  // const Selector = {}
 
-    var Selector = {};
+  /* const Event = {
+    CLICK_DATA_API: `click${EVENT_KEY}${DATA_API_KEY}`,
+  } */
 
-    var Event = {
-        CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
-    };
+  // ------------------------------------------------------------------------
+  // Class Definition
+  // ------------------------------------------------------------------------
 
-    // ------------------------------------------------------------------------
-    // Class Definition
-    // ------------------------------------------------------------------------
+  var Toast = function () {
+    function Toast() {
+      _classCallCheck(this, Toast);
+    }
 
-    var Toast = function () {
-        function Toast(element, config) {
-            _classCallCheck(this, Toast);
-
-            var _self = this;
-        }
-
-        // Getters
-        // ------------------------------------------------------------------------
-
-        _createClass(Toast, [{
-            key: 'dispose',
+    _createClass(Toast, [{
+      key: 'dispose',
 
 
-            // Public
-            // ------------------------------------------------------------------------
+      // Public
+      // ------------------------------------------------------------------------
 
-            value: function dispose() {
-                $.removeData(this._trigger, DATA_KEY);
+      value: function dispose() {
+        $.removeData(this._trigger, DATA_KEY);
+      }
+
+      // Private
+      // ------------------------------------------------------------------------
+
+      // Static
+      // ------------------------------------------------------------------------
+
+    }], [{
+      key: 'success',
+
+
+      // Public
+      // ------------------------------------------------------------------------
+
+      value: function success() {
+        toastr.success.apply(this, arguments);
+      }
+    }, {
+      key: 'info',
+      value: function info() {
+        toastr.info.apply(this, arguments);
+      }
+    }, {
+      key: 'warning',
+      value: function warning() {
+        toastr.warning.apply(this, arguments);
+      }
+    }, {
+      key: 'error',
+      value: function error() {
+        toastr.error.apply(this, arguments);
+      }
+    }, {
+      key: 'remove',
+      value: function remove() {
+        toastr.remove();
+      }
+    }, {
+      key: 'clear',
+      value: function clear() {
+        toastr.clear();
+      }
+    }, {
+      key: '_jQueryInterface',
+      value: function _jQueryInterface(config) {
+        return this.each(function () {
+          var $this = $(this);
+          var data = $this.data(DATA_KEY);
+          var _config = $.extend({}, Default, $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);
+
+          if (!data) {
+            data = new _cards2.default(this, _config);
+            $this.data(DATA_KEY, data);
+          }
+
+          if (typeof config === 'string') {
+            if (data[config] === undefined) {
+              throw new Error('No method named "' + config + '"');
             }
+            data[config]();
+          }
+        });
+      }
+    }, {
+      key: 'VERSION',
 
-            // Private
-            // ------------------------------------------------------------------------
+      /* constructor (element, config) {
+        let _self = this
+      } */
 
+      // Getters
+      // ------------------------------------------------------------------------
 
-            // Static
-            // ------------------------------------------------------------------------
+      get: function get() {
+        return VERSION;
+      }
+    }, {
+      key: 'options',
+      get: function get() {
+        return toastr.options;
+      }
 
-        }], [{
-            key: 'success',
+      // Setters
+      // ------------------------------------------------------------------------
 
-
-            // Public
-            // ------------------------------------------------------------------------
-
-            value: function success() {
-                toastr.success.apply(this, arguments);
-            }
-        }, {
-            key: 'info',
-            value: function info() {
-                toastr.info.apply(this, arguments);
-            }
-        }, {
-            key: 'warning',
-            value: function warning() {
-                toastr.warning.apply(this, arguments);
-            }
-        }, {
-            key: 'error',
-            value: function error() {
-                toastr.error.apply(this, arguments);
-            }
-        }, {
-            key: 'remove',
-            value: function remove() {
-                toastr.remove();
-            }
-        }, {
-            key: 'clear',
-            value: function clear() {
-                toastr.clear();
-            }
-        }, {
-            key: '_jQueryInterface',
-            value: function _jQueryInterface(config) {
-                return this.each(function () {
-                    var $this = $(this);
-                    var data = $this.data(DATA_KEY);
-                    var _config = $.extend({}, Default, $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);
-
-                    if (!data) {
-                        data = new _cards2.default(this, _config);
-                        $this.data(DATA_KEY, data);
-                    }
-
-                    if (typeof config === 'string') {
-                        if (data[config] === undefined) {
-                            throw new Error('No method named "' + config + '"');
-                        }
-                        data[config]();
-                    }
-                });
-            }
-        }, {
-            key: 'VERSION',
-            get: function get() {
-                return VERSION;
-            }
-        }, {
-            key: 'options',
-            get: function get() {
-                return toastr.options;
-            }
-
-            // Setters
-            // ------------------------------------------------------------------------
-
-            ,
-            set: function set(opt) {
-                toastr.options = opt;
-            }
-        }]);
-
-        return Toast;
-    }();
-
-    // ------------------------------------------------------------------------
-    // Data Api implementation
-    // ------------------------------------------------------------------------
-
-    // READY & OBSERVE
-
-
-    if (_util2.default.mutationObserver === null) {} else {}
-    // .bas_ui_observe(selector, onAdded, onRemoved)
-
-
-    // ------------------------------------------------------------------------
-    // jQuery
-    // ------------------------------------------------------------------------
-
-    $.fn[NAME] = Toast._jQueryInterface;
-    $.fn[NAME].Constructor = Toast;
+      ,
+      set: function set(opt) {
+        toastr.options = opt;
+      }
+    }]);
 
     return Toast;
+  }();
+
+  // ------------------------------------------------------------------------
+  // Data Api implementation
+  // ------------------------------------------------------------------------
+
+  // READY & OBSERVE
+
+
+  if (_util2.default.mutationObserver === null) {} else {}
+  // .bas_ui_observe(selector, onAdded, onRemoved)
+
+
+  // ------------------------------------------------------------------------
+  // jQuery
+  // ------------------------------------------------------------------------
+
+  $.fn[NAME] = Toast._jQueryInterface;
+  $.fn[NAME].Constructor = Toast;
+
+  return Toast;
 }(jQuery);
 
 BasUI.Toast = Toast;

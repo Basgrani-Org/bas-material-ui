@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -17,353 +17,351 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Collapsible = function ($) {
+  // ------------------------------------------------------------------------
+  // Constants
+  // ------------------------------------------------------------------------
 
-    // ------------------------------------------------------------------------
-    // Constants
-    // ------------------------------------------------------------------------
+  var VERSION = _util2.default.VERSION;
+  var NAME = _util2.default.PREFIX + '_collapsible';
+  var NAME_CLASS = _util2.default.CLASS_PREFIX + '-collapsible';
+  var DATA_KEY = _util2.default.API_PREFIX + '.collapsible';
+  var EVENT_KEY = '.' + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var TRANSITION_DURATION = 600;
 
-    var VERSION = _util2.default.VERSION;
-    var NAME = _util2.default.PREFIX + '_collapsible';
-    var NAME_CLASS = _util2.default.CLASS_PREFIX + '-collapsible';
-    var DATA_KEY = _util2.default.API_PREFIX + '.collapsible';
-    var EVENT_KEY = '.' + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var TRANSITION_DURATION = 600;
+  var Default = {
+    toggle: true
+  };
 
-    var Default = {
-        toggle: true
-    };
+  var DefaultType = {
+    toggle: 'boolean'
+  };
 
-    var DefaultType = {
-        toggle: 'boolean'
-    };
+  var Event = {
+    SHOW: 'show' + EVENT_KEY,
+    SHOWN: 'shown' + EVENT_KEY,
+    HIDE: 'hide' + EVENT_KEY,
+    HIDDEN: 'hidden' + EVENT_KEY,
+    CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
+  };
 
-    var Event = {
-        SHOW: 'show' + EVENT_KEY,
-        SHOWN: 'shown' + EVENT_KEY,
-        HIDE: 'hide' + EVENT_KEY,
-        HIDDEN: 'hidden' + EVENT_KEY,
-        CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
-    };
+  var ClassName = {
+    ACTIVE: 'active',
+    POPOUT: 'popout',
+    EXPANDABLE: 'expandable',
+    IN: 'in',
+    COLLAPSE: 'collapse',
+    COLLAPSING: 'collapsing',
+    COLLAPSED: 'collapsed'
+  };
 
-    var ClassName = {
-        ACTIVE: 'active',
-        POPOUT: 'popout',
-        EXPANDABLE: 'expandable',
-        IN: 'in',
-        COLLAPSE: 'collapse',
-        COLLAPSING: 'collapsing',
-        COLLAPSED: 'collapsed'
-    };
+  var Dimension = {
+    WIDTH: 'width',
+    HEIGHT: 'height'
+  };
 
-    var Dimension = {
-        WIDTH: 'width',
-        HEIGHT: 'height'
-    };
-
-    var Selector = {
-        HEADER: '.' + _util2.default.CLASS_PREFIX + '-collapsible-header',
-        BODY: '.' + _util2.default.CLASS_PREFIX + '-collapsible-body',
-        ACTIVES: 'li > .in, li > .collapsing',
-        DATA_TOGGLE: '[data-collapsible="accordion"] .' + _util2.default.CLASS_PREFIX + '-collapsible-header, [data-collapsible="expandable"] .' + _util2.default.CLASS_PREFIX + '-collapsible-header'
-
-    };
+  var Selector = {
+    HEADER: '.' + _util2.default.CLASS_PREFIX + '-collapsible-header',
+    BODY: '.' + _util2.default.CLASS_PREFIX + '-collapsible-body',
+    ACTIVES: 'li > .in, li > .collapsing',
+    DATA_TOGGLE: '[data-collapsible="accordion"] .' + _util2.default.CLASS_PREFIX + '-collapsible-header, [data-collapsible="expandable"] .' + _util2.default.CLASS_PREFIX + '-collapsible-header'
 
     // ------------------------------------------------------------------------
     // Class Definition
     // ------------------------------------------------------------------------
 
-    var Collapsible = function () {
-        function Collapsible(element, config) {
-            _classCallCheck(this, Collapsible);
+  };
+  var Collapsible = function () {
+    function Collapsible(element, config) {
+      _classCallCheck(this, Collapsible);
 
-            this._isTransitioning = false;
-            this._element = element;
-            this._root = $(this._element).closest('.' + NAME_CLASS);
-            this._rootLI = $(this._element).closest('li');
-            this._config = Collapsible._getConfig(config);
-            this._parent = Collapsible._getHeaderFromElement($(this._element));
-            this._isPopout = false;
-            this._isExpandable = false;
+      this._isTransitioning = false;
+      this._element = element;
+      this._root = $(this._element).closest('.' + NAME_CLASS);
+      this._rootLI = $(this._element).closest('li');
+      this._config = Collapsible._getConfig(config);
+      this._parent = Collapsible._getHeaderFromElement($(this._element));
+      this._isPopout = false;
+      this._isExpandable = false;
 
-            if (this._root && this._root.hasClass(ClassName.POPOUT)) {
-                this._isPopout = true;
-            }
+      if (this._root && this._root.hasClass(ClassName.POPOUT)) {
+        this._isPopout = true;
+      }
 
-            if (this._root && this._root.data('collapsible') === ClassName.EXPANDABLE) {
-                this._isExpandable = true;
-            }
+      if (this._root && this._root.data('collapsible') === ClassName.EXPANDABLE) {
+        this._isExpandable = true;
+      }
 
-            if (this._parent) {
-                Collapsible._addAriaAndCollapsedClass(this._element, this._parent);
-            }
+      if (this._parent) {
+        Collapsible._addAriaAndCollapsedClass(this._element, this._parent);
+      }
 
-            if (this._config.toggle) {
-                this.toggle();
-            }
+      if (this._config.toggle) {
+        this.toggle();
+      }
+    }
+
+    // Getters
+    // ------------------------------------------------------------------------
+
+    _createClass(Collapsible, [{
+      key: 'toggle',
+
+
+      // Public
+      // ------------------------------------------------------------------------
+
+      value: function toggle() {
+        if ($(this._element).hasClass(ClassName.IN)) {
+          this.hide();
+        } else {
+          this.show();
+        }
+      }
+    }, {
+      key: 'show',
+      value: function show() {
+        var _this = this;
+
+        if (this._isTransitioning || $(this._element).hasClass(ClassName.IN)) {
+          return;
         }
 
-        // Getters
-        // ------------------------------------------------------------------------
+        var actives = void 0;
+        var activesData = void 0;
 
-        _createClass(Collapsible, [{
-            key: 'toggle',
+        actives = $.makeArray(this._root.find(Selector.ACTIVES));
+        if (!actives.length) {
+          actives = null;
+        }
 
+        if (actives) {
+          activesData = $(actives).data(DATA_KEY);
+          if (activesData && activesData._isTransitioning) {
+            return;
+          }
+        }
 
-            // Public
-            // ------------------------------------------------------------------------
+        var startEvent = $.Event(Event.SHOW);
+        $(this._element).trigger(startEvent);
+        if (startEvent.isDefaultPrevented()) {
+          return;
+        }
 
-            value: function toggle() {
-                if ($(this._element).hasClass(ClassName.IN)) {
-                    this.hide();
-                } else {
-                    this.show();
-                }
+        if (actives && !this._isExpandable) {
+          Collapsible._jQueryInterface.call($(actives), 'hide');
+          if (!activesData) {
+            $(actives).data(DATA_KEY, null);
+          }
+        }
+
+        var dimension = this._getDimension();
+
+        $(this._element).removeClass(ClassName.COLLAPSE).addClass(ClassName.COLLAPSING);
+
+        this._element.style[dimension] = 0;
+        this._element.setAttribute('aria-expanded', true);
+
+        if (this._parent) {
+          $(this._parent).removeClass(ClassName.COLLAPSED).addClass(ClassName.ACTIVE).attr('aria-expanded', true);
+          if (this._isPopout) {
+            this._rootLI.addClass(ClassName.ACTIVE);
+          }
+        }
+
+        this.setTransitioning(true);
+
+        var complete = function complete() {
+          $(_this._element).removeClass(ClassName.COLLAPSING).addClass(ClassName.COLLAPSE).addClass(ClassName.IN);
+
+          _this._element.style[dimension] = '';
+
+          _this.setTransitioning(false);
+
+          $(_this._element).trigger(Event.SHOWN);
+        };
+
+        if (!_util2.default.supportsTransitionEnd()) {
+          complete();
+          return;
+        }
+
+        var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
+        var scrollSize = 'scroll' + capitalizedDimension;
+
+        $(this._element).one(_util2.default.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
+
+        this._element.style[dimension] = this._element[scrollSize] + 'px';
+      }
+    }, {
+      key: 'hide',
+      value: function hide() {
+        var _this2 = this;
+
+        if (this._isTransitioning || !$(this._element).hasClass(ClassName.IN)) {
+          return;
+        }
+
+        var startEvent = $.Event(Event.HIDE);
+        $(this._element).trigger(startEvent);
+        if (startEvent.isDefaultPrevented()) {
+          return;
+        }
+
+        var dimension = this._getDimension();
+        var offsetDimension = dimension === Dimension.WIDTH ? 'offsetWidth' : 'offsetHeight';
+
+        this._element.style[dimension] = this._element[offsetDimension] + 'px';
+
+        _util2.default.reflow(this._element);
+
+        $(this._element).addClass(ClassName.COLLAPSING).removeClass(ClassName.COLLAPSE).removeClass(ClassName.IN);
+
+        this._element.setAttribute('aria-expanded', false);
+
+        if (this._parent) {
+          $(this._parent).addClass(ClassName.COLLAPSED).removeClass(ClassName.ACTIVE).attr('aria-expanded', false);
+          if (this._isPopout) {
+            this._rootLI.removeClass(ClassName.ACTIVE);
+          }
+        }
+
+        this.setTransitioning(true);
+
+        var complete = function complete() {
+          _this2.setTransitioning(false);
+          $(_this2._element).removeClass(ClassName.COLLAPSING).addClass(ClassName.COLLAPSE).trigger(Event.HIDDEN);
+        };
+
+        this._element.style[dimension] = 0;
+
+        if (!_util2.default.supportsTransitionEnd()) {
+          complete();
+          return;
+        }
+
+        $(this._element).one(_util2.default.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
+      }
+    }, {
+      key: 'setTransitioning',
+      value: function setTransitioning(isTransitioning) {
+        this._isTransitioning = isTransitioning;
+      }
+    }, {
+      key: 'dispose',
+      value: function dispose() {
+        $.removeData(this._element, DATA_KEY);
+
+        this._config = null;
+        this._parent = null;
+        this._element = null;
+        this._isTransitioning = null;
+        this._root = null;
+        this._rootLI = null;
+        this._isPopout = null;
+        this._isExpandable = null;
+      }
+
+      // Private
+      // ------------------------------------------------------------------------
+
+    }, {
+      key: '_getDimension',
+      value: function _getDimension() {
+        var hasWidth = $(this._element).hasClass(Dimension.WIDTH);
+        return hasWidth ? Dimension.WIDTH : Dimension.HEIGHT;
+      }
+
+      // Static
+      // ------------------------------------------------------------------------
+
+    }], [{
+      key: '_getConfig',
+      value: function _getConfig(config) {
+        config = $.extend({}, Default, config);
+        config.toggle = Boolean(config.toggle); // coerce string values
+        _util2.default.typeCheckConfig(NAME, config, DefaultType);
+        return config;
+      }
+    }, {
+      key: '_addAriaAndCollapsedClass',
+      value: function _addAriaAndCollapsedClass(element, triggerArray) {
+        if (element) {
+          var isOpen = $(element).hasClass(ClassName.IN);
+          element.setAttribute('aria-expanded', isOpen);
+
+          if (triggerArray.length) {
+            $(triggerArray).toggleClass(ClassName.COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
+          }
+        }
+      }
+    }, {
+      key: '_getTargetFromElement',
+      value: function _getTargetFromElement(element) {
+        var selector = element.siblings(Selector.BODY);
+        return selector ? $(selector)[0] : null;
+      }
+    }, {
+      key: '_getHeaderFromElement',
+      value: function _getHeaderFromElement(element) {
+        var selector = element.siblings(Selector.HEADER);
+        return selector ? $(selector)[0] : null;
+      }
+    }, {
+      key: '_jQueryInterface',
+      value: function _jQueryInterface(config) {
+        return this.each(function () {
+          var $this = $(this);
+          var data = $this.data(DATA_KEY);
+          var _config = $.extend({}, Default, $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);
+
+          if (!data && _config.toggle && /show|hide/.test(config)) {
+            _config.toggle = false;
+          }
+
+          if (!data) {
+            data = new Collapsible(this, _config);
+            $this.data(DATA_KEY, data);
+          }
+
+          if (typeof config === 'string') {
+            if (data[config] === undefined) {
+              throw new Error('No method named "' + config + '"');
             }
-        }, {
-            key: 'show',
-            value: function show() {
-                var _this = this;
-
-                if (this._isTransitioning || $(this._element).hasClass(ClassName.IN)) {
-                    return;
-                }
-
-                var actives = void 0;
-                var activesData = void 0;
-
-                actives = $.makeArray(this._root.find(Selector.ACTIVES));
-                if (!actives.length) {
-                    actives = null;
-                }
-
-                if (actives) {
-                    activesData = $(actives).data(DATA_KEY);
-                    if (activesData && activesData._isTransitioning) {
-                        return;
-                    }
-                }
-
-                var startEvent = $.Event(Event.SHOW);
-                $(this._element).trigger(startEvent);
-                if (startEvent.isDefaultPrevented()) {
-                    return;
-                }
-
-                if (actives && !this._isExpandable) {
-                    Collapsible._jQueryInterface.call($(actives), 'hide');
-                    if (!activesData) {
-                        $(actives).data(DATA_KEY, null);
-                    }
-                }
-
-                var dimension = this._getDimension();
-
-                $(this._element).removeClass(ClassName.COLLAPSE).addClass(ClassName.COLLAPSING);
-
-                this._element.style[dimension] = 0;
-                this._element.setAttribute('aria-expanded', true);
-
-                if (this._parent) {
-                    $(this._parent).removeClass(ClassName.COLLAPSED).addClass(ClassName.ACTIVE).attr('aria-expanded', true);
-                    if (this._isPopout) {
-                        this._rootLI.addClass(ClassName.ACTIVE);
-                    }
-                }
-
-                this.setTransitioning(true);
-
-                var complete = function complete() {
-                    $(_this._element).removeClass(ClassName.COLLAPSING).addClass(ClassName.COLLAPSE).addClass(ClassName.IN);
-
-                    _this._element.style[dimension] = '';
-
-                    _this.setTransitioning(false);
-
-                    $(_this._element).trigger(Event.SHOWN);
-                };
-
-                if (!_util2.default.supportsTransitionEnd()) {
-                    complete();
-                    return;
-                }
-
-                var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
-                var scrollSize = 'scroll' + capitalizedDimension;
-
-                $(this._element).one(_util2.default.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
-
-                this._element.style[dimension] = this._element[scrollSize] + 'px';
-            }
-        }, {
-            key: 'hide',
-            value: function hide() {
-                var _this2 = this;
-
-                if (this._isTransitioning || !$(this._element).hasClass(ClassName.IN)) {
-                    return;
-                }
-
-                var startEvent = $.Event(Event.HIDE);
-                $(this._element).trigger(startEvent);
-                if (startEvent.isDefaultPrevented()) {
-                    return;
-                }
-
-                var dimension = this._getDimension();
-                var offsetDimension = dimension === Dimension.WIDTH ? 'offsetWidth' : 'offsetHeight';
-
-                this._element.style[dimension] = this._element[offsetDimension] + 'px';
-
-                _util2.default.reflow(this._element);
-
-                $(this._element).addClass(ClassName.COLLAPSING).removeClass(ClassName.COLLAPSE).removeClass(ClassName.IN);
-
-                this._element.setAttribute('aria-expanded', false);
-
-                if (this._parent) {
-                    $(this._parent).addClass(ClassName.COLLAPSED).removeClass(ClassName.ACTIVE).attr('aria-expanded', false);
-                    if (this._isPopout) {
-                        this._rootLI.removeClass(ClassName.ACTIVE);
-                    }
-                }
-
-                this.setTransitioning(true);
-
-                var complete = function complete() {
-                    _this2.setTransitioning(false);
-                    $(_this2._element).removeClass(ClassName.COLLAPSING).addClass(ClassName.COLLAPSE).trigger(Event.HIDDEN);
-                };
-
-                this._element.style[dimension] = 0;
-
-                if (!_util2.default.supportsTransitionEnd()) {
-                    complete();
-                    return;
-                }
-
-                $(this._element).one(_util2.default.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
-            }
-        }, {
-            key: 'setTransitioning',
-            value: function setTransitioning(isTransitioning) {
-                this._isTransitioning = isTransitioning;
-            }
-        }, {
-            key: 'dispose',
-            value: function dispose() {
-                $.removeData(this._element, DATA_KEY);
-
-                this._config = null;
-                this._parent = null;
-                this._element = null;
-                this._isTransitioning = null;
-                this._root = null;
-                this._rootLI = null;
-                this._isPopout = null;
-                this._isExpandable = null;
-            }
-
-            // Private
-            // ------------------------------------------------------------------------
-
-        }, {
-            key: '_getDimension',
-            value: function _getDimension() {
-                var hasWidth = $(this._element).hasClass(Dimension.WIDTH);
-                return hasWidth ? Dimension.WIDTH : Dimension.HEIGHT;
-            }
-
-            // Static
-            // ------------------------------------------------------------------------
-
-        }], [{
-            key: '_getConfig',
-            value: function _getConfig(config) {
-                config = $.extend({}, Default, config);
-                config.toggle = Boolean(config.toggle); // coerce string values
-                _util2.default.typeCheckConfig(NAME, config, DefaultType);
-                return config;
-            }
-        }, {
-            key: '_addAriaAndCollapsedClass',
-            value: function _addAriaAndCollapsedClass(element, triggerArray) {
-                if (element) {
-                    var isOpen = $(element).hasClass(ClassName.IN);
-                    element.setAttribute('aria-expanded', isOpen);
-
-                    if (triggerArray.length) {
-                        $(triggerArray).toggleClass(ClassName.COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
-                    }
-                }
-            }
-        }, {
-            key: '_getTargetFromElement',
-            value: function _getTargetFromElement(element) {
-                var selector = element.siblings(Selector.BODY);
-                return selector ? $(selector)[0] : null;
-            }
-        }, {
-            key: '_getHeaderFromElement',
-            value: function _getHeaderFromElement(element) {
-                var selector = element.siblings(Selector.HEADER);
-                return selector ? $(selector)[0] : null;
-            }
-        }, {
-            key: '_jQueryInterface',
-            value: function _jQueryInterface(config) {
-                return this.each(function () {
-                    var $this = $(this);
-                    var data = $this.data(DATA_KEY);
-                    var _config = $.extend({}, Default, $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);
-
-                    if (!data && _config.toggle && /show|hide/.test(config)) {
-                        _config.toggle = false;
-                    }
-
-                    if (!data) {
-                        data = new Collapsible(this, _config);
-                        $this.data(DATA_KEY, data);
-                    }
-
-                    if (typeof config === 'string') {
-                        if (data[config] === undefined) {
-                            throw new Error('No method named "' + config + '"');
-                        }
-                        data[config]();
-                    }
-                });
-            }
-        }, {
-            key: 'VERSION',
-            get: function get() {
-                return VERSION;
-            }
-        }]);
-
-        return Collapsible;
-    }();
-
-    // ------------------------------------------------------------------------
-    // Data Api implementation
-    // ------------------------------------------------------------------------
-
-    $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
-        var target = Collapsible._getTargetFromElement($(this));
-        var data = $(target).data(DATA_KEY);
-        var config = data ? 'toggle' : $(this).data();
-
-        Collapsible._jQueryInterface.call($(target), config);
-    });
-
-    // ------------------------------------------------------------------------
-    // jQuery
-    // ------------------------------------------------------------------------
-
-    $.fn[NAME] = Collapsible._jQueryInterface;
-    $.fn[NAME].Constructor = Collapsible;
+            data[config]();
+          }
+        });
+      }
+    }, {
+      key: 'VERSION',
+      get: function get() {
+        return VERSION;
+      }
+    }]);
 
     return Collapsible;
+  }();
+
+  // ------------------------------------------------------------------------
+  // Data Api implementation
+  // ------------------------------------------------------------------------
+
+  $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
+    var target = Collapsible._getTargetFromElement($(this));
+    var data = $(target).data(DATA_KEY);
+    var config = data ? 'toggle' : $(this).data();
+
+    Collapsible._jQueryInterface.call($(target), config);
+  });
+
+  // ------------------------------------------------------------------------
+  // jQuery
+  // ------------------------------------------------------------------------
+
+  $.fn[NAME] = Collapsible._jQueryInterface;
+  $.fn[NAME].Constructor = Collapsible;
+
+  return Collapsible;
 }(jQuery);
 
 BasUI.Collapsible = Collapsible;

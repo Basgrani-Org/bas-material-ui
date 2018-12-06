@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### v0.2.8 (Dec 06, 2018)
+
+**Fixes**
+- Fix parsleyjs
+
 ### v0.2.7 (Sept 28, 2018)
 
 **Fixes**
